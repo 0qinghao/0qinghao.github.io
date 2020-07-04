@@ -1,1 +1,1 @@
-Sitemap: https://0qinghao.github.io/inforest/sitemap.xml
+Sitemap: https://inforest.site/sitemap.xml
