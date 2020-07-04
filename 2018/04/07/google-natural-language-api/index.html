@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><title>译 - 使用Natural Language API分析文本的实体与情感 &mdash; 林间</title><link rel="stylesheet" href="https://inforest.site/assets/vendor/primer-css/css/primer.css"><link rel="stylesheet" href="https://inforest.site/assets/vendor/primer-markdown/dist/user-content.min.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/collection.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/repo-card.css"><link rel="stylesheet" href="https://inforest.site/assets/css/sections/repo-list.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/boxed-group.css"><link rel="stylesheet" href="https://inforest.site/assets/css/globals/common.css"><link rel="stylesheet" href="https://inforest.site/assets/css/globals/responsive.css"><link rel="stylesheet" href="https://inforest.site/assets/css/posts/index.css"><link rel="stylesheet" href="https://inforest.site/assets/vendor/octicons/octicons/octicons.css"><link rel="canonical" href="https://inforest.site/2018/04/07/google-natural-language-api/"><link rel="alternate" type="application/atom+xml" title="林间" href="https://inforest.site/feed.xml"><link rel="shortcut icon" href="https://inforest.site/favicon.ico"><meta property="og:title" content="译 - 使用Natural Language API分析文本的实体与情感"><meta name="keywords" content="谷歌, 自然语言, API"><meta name="og:keywords" content="谷歌, 自然语言, API"><meta name="description" content=" 原文：Natural Language APIでエンティティと感情を分析する"><meta name="og:description" content=" 原文：Natural Language APIでエンティティと感情を分析する"><meta property="og:url" content="https://inforest.site/2018/04/07/google-natural-language-api/"><meta property="og:site_name" content="林间"><meta property="og:type" content="article"><meta property="og:locale" content="zh_CN" /><meta property="article:published_time" content="2018-04-07"> <script src="https://inforest.site/assets/vendor/jquery/dist/jquery.min.js"></script> <script src="https://inforest.site/assets/js/jquery-ui.js"></script> <script src="https://inforest.site/assets/js/main.js"></script></head><body class="" data-mz=""><header class="site-header"><div class="container"><h1><a href="https://inforest.site/" title="林间"><span class="octicon octicon-mark-github"></span> 林间</a></h1><button class="collapsed mobile-visible" type="button" onclick="toggleMenu();"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button><nav class="site-header-nav" role="navigation"> <a href="https://inforest.site/" class=" site-header-nav-item" target="" title="首页">首页</a> <a href="https://inforest.site/categories/" class=" site-header-nav-item" target="" title="分类">分类</a> <a href="https://inforest.site/archives/" class=" site-header-nav-item" target="" title="归档">归档</a> <a href="https://inforest.site/open-source/" class=" site-header-nav-item" target="" title="开源">开源</a> <a href="https://inforest.site/links/" class=" site-header-nav-item" target="" title="链接">链接</a> <a href="https://inforest.site/about/" class=" site-header-nav-item" target="" title="关于">关于</a></nav></div></header><section class="collection-head small geopattern" data-pattern-id="译 - 使用Natural L"><div class="container"><div class="columns"><div class="column three-fourths"><div class="collection-title"><h1 class="collection-header">译 - 使用Natural Language API分析文本的实体与情感</h1><div class="collection-info"> <span class="meta-info"> <span class="octicon octicon-calendar"></span> 2018/04/07 </span> <span class="meta-info"> <span class="octicon octicon-file-directory"></span> <a href="https://inforest.site/categories/#google cloud" title="google cloud">google cloud</a> </span> <span class="meta-info"> <span class="octicon octicon-clock"></span> 共 6826 字，约 20 分钟 </span></div></div></div><div class="column one-fourths mobile-hidden"><div class="collection-title"></div></div></div></div></section><section class="container content"><div class="columns"><div class="column three-fourths"><article class="article-content markdown-body"><blockquote><p>原文：<a href="https://codelabs.developers.google.com/codelabs/cloud-nl-intro-ja/index.html?index=..%2F..%2Fspringone#0">Natural Language APIでエンティティと感情を分析する</a></p></blockquote><h1 id="概要">概要</h1><p>使用 Cloud Natural Language API ，可以从文本中提取实体、分析情感、解析文本构成。</p><p>此次向导中，我们将针对 Natural Language API 的3个方法： <code class="language-plaintext highlighter-rouge">analyzeEntities</code> 、 <code class="language-plaintext highlighter-rouge">analyzeSentiment</code> 和 <code class="language-plaintext highlighter-rouge">annotateText</code> 进行学习。</p><p><strong>将要学习的东西</strong></p><ul><li>构造 Natural Language API 请求，并使用 curl 发送请求</li><li>使用 Natural Language API 提取文本中的实体，并进行情感分析</li><li>使用 Natural Language API 对文本进行语言分析（语法、词性等）</li><li>使用不同的语言构造 Natural Language API 请求</li></ul><p><strong>必要的准备</strong></p><ul><li>创建Google Cloud Platform项目</li><li>浏览器（<a href="https://www.google.com/chrome/browser/desktop/">Chrome</a>、<a href="https://www.mozilla.org/firefox/">Firefox</a> 等）</li></ul><h1 id="设置和一些说明">设置和一些说明</h1><p><strong>根据自己的情况进行设置</strong></p><p>还未拥有Google账号（Gmail / Google Apps）的情况下，<a href="https://accounts.google.com/SignUp">创建账号</a>是必须的。登录Google Cloud Platform Console（<a href="http://console.cloud.google.com/">console.cloud.google.com</a>），创建一个新项目。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1is4jamij307q04rq2v.jpg" alt="" /></p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1isb2igbj30dg05waa3.jpg" alt="" /></p><p>请记住项目名称。任意一个Google Cloud项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。</p><p>Google Cloud Platform的新用户将赠与<a href="https://console.developers.google.com/billing/freetrial">相当于$ 300的试用金</a>。</p><h1 id="启用cloud-natural-language-api">启用Cloud Natural Language API</h1><p>点击屏幕左上角的菜单图标。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jddf3k3j307n01dglk.jpg" alt="" /></p><p>在下拉菜单中选择 [<strong>API Manager</strong>]</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1je8vadpj308k09gq36.jpg" alt="" /></p><p>点击 [<strong>启用API</strong>] 。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jfksxryj30l503kgls.jpg" alt="" /></p><p>然后，在搜索框中输入「Language」。点击 [<strong>Google Cloud Natural Language API</strong>]。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e7yyteej30y007uq3l.jpg" alt="" /></p><p>点击[<strong>启用</strong>]，启用 Cloud Natural Language API 。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e87nxmij30wn07pgmg.jpg" alt="" /></p><p>等待数秒，API成功启用后，将显示如下。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e9gcof8j30gi02c748.jpg" alt="" /></p><h1 id="激活cloud-shell">激活Cloud Shell</h1><p>Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git等），并提供永久的5 GB主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。</p><p>点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（<strong>&gt;_</strong>），启动Cloud Shell。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k54ijd6j318g01y3yw.jpg" alt="" /></p><p>Cloud Shell 将在控制台底部的新窗口中打开，并显示命令行提示符。请等待提示符 <code class="language-plaintext highlighter-rouge">user@project:~$</code> 出现。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k6p9s1uj318g0a8dg7.jpg" alt="" /></p><h1 id="生成api-key">生成API Key</h1><p>你将通过使用curl发送一个请求来调用 Natural Language API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1vzcg8gfj308f09edg0.jpg" alt="" /></p><p>然后，在 [<strong>凭据</strong>] 选项卡中点击 [<strong>创建凭据</strong>] 。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w1xzz3vj30t80fdt9v.jpg" alt="" /></p><p>在下拉菜单中选择 [<strong>API 密钥</strong>] 。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w36by92j30ds08m74w.jpg" alt="" /></p><p>最后，复制生成好的密钥。此密钥将在向导的后半部分中用到。</p><p>你已获得API密钥，我们将其保存在环境变量中，以便每次调用API时不需要重复插入API密钥值。你可以将密钥保存在 Cloud Shell 中，下述的 <code class="language-plaintext highlighter-rouge">&lt;your_api_key&gt;</code> 请替换成之前复制的内容。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export API_KEY=&lt;YOUR_API_KEY&gt;
+</code></pre></div></div><h1 id="构造分析文本中实体的请求">构造分析文本中实体的请求</h1><p>第一个介绍的 Natural Language API 方法是 <code class="language-plaintext highlighter-rouge">analyzeEntities</code> 。API 使用此方法从文本中提取出实体（人物、场所、事件等）。为了试用 API 的实体分析功能，我们将引用最近新闻中的以下句子。</p><p><em>LONDON — J. K. Rowling always said that the seventh Harry Potter book, “Harry Potter and the Deathly Hallows, “ would be the last in the series, and so far she has kept to her word.</em></p><p>对 Natural Language API 发出的请求可以事先保存在 <code class="language-plaintext highlighter-rouge">request.json</code> 文件中。首先，我们在 Cloud Shell 中生成这个文件。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>touch request.json
+</code></pre></div></div><p>然后，使用任意一个文本编辑器（ <code class="language-plaintext highlighter-rouge">nano</code> 、 <code class="language-plaintext highlighter-rouge">vim</code> 、 <code class="language-plaintext highlighter-rouge">emacs</code> ）打开生成的文件。在文件 <code class="language-plaintext highlighter-rouge">request.json</code> 中添加如下内容。</p><p><strong>request.json</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "document":{
+    "type":"PLAIN_TEXT",
+    "content":"LONDON — J. K. Rowling always said that the seventh Harry Potter book, ‘Harry Potter and the Deathly Hallows,' would be the last in the series, and so far she has kept to her word."
+  }
+}
+</code></pre></div></div><p>在这个请求文件中，保存了即将发送给 Natural Language API 的文本的相关信息。type 属性的值可以是 <code class="language-plaintext highlighter-rouge">PLAIN_TEXT</code> 或 <code class="language-plaintext highlighter-rouge">HTML</code> 。content 中存放了将要发送给 Natural Language API 分析的文本。Natural Language API 还支持直接发送存储在 Google Cloud Storage 中的文件。直接从 Google Cloud Storage 发送文件时，请将 <code class="language-plaintext highlighter-rouge">content</code> 替换为 <code class="language-plaintext highlighter-rouge">gcsContentUri</code> ，并将其值设置为云端文件的 uri 地址。</p><h1 id="调用-natural-language-api">调用 Natural Language API</h1><p>现在，我们将使用 curl 命令，把请求文件和之前保存好的 API 密钥环境变量一起，发送给 Natural Language API （全放在一条命令里面）。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl "https://language.googleapis.com/v1/documents:analyzeEntities?key=${API_KEY}" -s -X POST -H "Content-Type: application/json" --data-binary @request.json
+</code></pre></div></div><p>你将得到形式如下的响应。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "entities": [
+    {
+      "name": "Harry Potter and the Deathly Hallows",
+      "type": "WORK_OF_ART",
+      "metadata": {
+        "mid": "/m/03bkkv",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows"
+      },
+      "salience": 0.30040884,
+      "mentions": [
+        {
+          "text": {
+            "content": "book",
+            "beginOffset": -1
+          },
+          "type": "COMMON"
+        }
+      ]
+    }
+  ],
+  ...
+  ...
+  "language": "en"
+}
+</code></pre></div></div><p>在响应中，我们可以看到 API 从句子里检测到了6个实体（译者：原文是4个，但实际运行时得到6个，应该是API有所改善）。对于每个实体，你将得到实体的 <code class="language-plaintext highlighter-rouge">type</code> 、关联的维基百科URL（如果存在）、 <code class="language-plaintext highlighter-rouge">salience</code> （显著性）以及实体在文本中出现的位置的索引。 <code class="language-plaintext highlighter-rouge">salience</code> （显著性）是一个0~1的数字，指的是该实体对于整个文本的突出性。对于上述文段，「Harry Potter and the Deathly Hallows」具有最高的显著性（译者：原文是「Rowling」，应该是API有所改善），这是因为这部作品是文段所表述内容的主题。Natural Language API 也可以识别用其他方式表述的相同的实体，比如说「Rowling」、「J. K. Rowling」和「Joanne Kathleen Rowling」都指向同一个维基百科页面。</p><h1 id="使用-natural-language-api-进行情感分析">使用 Natural Language API 进行情感分析</h1><p>除了提取实体，Natural Language API 还可以分析文本块的情感。JSON 请求文件与之前的那个具有相同的参数，但这次我们更改一下文本，换成一段具有更强烈情感的内容。请修改 <code class="language-plaintext highlighter-rouge">request.json</code> 为如下内容，或者换成你喜欢的文段。</p><p><strong>request.json</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "document":{
+    "type":"PLAIN_TEXT",
+    "content":"I love everything about Harry Potter. It's the greatest book ever written."
+  }
+}
+</code></pre></div></div><p>然后把请求发送到 API 的 <code class="language-plaintext highlighter-rouge">analyzeSentiment</code> 端点。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl "https://language.googleapis.com/v1/documents:analyzeSentiment?key=${API_KEY}" -s -X POST -H "Content-Type: application/json" --data-binary @request.json
+</code></pre></div></div><p>你将得到形式如下的响应。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "documentSentiment": {
+    "polarity": 1,
+    "magnitude": 1.5,
+    "score": 0.7
+  },
+  "language": "en",
+  "sentences": [
+    {
+      "text": {
+        "content": "I love everything about Harry Potter.",
+        "beginOffset": -1
+      },
+      "sentiment": {
+        "polarity": 1,
+        "magnitude": 0.6,
+        "score": 0.6
+      }
+    },
+    {
+      "text": {
+        "content": "It's the greatest book ever written.",
+        "beginOffset": -1
+      },
+      "sentiment": {
+        "polarity": 1,
+        "magnitude": 0.8,
+        "score": 0.8
+      }
+    }
+  ]
+}
+</code></pre></div></div><p>该方法将返回 <code class="language-plaintext highlighter-rouge">polarity</code> （极性）和 <code class="language-plaintext highlighter-rouge">magnitude</code> （强度）两个值（译者：原文是这两个值，但很明显现在还能看到 <code class="language-plaintext highlighter-rouge">score</code> 这个值）。polarity是介于-1.0 ~ 1.0之间的数值，表示文本消极或积极的程度。magnitude是介于0 ~ ∞的数值，与polarity没有关系，它表示在文本中表达的感情的权重。权重较大的文本块单是增加长度，其magnitude也会变大。上文的polarity是100%积极。「love」、「greatest」、「ever」这样的单词会影响magnitude的值。</p><h1 id="分析语法与词性">分析语法与词性</h1><p>让我们看看 Natural Language API 的第三个方法：文本注释。让我们进入文本的语言细节。annotateText方法提供了关于文本情感元素、语法元素的完整细节。使用该方法，可以知道文本中每个词语的词性（名词、动词、形容词等），以及各个单词如何与句子中的其他单词关联（是动词的原始形式，还是用来修饰语句）。</p><p>让我们通过简单的文段来使用这个方法。JSON 文件与之前的相似，但在这里我们需要添加一项 features 来告诉API你想要执行语法注释。请将request.json替换为如下内容。</p><p><strong>request.json</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "document":{
+    "type":"PLAIN_TEXT",
+    "content":"Joanne Rowling is a British novelist, screenwriter and film producer."
+  },
+  "features":{
+    "extractSyntax":true
+  }
+}
+</code></pre></div></div><p>然后把请求发送到 API 的 <code class="language-plaintext highlighter-rouge">annotateText</code> 端点。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl "https://language.googleapis.com/v1/documents:annotateText?key=${API_KEY}" -s -X POST -H "Content-Type: application/json" --data-binary @request.json
+</code></pre></div></div><p>响应中，对于句子中的每一个标记（token），会返回以下对象。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "text": {
+	"content": "Joanne",
+	"beginOffset": -1
+  },
+  "partOfSpeech": {
+	"tag": "NOUN",
+	"aspect": "ASPECT_UNKNOWN",
+	"case": "CASE_UNKNOWN",
+	"form": "FORM_UNKNOWN",
+	"gender": "GENDER_UNKNOWN",
+	"mood": "MOOD_UNKNOWN",
+	"number": "SINGULAR",
+	"person": "PERSON_UNKNOWN",
+	"proper": "PROPER",
+	"reciprocity": "RECIPROCITY_UNKNOWN",
+	"tense": "TENSE_UNKNOWN",
+	"voice": "VOICE_UNKNOWN"
+  },
+  "dependencyEdge": {
+	"headTokenIndex": 1,
+	"label": "NN"
+  },
+  "lemma": "Joanne"
+},
+</code></pre></div></div><p>让我们详细看看返回值。从 <code class="language-plaintext highlighter-rouge">partOfSpeech</code> 可以看到「Joanne」是一个名词。 <code class="language-plaintext highlighter-rouge">dependencyEdge</code> 包含可用于创建<a href="https://en.wikipedia.org/wiki/Parse_tree#Dependency-based_parse_trees">依存句法分析树</a>（依存構文木/Dependency-based parse trees）的数据。这个语法树是一个图表，用来显示句中各单词之间的关系。上述文段的依存句法分析树如下所示。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fq3h4ul57oj30l605ndgg.jpg" alt="" /></p><blockquote><p><strong>注：</strong>使用下面的 demo ，你可以在浏览器中创建自己的依存句法分析树。</p><p><a href="https://cloud.google.com/natural-language/">https://cloud.google.com/natural-language/</a></p></blockquote><p>上述返回值中， <code class="language-plaintext highlighter-rouge">headTokenIndex</code> 是指具有指向「Joanne」的圆弧的标记（token）的索引。文段中的每一个标记（token）都可以看作是数组中的一个单词，「Joanne」的 <code class="language-plaintext highlighter-rouge">headTokenIndex</code> 值是1，表示依存句法分析树中连接了「Rowling」这个单词。 <code class="language-plaintext highlighter-rouge">NN</code> （修饰语句 noun compound （名词复合词）的略称）这个标签表示该词在改句子中的作用。「Joanne」是这个句子的主语「Rowling」的修饰词。 <code class="language-plaintext highlighter-rouge">lemma</code> 是这个单词的规范化形式。比如，<em>run</em>、<em>runs</em>、<em>ran</em>、<em>running</em> 这些单词的 lemma 都是 run 。lemma 有助于你调查大量文本中某一单词的出现频率。</p><h1 id="其他语言的自然语言处理">其他语言的自然语言处理</h1><p>Natural Language API 还支持其他很多语言的实体分析和语法注释。现在我们以日语为例，尝试进行日语文段的实体分析。</p><p><strong>request.json</strong></p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "document":{
+    "type":"PLAIN_TEXT",
+    "content":"日本のグーグルのオフィスは、東京の六本木ヒルズにあります"
+  }
+}
+</code></pre></div></div><p>（译者：句意是“日本的谷歌办公大楼在东京的六本木新城。”）</p><p>我们不必告诉 API 这个文段是什么语言，API 能够自动检测出来。我们以相同的方式发送 API 请求。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl "https://language.googleapis.com/v1/documents:analyzeEntities?key=${API_KEY}" -s -X POST -H "Content-Type: application/json" --data-binary @request.json
+</code></pre></div></div><p>你将得到形式如下的响应。</p><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "entities": [
+    {
+      "name": "日本",
+      "type": "LOCATION",
+      "metadata": {
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Japan",
+        "mid": "/m/03_3d"
+      },
+      "salience": 0.23854347,
+      "mentions": [
+        {
+          "text": {
+            "content": "日本",
+            "beginOffset": -1
+          },
+          "type": "PROPER"
+        }
+      ]
+    },
+    {
+      "name": "グーグル",
+      "type": "ORGANIZATION",
+      "metadata": {
+        "mid": "/m/045c7b",
+        "wikipedia_url": "https://en.wikipedia.org/wiki/Google"
+      },
+      "salience": 0.21155767,
+      "mentions": [
+        {
+          "text": {
+            "content": "グーグル",
+            "beginOffset": -1
+          },
+          "type": "PROPER"
+        }
+      ]
+    },
+    ......
+    ......
+  ],
+  "language": "ja"
+}
+</code></pre></div></div><h1 id="恭喜">恭喜！</h1><p>通过此次向导，我们尝试执行了实体提取、情感分析和语法注释，学会了如何使用 Natural Language API 进行文本分析。</p><p><strong>学到的东西</strong></p><ul><li>构造 Natural Language API 请求，并使用 curl 发送请求</li><li>使用 Natural Language API 提取文本中的实体，并进行情感分析</li><li>使用 Natural Language API 对文本进行语言分析（语法、词性等）</li><li>使用不同的语言构造 Natural Language API 请求</li></ul><p><strong>下一步</strong></p><ul><li>浏览 Natural Language API 文档的<a href="https://cloud.google.com/natural-language/docs/tutorials">向导</a>。</li><li>尝试使用 <a href="https://cloud.google.com/vision/">Vision API</a> 、<a href="https://cloud.google.com/speech/">Speech API</a> 。</li></ul><div style="margin-top:2em;padding:0 1.5em;border:1px solid #d3d3d3;background-color:#deebf7"><h3>文档信息</h3><ul><li>本文作者：<a href="https://inforest.site" target="_blank">Qinghao Lin</a></li><li>本文链接：<a href="https://inforest.site/2018/04/07/google-natural-language-api/" target="_blank">https://inforest.site/2018/04/07/google-natural-language-api/</a></li><li>采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">《署名-非商业性使用-禁止演绎 4.0 国际》许可协议</a></li></ul></div></article><div class="share"></div><div class="comment"><div id="gitalk-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> <script> var gitalk = new Gitalk({ id: '/2018/04/07/google-natural-language-api/', clientID: 'bc91b2b5caf9247e2f34', clientSecret: 'b460496b0de331f4b247de2b662f390893d0545b', repo: 'blog-comments', owner: '0qinghao', admin: ['0qinghao'], labels: ['gitment'], perPage: 50, }); gitalk.render('gitalk-container'); </script></div></div><div class="column one-fourth"><h3>Search</h3><div id="site_search"> <input style="width:96%" type="text" id="search_box" placeholder="Search"></div><ul id="search_results" style="font-size:14px;list-style-type:none;padding-top:10px;padding-left:10px;"></ul><script src="https://inforest.site/assets/js/simple-jekyll-search.min.js"></script> <script type="text/javascript"> SimpleJekyllSearch({ searchInput: document.getElementById('search_box'), resultsContainer: document.getElementById('search_results'), json: 'https://inforest.site/assets/search_data.json', searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', noResultsText: 'No results found', limit: 30, fuzzy: false, exclude: ['Welcome'] }) </script><h3 class="post-directory-title mobile-hidden">Table of Contents</h3><div id="post-directory-module" class="mobile-hidden"><section class="post-directory"><dl></dl></section></div><script src="https://inforest.site/assets/js/jquery.toc.js"></script></div></div></section><footer class="container"><div class="site-footer" role="contentinfo"><div class="copyright left mobile-block"> © 2020 <span title="Qinghao Lin">Qinghao Lin</span> <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a></div><ul class="site-footer-links right mobile-hidden"><li> <a href="javascript:window.scrollTo(0,0)">TOP</a></li></ul><a href="https://github.com/0qinghao/0qinghao.github.io" target="_blank" aria-label="view source code"> <span class="mega-octicon octicon-mark-github" title="GitHub"></span> </a><ul class="site-footer-links mobile-hidden"><li> <a href="https://inforest.site/" title="首页" target="">首页</a></li><li> <a href="https://inforest.site/categories/" title="分类" target="">分类</a></li><li> <a href="https://inforest.site/archives/" title="归档" target="">归档</a></li><li> <a href="https://inforest.site/open-source/" title="开源" target="">开源</a></li><li> <a href="https://inforest.site/links/" title="链接" target="">链接</a></li><li> <a href="https://inforest.site/about/" title="关于" target="">关于</a></li></ul><script async src="https://inforest.site/assets/vendor/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="mobile-hidden" style="margin-top:8px"> <span id="busuanzi_container_site_pv" style="display:none"> 本站访问量<span id="busuanzi_value_site_pv"></span>次 </span> <span id="busuanzi_container_site_uv" style="display:none"> / 本站访客数<span id="busuanzi_value_site_uv"></span>人 </span> <span id="busuanzi_container_page_pv" style="display:none"> / 本页访问量<span id="busuanzi_value_page_pv"></span>次 / 统计始于2020-06-16 </span></div></div></footer><div class="tools-wrapper"> <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a></div><script src="https://inforest.site/assets/js/geopattern.js"></script> <script> jQuery(document).ready(function ($) { $('.geopattern').each(function () { $(this).geopattern($(this).data('pattern-id')); }); /* hljs.initHighlightingOnLoad(); */ }); </script></body></html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /><title>使用Python把树莓派改造成一个语音助手 &mdash; 林间</title><link rel="stylesheet" href="https://inforest.site/assets/vendor/primer-css/css/primer.css"><link rel="stylesheet" href="https://inforest.site/assets/vendor/primer-markdown/dist/user-content.min.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/collection.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/repo-card.css"><link rel="stylesheet" href="https://inforest.site/assets/css/sections/repo-list.css"><link rel="stylesheet" href="https://inforest.site/assets/css/components/boxed-group.css"><link rel="stylesheet" href="https://inforest.site/assets/css/globals/common.css"><link rel="stylesheet" href="https://inforest.site/assets/css/globals/responsive.css"><link rel="stylesheet" href="https://inforest.site/assets/css/posts/index.css"><link rel="stylesheet" href="https://inforest.site/assets/vendor/octicons/octicons/octicons.css"><link rel="canonical" href="https://inforest.site/2018/03/26/PiDaXing/"><link rel="alternate" type="application/atom+xml" title="林间" href="https://inforest.site/feed.xml"><link rel="shortcut icon" href="https://inforest.site/favicon.ico"><meta property="og:title" content="使用Python把树莓派改造成一个语音助手"><meta name="keywords" content="语音助手, 树莓派, python"><meta name="og:keywords" content="语音助手, 树莓派, python"><meta name="description" content="语音助手已经不是什么新事物了。就在两三年前，语音助手的使用体验还不是那么好，尝尝鲜后也就没用过了。但最近发现不管是微软的Cortana、苹果的Siri，还是一些不怎么有名气的，例如MIUI的小爱同学等，使用体验真的改善了很多，确确实实能带来一些方便了。"><meta name="og:description" content="语音助手已经不是什么新事物了。就在两三年前，语音助手的使用体验还不是那么好，尝尝鲜后也就没用过了。但最近发现不管是微软的Cortana、苹果的Siri，还是一些不怎么有名气的，例如MIUI的小爱同学等，使用体验真的改善了很多，确确实实能带来一些方便了。"><meta property="og:url" content="https://inforest.site/2018/03/26/PiDaXing/"><meta property="og:site_name" content="林间"><meta property="og:type" content="article"><meta property="og:locale" content="zh_CN" /><meta property="article:published_time" content="2018-03-26"> <script src="https://inforest.site/assets/vendor/jquery/dist/jquery.min.js"></script> <script src="https://inforest.site/assets/js/jquery-ui.js"></script> <script src="https://inforest.site/assets/js/main.js"></script></head><body class="" data-mz=""><header class="site-header"><div class="container"><h1><a href="https://inforest.site/" title="林间"><span class="octicon octicon-mark-github"></span> 林间</a></h1><button class="collapsed mobile-visible" type="button" onclick="toggleMenu();"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button><nav class="site-header-nav" role="navigation"> <a href="https://inforest.site/" class=" site-header-nav-item" target="" title="首页">首页</a> <a href="https://inforest.site/categories/" class=" site-header-nav-item" target="" title="分类">分类</a> <a href="https://inforest.site/archives/" class=" site-header-nav-item" target="" title="归档">归档</a> <a href="https://inforest.site/open-source/" class=" site-header-nav-item" target="" title="开源">开源</a> <a href="https://inforest.site/links/" class=" site-header-nav-item" target="" title="链接">链接</a> <a href="https://inforest.site/about/" class=" site-header-nav-item" target="" title="关于">关于</a></nav></div></header><section class="collection-head small geopattern" data-pattern-id="使用Python把树莓派改造成"><div class="container"><div class="columns"><div class="column three-fourths"><div class="collection-title"><h1 class="collection-header">使用Python把树莓派改造成一个语音助手</h1><div class="collection-info"> <span class="meta-info"> <span class="octicon octicon-calendar"></span> 2018/03/26 </span> <span class="meta-info"> <span class="octicon octicon-file-directory"></span> <a href="https://inforest.site/categories/#python" title="python">python</a> </span> <span class="meta-info"> <span class="octicon octicon-file-directory"></span> <a href="https://inforest.site/categories/#raspberrypi" title="raspberrypi">raspberrypi</a> </span> <span class="meta-info"> <span class="octicon octicon-file-directory"></span> <a href="https://inforest.site/categories/#linux" title="linux">linux</a> </span> <span class="meta-info"> <span class="octicon octicon-clock"></span> 共 7244 字，约 21 分钟 </span></div></div></div><div class="column one-fourths mobile-hidden"><div class="collection-title"></div></div></div></div></section><section class="container content"><div class="columns"><div class="column three-fourths"><article class="article-content markdown-body"><p>语音助手已经不是什么新事物了。就在两三年前，语音助手的使用体验还不是那么好，尝尝鲜后也就没用过了。但最近发现不管是微软的Cortana、苹果的Siri，还是一些不怎么有名气的，例如MIUI的小爱同学等，使用体验真的改善了很多，确确实实能带来一些方便了。</p><p>随着各种云服务、API的面世，语音方面的云服务可以说是十分健全了。你是否也想过自己动手搭建一个语音助手系统呢？本文将总结使用Python把 <strong>树莓派（3代b型）</strong> 改造成一个<strong>简易</strong>语音助手的基本流程。</p><h1 id="概述">概述</h1><p>这次要做的说白了，就是把各种云服务、API串起来，并不涉及任何核心技术、算法的实现，望知悉。</p><p>这次将要使用到的服务包括：</p><ul><li><a href="https://cloud.google.com/speech/">谷歌Cloud Speech API</a></li><li><a href="http://www.tuling123.com/">图灵机器人</a></li><li><a href="http://doc.xfyun.cn/rest_api/">科大讯飞 语音合成WebAPI</a></li></ul><p>为了实现这个语音助手系统，需要完成的工作每一个都不难，但数量稍多了些。以下是涉及到的一些博客：</p><ul><li><a href="https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/">使用Google云计算引擎实现科学上网</a></li><li><a href="https://0qinghao.github.io/inforest/2018/09/19/proxy-set-in-windows-and-linux/">在Windows命令行、Linux终端使用代理</a></li><li><a href="https://0qinghao.github.io/inforest/2018/03/20/RPi-recorder-python/">树莓派学习手记——使用Python录音</a></li><li><a href="https://0qinghao.github.io/inforest/2018/03/08/google-cloud-speech-api-voice2text-python-another-way/">在Python中使用谷歌Cloud Speech API将语音转换为文字（另一种方案）</a></li><li><a href="https://0qinghao.github.io/inforest/2018/03/22/turing-chat-bot-python-API/">使用Python与图灵机器人聊天</a></li><li><a href="https://0qinghao.github.io/inforest/2018/03/24/xunfei-tts-web-api-python/">在Python中使用科大讯飞Web API进行语音合成</a></li></ul><p>后文在介绍各部分的具体实现时，只附上代码和进行一些必要的说明，详细内容还需要参考相应博客。</p><h1 id="各部分的实现">各部分的实现</h1><p>由于整个项目用到的服务比较多，而且各部分的分工很明显，所以选择各部分分别用一个python程序来实现，最后再用一个程序整合在一起的方式。</p><h2 id="录音">录音</h2><p><strong>参考：</strong><a href="https://0qinghao.github.io/inforest/2018/03/20/RPi-recorder-python/">树莓派学习手记——使用Python录音</a></p><p>笔者采用了“按住按钮进行录音”的操作方式，如下图所示接线。如果你手头上没有按钮或觉得这么做不方便，可以修改代码改成“按回车键开始/结束录音”之类的操作方式。</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fpx6vnxgjbj30br0bamyk.jpg" alt="" /></p><p>另外，树莓派的板载3.5mm耳机接口是不带语音输入功能的，所以你需要另外购买USB声卡。</p><ul><li>文件 <code class="language-plaintext highlighter-rouge">rec.py</code></li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">RPi.GPIO</span> <span class="k">as</span> <span class="n">GPIO</span>
+<span class="kn">import</span> <span class="nn">pyaudio</span>
+<span class="kn">import</span> <span class="nn">wave</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="k">def</span> <span class="nf">rec_fun</span><span class="p">():</span>
+	<span class="c1"># 隐藏错误消息，因为会有一堆ALSA和JACK错误消息，但其实能正常录音
+</span>	<span class="n">os</span><span class="p">.</span><span class="n">close</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">stderr</span><span class="p">.</span><span class="n">fileno</span><span class="p">())</span>
+	
+	<span class="n">BUTT</span> <span class="o">=</span> <span class="mi">26</span>	<span class="c1"># 开始录音的按钮：一边接GPIO26，一边接地
+</span>	<span class="n">GPIO</span><span class="p">.</span><span class="n">setmode</span><span class="p">(</span><span class="n">GPIO</span><span class="p">.</span><span class="n">BCM</span><span class="p">)</span>
+	<span class="c1"># 设GPIO26脚为输入脚，电平拉高，也就是说26脚一旦读到低电平，说明按了按钮
+</span>	<span class="n">GPIO</span><span class="p">.</span><span class="n">setup</span><span class="p">(</span><span class="n">BUTT</span><span class="p">,</span> <span class="n">GPIO</span><span class="p">.</span><span class="n">IN</span><span class="p">,</span> <span class="n">pull_up_down</span> <span class="o">=</span> <span class="n">GPIO</span><span class="p">.</span><span class="n">PUD_UP</span><span class="p">)</span>
+
+	<span class="c1"># wav文件是由若干个CHUNK组成的，CHUNK我们就理解成数据包或者数据片段。
+</span>	<span class="n">CHUNK</span> <span class="o">=</span> <span class="mi">512</span> 
+	<span class="n">FORMAT</span> <span class="o">=</span> <span class="n">pyaudio</span><span class="p">.</span><span class="n">paInt16</span>  <span class="c1"># pyaudio.paInt16表示我们使用量化位数 16位来进行录音
+</span>	<span class="n">RATE</span> <span class="o">=</span> <span class="mi">44100</span>  <span class="c1"># 采样率 44.1k，每秒采样44100个点。
+</span>	<span class="n">WAVE_OUTPUT_FILENAME</span> <span class="o">=</span> <span class="s">"/home/pi/chat/command.wav"</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'请按住按钮开始录音...'</span><span class="p">)</span>
+	<span class="n">GPIO</span><span class="p">.</span><span class="n">wait_for_edge</span><span class="p">(</span><span class="n">BUTT</span><span class="p">,</span> <span class="n">GPIO</span><span class="p">.</span><span class="n">FALLING</span><span class="p">)</span>
+
+	<span class="c1"># To use PyAudio, first instantiate PyAudio using pyaudio.PyAudio(), which sets up the portaudio system.
+</span>	<span class="n">p</span> <span class="o">=</span> <span class="n">pyaudio</span><span class="p">.</span><span class="n">PyAudio</span><span class="p">()</span>
+	<span class="n">stream</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="nb">format</span> <span class="o">=</span> <span class="n">FORMAT</span><span class="p">,</span>
+					<span class="n">channels</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>	<span class="c1"># cloud speecAPI只支持单声道
+</span>					<span class="n">rate</span> <span class="o">=</span> <span class="n">RATE</span><span class="p">,</span>
+					<span class="nb">input</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+					<span class="n">frames_per_buffer</span> <span class="o">=</span> <span class="n">CHUNK</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"录音中..."</span><span class="p">)</span>
+
+	<span class="n">frames</span> <span class="o">=</span> <span class="p">[]</span>
+	<span class="c1"># 按住按钮录音，放开时结束
+</span>	<span class="k">while</span> <span class="n">GPIO</span><span class="p">.</span><span class="nb">input</span><span class="p">(</span><span class="n">BUTT</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+		<span class="n">data</span> <span class="o">=</span> <span class="n">stream</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">CHUNK</span><span class="p">)</span>
+		<span class="n">frames</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"录音完成，输出文件："</span> <span class="o">+</span> <span class="n">WAVE_OUTPUT_FILENAME</span> <span class="o">+</span> <span class="s">'</span><span class="se">\n</span><span class="s">'</span><span class="p">)</span>
+	<span class="n">stream</span><span class="p">.</span><span class="n">stop_stream</span><span class="p">()</span>
+	<span class="n">stream</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+	<span class="n">p</span><span class="p">.</span><span class="n">terminate</span><span class="p">()</span>
+
+	<span class="n">wf</span> <span class="o">=</span> <span class="n">wave</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="n">WAVE_OUTPUT_FILENAME</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span>
+	<span class="n">wf</span><span class="p">.</span><span class="n">setnchannels</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+	<span class="n">wf</span><span class="p">.</span><span class="n">setsampwidth</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">get_sample_size</span><span class="p">(</span><span class="n">FORMAT</span><span class="p">))</span>	<span class="c1"># Returns the size (in bytes) for the specified sample format.
+</span>	<span class="n">wf</span><span class="p">.</span><span class="n">setframerate</span><span class="p">(</span><span class="n">RATE</span><span class="p">)</span>
+	<span class="n">wf</span><span class="p">.</span><span class="n">writeframes</span><span class="p">(</span><span class="s">b''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">frames</span><span class="p">))</span>
+	<span class="n">wf</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+	
+	<span class="k">return</span>
+
+<span class="c1"># 可以直接运行rec.py进行测试，同时保证该文件import时不会自动运行
+</span><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="n">rec_fun</span><span class="p">()</span>
+</code></pre></div></div><h2 id="语音识别">语音识别</h2><p><strong>参考：</strong></p><p><a href="https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/">使用Google云计算引擎实现科学上网</a></p><p><a href="https://0qinghao.github.io/inforest/2018/09/19/proxy-set-in-windows-and-linux/">在Windows命令行、Linux终端使用代理</a></p><p><a href="https://0qinghao.github.io/inforest/2018/03/08/google-cloud-speech-api-voice2text-python-another-way/">在Python中使用谷歌Cloud Speech API将语音转换为文字（另一种方案）</a></p><p>由于某些原因，笔者选择了使用谷歌Cloud Speech API进行语音识别。既然要用谷歌的服务，自然就涉及到了科学上网、代理、谷歌云平台的使用，如果不想这么折腾，完全可以用国内的讯飞、百度来实现。</p><p>另外，API KEY之类的字符串在这里删除了，还请麻烦修改代码加上你自己申请的API KEY。</p><ul><li>文件 <code class="language-plaintext highlighter-rouge">speech_api.py</code></li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+
+<span class="k">def</span> <span class="nf">wav_to_text</span><span class="p">():</span>
+	<span class="n">api_url</span> <span class="o">=</span> <span class="s">"https://speech.googleapis.com/v1beta1/speech:syncrecognize?key=替换成你的API密钥"</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'语音文件编码中...'</span><span class="p">)</span>
+	<span class="n">audio_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'/home/pi/chat/command.wav'</span><span class="p">,</span> <span class="s">'rb'</span><span class="p">)</span>
+	<span class="n">audio_b64str</span> <span class="o">=</span> <span class="p">(</span><span class="n">base64</span><span class="p">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">audio_file</span><span class="p">.</span><span class="n">read</span><span class="p">())).</span><span class="n">decode</span><span class="p">()</span>
+	<span class="n">audio_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+	<span class="n">voice</span> <span class="o">=</span> <span class="p">{</span>
+	  <span class="s">"config"</span><span class="p">:</span>
+	  <span class="p">{</span>
+		<span class="s">"languageCode"</span><span class="p">:</span> <span class="s">"cmn-Hans-CN"</span>
+	  <span class="p">},</span>
+
+	  <span class="s">"audio"</span><span class="p">:</span>
+	  <span class="p">{</span>
+		<span class="s">"content"</span><span class="p">:</span> <span class="n">audio_b64str</span>
+	  <span class="p">}</span>
+	<span class="p">}</span>
+	<span class="n">voice</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">voice</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'编码完成。正在上传语音...'</span><span class="p">)</span>
+	<span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">voice</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">})</span>
+	<span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+	<span class="n">response_str</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+	<span class="n">response_dic</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response_str</span><span class="p">)</span>
+
+	<span class="k">if</span> <span class="p">(</span><span class="s">'results'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">response_dic</span><span class="p">.</span><span class="n">keys</span><span class="p">()):</span>
+		<span class="k">print</span><span class="p">(</span><span class="s">'您录制的文件似乎没有声音，请检查麦克风。'</span><span class="p">)</span>
+		<span class="k">return</span>
+	
+	<span class="n">transcript</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'results'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'alternatives'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'transcript'</span><span class="p">]</span>
+	<span class="n">confidence</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'results'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'alternatives'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'confidence'</span><span class="p">]</span>
+	<span class="n">result_dic</span> <span class="o">=</span> <span class="p">{</span><span class="s">'text'</span><span class="p">:</span><span class="n">transcript</span> <span class="p">,</span><span class="s">'confidence'</span><span class="p">:</span><span class="n">confidence</span><span class="p">}</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">'识别完成。以字典格式输出：'</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">result_dic</span><span class="p">)</span>
+	
+	<span class="k">return</span> <span class="n">result_dic</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="n">wav_to_text</span><span class="p">()</span>
+</code></pre></div></div><h2 id="获取文字回答">获取文字回答</h2><p><strong>参考：</strong><a href="https://0qinghao.github.io/inforest/2018/03/22/turing-chat-bot-python-API/">使用Python与图灵机器人聊天</a></p><p>这个获取回答的程序有些粗糙，只能获得普通的文字回答。实际上图灵机器人回复的内容中包括了文字、问题类型甚至情感等信息，还有很多修改的空间。</p><ul><li>文件 <code class="language-plaintext highlighter-rouge">turing.py</code></li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="k">def</span> <span class="nf">chat</span><span class="p">(</span><span class="n">question</span><span class="p">):</span>
+	<span class="n">api_url</span> <span class="o">=</span> <span class="s">"http://openapi.tuling123.com/openapi/api/v2"</span>
+	<span class="n">text_input</span> <span class="o">=</span> <span class="n">question</span><span class="p">[</span><span class="s">'text'</span><span class="p">]</span>
+	<span class="n">req</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">"perception"</span><span class="p">:</span>
+		<span class="p">{</span>
+			<span class="s">"inputText"</span><span class="p">:</span>
+			<span class="p">{</span>
+				<span class="s">"text"</span><span class="p">:</span> <span class="n">text_input</span>
+			<span class="p">},</span>
+
+			<span class="s">"selfInfo"</span><span class="p">:</span>
+			<span class="p">{</span>
+				<span class="s">"location"</span><span class="p">:</span>
+				<span class="p">{</span>
+					<span class="s">"city"</span><span class="p">:</span> <span class="s">"上海"</span><span class="p">,</span>
+					<span class="s">"province"</span><span class="p">:</span> <span class="s">"上海"</span><span class="p">,</span>
+					<span class="s">"street"</span><span class="p">:</span> <span class="s">"文汇路"</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">},</span>
+
+		<span class="s">"userInfo"</span><span class="p">:</span> 
+		<span class="p">{</span>
+			<span class="s">"apiKey"</span><span class="p">:</span> <span class="s">"替换成你的APIKEY"</span><span class="p">,</span>
+			<span class="s">"userId"</span><span class="p">:</span> <span class="s">"用户参数"</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="c1"># 将字典格式的req转为utf8编码的字符串
+</span>	<span class="n">req</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">req</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+	
+	<span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">'正在调用图灵机器人API...'</span><span class="p">)</span>
+	<span class="n">http_post</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">req</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'content-type'</span><span class="p">:</span> <span class="s">'application/json'</span><span class="p">})</span>
+	<span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">http_post</span><span class="p">)</span>
+	
+	<span class="k">print</span><span class="p">(</span><span class="s">'得到回答，输出为字典格式：'</span><span class="p">)</span>
+	<span class="n">response_str</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+	<span class="n">response_dic</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">response_str</span><span class="p">)</span>
+	<span class="n">intent_code</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'intent'</span><span class="p">][</span><span class="s">'code'</span><span class="p">]</span>
+	
+	<span class="c1"># 返回网页类的输出方式
+</span>	<span class="k">if</span><span class="p">(</span><span class="n">intent_code</span> <span class="o">==</span> <span class="mi">10023</span><span class="p">):</span>
+		<span class="n">results_url</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'results'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'values'</span><span class="p">][</span><span class="s">'url'</span><span class="p">]</span>
+		<span class="n">results_text</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'results'</span><span class="p">][</span><span class="mi">1</span><span class="p">][</span><span class="s">'values'</span><span class="p">][</span><span class="s">'text'</span><span class="p">]</span>
+		<span class="n">answer</span> <span class="o">=</span> <span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="n">intent_code</span><span class="p">,</span> <span class="s">"text"</span><span class="p">:</span> <span class="n">results_text</span><span class="p">,</span> <span class="s">"url"</span><span class="p">:</span><span class="n">results_url</span><span class="p">}</span>
+		<span class="k">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+		<span class="k">return</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+	<span class="c1"># 一般的输出方式
+</span>	<span class="k">else</span><span class="p">:</span>
+		<span class="n">results_text</span> <span class="o">=</span> <span class="n">response_dic</span><span class="p">[</span><span class="s">'results'</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s">'values'</span><span class="p">][</span><span class="s">'text'</span><span class="p">]</span>
+		<span class="n">answer</span> <span class="o">=</span> <span class="p">{</span><span class="s">"code"</span><span class="p">:</span> <span class="n">intent_code</span><span class="p">,</span> <span class="s">"text"</span><span class="p">:</span> <span class="n">results_text</span><span class="p">}</span>
+		<span class="k">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+		<span class="k">return</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
+	
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="n">eg_question</span> <span class="o">=</span> <span class="p">{</span><span class="s">'text'</span><span class="p">:</span> <span class="s">'今天是几号'</span><span class="p">,</span> <span class="s">'confidence'</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">}</span>
+	<span class="n">chat</span><span class="p">(</span><span class="n">eg_question</span><span class="p">)</span>
+</code></pre></div></div><h2 id="读出回答语音合成">读出回答（语音合成）</h2><p><strong>参考：</strong><a href="https://0qinghao.github.io/inforest/2018/03/24/xunfei-tts-web-api-python/">在Python中使用科大讯飞Web API进行语音合成</a></p><p>笔者在使用讯飞Web API时，该服务才开放不到一周，难免以后该API会有所变动，如有问题建议查阅官方文档。</p><ul><li>文件 <code class="language-plaintext highlighter-rouge">tts.py</code></li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">urllib.parse</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="n">text_content</span><span class="p">):</span>
+	<span class="c1"># API请求地址、API KEY、APP ID等参数，提前填好备用
+</span>	<span class="n">api_url</span> <span class="o">=</span> <span class="s">"http://api.xfyun.cn/v1/service/v1/tts"</span>
+	<span class="n">API_KEY</span> <span class="o">=</span> <span class="s">"替换成你的APIKEY"</span>
+	<span class="n">APP_ID</span> <span class="o">=</span> <span class="s">"替换成你的APPID"</span>
+	<span class="n">AUE</span> <span class="o">=</span> <span class="s">"lame"</span>
+
+	<span class="c1"># 构造输出音频配置参数
+</span>	<span class="n">Param</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">"auf"</span><span class="p">:</span> <span class="s">"audio/L16;rate=16000"</span><span class="p">,</span>	<span class="c1">#音频采样率
+</span>		<span class="s">"aue"</span><span class="p">:</span> <span class="n">AUE</span><span class="p">,</span>	<span class="c1">#音频编码，raw(生成wav)或lame(生成mp3)
+</span>		<span class="s">"voice_name"</span><span class="p">:</span> <span class="s">"xiaoyan"</span><span class="p">,</span>
+		<span class="s">"speed"</span><span class="p">:</span> <span class="s">"50"</span><span class="p">,</span>	<span class="c1">#语速[0,100]
+</span>		<span class="s">"volume"</span><span class="p">:</span> <span class="s">"10"</span><span class="p">,</span>	<span class="c1">#音量[0,100]
+</span>		<span class="s">"pitch"</span><span class="p">:</span> <span class="s">"50"</span><span class="p">,</span>	<span class="c1">#音高[0,100]
+</span>		<span class="s">"engine_type"</span><span class="p">:</span> <span class="s">"aisound"</span>	<span class="c1">#引擎类型。aisound（普通效果），intp65（中文），intp65_en（英文）
+</span>	<span class="p">}</span>
+	<span class="c1"># 配置参数编码为base64字符串，过程：字典→明文字符串→utf8编码→base64(bytes)→base64字符串
+</span>	<span class="n">Param_str</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">Param</span><span class="p">)</span>	<span class="c1">#得到明文字符串
+</span>	<span class="n">Param_utf8</span> <span class="o">=</span> <span class="n">Param_str</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>	<span class="c1">#得到utf8编码(bytes类型)
+</span>	<span class="n">Param_b64</span> <span class="o">=</span> <span class="n">base64</span><span class="p">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">Param_utf8</span><span class="p">)</span>	<span class="c1">#得到base64编码(bytes类型)
+</span>	<span class="n">Param_b64str</span> <span class="o">=</span> <span class="n">Param_b64</span><span class="p">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>	<span class="c1">#得到base64字符串
+</span>
+	<span class="c1"># 构造HTTP请求的头部
+</span>	<span class="n">time_now</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()))</span>
+	<span class="n">checksum</span> <span class="o">=</span> <span class="p">(</span><span class="n">API_KEY</span> <span class="o">+</span> <span class="n">time_now</span> <span class="o">+</span> <span class="n">Param_b64str</span><span class="p">).</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+	<span class="n">checksum_md5</span> <span class="o">=</span> <span class="n">hashlib</span><span class="p">.</span><span class="n">md5</span><span class="p">(</span><span class="n">checksum</span><span class="p">).</span><span class="n">hexdigest</span><span class="p">()</span>
+	<span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">"X-Appid"</span><span class="p">:</span> <span class="n">APP_ID</span><span class="p">,</span>
+		<span class="s">"X-CurTime"</span><span class="p">:</span> <span class="n">time_now</span><span class="p">,</span>
+		<span class="s">"X-Param"</span><span class="p">:</span> <span class="n">Param_b64str</span><span class="p">,</span>
+		<span class="s">"X-CheckSum"</span><span class="p">:</span> <span class="n">checksum_md5</span>
+	<span class="p">}</span>
+
+	<span class="c1"># 构造HTTP请求Body
+</span>	<span class="n">body</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="s">"text"</span><span class="p">:</span> <span class="n">text_content</span>
+	<span class="p">}</span>
+	<span class="n">body_urlencode</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">parse</span><span class="p">.</span><span class="n">urlencode</span><span class="p">(</span><span class="n">body</span><span class="p">)</span>
+	<span class="n">body_utf8</span> <span class="o">=</span> <span class="n">body_urlencode</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">)</span>
+
+	<span class="c1"># 发送HTTP POST请求
+</span>	<span class="k">print</span><span class="p">(</span><span class="s">'</span><span class="se">\n</span><span class="s">'</span> <span class="o">+</span> <span class="s">"正在调用科大讯飞语音合成API..."</span><span class="p">)</span>
+	<span class="n">req</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">Request</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">body_utf8</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">header</span><span class="p">)</span>
+	<span class="n">response</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
+
+	<span class="c1"># 读取结果
+</span>	<span class="n">response_head</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="p">[</span><span class="s">'Content-Type'</span><span class="p">]</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">response_head</span> <span class="o">==</span> <span class="s">"audio/mpeg"</span><span class="p">):</span>
+		<span class="n">out_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">'/home/pi/chat/answer.mp3'</span><span class="p">,</span> <span class="s">'wb'</span><span class="p">)</span>
+		<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">()</span> <span class="c1"># a `bytes` object
+</span>		<span class="n">out_file</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+		<span class="n">out_file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+		<span class="k">print</span><span class="p">(</span><span class="s">'得到结果，输出文件: /home/pi/chat/answer.mp3'</span><span class="p">)</span>
+	<span class="k">else</span><span class="p">:</span>
+		<span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">))</span>
+
+	<span class="c1"># 播放音频
+</span>	<span class="k">print</span><span class="p">(</span><span class="s">"播放音频中..."</span><span class="p">)</span>
+	<span class="k">print</span><span class="p">(</span><span class="s">"以下均为mplayer的输出内容</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+	<span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">"mplayer -ao alsa:device=hw=1.0 /home/pi/chat/answer.mp3"</span><span class="p">)</span>
+	
+	<span class="k">return</span>
+	
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">'__main__'</span><span class="p">:</span>
+	<span class="n">eg_text_content</span> <span class="o">=</span> <span class="s">"苟利国家生死以，岂因祸福避趋之"</span>
+	<span class="n">speak</span><span class="p">(</span><span class="n">eg_text_content</span><span class="p">)</span>
+</code></pre></div></div><h1 id="整合测试">整合&amp;测试</h1><p>现在，你的项目文件夹中应该有这些python代码文件：</p><p><img src="http://ww1.sinaimg.cn/large/005MY9Xigy1fpqkfcz0erj30be02z3yh.jpg" alt="" /></p><p>接下来我们只需要将他们整合在一起运行。</p><ul><li>文件 <code class="language-plaintext highlighter-rouge">combine.py</code></li></ul><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 这些import进来的模块是同目录下的py文件
+</span><span class="kn">import</span> <span class="nn">rec</span>	<span class="c1"># rec.py负责录制wav音频
+</span><span class="kn">import</span> <span class="nn">speech_api</span>	<span class="c1"># speech_api.py负责wav转文字
+</span><span class="kn">import</span> <span class="nn">turing</span>	<span class="c1"># turing.py负责获得图灵机器人的文字回答
+</span><span class="kn">import</span> <span class="nn">tts</span>	<span class="c1"># tts.py负责读出回答
+</span>
+<span class="n">rec</span><span class="p">.</span><span class="n">rec_fun</span><span class="p">()</span>	<span class="c1"># 录制音频
+</span><span class="n">recognize_result</span> <span class="o">=</span> <span class="n">speech_api</span><span class="p">.</span><span class="n">wav_to_text</span><span class="p">()</span>	<span class="c1"># 识别语音，返回值是字典格式，包含文字结果和信心
+</span><span class="n">turing_answer</span> <span class="o">=</span> <span class="n">turing</span><span class="p">.</span><span class="n">chat</span><span class="p">(</span><span class="n">recognize_result</span><span class="p">)</span>	<span class="c1"># 得到图灵的回答，返回值仍是字典格式
+</span><span class="n">tts</span><span class="p">.</span><span class="n">speak</span><span class="p">(</span><span class="n">turing_answer</span><span class="p">[</span><span class="s">'text'</span><span class="p">])</span>
+</code></pre></div></div><p>如果一切顺利的话，实际运行效果如下： <a href="http://v.youku.com/v_show/id_XMzQ4OTg3MjYzNg==.html">树莓派_语音助手_youku</a></p><h1 id="小结">小结</h1><p>语音助手这边的工作算是告一段落了，结果小结却不知道怎么写了。不管怎么说，很开心最后能得到实际的结果，做的过程中也有一些脑洞想要继续扩展，过段时间应该还会继续！</p><p>做这个项目的过程中，项目外的收获或许比这个项目本身还要多。这段时间从很多博客、论坛得到了数不尽的帮助，国内的、国外的、中文的、英文的、日文的都有，深深地感受到了互联网共享精神的力量，这也是促使我开始写这些文章的原因。那么，最后还是说一句：感谢你阅读文章！</p><div style="margin-top:2em;padding:0 1.5em;border:1px solid #d3d3d3;background-color:#deebf7"><h3>文档信息</h3><ul><li>本文作者：<a href="https://inforest.site" target="_blank">Qinghao Lin</a></li><li>本文链接：<a href="https://inforest.site/2018/03/26/PiDaXing/" target="_blank">https://inforest.site/2018/03/26/PiDaXing/</a></li><li>采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" target="_blank">《署名-非商业性使用-禁止演绎 4.0 国际》许可协议</a></li></ul></div></article><div class="share"></div><div class="comment"><div id="gitalk-container"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css"> <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script> <script> var gitalk = new Gitalk({ id: '/2018/03/26/PiDaXing/', clientID: 'bc91b2b5caf9247e2f34', clientSecret: 'b460496b0de331f4b247de2b662f390893d0545b', repo: 'blog-comments', owner: '0qinghao', admin: ['0qinghao'], labels: ['gitment'], perPage: 50, }); gitalk.render('gitalk-container'); </script></div></div><div class="column one-fourth"><h3>Search</h3><div id="site_search"> <input style="width:96%" type="text" id="search_box" placeholder="Search"></div><ul id="search_results" style="font-size:14px;list-style-type:none;padding-top:10px;padding-left:10px;"></ul><script src="https://inforest.site/assets/js/simple-jekyll-search.min.js"></script> <script type="text/javascript"> SimpleJekyllSearch({ searchInput: document.getElementById('search_box'), resultsContainer: document.getElementById('search_results'), json: 'https://inforest.site/assets/search_data.json', searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>', noResultsText: 'No results found', limit: 30, fuzzy: false, exclude: ['Welcome'] }) </script><h3 class="post-directory-title mobile-hidden">Table of Contents</h3><div id="post-directory-module" class="mobile-hidden"><section class="post-directory"><dl></dl></section></div><script src="https://inforest.site/assets/js/jquery.toc.js"></script></div></div></section><footer class="container"><div class="site-footer" role="contentinfo"><div class="copyright left mobile-block"> © 2020 <span title="Qinghao Lin">Qinghao Lin</span> <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a></div><ul class="site-footer-links right mobile-hidden"><li> <a href="javascript:window.scrollTo(0,0)">TOP</a></li></ul><a href="https://github.com/0qinghao/0qinghao.github.io" target="_blank" aria-label="view source code"> <span class="mega-octicon octicon-mark-github" title="GitHub"></span> </a><ul class="site-footer-links mobile-hidden"><li> <a href="https://inforest.site/" title="首页" target="">首页</a></li><li> <a href="https://inforest.site/categories/" title="分类" target="">分类</a></li><li> <a href="https://inforest.site/archives/" title="归档" target="">归档</a></li><li> <a href="https://inforest.site/open-source/" title="开源" target="">开源</a></li><li> <a href="https://inforest.site/links/" title="链接" target="">链接</a></li><li> <a href="https://inforest.site/about/" title="关于" target="">关于</a></li></ul><script async src="https://inforest.site/assets/vendor/busuanzi/2.3/busuanzi.pure.mini.js"></script><div class="mobile-hidden" style="margin-top:8px"> <span id="busuanzi_container_site_pv" style="display:none"> 本站访问量<span id="busuanzi_value_site_pv"></span>次 </span> <span id="busuanzi_container_site_uv" style="display:none"> / 本站访客数<span id="busuanzi_value_site_uv"></span>人 </span> <span id="busuanzi_container_page_pv" style="display:none"> / 本页访问量<span id="busuanzi_value_page_pv"></span>次 / 统计始于2020-06-16 </span></div></div></footer><div class="tools-wrapper"> <a class="gotop" href="#" title="回到顶部"><span class="octicon octicon-arrow-up"></span></a></div><script src="https://inforest.site/assets/js/geopattern.js"></script> <script> jQuery(document).ready(function ($) { $('.geopattern').each(function () { $(this).geopattern($(this).data('pattern-id')); }); /* hljs.initHighlightingOnLoad(); */ }); </script></body></html>
