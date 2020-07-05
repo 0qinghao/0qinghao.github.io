@@ -6,6 +6,7 @@ spawn git push origin master
 expect {
     "Password*" {send "$githubpw\r\n"}
 }
+expect eof
 
 cd docs
 spawn git push coding master
