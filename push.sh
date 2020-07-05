@@ -1,6 +1,6 @@
 #!/bin/bash
-echo -p 'github password:' githubpw
-echo -p 'coding password:' codingpw
+read -s -p 'github password:' githubpw
+read -s -p 'coding password:' codingpw
 
 bundle exec jekyll build --destination ./docs
 cp ./CNAME ./docs/
