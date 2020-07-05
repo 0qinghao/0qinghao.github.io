@@ -9,9 +9,15 @@ expect {
 expect eof
 
 cd docs
+
 spawn git push coding master
-expect "Password*"
-send "$codingpw\r\n"
+expect {
+    "Password*" {send "$codingpw\r\n"}
+}
+expect eof
+
 spawn git push githubpage master
-expect "Password*"
-send "$githubpw\r\n"
+expect {
+    "Password*" {send "$githubpw\r\n"}
+}
+expect eof
