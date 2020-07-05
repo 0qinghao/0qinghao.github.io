@@ -1,6 +1,6 @@
 #!/usr/bin/expect
 set githubpw [lindex $argv 0]
-set coding [lindex $argv 1]
+set codingpw [lindex $argv 1]
 
 spawn git push origin master
 expect {
