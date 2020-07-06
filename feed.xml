@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-06T19:53:24+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用iStyle格式化Verilog代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用iStyle格式化Verilog代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-06T20:24:16+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用iStyle格式化Verilog代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用iStyle格式化Verilog代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
   &lt;p&gt;原文：&lt;a href=&quot;https://qiita.com/kkumt93/items/70766645c07c298d19c3&quot;&gt;Verilogでコード整形&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -1004,7 +1004,7 @@ set ftp_proxy=socks5://127.0.0.1:1080
 
 &lt;p&gt;测试 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl https://www.facebook.com&lt;/code&gt; 能得到返回结果。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/mw690/005MY9Xigy1fp4azce62uj30hd075t9e.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;取消代理命令：&lt;/p&gt;
 
@@ -1065,7 +1065,7 @@ dnsQueryIPv6 = no
 
 &lt;p&gt;通过 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;service polipo status&lt;/code&gt; 命令，我们可以看到新的监听端口为&lt;strong&gt;8123&lt;/strong&gt;。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fp4g22nbr8j30f905ddhd.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;因此，LX终端启用代理的命令为：&lt;/p&gt;
 
@@ -1083,7 +1083,7 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;测试 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt; 指令：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fp4gl2vchsj30er05a3z3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;小结&quot;&gt;小结&lt;/h1&gt;
 
@@ -1121,9 +1121,9 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;还未拥有Google账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt;是必须的。登录Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1is4jamij307q04rq2v.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1isb2igbj30dg05waa3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;请记住项目名称。任意一个Google Cloud项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
 
@@ -1133,27 +1133,27 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jddf3k3j307n01dglk.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在下拉菜单中选择 [&lt;strong&gt;API Manager&lt;/strong&gt;]&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1je8vadpj308k09gq36.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;点击 [&lt;strong&gt;启用API&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jfksxryj30l503kgls.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-31.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后，在搜索框中输入「Language」。点击 [&lt;strong&gt;Google Cloud Natural Language API&lt;/strong&gt;]。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e7yyteej30y007uq3l.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;点击[&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Natural Language API 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e87nxmij30wn07pgmg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;等待数秒，API成功启用后，将显示如下。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq3e9gcof8j30gi02c748.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;激活cloud-shell&quot;&gt;激活Cloud Shell&lt;/h1&gt;
 
@@ -1161,25 +1161,25 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动Cloud Shell。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k54ijd6j318g01y3yw.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cloud Shell 将在控制台底部的新窗口中打开，并显示命令行提示符。请等待提示符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user@project:~$&lt;/code&gt; 出现。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k6p9s1uj318g0a8dg7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;生成api-key&quot;&gt;生成API Key&lt;/h1&gt;
 
 &lt;p&gt;你将通过使用curl发送一个请求来调用 Natural Language API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1vzcg8gfj308f09edg0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-32.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后，在 [&lt;strong&gt;凭据&lt;/strong&gt;] 选项卡中点击 [&lt;strong&gt;创建凭据&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w1xzz3vj30t80fdt9v.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-37.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在下拉菜单中选择  [&lt;strong&gt;API 密钥&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w36by92j30ds08m74w.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最后，复制生成好的密钥。此密钥将在向导的后半部分中用到。&lt;/p&gt;
 
@@ -1363,7 +1363,7 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;让我们详细看看返回值。从 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;partOfSpeech&lt;/code&gt; 可以看到「Joanne」是一个名词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencyEdge&lt;/code&gt; 包含可用于创建&lt;a href=&quot;https://en.wikipedia.org/wiki/Parse_tree#Dependency-based_parse_trees&quot;&gt;依存句法分析树&lt;/a&gt;（依存構文木/Dependency-based parse trees）的数据。这个语法树是一个图表，用来显示句中各单词之间的关系。上述文段的依存句法分析树如下所示。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq3h4ul57oj30l605ndgg.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-21-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;使用下面的 demo ，你可以在浏览器中创建自己的依存句法分析树。&lt;/p&gt;
@@ -1572,9 +1572,9 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;还未拥有Google账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt;是必须的。登录Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1is4jamij307q04rq2v.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-39.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1isb2igbj30dg05waa3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-52.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;请记住项目名称。任意一个Google Cloud项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
 
@@ -1588,37 +1588,37 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;登录后，你将看到如下界面。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jc2vxn7j30wt0h4taz.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;启用translation-api&quot;&gt;启用Translation API&lt;/h1&gt;
 
 &lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jddf3k3j307n01dglk.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在下拉菜单中选择 [&lt;strong&gt;API Manager&lt;/strong&gt;]&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1je8vadpj308k09gq36.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;点击 [&lt;strong&gt;启用API&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jfksxryj30l503kgls.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后，在搜索框中输入「translate」。点击 [&lt;strong&gt;Google Cloud Translation API&lt;/strong&gt;]。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jge0vz8j30sj07rwey.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;API已经启用的情况下，只会显示 [停用] 按钮。请不要停用API。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jj62ajkj30dx01xwed.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;API还未启用的情况下，点击[&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Translation API 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jkjrp5kj30ku04zglv.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;等待数秒，API成功启用后，将显示如下。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1jlh7mqoj30dx01xwed.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;激活cloud-shell&quot;&gt;激活Cloud Shell&lt;/h1&gt;
 
@@ -1626,25 +1626,25 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动Cloud Shell。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k54ijd6j318g01y3yw.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Cloud Shell 将在控制台底部的新窗口中打开，并显示命令行提示符。请等待提示符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user@project:~$&lt;/code&gt; 出现。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1k6p9s1uj318g0a8dg7.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;生成api-key&quot;&gt;生成API Key&lt;/h1&gt;
 
 &lt;p&gt;你将通过使用curl发送一个请求来调用 Translation API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1vzcg8gfj308f09edg0.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-14-51.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;然后，在 [&lt;strong&gt;凭据&lt;/strong&gt;] 选项卡中点击 [&lt;strong&gt;创建凭据&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w1xzz3vj30t80fdt9v.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-15-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;在下拉菜单中选择  [&lt;strong&gt;API 密钥&lt;/strong&gt;] 。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/005MY9Xigy1fq1w36by92j30ds08m74w.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-15-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;最后，复制生成好的密钥。&lt;/p&gt;
 
