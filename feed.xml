@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-06T20:24:16+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用iStyle格式化Verilog代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用iStyle格式化Verilog代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
-  &lt;p&gt;原文：&lt;a href=&quot;https://qiita.com/kkumt93/items/70766645c07c298d19c3&quot;&gt;Verilogでコード整形&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-07T17:34:57+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用 iStyle 格式化 Verilog 代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用 iStyle 格式化 Verilog 代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
+  &lt;p&gt;原文：&lt;a href=&quot;https://qiita.com/kkumt93/items/70766645c07c298d19c3&quot;&gt;Verilog でコード整形&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;安装&quot;&gt;安装&lt;/h1&gt;
 
-&lt;p&gt;iStyle可以从GitHub上clone、make自行编译出可执行文件，也可以直接下载已编译好的可执行文件。这里都给出来。&lt;/p&gt;
+&lt;p&gt;iStyle 可以从 GitHub 上 clone、make 自行编译出可执行文件，也可以直接下载已编译好的可执行文件。这里都给出来。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Github&lt;/strong&gt;&lt;/p&gt;
 
@@ -95,7 +95,7 @@
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./iStyle -s2 test.v
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;该选项指定缩进时的空格数量，-s2表示每次缩进使用2个空格（如果是-s4则表示每次用4个空格缩进）。&lt;/p&gt;
+&lt;p&gt;该选项指定缩进时的空格数量，-s2 表示每次缩进使用 2 个空格（如果是 - s4 则表示每次用 4 个空格缩进）。&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;always&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clk&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
@@ -109,7 +109,7 @@
 
 &lt;h2 id=&quot;-p&quot;&gt;-p&lt;/h2&gt;
 
-&lt;p&gt;-p选项指定在运算符两侧插入空格。&lt;/p&gt;
+&lt;p&gt;-p 选项指定在运算符两侧插入空格。&lt;/p&gt;
 
 &lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;always&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clk&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
@@ -125,11 +125,11 @@
 
 &lt;h2 id=&quot;-p-1&quot;&gt;-P&lt;/h2&gt;
 
-&lt;p&gt;-P选项指定在运算符和括号周围插入空格。&lt;/p&gt;
+&lt;p&gt;-P 选项指定在运算符和括号周围插入空格。&lt;/p&gt;
 
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;always&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clk&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;reg&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;always&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clk&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rst&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
         &lt;span class=&quot;n&quot;&gt;cnt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;4'h0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
@@ -141,13 +141,13 @@
 
 &lt;h1 id=&quot;小结&quot;&gt;小结&lt;/h1&gt;
 
-&lt;p&gt;虽然文中没有写，&lt;strong&gt;module&lt;/strong&gt;声明的缩进感觉并不是很好。verilog有各种各样的代码风格，因此有一个强大的格式化程序是很有用的。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Verilogでコード整形</summary></entry><entry><title type="html">记一篇日语短文</title><link href="https://inforest.site/2019/06/25/2017-07-jlpt-n2/" rel="alternate" type="text/html" title="记一篇日语短文" /><published>2019-06-25T00:00:00+08:00</published><updated>2019-06-25T00:00:00+08:00</updated><id>https://inforest.site/2019/06/25/2017-07-jlpt-n2</id><content type="html" xml:base="https://inforest.site/2019/06/25/2017-07-jlpt-n2/">&lt;p&gt;今年（2019）7月的JLPT也快要开始了，我最重要的一个…emmm… 朋友，参加这次的N2考试，祝愿拿到好成绩。💪😊&lt;/p&gt;
+&lt;p&gt;虽然文中没有写，&lt;strong&gt;module&lt;/strong&gt; 声明的缩进感觉并不是很好。verilog 有各种各样的代码风格，因此有一个强大的格式化程序是很有用的。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Verilog でコード整形</summary></entry><entry><title type="html">记一篇日语短文</title><link href="https://inforest.site/2019/06/25/2017-07-jlpt-n2/" rel="alternate" type="text/html" title="记一篇日语短文" /><published>2019-06-25T00:00:00+08:00</published><updated>2019-06-25T00:00:00+08:00</updated><id>https://inforest.site/2019/06/25/2017-07-jlpt-n2</id><content type="html" xml:base="https://inforest.site/2019/06/25/2017-07-jlpt-n2/">&lt;p&gt;今年（2019）7 月的 JLPT 也快要开始了，我最重要的一个 emmm… 朋友，参加这次的 N2 考试，祝愿拿到好成绩。💪😊&lt;/p&gt;
 
-&lt;p&gt;两年前，大三的暑假，似乎比今年的夏天更加闷热一些，我第一次参加JLPT，也是N2。糊里糊涂刷了不到半本红蓝宝书，外加几套真题，就这样跑去另一个校区考试了。（考试前一天有点感冒，突然发烧头痛，好在睡了一下午就好了很多，想想自己当时也是心大😂）&lt;/p&gt;
+&lt;p&gt;两年前，大三的暑假，似乎比今年的夏天更加闷热一些，我第一次参加 JLPT，也是 N2。糊里糊涂刷了不到半本红蓝宝书，外加几套真题，就这样跑去另一个校区考试了。（考试前一天有点感冒，突然发烧头痛，好在睡了一下午就好了很多，想想自己当时也是心大😂）&lt;/p&gt;
 
-&lt;p&gt;那次的N2似乎比往年真题简单一些，接近3小时的答题时间过得还算舒适，本科3年各种突击应付式的考试都快让我忘记了这种——沉浸在试题里的紧张、兴奋和满足感。&lt;/p&gt;
+&lt;p&gt;那次的 N2 似乎比往年真题简单一些，接近 3 小时的答题时间过得还算舒适，本科 3 年各种突击应付式的考试都快让我忘记了这种——沉浸在试题里的紧张、兴奋和满足感。&lt;/p&gt;
 
-&lt;p&gt;那年的最后一篇长阅读（除去海报内容理解那篇）答得很开心，难度适中，文笔优美（按我的审美来说😂）。尽管是篇鸡汤文，但也强烈地让我想去拜读一下原作，可惜当时没能把出处记下来，也没办法Google到。最近不知为何又突然想起这篇文章，遂找出了当年的真题卷重温一遍，顺手在这做一下记录。&lt;/p&gt;
+&lt;p&gt;那年的最后一篇长阅读（除去海报内容理解那篇）答得很开心，难度适中，文笔优美（按我的审美来说😂）。尽管是篇鸡汤文，但也强烈地让我想去拜读一下原作，可惜当时没能把出处记下来，也没办法 Google 到。最近不知为何又突然想起这篇文章，遂找出了当年的真题卷重温一遍，顺手在这做一下记录。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -167,92 +167,92 @@
 
 &lt;p&gt;​	少し脇道に入ってしまったのなら、その脇道を歩いてみればいい。無理をして元の道に戻ろうとしても、余計に迷うだけだ。脇道を歩いているうちに、いつの間にか元の道に戻ることもあるだろうし、また別の大通りに出会うこともあるだろう。人生には数え切れないほどの道があることを知っておいたほうがいい。今いる場所さえしっかりと認識できていれば、人はどんな道だって歩いていくことができるものだ。&lt;/p&gt;
 
-&lt;p&gt;（立松平和『人生の現在地—まだまだ迷っているぞ、私は。』による）&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">今年（2019）7月的JLPT也快要开始了，我最重要的一个…emmm… 朋友，参加这次的N2考试，祝愿拿到好成绩。💪😊</summary></entry><entry><title type="html">【日更】今天的日语单词</title><link href="https://inforest.site/2019/02/12/one-japanese-word-a-day/" rel="alternate" type="text/html" title="【日更】今天的日语单词" /><published>2019-02-12T00:00:00+08:00</published><updated>2019-02-12T00:00:00+08:00</updated><id>https://inforest.site/2019/02/12/one-japanese-word-a-day</id><content type="html" xml:base="https://inforest.site/2019/02/12/one-japanese-word-a-day/">&lt;p&gt;每天(雾)一个日语单词😂&lt;/p&gt;
+&lt;p&gt;（立松平和『人生の現在地 — まだまだ迷っているぞ、私は。』による）&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">今年（2019）7 月的 JLPT 也快要开始了，我最重要的一个 emmm… 朋友，参加这次的 N2 考试，祝愿拿到好成绩。💪😊</summary></entry><entry><title type="html">【日更】今天的日语单词</title><link href="https://inforest.site/2019/02/12/one-japanese-word-a-day/" rel="alternate" type="text/html" title="【日更】今天的日语单词" /><published>2019-02-12T00:00:00+08:00</published><updated>2019-02-12T00:00:00+08:00</updated><id>https://inforest.site/2019/02/12/one-japanese-word-a-day</id><content type="html" xml:base="https://inforest.site/2019/02/12/one-japanese-word-a-day/">&lt;p&gt;每天 (雾) 一个日语单词😂&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月12日&quot;&gt;2019年2月12日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-12-日&quot;&gt;2019 年 2 月 12 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;おとしだ【お年玉】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;压岁钱；新年礼物.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;お(年玉:としだま)をもらう。／得到压岁钱。&lt;/li&gt;
-  &lt;li&gt;お(年玉:としだま)をあげる。／给压岁钱。&lt;/li&gt;
-  &lt;li&gt;お(年:とし)(玉:だま)(付:つ)き(年:ねん)(賀:が)はがき。／带抽奖的贺年卡。&lt;/li&gt;
+  &lt;li&gt;お (年玉:としだま) をもらう。／得到压岁钱。&lt;/li&gt;
+  &lt;li&gt;お (年玉:としだま) をあげる。／给压岁钱。&lt;/li&gt;
+  &lt;li&gt;お (年:とし)(玉:だま)(付:つ) き(年:ねん)(賀:が)はがき。／带抽奖的贺年卡。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;【(説明:せつめい)】(新年:しんねん)の(祝:いわ)いに(子供:こども)など(目下:めした)のものに(贈:おく)るお(金:かね)やプレゼントのこと。(親:おや)や(祖父母:そふぼ)、(親戚:しんせき)の(叔父:おじ)・(叔母:おば)などからもらうお(年玉:としだま)を、(子供:こども)たちは(非常:ひじょう)に(楽:たの)しみにしている。&lt;/p&gt;
+&lt;p&gt;【(説明:せつめい)】(新年:しんねん)の (祝:いわ) いに (子供:こども) など (目下:めした) のものに (贈:おく) るお (金:かね) やプレゼントのこと。(親:おや)や (祖父母:そふぼ)、(親戚:しんせき) の(叔父:おじ)・ (叔母:おば) などからもらうお (年玉:としだま) を、(子供:こども)たちは (非常:ひじょう) に(楽:たの)しみにしている。&lt;/p&gt;
 
 &lt;p&gt;【(中訳:ちゅうやく)】为祝贺新年，由长辈给孩子、晚辈的钱或者礼物。临近新年时，孩子们都盼望着能从父母、祖父母和其他长辈亲戚那里得到压岁钱。&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月13日&quot;&gt;2019年2月13日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-13-日&quot;&gt;2019 年 2 月 13 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;かぜ【風邪】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;感冒；伤风；流感.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(風邪:かぜ)を(引:ひ)く。／患感冒；伤风；着凉。&lt;/li&gt;
-  &lt;li&gt;(風邪:かぜ)が(治:なお)る。／感冒好了。&lt;/li&gt;
-  &lt;li&gt;(風邪:かぜ)がなかなか(抜:ぬ)けない。／感冒老也不好。&lt;/li&gt;
-  &lt;li&gt;(風邪:かぜ)で(会社:かいしゃ)を(休:やす)む。／因感冒不去公司上班。&lt;/li&gt;
-  &lt;li&gt;(風邪:かぜ)がはやっている。／感冒很流行。&lt;/li&gt;
-  &lt;li&gt;(弟:おとうと)の(風邪:かぜ)がうつったようだ。／弟弟的感冒好像传染我了。&lt;/li&gt;
+  &lt;li&gt;(風邪:かぜ)を (引:ひ) く。／患感冒；伤风；着凉。&lt;/li&gt;
+  &lt;li&gt;(風邪:かぜ)が (治:なお) る。／感冒好了。&lt;/li&gt;
+  &lt;li&gt;(風邪:かぜ)がなかなか (抜:ぬ) けない。／感冒老也不好。&lt;/li&gt;
+  &lt;li&gt;(風邪:かぜ)で (会社:かいしゃ) を(休:やす)む。／因感冒不去公司上班。&lt;/li&gt;
+  &lt;li&gt;(風邪:かぜ) がはやっている。／感冒很流行。&lt;/li&gt;
+  &lt;li&gt;(弟:おとうと)の (風邪:かぜ) がうつったようだ。／弟弟的感冒好像传染我了。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;【(慣用句:かんようく)】&lt;/p&gt;
 
-&lt;p&gt;(風邪:かぜ)は(万病:まんびょう)の(元:もと)。／伤风感冒是万病之源。&lt;/p&gt;
+&lt;p&gt;(風邪:かぜ)は (万病:まんびょう) の(元:もと)。／伤风感冒是万病之源。&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月14日&quot;&gt;2019年2月14日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-14-日&quot;&gt;2019 年 2 月 14 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;じゃぐち【蛇口】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;水龙头.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(蛇口:じゃぐち)を(締:し)める。／关上水龙头。&lt;/li&gt;
-  &lt;li&gt;(蛇口:じゃぐち)をあける。／打开水龙头。&lt;/li&gt;
+  &lt;li&gt;(蛇口:じゃぐち)を (締:し) める。／关上水龙头。&lt;/li&gt;
+  &lt;li&gt;(蛇口:じゃぐち) をあける。／打开水龙头。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;【大约10年前的N1真题，选择汉字的读法】&lt;/p&gt;
+&lt;p&gt;【大约 10 年前的 N1 真题，选择汉字的读法】&lt;/p&gt;
 
-&lt;p&gt;蛇口:ら(直接水:ちょくせつみず)を(飲:の)む。&lt;/p&gt;
+&lt;p&gt;蛇口:ら (直接水:ちょくせつみず) を(飲:の)む。&lt;/p&gt;
 
 &lt;p&gt;①じゃぐち    ②びぐち    ③びこう    ④じゃこう&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月15日&quot;&gt;2019年2月15日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-15-日&quot;&gt;2019 年 2 月 15 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;ナシ【梨】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;梨；梨子；梨树.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;このナシは(甘:あま)くて(美味:おい)しい。／这种梨味道香甜。&lt;/li&gt;
-  &lt;li&gt;(鳥取産:とっとりさん)の(ナシ:なし)。／鸟取县出产的梨子。&lt;/li&gt;
+  &lt;li&gt;このナシは (甘:あま) くて (美味:おい) しい。／这种梨味道香甜。&lt;/li&gt;
+  &lt;li&gt;(鳥取産:とっとりさん) の (ナシ:なし)。／鸟取县出产的梨子。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;（(鳥取県:とっとりけん)：日本本州西部的一个县，是日本所有(都道府県:とどうふけん)中人口最少的一个，盛产梨。）&lt;/p&gt;
+&lt;p&gt;（(鳥取県:とっとりけん)：日本本州西部的一个县，是日本所有 (都道府県:とどうふけん) 中人口最少的一个，盛产梨。）&lt;/p&gt;
 
 &lt;p&gt;【(慣用句:かんようく)】&lt;/p&gt;
 
 &lt;p&gt;ナシのつぶて。／杳无音信；石沉大海。&lt;/p&gt;
 
-&lt;p&gt;『(梨:なし)』和『(無:な)し』读音相同；&lt;/p&gt;
+&lt;p&gt;『(梨:なし)』和『(無:な) し』读音相同；&lt;/p&gt;
 
 &lt;p&gt;(礫:つぶて)：小石子；&lt;/p&gt;
 
-&lt;p&gt;『ナシのつぶて』字面意思是“扔出去的小石子（找不回来）”，玩了个同音的文字游戏，写成『(梨:なし)の(礫:つぶて)』。&lt;/p&gt;
+&lt;p&gt;『ナシのつぶて』字面意思是 “扔出去的小石子（找不回来）”，玩了个同音的文字游戏，写成『(梨:なし) の(礫:つぶて)』。&lt;/p&gt;
 
-&lt;p&gt;【例】(何遍:なんべん)か(催促:さいそく)したが、(梨:なし)の(礫:つぶて)だ。／我一再催促，但都杳无音信。&lt;/p&gt;
+&lt;p&gt;【例】(何遍:なんべん)か (催促:さいそく) したが、(梨:なし)の (礫:つぶて) だ。／我一再催促，但都杳无音信。&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月16日&quot;&gt;2019年2月16日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-16-日&quot;&gt;2019 年 2 月 16 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;けんきゅうせい【研究生】&lt;/strong&gt;&lt;/p&gt;
 
@@ -260,46 +260,46 @@
 
 &lt;p&gt;【説明】&lt;/p&gt;
 
-&lt;p&gt;(留学生:りゅうがくせい)の(場合:ばあい)、(最初:さいしょ)の(半年:はんとし)から(一年程度:いちねんていど)を(研究生:けんきゅうせい)として(指導教員:しどうきょういん)の(指導:しどう)の(下:もと)で(研究:けんきゅう)を(行:おこな)ったり、(日本語:にほんご)を(勉強:べんきょう)をしたりして(過:す)ごし、(大学院:だいがくいん)への(入学:にゅうがく)の(準備:じゅんび)をするという(事例:じれい)がよく(見:み)られます。／留学生最初的半年到一年时间是在指导员的指导下作为(研究生:けんきゅうせい)，一边进行研究一边学习日语度过的，以准备研究生院的入学考试。&lt;/p&gt;
+&lt;p&gt;(留学生:りゅうがくせい)の (場合:ばあい)、(最初:さいしょ) の(半年:はんとし)から (一年程度:いちねんていど) を(研究生:けんきゅうせい)として (指導教員:しどうきょういん) の(指導:しどう)の (下:もと) で(研究:けんきゅう)を (行:おこな) ったり、(日本語:にほんご)を (勉強:べんきょう) をしたりして (過:す) ごし、(大学院:だいがくいん)への (入学:にゅうがく) の(準備:じゅんび)をするという (事例:じれい) がよく (見:み) られます。／留学生最初的半年到一年时间是在指导员的指导下作为(研究生:けんきゅうせい)，一边进行研究一边学习日语度过的，以准备研究生院的入学考试。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;いんせい【院生】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;研究生.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(教授:きょうじゅ)の(指導:しどう)の(下:もと)で(院生:いんせい)が(論文:ろんぶん)を(執筆:しっぴつ)している。／在教授的指导下研究生执笔写论文。&lt;/li&gt;
+  &lt;li&gt;(教授:きょうじゅ)の (指導:しどう) の(下:もと)で (院生:いんせい) が(論文:ろんぶん)を (執筆:しっぴつ) している。／在教授的指导下研究生执笔写论文。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;しゅうし【修士】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;硕士.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(大学院:だいがくいん)の(修士課程:しゅうしかてい)を(終:お)えて(博士:はかせ)へ(進:すす)む。／读完硕士继续读博士。&lt;/li&gt;
+  &lt;li&gt;(大学院:だいがくいん)の (修士課程:しゅうしかてい) を(終:お)えて (博士:はかせ) へ(進:すす)む。／读完硕士继续读博士。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月17日&quot;&gt;2019年2月17日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-17-日&quot;&gt;2019 年 2 月 17 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;ごい【語彙】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;词汇.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(語彙:ごい)が(豊:ゆた)かだ〔(乏:とぼ)しい〕。／词汇很丰富〔贫乏〕。&lt;/li&gt;
+  &lt;li&gt;(語彙:ごい)が (豊:ゆた) かだ〔(乏:とぼ)しい〕。／词汇很丰富〔贫乏〕。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;ぶんぽう【文法】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;语法.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(英文法:えいぶんぽう)の(授業:じゅぎょう)をサボった。／旷了英语语法课。&lt;/li&gt;
-  &lt;li&gt;(彼:かれ)の(書:か)く(英語:えいご)は(文法:ぶんぽう)がでたらめだ。／他写的英语，语法乱七八糟。&lt;/li&gt;
+  &lt;li&gt;(英文法:えいぶんぽう)の (授業:じゅぎょう) をサボった。／旷了英语语法课。&lt;/li&gt;
+  &lt;li&gt;(彼:かれ)の (書:か) く(英語:えいご)は (文法:ぶんぽう) がでたらめだ。／他写的英语，语法乱七八糟。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;どっかい【読解】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;阅读理解.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(多:おお)くの(本:ほん)を(読:よ)み、(読解力:どっかいりょく)をつける。／多读书，从而提高阅读理解能力。&lt;/li&gt;
+  &lt;li&gt;(多:おお)くの (本:ほん) を(読:よ)み、(読解力:どっかいりょく)をつける。／多读书，从而提高阅读理解能力。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;ちょうかい【聴解】&lt;/strong&gt;&lt;/p&gt;
@@ -308,101 +308,101 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月18日&quot;&gt;2019年2月18日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-18-日&quot;&gt;2019 年 2 月 18 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;なさけ【情け】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;慈悲；同情；人情.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(情:なさ)けのある(人:ひと)。／有同情心的人；乐善好施的人。&lt;/li&gt;
-  &lt;li&gt;(人:ひと)の(情:なさ)けが(身:み)にしみる。／感受到了人情温暖。&lt;/li&gt;
-  &lt;li&gt;あいつに(情:なさ)けをかけてはいけない。／对那个人可不能怜悯。&lt;/li&gt;
+  &lt;li&gt;(情:なさ) けのある (人:ひと)。／有同情心的人；乐善好施的人。&lt;/li&gt;
+  &lt;li&gt;(人:ひと)の (情:なさ) けが (身:み) にしみる。／感受到了人情温暖。&lt;/li&gt;
+  &lt;li&gt;あいつに (情:なさ) けをかけてはいけない。／对那个人可不能怜悯。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;【(慣用句:かんようく)】&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(悪女:あくじょ)の(深情:ふかなさ)け。／丑女多情〔美女薄情〕；令人为难的好意。&lt;/li&gt;
-  &lt;li&gt;(旅:たび)は(道連:みちづ)れ､(世:よ)は(情:なさ)け。／行要好伴，住要好邻；行旅要伴侣，处世要互助。&lt;/li&gt;
+  &lt;li&gt;(悪女:あくじょ)の (深情:ふかなさ) け。／丑女多情〔美女薄情〕；令人为难的好意。&lt;/li&gt;
+  &lt;li&gt;(旅:たび)は (道連:みちづ) れ､(世:よ)は (情:なさ) け。／行要好伴，住要好邻；行旅要伴侣，处世要互助。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月19日&quot;&gt;2019年2月19日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-19-日&quot;&gt;2019 年 2 月 19 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;うしなう【失う】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;失去；错过；迷失.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(自信:じしん)を(失:うしな)う。／失去信心。&lt;/li&gt;
-  &lt;li&gt;バランスを(失:うしな)う。／失去平衡。&lt;/li&gt;
-  &lt;li&gt;(最後:さいご)のチャンスを(失:うしな)った。／错过了最后一次机会。&lt;/li&gt;
-  &lt;li&gt;(山:やま)の(中:なか)で(方角:ほうがく)を(失:うしな)った。／在山里迷失了方向。&lt;/li&gt;
-  &lt;li&gt;(毎:まい)(年:とし)(交:こう)(通:つう)(事:じ)(故:こ)で(命:いのち)を(失:うしな)う(人:ひと)は(一万人:いちまんにん)を(超:こ)える。／每年因交通事故丧命的人超过一万人。&lt;/li&gt;
-  &lt;li&gt;(色:いろ)を(失:うしな)う。／〔受到惊吓而〕失色。&lt;/li&gt;
-  &lt;li&gt;(客:きゃく)(車:しゃ)が(暴:ぼう)(走:そう)し､(誰:だれ)もが(色:いろ)を(失:うしな)った。／客车失控了，每个人都大惊失色。&lt;/li&gt;
+  &lt;li&gt;(自信:じしん)を (失:うしな) う。／失去信心。&lt;/li&gt;
+  &lt;li&gt;バランスを (失:うしな) う。／失去平衡。&lt;/li&gt;
+  &lt;li&gt;(最後:さいご)のチャンスを (失:うしな) った。／错过了最后一次机会。&lt;/li&gt;
+  &lt;li&gt;(山:やま)の (中:なか) で(方角:ほうがく)を (失:うしな) った。／在山里迷失了方向。&lt;/li&gt;
+  &lt;li&gt;(毎:まい)(年:とし)(交:こう)(通:つう)(事:じ)(故:こ)で (命:いのち) を(失:うしな)う (人:ひと) は(一万人:いちまんにん)を (超:こ) える。／每年因交通事故丧命的人超过一万人。&lt;/li&gt;
+  &lt;li&gt;(色:いろ)を (失:うしな) う。／〔受到惊吓而〕失色。&lt;/li&gt;
+  &lt;li&gt;(客:きゃく)(車:しゃ)が (暴:ぼう)(走:そう) し､(誰:だれ)もが (色:いろ) を(失:うしな)った。／客车失控了，每个人都大惊失色。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月20日&quot;&gt;2019年2月20日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-20-日&quot;&gt;2019 年 2 月 20 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;やくそく【約束】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;约定；协定；说好.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(約:やく)(束:そく)を(守:まも)る。／守约。&lt;/li&gt;
-  &lt;li&gt;(約:やく)(束:そく)を(破:やぶ)る。／失约。&lt;/li&gt;
-  &lt;li&gt;(口:くち)(約:やく)(束:そく)では(危:あぶ)ない､(契:けい)(約:やく)(書:しょ)を(交:か)わしたほうがいい。／口头承诺是靠不住的，还是签个合同比较好。&lt;/li&gt;
-  &lt;li&gt;(約:やく)(束:そく)した(以:い)(上:じょう)､(必:かなら)ず(来:く)るだろう。／既然约好了，肯定会来。&lt;/li&gt;
-  &lt;li&gt;(無:む)(言:ごん)の(約:やく)(束:そく)を(取:と)り(交:か)わす。／（无形之中）达成了默契。&lt;/li&gt;
+  &lt;li&gt;(約:やく)(束:そく)を (守:まも) る。／守约。&lt;/li&gt;
+  &lt;li&gt;(約:やく)(束:そく)を (破:やぶ) る。／失约。&lt;/li&gt;
+  &lt;li&gt;(口:くち)(約:やく)(束:そく)では (危:あぶ) ない､(契:けい)(約:やく)(書:しょ)を (交:か) わしたほうがいい。／口头承诺是靠不住的，还是签个合同比较好。&lt;/li&gt;
+  &lt;li&gt;(約:やく)(束:そく)した (以:い)(上:じょう)､(必:かなら) ず(来:く)るだろう。／既然约好了，肯定会来。&lt;/li&gt;
+  &lt;li&gt;(無:む)(言:ごん)の (約:やく)(束:そく) を(取:と)り (交:か) わす。／（无形之中）达成了默契。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://music.163.com/#/song?id=27552690&quot;&gt;まどろみの約束&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月21日&quot;&gt;2019年2月21日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-21-日&quot;&gt;2019 年 2 月 21 日&lt;/h5&gt;
 
 &lt;p&gt;凪【なぎ】&lt;/p&gt;
 
 &lt;p&gt;风平浪静〔体言（也就是名词）〕.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;(朝:あさ)(凪:なぎ)。／早晨海上风平浪静。&lt;/li&gt;
-  &lt;li&gt;(凪:なぎ)になってから(船:ふね)を(出:だ)す。／等到风平浪静后再出航。&lt;/li&gt;
+  &lt;li&gt;(凪:なぎ)になってから (船:ふね) を(出:だ)す。／等到风平浪静后再出航。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;凪ぐ【なぐ】&lt;/p&gt;
 
-&lt;p&gt;风平浪静；(风)停〔用言（也就是动词）〕.&lt;/p&gt;
+&lt;p&gt;风平浪静；(风) 停〔用言（也就是动词）〕.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(海:うみ)が(凪:な)いできた。／大海平静了。&lt;/li&gt;
-  &lt;li&gt;(昼:ひる)ごろになると(風:かぜ)が(急:きゅう)にないだ。／到了午间风突然平息了。&lt;/li&gt;
+  &lt;li&gt;(海:うみ)が (凪:な) いできた。／大海平静了。&lt;/li&gt;
+  &lt;li&gt;(昼:ひる)ごろになると (風:かぜ) が(急:きゅう)にないだ。／到了午间风突然平息了。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月23日&quot;&gt;2019年2月23日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-23-日&quot;&gt;2019 年 2 月 23 日&lt;/h5&gt;
 
 &lt;p&gt;きのこ ･ キノコ&lt;/p&gt;
 
-&lt;p&gt;蘑菇（一般不写汉字，汉字写出来是 (木:き)の(子:こ) ･ (茸:きのこ) ）.&lt;/p&gt;
+&lt;p&gt;蘑菇（一般不写汉字，汉字写出来是 (木:き) の (子:こ) ･ (茸:きのこ) ）.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;キノコ(狩:が)りに(行:い)こう。／去采蘑菇吧。&lt;/li&gt;
-  &lt;li&gt;きのこが(生:は)えた。／长蘑菇了。&lt;/li&gt;
-  &lt;li&gt;きのこ(雲:ぐも)。／蘑菇云。&lt;/li&gt;
+  &lt;li&gt;キノコ (狩:が) りに (行:い) こう。／去采蘑菇吧。&lt;/li&gt;
+  &lt;li&gt;きのこが (生:は) えた。／长蘑菇了。&lt;/li&gt;
+  &lt;li&gt;きのこ (雲:ぐも)。／蘑菇云。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月25日&quot;&gt;2019年2月25日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-25-日&quot;&gt;2019 年 2 月 25 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;さくらぜんせん【桜前線】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;樱花（由南向北）开放的前锋.&lt;/p&gt;
 
-&lt;p&gt;【(説明:せつめい)】(気象庁:きしょうちょう)による(桜:さくら)の(開花予想図:かいかよそうず)に(見:み)られるもの。ソメイヨシノを(対象:たいしょう)としており、(同:おな)じ(日:ひ)に(開花:かいか)する(地点:ちてん)を(線:せん)で(結:むす)ぶ。(日本:にほん)は(南北:なんぼく)に(長:なが)いため、(三月末:さんがつすえ)から(九州:きゅうしゅう)より(北上:ほくじょう)を(始:はじ)め、(五月初:ごがつはじ)めに(北海道:ほっかいどう)に(至:いた)る。(開花予想:かいかよそう)は(花見:はなみ)や(旅行:りょこう)をする(人:ひと)たちに(特:とく)に(注目:ちゅうもく)される。&lt;/p&gt;
+&lt;p&gt;【(説明:せつめい)】(気象庁:きしょうちょう)による (桜:さくら) の(開花予想図:かいかよそうず)に (見:み) られるもの。ソメイヨシノを (対象:たいしょう) としており、(同:おな)じ (日:ひ) に(開花:かいか)する (地点:ちてん) を(線:せん)で (結:むす) ぶ。(日本:にほん)は (南北:なんぼく) に(長:なが)いため、(三月末:さんがつすえ)から (九州:きゅうしゅう) より (北上:ほくじょう) を(始:はじ)め、(五月初:ごがつはじ)めに (北海道:ほっかいどう) に(至:いた)る。(開花予想:かいかよそう)は (花見:はなみ) や(旅行:りょこう)をする (人:ひと) たちに (特:とく) に(注目:ちゅうもく)される。&lt;/p&gt;
 
-&lt;p&gt;【(中:ちゅう)(訳:やく)】这个词出自气象厅绘制的樱花开花时间预报图。开花预报以“染井吉野樱花”为代表，在地图上把同时开花的地点用线条连接起来，从而形成由南向北推移的“樱花前锋”。日本国土南北跨度较大，每年三月底，樱花前锋从九州开始北上，一直要到五月初才能到达北海道。开花预报尤其受到赏花人和旅行者的关注。&lt;/p&gt;
+&lt;p&gt;【(中:ちゅう)(訳:やく)】这个词出自气象厅绘制的樱花开花时间预报图。开花预报以 “染井吉野樱花” 为代表，在地图上把同时开花的地点用线条连接起来，从而形成由南向北推移的“樱花前锋”。日本国土南北跨度较大，每年三月底，樱花前锋从九州开始北上，一直要到五月初才能到达北海道。开花预报尤其受到赏花人和旅行者的关注。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ばいうぜんせん【梅雨前線】&lt;/strong&gt;&lt;/p&gt;
 
@@ -418,310 +418,310 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月27日&quot;&gt;2019年2月27日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-27-日&quot;&gt;2019 年 2 月 27 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;いなずま【稲妻】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;闪电.&lt;/p&gt;
 
-&lt;p&gt;（(古代:こだい)、(稲:いね)の(結実時期:けつじつじき)に(雷:かみなり)が(多:おお)いことから、(雷光:らいこう)が(稲:いね)を(実:みの)らせるという(信仰:しんこう)があった。／在古代，因为稻子结果的时期经常打雷，所以人们认为雷光与稻子交配使其结果，故称闪电为(稲:いな)(妻:ずま)。）&lt;/p&gt;
+&lt;p&gt;（(古代:こだい)、(稲:いね)の (結実時期:けつじつじき) に(雷:かみなり)が (多:おお) いことから、(雷光:らいこう)が (稲:いね) を(実:みの)らせるという (信仰:しんこう) があった。／在古代，因为稻子结果的时期经常打雷，所以人们认为雷光与稻子交配使其结果，故称闪电为(稲:いな)(妻:ずま)。）&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(稲妻:いなずま)が(走:はし)り、(雷鳴:らいめい)がとどろいた。／电光闪闪，雷声隆隆。&lt;/li&gt;
-  &lt;li&gt;(稲妻:いなずま)のような(速:はや)さで(身:み)を(隠:かく)した。／飞快地躲了起来。&lt;/li&gt;
+  &lt;li&gt;(稲妻:いなずま)が (走:はし) り、(雷鳴:らいめい)がとどろいた。／电光闪闪，雷声隆隆。&lt;/li&gt;
+  &lt;li&gt;(稲妻:いなずま)のような (速:はや) さで (身:み) を(隠:かく)した。／飞快地躲了起来。&lt;/li&gt;
   &lt;li&gt;(稲妻形:いなずまかたち)。／闪电形；之字形。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年2月28日&quot;&gt;2019年2月28日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-2-月-28-日&quot;&gt;2019 年 2 月 28 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;みのる【実る】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;结果；有成果.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(今:ことし)年はイネがよく(実:みの)った。／今年稻子收成好。&lt;/li&gt;
-  &lt;li&gt;ブドウがたわわに(実:みの)っている。／串串葡萄压弯了树枝。&lt;/li&gt;
-  &lt;li&gt;(長:なが)(年:ねん)の(努:ど)(力:りょく)がやっと(実:みの)った。／多年的努力终于有了成果。&lt;/li&gt;
-  &lt;li&gt;(実:みの)るほど(頭:あたま)の(下:さ)がる(稲:いな)(穂:ほ)かな。／粒满穗垂，知博益谦；越是成熟越谦虚。&lt;/li&gt;
+  &lt;li&gt;(今:ことし)年はイネがよく (実:みの) った。／今年稻子收成好。&lt;/li&gt;
+  &lt;li&gt;ブドウがたわわに (実:みの) っている。／串串葡萄压弯了树枝。&lt;/li&gt;
+  &lt;li&gt;(長:なが)(年:ねん)の (努:ど)(力:りょく) がやっと (実:みの) った。／多年的努力终于有了成果。&lt;/li&gt;
+  &lt;li&gt;(実:みの)るほど (頭:あたま) の(下:さ)がる (稲:いな)(穂:ほ) かな。／粒满穗垂，知博益谦；越是成熟越谦虚。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月2日&quot;&gt;2019年3月2日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-2-日&quot;&gt;2019 年 3 月 2 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;きしべ【岸辺】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;岸边.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(岸:きし)(辺:べ)を(散:さん)(策:さく)する。／在岸边散步。&lt;/li&gt;
-  &lt;li&gt;(岸:きし)(辺:べ)にボートを(着:つ)ける。／把小船靠在岸边。&lt;/li&gt;
-  &lt;li&gt;(波:なみ)が(次:つぎ)から(次:つぎ)へと(岸:きし)(辺:べ)に(打:う)ち(返:かえ)す。／波浪一波接一波地冲向岸边。&lt;/li&gt;
+  &lt;li&gt;(岸:きし)(辺:べ)を (散:さん)(策:さく) する。／在岸边散步。&lt;/li&gt;
+  &lt;li&gt;(岸:きし)(辺:べ)にボートを (着:つ) ける。／把小船靠在岸边。&lt;/li&gt;
+  &lt;li&gt;(波:なみ)が (次:つぎ) から (次:つぎ) へと (岸:きし)(辺:べ) に(打:う)ち (返:かえ) す。／波浪一波接一波地冲向岸边。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月4日&quot;&gt;2019年3月4日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-4-日&quot;&gt;2019 年 3 月 4 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;やきもち【焼き餅】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;烤年糕；吃醋；嫉妒.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;つまらないことにもすぐやきもちを(焼:や)く。／一点点小事也马上忌妒起来。&lt;/li&gt;
-  &lt;li&gt;やたらにやきもちを(焼:や)く。／爱吃醋。&lt;/li&gt;
-  &lt;li&gt;(妻:つま)の(男:おとこ)(友:とも)(達:だち)にやきもちを(焼:や)く。／嫉妒妻子的男性朋友。&lt;/li&gt;
-  &lt;li&gt;(母:はは)(親:おや)をとられた(気:き)がして(兄:あに)は(赤:あか)ん(坊:ぼう)の(弟:おとうと)にやきもちを(焼:や)いた。／哥哥觉得母亲被抢走了，嫉妒起还在襁褓中的弟弟来。&lt;/li&gt;
+  &lt;li&gt;つまらないことにもすぐやきもちを (焼:や) く。／一点点小事也马上忌妒起来。&lt;/li&gt;
+  &lt;li&gt;やたらにやきもちを (焼:や) く。／爱吃醋。&lt;/li&gt;
+  &lt;li&gt;(妻:つま)の (男:おとこ)(友:とも)(達:だち) にやきもちを (焼:や) く。／嫉妒妻子的男性朋友。&lt;/li&gt;
+  &lt;li&gt;(母:はは)(親:おや)をとられた (気:き) がして (兄:あに) は(赤:あか)ん (坊:ぼう) の(弟:おとうと)にやきもちを (焼:や) いた。／哥哥觉得母亲被抢走了，嫉妒起还在襁褓中的弟弟来。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月4日-1&quot;&gt;2019年3月4日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-4-日-1&quot;&gt;2019 年 3 月 4 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;とうとい【尊い】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;宝贵；高贵.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(尊:とうと)い(経験:けいけん)。／宝贵的经验。&lt;/li&gt;
-  &lt;li&gt;(地震:じしん)は(多:おお)くの(尊:とうと)い(人命:じんめい)を(奪:うば)った。／地震夺去了许多宝贵的生命。&lt;/li&gt;
-  &lt;li&gt;(病気:びょうき)になって(健康:けんこう)の(尊:とうと)さを(知:し)った。／得病以后才知道健康的宝贵。&lt;/li&gt;
-  &lt;li&gt;(尊:とうと)い(身分:みぶん)。／高贵的身份。&lt;/li&gt;
+  &lt;li&gt;(尊:とうと) い (経験:けいけん)。／宝贵的经验。&lt;/li&gt;
+  &lt;li&gt;(地震:じしん)は (多:おお) くの (尊:とうと) い(人命:じんめい)を (奪:うば) った。／地震夺去了许多宝贵的生命。&lt;/li&gt;
+  &lt;li&gt;(病気:びょうき)になって (健康:けんこう) の(尊:とうと)さを (知:し) った。／得病以后才知道健康的宝贵。&lt;/li&gt;
+  &lt;li&gt;(尊:とうと) い (身分:みぶん)。／高贵的身份。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月8日&quot;&gt;2019年3月8日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-8-日&quot;&gt;2019 年 3 月 8 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;しかる【叱る】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;责备；训斥；忠告.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(先生:せんせい)に(叱:しか)られる。／被老师批评了。&lt;/li&gt;
-  &lt;li&gt;(私:わたし)は(子供:こども)の(時:とき)いたずらっ(子:こ)だったので、よく(叱:しか)られた。／我小时候因为是个小淘气，所以时常挨骂。&lt;/li&gt;
-  &lt;li&gt;(彼:かれ)は(部下:ぶか)を(叱:しか)るとき、(少:すこ)しも(容赦:ようしゃ)しない。／他批评起部下来毫不留情。&lt;/li&gt;
-  &lt;li&gt;(何:なん)べんも(叱:しか)ったのに、(彼:かれ)はどうしても(改:あらた)めようとしない。／说过他好几次，他就是不改。&lt;/li&gt;
+  &lt;li&gt;(先生:せんせい)に (叱:しか) られる。／被老师批评了。&lt;/li&gt;
+  &lt;li&gt;(私:わたし)は (子供:こども) の(時:とき)いたずらっ (子:こ) だったので、よく (叱:しか) られた。／我小时候因为是个小淘气，所以时常挨骂。&lt;/li&gt;
+  &lt;li&gt;(彼:かれ)は (部下:ぶか) を(叱:しか)るとき、(少:すこ)しも (容赦:ようしゃ) しない。／他批评起部下来毫不留情。&lt;/li&gt;
+  &lt;li&gt;(何:なん)べんも (叱:しか) ったのに、(彼:かれ)はどうしても (改:あらた) めようとしない。／说过他好几次，他就是不改。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月9日&quot;&gt;2019年3月9日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-9-日&quot;&gt;2019 年 3 月 9 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;たどる【辿る】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;沿着（道路）；探索；趋于.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(家:いえ)(路:じ)を(辿:たど)る。／走上回家的路。&lt;/li&gt;
-  &lt;li&gt;(記:き)(憶:おく)を(辿:たど)りながら(思:おも)い(出:で)の(場:ば)(所:しょ)を(探:さが)した。／凭着记忆寻找印象中的故地。&lt;/li&gt;
-  &lt;li&gt;(中:ちゅう)(国:ごく)(文:ぶん)(明:めい)の(源:げん)(流:りゅう)をたどる。／追溯中国文明的起源。&lt;/li&gt;
-  &lt;li&gt;(売:う)り(上:あ)げが(下:か)(降:こう)(線:せん)を(辿:たど)る。／销售额下降。&lt;/li&gt;
+  &lt;li&gt;(家:いえ)(路:じ)を (辿:たど) る。／走上回家的路。&lt;/li&gt;
+  &lt;li&gt;(記:き)(憶:おく)を (辿:たど) りながら (思:おも) い(出:で)の (場:ば)(所:しょ) を(探:さが)した。／凭着记忆寻找印象中的故地。&lt;/li&gt;
+  &lt;li&gt;(中:ちゅう)(国:ごく)(文:ぶん)(明:めい)の (源:げん)(流:りゅう) をたどる。／追溯中国文明的起源。&lt;/li&gt;
+  &lt;li&gt;(売:う)り (上:あ) げが (下:か)(降:こう)(線:せん) を(辿:たど)る。／销售额下降。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月11日&quot;&gt;2019年3月11日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-11-日&quot;&gt;2019 年 3 月 11 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;ちゅうこ【中古】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;二手，半旧.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;(中:ちゅう)(古:こ)(品:ひん)。／二手货。&lt;/li&gt;
-  &lt;li&gt;(中:ちゅう)(古:こ)のレコードを(買:か)う。／买旧唱片。&lt;/li&gt;
-  &lt;li&gt;あの(中:ちゅう)(古:こ)(車:しゃ)はいい(値:あたい)で(売:う)れた。／那辆二手车卖了个好价钱。&lt;/li&gt;
-  &lt;li&gt;やっぱり(中:ちゅう)(古:こ)ではなく(新:しん)(品:ぴん)のギターが(欲:ほ)しい。／我还是想要新的吉他，不想要旧的。&lt;/li&gt;
+  &lt;li&gt;(中:ちゅう)(古:こ)のレコードを (買:か) う。／买旧唱片。&lt;/li&gt;
+  &lt;li&gt;あの (中:ちゅう)(古:こ)(車:しゃ) はいい (値:あたい) で(売:う)れた。／那辆二手车卖了个好价钱。&lt;/li&gt;
+  &lt;li&gt;やっぱり (中:ちゅう)(古:こ) ではなく (新:しん)(品:ぴん) のギターが (欲:ほ) しい。／我还是想要新的吉他，不想要旧的。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月12日&quot;&gt;2019年3月12日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-12-日&quot;&gt;2019 年 3 月 12 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;おとなしい【大人しい】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;老实；规规矩矩；温顺；雅致.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;おとなしい(子供:こども)。／老实的孩子。&lt;/li&gt;
+  &lt;li&gt;おとなしい (子供:こども)。／老实的孩子。&lt;/li&gt;
   &lt;li&gt;このイヌはおとなしい。／这只狗很温顺。&lt;/li&gt;
-  &lt;li&gt;(敵:てき)はおとなしく(銃:じゅう)を(捨:す)てて(降:こう)(参:さん)した。／敌人乖乖地缴枪投降了。&lt;/li&gt;
-  &lt;li&gt;この(柄:がら)はおとなしい。／这种纹样很素雅。&lt;/li&gt;
+  &lt;li&gt;(敵:てき)はおとなしく (銃:じゅう) を(捨:す)てて (降:こう)(参:さん) した。／敌人乖乖地缴枪投降了。&lt;/li&gt;
+  &lt;li&gt;この (柄:がら) はおとなしい。／这种纹样很素雅。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月16日&quot;&gt;2019年3月16日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-16-日&quot;&gt;2019 年 3 月 16 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;はれる【晴れる】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;晴；（云雾）消散；（疑虑）消散；（心情）舒畅.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(明:あ)(日:す)は(晴:は)れでしょう。／明天该放晴了吧。&lt;/li&gt;
-  &lt;li&gt;(空:そら)が(晴:は)れて(星:ほし)がよく(見:み)える。／天空晴朗，星星清晰可见。&lt;/li&gt;
-  &lt;li&gt;(晴:は)れた(日:ひ)にはここから(富:ふ)(士:じ)の(全:ぜん)(景:けい)が(一:いち)(望:ぼう)できる。／天晴的时候从这儿可以望见富士山的全景。&lt;/li&gt;
-  &lt;li&gt;(真:しん)(犯:はん)(人:にん)(逮:たい)(捕:ほ)で、やっと(私:わたし)の(疑:ぎ)(惑:わく)が(晴:は)れた。／真正的犯人被捕后，对我的嫌疑才消除了。&lt;/li&gt;
-  &lt;li&gt;(心:こころ)のもやもやがまだ(晴:は)れない。／心里的疙瘩还没解开。&lt;/li&gt;
+  &lt;li&gt;(明:あ)(日:す)は (晴:は) れでしょう。／明天该放晴了吧。&lt;/li&gt;
+  &lt;li&gt;(空:そら)が (晴:は) れて (星:ほし) がよく (見:み) える。／天空晴朗，星星清晰可见。&lt;/li&gt;
+  &lt;li&gt;(晴:は)れた (日:ひ) にはここから (富:ふ)(士:じ) の(全:ぜん)(景:けい)が (一:いち)(望:ぼう) できる。／天晴的时候从这儿可以望见富士山的全景。&lt;/li&gt;
+  &lt;li&gt;(真:しん)(犯:はん)(人:にん)(逮:たい)(捕:ほ)で、やっと (私:わたし) の(疑:ぎ)(惑:わく)が (晴:は) れた。／真正的犯人被捕后，对我的嫌疑才消除了。&lt;/li&gt;
+  &lt;li&gt;(心:こころ)のもやもやがまだ (晴:は) れない。／心里的疙瘩还没解开。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月18日&quot;&gt;2019年3月18日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-18-日&quot;&gt;2019 年 3 月 18 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;さび【錆】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;铁锈；恶果.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;ナイフの(錆:さび)を(落:お)とす。／把小刀上的绣去掉。&lt;/li&gt;
-  &lt;li&gt;この(包丁:ほうちょう)は(長:なが)い(間使:あいだつか)ってなかったから(錆:さび)だらけだ。／这把菜刀由于长期没有使用，刀上尽是锈。&lt;/li&gt;
-  &lt;li&gt;(身:み)から(出:で)た(錆:さび)。／自食其果；咎由自取。&lt;/li&gt;
-  &lt;li&gt;(自慢:じまん)の(腕:うで)もすっかり(錆:さび)ついてしまった。／拿手的技艺也完全荒废了。&lt;/li&gt;
+  &lt;li&gt;ナイフの (錆:さび) を(落:お)とす。／把小刀上的绣去掉。&lt;/li&gt;
+  &lt;li&gt;この (包丁:ほうちょう) は(長:なが)い (間使:あいだつか) ってなかったから (錆:さび) だらけだ。／这把菜刀由于长期没有使用，刀上尽是锈。&lt;/li&gt;
+  &lt;li&gt;(身:み)から (出:で) た(錆:さび)。／自食其果；咎由自取。&lt;/li&gt;
+  &lt;li&gt;(自慢:じまん)の (腕:うで) もすっかり (錆:さび) ついてしまった。／拿手的技艺也完全荒废了。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年3月19日&quot;&gt;2019年3月19日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-3-月-19-日&quot;&gt;2019 年 3 月 19 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;はじける【弾ける】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;裂开；爆开；迸发.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;クリのいがが(弾:はじ)ける。／栗子的毛壳绷开了。&lt;/li&gt;
-  &lt;li&gt;バブルが(弾:はじ)ける。／泡沫经济崩溃。&lt;/li&gt;
-  &lt;li&gt;(彼:かれ)はとても(太:ふと)っていて、(洋:よう)(服:ふく)が(弾:はじ)けそうだ。／他太胖了，西服都快要绽开了。&lt;/li&gt;
-  &lt;li&gt;(笑:わら)いが(弾:はじ)ける。／迸发出笑声。&lt;/li&gt;
-  &lt;li&gt;(弾:はじ)けそうな(若:わか)さ。／迸发的青春活力。&lt;/li&gt;
+  &lt;li&gt;クリのいがが (弾:はじ) ける。／栗子的毛壳绷开了。&lt;/li&gt;
+  &lt;li&gt;バブルが (弾:はじ) ける。／泡沫经济崩溃。&lt;/li&gt;
+  &lt;li&gt;(彼:かれ)はとても (太:ふと) っていて、(洋:よう)(服:ふく)が (弾:はじ) けそうだ。／他太胖了，西服都快要绽开了。&lt;/li&gt;
+  &lt;li&gt;(笑:わら)いが (弾:はじ) ける。／迸发出笑声。&lt;/li&gt;
+  &lt;li&gt;(弾:はじ)けそうな (若:わか) さ。／迸发的青春活力。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月8日&quot;&gt;2019年4月8日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-8-日&quot;&gt;2019 年 4 月 8 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;ざわめく【騒めく】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;人声嘈杂；（树叶等）沙沙作响&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(町:まち)(中:なか)がその(知:し)(らせ:せ)でざわめいていた。／全城因为这个消息轰动了起来。&lt;/li&gt;
-  &lt;li&gt;(新婦:しんぷ)のお(色直:いろなお)しに(会場:かいじょう)がざわめいた。／新娘换了衣服走进来，会场立刻一片嘁嘁喳喳声。&lt;/li&gt;
-  &lt;li&gt;(質問者:しつもんしゃ)の(発言:はつげん)に(一瞬会場:いっしゅんかいじょう)がざわめいた。／提问者的发言使会场喧哗了一阵。&lt;/li&gt;
+  &lt;li&gt;(町:まち)(中:なか)がその (知:し)(らせ:せ) でざわめいていた。／全城因为这个消息轰动了起来。&lt;/li&gt;
+  &lt;li&gt;(新婦:しんぷ)のお (色直:いろなお) しに (会場:かいじょう) がざわめいた。／新娘换了衣服走进来，会场立刻一片嘁嘁喳喳声。&lt;/li&gt;
+  &lt;li&gt;(質問者:しつもんしゃ)の (発言:はつげん) に(一瞬会場:いっしゅんかいじょう)がざわめいた。／提问者的发言使会场喧哗了一阵。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月16日&quot;&gt;2019年4月16日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-16-日&quot;&gt;2019 年 4 月 16 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;あらそう【争う】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;争夺；对抗；争辩；&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(一:いっ)(刻:こく)を(争:あらそ)うときだ。／是分秒必争的时候。&lt;/li&gt;
-  &lt;li&gt;(住:じゅう)(民:みん)たちは(日:にっ)(照:しょう)(権:けん)のことで(役:やく)(所:しょ)と(激:はげ)しく(争:あらそ)った。／因日照权的问题，居民们同有关部门进行了激烈的争论。&lt;/li&gt;
-  &lt;li&gt;(年:とし)は(争:あらそ)えない。／岁月不饶人；要服老。&lt;/li&gt;
-  &lt;li&gt;(血:ち)は(争:あらそ)えない。／虎父无犬子；血浓于水。&lt;/li&gt;
-  &lt;li&gt;(顔:かお)も(声:こえ)もそっくりで、(流石:さすが)に(血:ち)は(争:あらそ)えない。／长相、声音都如出一辙，到底是一家人。&lt;/li&gt;
+  &lt;li&gt;(一:いっ)(刻:こく)を (争:あらそ) うときだ。／是分秒必争的时候。&lt;/li&gt;
+  &lt;li&gt;(住:じゅう)(民:みん)たちは (日:にっ)(照:しょう)(権:けん) のことで (役:やく)(所:しょ) と(激:はげ)しく (争:あらそ) った。／因日照权的问题，居民们同有关部门进行了激烈的争论。&lt;/li&gt;
+  &lt;li&gt;(年:とし)は (争:あらそ) えない。／岁月不饶人；要服老。&lt;/li&gt;
+  &lt;li&gt;(血:ち)は (争:あらそ) えない。／虎父无犬子；血浓于水。&lt;/li&gt;
+  &lt;li&gt;(顔:かお)も (声:こえ) もそっくりで、(流石:さすが)に (血:ち) は(争:あらそ)えない。／长相、声音都如出一辙，到底是一家人。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月22日&quot;&gt;2019年4月22日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-22-日&quot;&gt;2019 年 4 月 22 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;はかない【儚い・果敢ない・果敢無い】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;短暂；虚幻无常；&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(人:ひと)の(一生:いっしょう)ははかないものだ。／人的一生是短暂无常的；人生如梦。&lt;/li&gt;
-  &lt;li&gt;はかない(生:しょう)(涯:がい)を(閉:と)じる。／结束了短暂的一生。&lt;/li&gt;
-  &lt;li&gt;(儚:はかな)い(最:さい)(期:ご)を(遂:と)げる。／死得可怜。&lt;/li&gt;
+  &lt;li&gt;(人:ひと)の (一生:いっしょう) ははかないものだ。／人的一生是短暂无常的；人生如梦。&lt;/li&gt;
+  &lt;li&gt;はかない (生:しょう)(涯:がい) を(閉:と)じる。／结束了短暂的一生。&lt;/li&gt;
+  &lt;li&gt;(儚:はかな)い (最:さい)(期:ご) を(遂:と)げる。／死得可怜。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月26日&quot;&gt;2019年4月26日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-26-日&quot;&gt;2019 年 4 月 26 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;てどり【手取り】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;（扣除税金保险等费用后的）净收入.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(税:ぜい)(引:び)き(後:ご)の(手:て)(取:ど)り(金:きん)(額:がく)。／扣除税款后的纯收入。&lt;/li&gt;
-  &lt;li&gt;(私:わたし)の(給:きゅう)(料:りょう)はいろいろな(手:て)(当:あて)まで(含:ふく)めて(月:つき)に(手:て)(取:ど)り(30:さんじゅう)(万:まん)(円:えん)です。／我的工资加上各种补贴最后到手的差不多每个月30万日元。&lt;/li&gt;
+  &lt;li&gt;(税:ぜい)(引:び)き (後:ご) の(手:て)(取:ど)り(金:きん)(額:がく)。／扣除税款后的纯收入。&lt;/li&gt;
+  &lt;li&gt;(私:わたし)の (給:きゅう)(料:りょう) はいろいろな (手:て)(当:あて) まで (含:ふく) めて (月:つき) に(手:て)(取:ど)り (30:さんじゅう)(万:まん)(円:えん) です。／我的工资加上各种补贴最后到手的差不多每个月 30 万日元。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;てとりあしとり【手取り足取り】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;手把手；耳提面命.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;じっくりと(手:て)(取:と)り(足:あし)(取:と)り(指:し)(導:どう)する。／手把手地耐心指导。&lt;/li&gt;
-  &lt;li&gt;(彼:かれ)の(技:ぎ)(術:じゅつ)は(私:わたし)が(手:て)(取:と)り(足:あし)(取:と)り(教:おし)えてやったのだ。／他的技术是我手把手教的。&lt;/li&gt;
+  &lt;li&gt;じっくりと (手:て)(取:と) り(足:あし)(取:と)り (指:し)(導:どう) する。／手把手地耐心指导。&lt;/li&gt;
+  &lt;li&gt;(彼:かれ)の (技:ぎ)(術:じゅつ) は(私:わたし)が (手:て)(取:と) り(足:あし)(取:と)り (教:おし) えてやったのだ。／他的技术是我手把手教的。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月27日&quot;&gt;2019年4月27日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-27-日&quot;&gt;2019 年 4 月 27 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;すきとおる【透き通る】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;透明；清澈.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;この(池:いけ)の(水:みず)は(透:す)き(通:とお)っている。／这个池子的水清澈见底。&lt;/li&gt;
-  &lt;li&gt;この(生:き)(地:じ)は(薄:うす)くて(透:す)き(通:とお)って(見:み)える。／这块布薄得透明。&lt;/li&gt;
-  &lt;li&gt;(北:きた)(国:ぐに)の(人:ひと)は(透:す)き(通:とお)るような(白:しろ)い(肌:はだ)をしている。／北方人皮肤白皙透明。&lt;/li&gt;
-  &lt;li&gt;あの(歌:か)(手:しゅ)は(透:す)き(通:とお)った(声:こえ)が(魅:み)(力:りょく)だ。／那个歌手清脆的歌声很有魅力。&lt;/li&gt;
+  &lt;li&gt;この (池:いけ) の(水:みず)は (透:す) き(通:とお)っている。／这个池子的水清澈见底。&lt;/li&gt;
+  &lt;li&gt;この (生:き)(地:じ) は(薄:うす)くて (透:す) き(通:とお)って (見:み) える。／这块布薄得透明。&lt;/li&gt;
+  &lt;li&gt;(北:きた)(国:ぐに)の (人:ひと) は(透:す)き (通:とお) るような (白:しろ) い(肌:はだ)をしている。／北方人皮肤白皙透明。&lt;/li&gt;
+  &lt;li&gt;あの (歌:か)(手:しゅ) は(透:す)き (通:とお) った (声:こえ) が(魅:み)(力:りょく)だ。／那个歌手清脆的歌声很有魅力。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年4月28日&quot;&gt;2019年4月28日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-4-月-28-日&quot;&gt;2019 年 4 月 28 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;こよみ【暦】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;日历；历法.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(暦:こよみ)の(上:うえ)では(春:はる)だが、まだ(随:ずい)(分:ぶん)(寒:さむ)い。／论节气已经到了春天，但还是很冷。&lt;/li&gt;
-  &lt;li&gt;(掛:か)け(暦:こよみ)／挂历&lt;/li&gt;
+  &lt;li&gt;(暦:こよみ)の (上:うえ) では (春:はる) だが、まだ (随:ずい)(分:ぶん)(寒:さむ) い。／论节气已经到了春天，但还是很冷。&lt;/li&gt;
+  &lt;li&gt;(掛:か) け (暦:こよみ)／挂历&lt;/li&gt;
   &lt;li&gt;(卓:たく)(上:じょう)(暦:こよみ)／台历&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年5月7日&quot;&gt;2019年5月7日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-5-月-7-日&quot;&gt;2019 年 5 月 7 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;わく【湧く】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;涌出；涌现；产生.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(温泉:おんせん)が(湧:わ)く。／温泉涌出。&lt;/li&gt;
-  &lt;li&gt;あなたのお(話:はなし)を(聞:き)いて(希望:きぼう)が(湧:わ)いてきた。／听了你的话，我产生了希望。&lt;/li&gt;
-  &lt;li&gt;いいアイデアが(突:とつ)(然:ぜん)(湧:わ)いた。／突然想出个好主意。&lt;/li&gt;
-  &lt;li&gt;(歴史:れきし)に(興味:きょうみ)がわく。／对历史产生兴趣。&lt;/li&gt;
-  &lt;li&gt;(東:ひがし)の(空:そら)に(雷雲:らいうん)がわく。／东方的天空中涌现出雷云。&lt;/li&gt;
+  &lt;li&gt;(温泉:おんせん)が (湧:わ) く。／温泉涌出。&lt;/li&gt;
+  &lt;li&gt;あなたのお (話:はなし) を(聞:き)いて (希望:きぼう) が(湧:わ)いてきた。／听了你的话，我产生了希望。&lt;/li&gt;
+  &lt;li&gt;いいアイデアが (突:とつ)(然:ぜん)(湧:わ) いた。／突然想出个好主意。&lt;/li&gt;
+  &lt;li&gt;(歴史:れきし)に (興味:きょうみ) がわく。／对历史产生兴趣。&lt;/li&gt;
+  &lt;li&gt;(東:ひがし)の (空:そら) に(雷雲:らいうん)がわく。／东方的天空中涌现出雷云。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2019年5月8日&quot;&gt;2019年5月8日&lt;/h5&gt;
+&lt;h5 id=&quot;2019-年-5-月-8-日&quot;&gt;2019 年 5 月 8 日&lt;/h5&gt;
 
 &lt;p&gt;カバー&lt;/p&gt;
 
 &lt;p&gt;外皮；罩子；弥补；填补.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(本:ほん)にカバーを(掛:か)ける。／给书包一个书皮。&lt;/li&gt;
-  &lt;li&gt;(他部門:ほかぶもん)の(収益:しゅうえき)で(赤字:あかじ)をカバーする。／拿其他部门的收益来抵消赤字。&lt;/li&gt;
-  &lt;li&gt;お(互:たが)いの(欠点:けってん)をカバーしあう。／互相弥补短处。&lt;/li&gt;
-  &lt;li&gt;(新人:しんじん)を(選抜:せんばつ)して(卒業:そつぎょう)したの(欠員:けついん)をカバーする。／遴选新人填补毕业运动员的空缺。&lt;/li&gt;
+  &lt;li&gt;(本:ほん)にカバーを (掛:か) ける。／给书包一个书皮。&lt;/li&gt;
+  &lt;li&gt;(他部門:ほかぶもん)の (収益:しゅうえき) で(赤字:あかじ)をカバーする。／拿其他部门的收益来抵消赤字。&lt;/li&gt;
+  &lt;li&gt;お (互:たが) いの (欠点:けってん) をカバーしあう。／互相弥补短处。&lt;/li&gt;
+  &lt;li&gt;(新人:しんじん)を (選抜:せんばつ) して (卒業:そつぎょう) したの (欠員:けついん) をカバーする。／遴选新人填补毕业运动员的空缺。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年2月25日&quot;&gt;2020年2月25日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-2-月-25-日&quot;&gt;2020 年 2 月 25 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;しゅっきん【出勤】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;上班.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;毎朝9時に出勤する。／每天早上9点上班。&lt;/li&gt;
+  &lt;li&gt;毎朝 9 時に出勤する。／每天早上 9 点上班。&lt;/li&gt;
   &lt;li&gt;わが社はフレックスタイム制で、出勤時間は決まっていない。／我们公司是弹性工作制，上班时间不固定。&lt;/li&gt;
-  &lt;li&gt;(混雑解消:こんざつかいしょう)のため(時差出勤:じさしゅっきん)をお願いします。／为解除拥挤，请错开时间上班。&lt;/li&gt;
+  &lt;li&gt;(混雑解消:こんざつかいしょう)のため (時差出勤:じさしゅっきん) をお願いします。／为解除拥挤，请错开时间上班。&lt;/li&gt;
   &lt;li&gt;今度の日曜は休日出勤だ。／这个星期天要加班。&lt;/li&gt;
-  &lt;li&gt;彼の課は10時までに社に行けばいいんだから(重役出勤:じゅうやくしゅっきん)だよ。／他们科只要10点以前能到公司就行，属于干部待遇。&lt;/li&gt;
+  &lt;li&gt;彼の課は 10 時までに社に行けばいいんだから (重役出勤:じゅうやくしゅっきん) だよ。／他们科只要 10 点以前能到公司就行，属于干部待遇。&lt;/li&gt;
   &lt;li&gt;重役出勤／像大人物一样姗姗来迟&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年2月26日&quot;&gt;2020年2月26日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-2-月-26-日&quot;&gt;2020 年 2 月 26 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;だそく【蛇足】&lt;/strong&gt;&lt;/p&gt;
 
@@ -734,25 +734,25 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年2月27日&quot;&gt;2020年2月27日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-2-月-27-日&quot;&gt;2020 年 2 月 27 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;つる【釣る】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;钓（鱼），引诱.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;大きな魚を釣った。／钓上了大鱼。&lt;/li&gt;
-  &lt;li&gt;海老で(鯛:たい)を釣る。／用小虾钓大鱼；一本万利。&lt;/li&gt;
+  &lt;li&gt;海老で (鯛:たい) を釣る。／用小虾钓大鱼；一本万利。&lt;/li&gt;
   &lt;li&gt;子供を金で釣るな。／别用钱去引诱孩子。&lt;/li&gt;
-  &lt;li&gt;(安値商品:やすねしょうひん)で客を釣る。／靠廉价商品招揽顾客。&lt;/li&gt;
+  &lt;li&gt;(安値商品:やすねしょうひん) で客を釣る。／靠廉价商品招揽顾客。&lt;/li&gt;
   &lt;li&gt;トンボを釣る。／（用囮子）引蜻蜓。&lt;/li&gt;
   &lt;li&gt;うまく釣られた。／轻易上了当。&lt;/li&gt;
   &lt;li&gt;釣られて笑う。／跟着别人笑。&lt;/li&gt;
-  &lt;li&gt;(甘言:かんげん)で人をつる。／用动听的话引诱人。&lt;/li&gt;
+  &lt;li&gt;(甘言:かんげん) で人をつる。／用动听的话引诱人。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年3月19日&quot;&gt;2020年3月19日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-3-月-19-日&quot;&gt;2020 年 3 月 19 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;かどまつ【門松】&lt;/strong&gt;&lt;/p&gt;
 
@@ -763,7 +763,7 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年3月23日&quot;&gt;2020年3月23日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-3-月-23-日&quot;&gt;2020 年 3 月 23 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;くちぐるま【口車】&lt;/strong&gt;&lt;/p&gt;
 
@@ -772,12 +772,12 @@
   &lt;li&gt;人の口車に乗る。／被别人的花言巧语所骗；上当。&lt;/li&gt;
   &lt;li&gt;人を口車に乗せる。／使人上当；用花言巧语骗人。&lt;/li&gt;
   &lt;li&gt;あの女の口車に乗るなよ。／别上她的当。&lt;/li&gt;
-  &lt;li&gt;セールスマンの口車に乗せられてこんな高い(品物:しなもの)を買ったしまった。／被那个推销员的花言巧语给骗了，买下了这么贵的东西。&lt;/li&gt;
+  &lt;li&gt;セールスマンの口車に乗せられてこんな高い (品物:しなもの) を買ったしまった。／被那个推销员的花言巧语给骗了，买下了这么贵的东西。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年3月24日&quot;&gt;2020年3月24日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-3-月-24-日&quot;&gt;2020 年 3 月 24 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;かこみ【囲み】&lt;/strong&gt;&lt;/p&gt;
 
@@ -785,24 +785,24 @@
 &lt;ul&gt;
   &lt;li&gt;囲み記事。／专栏；花边新闻。&lt;/li&gt;
   &lt;li&gt;敵の囲みを破る。／突破敌人的包围。&lt;/li&gt;
-  &lt;li&gt;囲みを(解:と)く。／解围。&lt;/li&gt;
+  &lt;li&gt;囲みを (解:と) く。／解围。&lt;/li&gt;
   &lt;li&gt;囲みを破って逃げる。／冲破包围逃走。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年4月22日&quot;&gt;2020年4月22日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-4-月-22-日&quot;&gt;2020 年 4 月 22 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;かげぼうし【影法師】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;（照在地上、窗上的）人影.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(夕日:ゆうひ)が長い影法師を(映:うつ)す。／夕阳照出一个长长的人影。&lt;/li&gt;
+  &lt;li&gt;(夕日:ゆうひ)が長い影法師を (映:うつ) す。／夕阳照出一个长长的人影。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年4月28日&quot;&gt;2020年4月28日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-4-月-28-日&quot;&gt;2020 年 4 月 28 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;しよう【仕様】&lt;/strong&gt;&lt;/p&gt;
 
@@ -810,16 +810,16 @@
 &lt;ul&gt;
   &lt;li&gt;なんともしようがない。／毫无办法。&lt;/li&gt;
   &lt;li&gt;他に何とか仕様がありそうなものなのに。／（本来）还会有其他什么办法来着。&lt;/li&gt;
-  &lt;li&gt;(住所:じゅうしょ)がわからないので連絡のしようがない。／因为不知道住处，所以无法联系。&lt;/li&gt;
+  &lt;li&gt;(住所:じゅうしょ) がわからないので連絡のしようがない。／因为不知道住处，所以无法联系。&lt;/li&gt;
   &lt;li&gt;どうしようもないやつ。／不可救药的家伙。&lt;/li&gt;
-  &lt;li&gt;(比較:ひかく)のしようがない。／没法比。&lt;/li&gt;
+  &lt;li&gt;(比較:ひかく) のしようがない。／没法比。&lt;/li&gt;
   &lt;li&gt;寒くてしようがない。／冻得受不了。&lt;/li&gt;
-  &lt;li&gt;(今更:いまさら)助けてくれと言われても私にはどうしようもない。／事到如今要我帮忙，我也帮不上了。&lt;/li&gt;
+  &lt;li&gt;(今更:いまさら) 助けてくれと言われても私にはどうしようもない。／事到如今要我帮忙，我也帮不上了。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年4月30日&quot;&gt;2020年4月30日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-4-月-30-日&quot;&gt;2020 年 4 月 30 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;ありか【在り処】&lt;/strong&gt;&lt;/p&gt;
 
@@ -833,57 +833,57 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年5月1日&quot;&gt;2020年5月1日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-5-月-1-日&quot;&gt;2020 年 5 月 1 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;まねく【招く】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;招待；招聘；招致；招呼.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;パーティーに客を招く。／邀请客人参加晚会。&lt;/li&gt;
-  &lt;li&gt;(政治家:せいじか)や芸能人などが(招:まね)かれて出席した。／政治家和演员等也应邀出席。&lt;/li&gt;
-  &lt;li&gt;関係者を招いて(懇親会:こんしんかい)を開く。／邀请相关人士召开联谊会。&lt;/li&gt;
-  &lt;li&gt;退任した教授の(後任:こうにん)として招かれた。／被聘为退休教授的后任。&lt;/li&gt;
+  &lt;li&gt;(政治家:せいじか)や芸能人などが (招:まね) かれて出席した。／政治家和演员等也应邀出席。&lt;/li&gt;
+  &lt;li&gt;関係者を招いて (懇親会:こんしんかい) を開く。／邀请相关人士召开联谊会。&lt;/li&gt;
+  &lt;li&gt;退任した教授の (後任:こうにん) として招かれた。／被聘为退休教授的后任。&lt;/li&gt;
   &lt;li&gt;その発言は誤解を招く。／那个发言会引起误解。&lt;/li&gt;
-  &lt;li&gt;上海から一流のコックを招いて(本場:ほんば)の味を再現する。／从上海聘请了超级厨师来，做出味道地道的菜肴。&lt;/li&gt;
+  &lt;li&gt;上海から一流のコックを招いて (本場:ほんば) の味を再現する。／从上海聘请了超级厨师来，做出味道地道的菜肴。&lt;/li&gt;
   &lt;li&gt;雨やどりをしていたら、家の人が私に中に入るようにと手で招いてくれた。／正避雨时，屋里的人招手让我进去。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年5月5日&quot;&gt;2020年5月5日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-5-月-5-日&quot;&gt;2020 年 5 月 5 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;しのぶ【忍ぶ】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;躲开；忍受.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;(人目:ひとめ)を忍んで恋人に会う。／躲开别人的眼睛和男友〔女友〕幽会。&lt;/li&gt;
-  &lt;li&gt;(世:よ)を忍ぶ(仮:かり)の(姿:すがた)。／掩人耳目的假象。&lt;/li&gt;
+  &lt;li&gt;(人目:ひとめ) を忍んで恋人に会う。／躲开别人的眼睛和男友〔女友〕幽会。&lt;/li&gt;
+  &lt;li&gt;(世:よ)を忍ぶ (仮:かり) の(姿:すがた)。／掩人耳目的假象。&lt;/li&gt;
   &lt;li&gt;生活上の様々な不便を忍ぶ。／忍受生活中的种种不便。&lt;/li&gt;
-  &lt;li&gt;(木陰:こかげ)に忍。／躲在树后。&lt;/li&gt;
-  &lt;li&gt;(夜:よ)ごとに忍んで来る。／每夜悄悄地来。&lt;/li&gt;
+  &lt;li&gt;(木陰:こかげ) に忍。／躲在树后。&lt;/li&gt;
+  &lt;li&gt;(夜:よ) ごとに忍んで来る。／每夜悄悄地来。&lt;/li&gt;
   &lt;li&gt;忍び難い。／难以忍受。&lt;/li&gt;
-  &lt;li&gt;彼を(正視:せいし)するに忍びなかった。／不忍正视他。&lt;/li&gt;
+  &lt;li&gt;彼を (正視:せいし) するに忍びなかった。／不忍正视他。&lt;/li&gt;
   &lt;li&gt;世を忍ぶ。／隐居。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年5月6日&quot;&gt;2020年5月6日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-5-月-6-日&quot;&gt;2020 年 5 月 6 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;おもかげ【面影】&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;音容；模样；痕迹.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;母には美人だった若いころの面影がまだ残っている。／妈妈还残留着几分年轻时的美丽。&lt;/li&gt;
-  &lt;li&gt;(弟:おとうと)は今も別れた恋人の面影を追っている。／弟弟至今还在追寻着已分别的恋人的音容〔痕迹〕。&lt;/li&gt;
-  &lt;li&gt;面影を(偲:しの)ぶ。／缅怀故容。&lt;/li&gt;
+  &lt;li&gt;(弟:おとうと) は今も別れた恋人の面影を追っている。／弟弟至今还在追寻着已分别的恋人的音容〔痕迹〕。&lt;/li&gt;
+  &lt;li&gt;面影を (偲:しの) ぶ。／缅怀故容。&lt;/li&gt;
   &lt;li&gt;彼の面影がまだ目に浮かぶようだ。／他的模样仿佛还在眼前。&lt;/li&gt;
-  &lt;li&gt;城は昔の面影を全く(留:とど)めていない。／城堡已面目全非。&lt;/li&gt;
+  &lt;li&gt;城は昔の面影を全く (留:とど) めていない。／城堡已面目全非。&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年5月10日&quot;&gt;2020年5月10日&lt;/h5&gt;
+&lt;h5 id=&quot;2020-年-5-月-10-日&quot;&gt;2020 年 5 月 10 日&lt;/h5&gt;
 
 &lt;p&gt;&lt;strong&gt;わずか【僅か】&lt;/strong&gt;&lt;/p&gt;
 
@@ -891,37 +891,37 @@
 &lt;ul&gt;
   &lt;li&gt;あんなに働いたのにわずかな金にしかならなかった。／那么拼命工作居然才挣了这么一点钱。&lt;/li&gt;
   &lt;li&gt;可能性はごくわずかだが、全くないわけではない。／可能性虽然很小，但也不是完全没有。&lt;/li&gt;
-  &lt;li&gt;彼女だけがわずかに(難:なん)を(免:まぬが)れた。／只有她幸免遇难。&lt;/li&gt;
-  &lt;li&gt;僅か500円で手に(入:い)れる。／仅用五百日元就买到了手。&lt;/li&gt;
-  &lt;li&gt;その橋の(周辺:しゅうへん)だけがわずかに自然を(残:のこ)している。／只有那个桥梁周围是唯一留下的一点自然。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">每天(雾)一个日语单词😂</summary></entry><entry><title type="html">配置澎峰Perf-V开发板RISC-V开发环境</title><link href="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/" rel="alternate" type="text/html" title="配置澎峰Perf-V开发板RISC-V开发环境" /><published>2018-10-30T00:00:00+08:00</published><updated>2018-10-30T00:00:00+08:00</updated><id>https://inforest.site/2018/10/30/per-f-risc-v-dev-env</id><content type="html" xml:base="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/">&lt;p&gt;实验室买了一块Perf-V开发板，准备开始做RISC-V相关的工作。&lt;/p&gt;
+  &lt;li&gt;彼女だけがわずかに (難:なん) を(免:まぬが)れた。／只有她幸免遇难。&lt;/li&gt;
+  &lt;li&gt;僅か 500 円で手に (入:い) れる。／仅用五百日元就买到了手。&lt;/li&gt;
+  &lt;li&gt;その橋の (周辺:しゅうへん) だけがわずかに自然を (残:のこ) している。／只有那个桥梁周围是唯一留下的一点自然。&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">每天 (雾) 一个日语单词😂</summary></entry><entry><title type="html">配置澎峰 Perf-V 开发板 RISC-V 开发环境</title><link href="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/" rel="alternate" type="text/html" title="配置澎峰 Perf-V 开发板 RISC-V 开发环境" /><published>2018-10-30T00:00:00+08:00</published><updated>2018-10-30T00:00:00+08:00</updated><id>https://inforest.site/2018/10/30/per-f-risc-v-dev-env</id><content type="html" xml:base="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/">&lt;p&gt;实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。&lt;/p&gt;
 
-&lt;p&gt;虽然澎峰直接给了配置好的虚拟机开发环境，不过因为Ubuntu16.03用着不顺手就想要自己把环境配出来。&lt;/p&gt;
+&lt;p&gt;虽然澎峰直接给了配置好的虚拟机开发环境，不过因为 Ubuntu16.03 用着不顺手就想要自己把环境配出来。&lt;/p&gt;
 
-&lt;p&gt;看澎峰给的SDK目录，就是直接用的开源蜂鸟（GitHub：e200_opensource）微调来的。所以最初尝试着git e200_opensource重新配置一遍，结果失败，报错找不到’cc1’。尝试添加PATH等操作无果。&lt;/p&gt;
+&lt;p&gt;看澎峰给的 SDK 目录，就是直接用的开源蜂鸟（GitHub：e200_opensource）微调来的。所以最初尝试着 git e200_opensource 重新配置一遍，结果失败，报错找不到’cc1’。尝试添加 PATH 等操作无果。&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;riscv-none-embed-gcc: error trying to exec ‘cc1’: execvp: No such file or directory&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;后尝试直接把给的环境升级到18.04，结果出现与上述相同的问题。&lt;/p&gt;
+&lt;p&gt;后尝试直接把给的环境升级到 18.04，结果出现与上述相同的问题。&lt;/p&gt;
 
-&lt;p&gt;那行吧，既然sirv-e-sdk和Perf-V-e-sdk都是从SIFIVE的freedom-e-sdk（GitHub：freedom-e-sdk）精简来的，那我就配置整个freedom-e-sdk吧。&lt;/p&gt;
+&lt;p&gt;那行吧，既然 sirv-e-sdk 和 Perf-V-e-sdk 都是从 SIFIVE 的 freedom-e-sdk（GitHub：freedom-e-sdk）精简来的，那我就配置整个 freedom-e-sdk 吧。&lt;/p&gt;
 
-&lt;p&gt;总之这几天为了搞定Perf-V开发板的开发环境，前前后后踩了不少坑。现在把最后结果记录如下，备忘。&lt;/p&gt;
+&lt;p&gt;总之这几天为了搞定 Perf-V 开发板的开发环境，前前后后踩了不少坑。现在把最后结果记录如下，备忘。&lt;/p&gt;
 
-&lt;h1 id=&quot;克隆freedom-e-sdk存储库&quot;&gt;克隆freedom-e-sdk存储库&lt;/h1&gt;
+&lt;h1 id=&quot;克隆-freedom-e-sdk-存储库&quot;&gt;克隆 freedom-e-sdk 存储库&lt;/h1&gt;
 
 &lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone &lt;span class=&quot;nt&quot;&gt;--recursive&lt;/span&gt; https://github.com/sifive/freedom-e-sdk.git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;文件大，耗时比较长。&lt;/p&gt;
 
-&lt;h1 id=&quot;从源代码构建tools&quot;&gt;从源代码构建Tools&lt;/h1&gt;
+&lt;h1 id=&quot;从源代码构建-tools&quot;&gt;从源代码构建 Tools&lt;/h1&gt;
 
-&lt;p&gt;Ubuntu需要这些packages：&lt;/p&gt;
+&lt;p&gt;Ubuntu 需要这些 packages：&lt;/p&gt;
 
-&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;autoconf automake libmpc-dev libmpfr-dev libgmp-dev gawk bison flex texinfo libtool libusb-1.0-0-dev make g++ pkg-config libexpat1-dev zlib1g-dev  
+&lt;div class=&quot;language-sh highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt-get &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;autoconf automake libmpc-dev libmpfr-dev libgmp-dev gawk bison flex texinfo libtool libusb-1.0-0-dev make g++ pkg-config libexpat1-dev zlib1g-dev
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;build：&lt;/p&gt;
@@ -930,31 +930,31 @@
 make tools [BOARD=freedom-e300-hifive1]
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;build过程耗时很长。&lt;/p&gt;
+&lt;p&gt;build 过程耗时很长。&lt;/p&gt;
 
 &lt;h1 id=&quot;替换板级支持包&quot;&gt;替换板级支持包&lt;/h1&gt;
 
-&lt;p&gt;freedom-e-sdk是SIFIVE的开发环境，里面的板级支持包只有sifive系列，要用来开发Perf-V需要先替换bsp文件夹。&lt;/p&gt;
+&lt;p&gt;freedom-e-sdk 是 SIFIVE 的开发环境，里面的板级支持包只有 sifive 系列，要用来开发 Perf-V 需要先替换 bsp 文件夹。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mv ./bsp ./bsp_bak
 cp -r ~/fengniao/e200_opensource/Perf-V-e-sdk/bsp ./
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;可以把Perf-V开发板自带的几个程序顺便复制过来，方便之后测试。&lt;/p&gt;
+&lt;p&gt;可以把 Perf-V 开发板自带的几个程序顺便复制过来，方便之后测试。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mv ./software ./software_bak
 cp -r ~/fengniao/e200_opensource/Perf-V-e-sdk/software ./
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;pc和开发板的连接&quot;&gt;PC和开发板的连接&lt;/h1&gt;
+&lt;h1 id=&quot;pc-和开发板的连接&quot;&gt;PC 和开发板的连接&lt;/h1&gt;
 
-&lt;p&gt;如果手头上有胡振波大大《RISC-V处理器》这本书的同学，请翻到P318，18.3节提到了他们的开发板是怎么配置和PC连接的。基本上照做就行了，可是别忘了，他们的开发板是Arty，虽然澎峰用的也是A7，但是板子ID可不一样，所以有2个参数要注意了。&lt;/p&gt;
+&lt;p&gt;如果手头上有胡振波大大《RISC-V 处理器》这本书的同学，请翻到 P318，18.3 节提到了他们的开发板是怎么配置和 PC 连接的。基本上照做就行了，可是别忘了，他们的开发板是 Arty，虽然澎峰用的也是 A7，但是板子 ID 可不一样，所以有 2 个参数要注意了。&lt;/p&gt;
 
-&lt;p&gt;我这就照着书上的步骤2到6简单写一下。&lt;/p&gt;
+&lt;p&gt;我这就照着书上的步骤 2 到 6 简单写一下。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;步骤二：通电；点USB图标连接至虚拟机&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤二：通电；点 USB 图标连接至虚拟机&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;步骤三：使用如下命令查看USB状态&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤三：使用如下命令查看 USB 状态&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;lsusb
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -965,37 +965,37 @@ cp -r ~/fengniao/e200_opensource/Perf-V-e-sdk/software ./
 
 &lt;p&gt;记下 0403:6010 这两个数。&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;步骤四：设置udev rules，使USB能够被plugdev group访问&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤四：设置 udev rules，使 USB 能够被 plugdev group 访问&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano /etc/udev/rules.d/99-openocd.rules
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 写入以下内容，注意0403和6010，和书上不一样
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 写入以下内容，注意 0403 和 6010，和书上不一样
 SUBSYSTEM==&quot;usb&quot;, ATTR{idVendor}==&quot;0403&quot;,
 ATTR{idProduct}==&quot;6010&quot;, MODE=&quot;664&quot;, GROUP=&quot;plugdev&quot;
 SUBSYSTEM==&quot;tty&quot;, ATTRS{idVendor}==&quot;0403&quot;,
 ATTRS{idProduct}==&quot;6010&quot;, MODE=&quot;664&quot;, GROUP=&quot;plugdev&quot;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;步骤五：看看USB设备所属组，略&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;步骤五：看看 USB 设备所属组，略&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;步骤六：把自己的用户添加到组中&lt;/strong&gt;&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo usermod -a -G plugdev 你的用户名
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h1 id=&quot;编译上传裸机risc-v程序&quot;&gt;编译上传裸机RISC-V程序&lt;/h1&gt;
+&lt;h1 id=&quot;编译上传裸机-risc-v-程序&quot;&gt;编译上传裸机 RISC-V 程序&lt;/h1&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd freedom-e-sdk
 make software PROGRAM=demo_gpio BOARD=Perf-V-creative-board
 make upload PROGRAM=demo_gpio BOARD=Perf-V-creative-board
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">实验室买了一块Perf-V开发板，准备开始做RISC-V相关的工作。</summary></entry><entry><title type="html">在Windows命令行、Linux终端使用代理</title><link href="https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux/" rel="alternate" type="text/html" title="在Windows命令行、Linux终端使用代理" /><published>2018-09-19T00:00:00+08:00</published><updated>2018-09-19T00:00:00+08:00</updated><id>https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux</id><content type="html" xml:base="https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux/">&lt;p&gt;在之前的博文中分享了如何&lt;a href=&quot;https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/&quot;&gt;使用Google云计算引擎搭建SS服务器&lt;/a&gt;，如何&lt;a href=&quot;https://0qinghao.github.io/inforest/2018/03/06/shadowsocks-clients/&quot;&gt;使用SS客户端&lt;/a&gt;，已经满足了科学上网的基本需求。这次将要总结在Windows的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt; 窗口和Linux的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LX终端&lt;/code&gt; 中，让 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl&lt;/code&gt; 等命令使用代理需要进行的一些配置。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。</summary></entry><entry><title type="html">在 Windows 命令行、Linux 终端使用代理</title><link href="https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux/" rel="alternate" type="text/html" title="在 Windows 命令行、Linux 终端使用代理" /><published>2018-09-19T00:00:00+08:00</published><updated>2018-09-19T00:00:00+08:00</updated><id>https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux</id><content type="html" xml:base="https://inforest.site/2018/09/19/proxy-set-in-windows-and-linux/">&lt;p&gt;在之前的博文中分享了如何 &lt;a href=&quot;https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/&quot;&gt;使用 Google 云计算引擎搭建 SS 服务器&lt;/a&gt;，如何 &lt;a href=&quot;https://0qinghao.github.io/inforest/2018/03/06/shadowsocks-clients/&quot;&gt;使用 SS 客户端&lt;/a&gt;，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt; 窗口和 Linux 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LX 终端 &lt;/code&gt; 中，让 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl&lt;/code&gt; 等命令使用代理需要进行的一些配置。&lt;/p&gt;
 
-&lt;h1 id=&quot;windows命令行代理&quot;&gt;Windows命令行代理&lt;/h1&gt;
+&lt;h1 id=&quot;windows-命令行代理&quot;&gt;Windows 命令行代理&lt;/h1&gt;
 
-&lt;p&gt;假设你已经使用了SS客户端，本地socks5代理为127.0.0.1:1080&lt;/p&gt;
+&lt;p&gt;假设你已经使用了 SS 客户端，本地 socks5 代理为 127.0.0.1:1080&lt;/p&gt;
 
-&lt;p&gt;在CMD窗口输入如下指令设置代理：&lt;/p&gt;
+&lt;p&gt;在 CMD 窗口输入如下指令设置代理：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;set http_proxy=socks5://127.0.0.1:1080
 set https_proxy=socks5://127.0.0.1:1080
@@ -1013,17 +1013,17 @@ set https_proxy=
 set ftp_proxy=
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;&lt;strong&gt;设置代理后只对当前命令行窗口生效，重新打开CDM需要再次设置。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;设置代理后只对当前命令行窗口生效，重新打开 CDM 需要再次设置。&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;linux-lx终端代理&quot;&gt;Linux LX终端代理&lt;/h1&gt;
+&lt;h1 id=&quot;linux-lx-终端代理&quot;&gt;Linux LX 终端代理&lt;/h1&gt;
 
-&lt;p&gt;由于Linux下SS客户端仅代理socks5协议的流量（如果不是这个原因恳请指正）。所以想在LX终端使用代理，需要在SS的socks5流量前再接一个代理，允许http、https、ftp协议流量通过。&lt;/p&gt;
+&lt;p&gt;由于 Linux 下 SS 客户端仅代理 socks5 协议的流量（如果不是这个原因恳请指正）。所以想在 LX 终端使用代理，需要在 SS 的 socks5 流量前再接一个代理，允许 http、https、ftp 协议流量通过。&lt;/p&gt;
 
-&lt;p&gt;我们也假定本地socks5代理为127.0.0.1:1080&lt;/p&gt;
+&lt;p&gt;我们也假定本地 socks5 代理为 127.0.0.1:1080&lt;/p&gt;
 
-&lt;h2 id=&quot;安装polipo&quot;&gt;安装polipo&lt;/h2&gt;
+&lt;h2 id=&quot;安装-polipo&quot;&gt;安装 polipo&lt;/h2&gt;
 
-&lt;p&gt;Debian下直接使用apt命令安装：&lt;/p&gt;
+&lt;p&gt;Debian 下直接使用 apt 命令安装：&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
 &lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;polipo
@@ -1054,9 +1054,9 @@ objectHighMark = 16384
 dnsQueryIPv6 = no
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;按&lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;X&lt;/kbd&gt;，&lt;kbd&gt;Y&lt;/kbd&gt;保存退出。&lt;/p&gt;
+&lt;p&gt;按 &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;X&lt;/kbd&gt;，&lt;kbd&gt;Y&lt;/kbd&gt; 保存退出。&lt;/p&gt;
 
-&lt;p&gt;重启polipo服务：&lt;/p&gt;
+&lt;p&gt;重启 polipo 服务：&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service polipo restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1067,14 +1067,14 @@ dnsQueryIPv6 = no
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;因此，LX终端启用代理的命令为：&lt;/p&gt;
+&lt;p&gt;因此，LX 终端启用代理的命令为：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;export http_proxy=http://127.0.0.1:8123
 export https_proxy=http://127.0.0.1:8123
 export ftp_proxy=http://127.0.0.1:8123
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;同样，直接输入上述命令设置的代理也是临时的。一个比较实用的方法是在~/.bashrc文件中设置环境，之后就不需要再手动设置了。&lt;/p&gt;
+&lt;p&gt;同样，直接输入上述命令设置的代理也是临时的。一个比较实用的方法是在~/.bashrc 文件中设置环境，之后就不需要再手动设置了。&lt;/p&gt;
 
 &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nano ~/.bashrc
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1087,17 +1087,17 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;h1 id=&quot;小结&quot;&gt;小结&lt;/h1&gt;
 
-&lt;p&gt;我对CMD/LX终端设置代理的出发点，是为了使用Google的一个API，设置后确实能够成功使用。另外似乎对 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 等指令也有效果，安装python模块时的下载速度有比较明显的提升。不过说到底只是在总结如何使用别人做好的工具，很多原理还是没有明白，如果文中有何纰漏，恳请指正。&lt;/p&gt;
+&lt;p&gt;我对 CMD/LX 终端设置代理的出发点，是为了使用 Google 的一个 API，设置后确实能够成功使用。另外似乎对 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 等指令也有效果，安装 python 模块时的下载速度有比较明显的提升。不过说到底只是在总结如何使用别人做好的工具，很多原理还是没有明白，如果文中有何纰漏，恳请指正。&lt;/p&gt;
 
-&lt;p&gt;感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">在之前的博文中分享了如何使用Google云计算引擎搭建SS服务器，如何使用SS客户端，已经满足了科学上网的基本需求。这次将要总结在Windows的 CMD 窗口和Linux的 LX终端 中，让 wget curl 等命令使用代理需要进行的一些配置。</summary></entry><entry><title type="html">译 - 使用Natural Language API分析文本的实体与情感</title><link href="https://inforest.site/2018/04/07/google-natural-language-api/" rel="alternate" type="text/html" title="译 - 使用Natural Language API分析文本的实体与情感" /><published>2018-04-07T00:00:00+08:00</published><updated>2018-04-07T00:00:00+08:00</updated><id>https://inforest.site/2018/04/07/google-natural-language-api</id><content type="html" xml:base="https://inforest.site/2018/04/07/google-natural-language-api/">&lt;blockquote&gt;
-  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-nl-intro-ja/index.html?index=..%2F..%2Fspringone#0&quot;&gt;Natural Language APIでエンティティと感情を分析する&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">在之前的博文中分享了如何 使用 Google 云计算引擎搭建 SS 服务器，如何 使用 SS 客户端，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 CMD 窗口和 Linux 的 LX 终端 中，让 wget curl 等命令使用代理需要进行的一些配置。</summary></entry><entry><title type="html">译 - 使用 Natural Language API 分析文本的实体与情感</title><link href="https://inforest.site/2018/04/07/google-natural-language-api/" rel="alternate" type="text/html" title="译 - 使用 Natural Language API 分析文本的实体与情感" /><published>2018-04-07T00:00:00+08:00</published><updated>2018-04-07T00:00:00+08:00</updated><id>https://inforest.site/2018/04/07/google-natural-language-api</id><content type="html" xml:base="https://inforest.site/2018/04/07/google-natural-language-api/">&lt;blockquote&gt;
+  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-nl-intro-ja/index.html?index=..%2F..%2Fspringone#0&quot;&gt;Natural Language API でエンティティと感情を分析する&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
 
 &lt;p&gt;使用 Cloud Natural Language API ，可以从文本中提取实体、分析情感、解析文本构成。&lt;/p&gt;
 
-&lt;p&gt;此次向导中，我们将针对 Natural Language API 的3个方法： &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeEntities&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeSentiment&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotateText&lt;/code&gt; 进行学习。&lt;/p&gt;
+&lt;p&gt;此次向导中，我们将针对 Natural Language API 的 3 个方法： &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeEntities&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeSentiment&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotateText&lt;/code&gt; 进行学习。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;将要学习的东西&lt;/strong&gt;&lt;/p&gt;
 
@@ -1111,7 +1111,7 @@ export ftp_proxy=http://127.0.0.1:8123
 &lt;p&gt;&lt;strong&gt;必要的准备&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;创建Google Cloud Platform项目&lt;/li&gt;
+  &lt;li&gt;创建 Google Cloud Platform 项目&lt;/li&gt;
   &lt;li&gt;浏览器（&lt;a href=&quot;https://www.google.com/chrome/browser/desktop/&quot;&gt;Chrome&lt;/a&gt;、&lt;a href=&quot;https://www.mozilla.org/firefox/&quot;&gt;Firefox&lt;/a&gt; 等）&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1119,17 +1119,17 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;&lt;strong&gt;根据自己的情况进行设置&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;还未拥有Google账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt;是必须的。登录Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
+&lt;p&gt;还未拥有 Google 账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt; 是必须的。登录 Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;请记住项目名称。任意一个Google Cloud项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
+&lt;p&gt;请记住项目名称。任意一个 Google Cloud 项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
 
-&lt;p&gt;Google Cloud Platform的新用户将赠与&lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于$ 300的试用金&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Google Cloud Platform 的新用户将赠与 &lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于 $ 300 的试用金&lt;/a&gt;。&lt;/p&gt;
 
-&lt;h1 id=&quot;启用cloud-natural-language-api&quot;&gt;启用Cloud Natural Language API&lt;/h1&gt;
+&lt;h1 id=&quot;启用-cloud-natural-language-api&quot;&gt;启用 Cloud Natural Language API&lt;/h1&gt;
 
 &lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
 
@@ -1139,7 +1139,7 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;点击 [&lt;strong&gt;启用API&lt;/strong&gt;] 。&lt;/p&gt;
+&lt;p&gt;点击 [&lt;strong&gt;启用 API&lt;/strong&gt;] 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-31.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1147,19 +1147,19 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;点击[&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Natural Language API 。&lt;/p&gt;
+&lt;p&gt;点击 [&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Natural Language API 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;等待数秒，API成功启用后，将显示如下。&lt;/p&gt;
+&lt;p&gt;等待数秒，API 成功启用后，将显示如下。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;激活cloud-shell&quot;&gt;激活Cloud Shell&lt;/h1&gt;
+&lt;h1 id=&quot;激活-cloud-shell&quot;&gt;激活 Cloud Shell&lt;/h1&gt;
 
-&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git等），并提供永久的5 GB主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
+&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git 等），并提供永久的 5 GB 主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
 
-&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动Cloud Shell。&lt;/p&gt;
+&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动 Cloud Shell。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1167,9 +1167,9 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;生成api-key&quot;&gt;生成API Key&lt;/h1&gt;
+&lt;h1 id=&quot;生成-api-key&quot;&gt;生成 API Key&lt;/h1&gt;
 
-&lt;p&gt;你将通过使用curl发送一个请求来调用 Natural Language API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
+&lt;p&gt;你将通过使用 curl 发送一个请求来调用 Natural Language API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-32.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1183,7 +1183,7 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;最后，复制生成好的密钥。此密钥将在向导的后半部分中用到。&lt;/p&gt;
 
-&lt;p&gt;你已获得API密钥，我们将其保存在环境变量中，以便每次调用API时不需要重复插入API密钥值。你可以将密钥保存在 Cloud Shell 中，下述的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;your_api_key&amp;gt;&lt;/code&gt; 请替换成之前复制的内容。&lt;/p&gt;
+&lt;p&gt;你已获得 API 密钥，我们将其保存在环境变量中，以便每次调用 API 时不需要重复插入 API 密钥值。你可以将密钥保存在 Cloud Shell 中，下述的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;your_api_key&amp;gt;&lt;/code&gt; 请替换成之前复制的内容。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export API_KEY=&amp;lt;YOUR_API_KEY&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -1249,7 +1249,7 @@ export ftp_proxy=http://127.0.0.1:8123
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;在响应中，我们可以看到 API 从句子里检测到了6个实体（译者：原文是4个，但实际运行时得到6个，应该是API有所改善）。对于每个实体，你将得到实体的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; 、关联的维基百科URL（如果存在）、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）以及实体在文本中出现的位置的索引。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）是一个0~1的数字，指的是该实体对于整个文本的突出性。对于上述文段，「Harry Potter and the Deathly Hallows」具有最高的显著性（译者：原文是「Rowling」，应该是API有所改善），这是因为这部作品是文段所表述内容的主题。Natural Language API 也可以识别用其他方式表述的相同的实体，比如说「Rowling」、「J. K. Rowling」和「Joanne Kathleen Rowling」都指向同一个维基百科页面。&lt;/p&gt;
+&lt;p&gt;在响应中，我们可以看到 API 从句子里检测到了 6 个实体（译者：原文是 4 个，但实际运行时得到 6 个，应该是 API 有所改善）。对于每个实体，你将得到实体的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; 、关联的维基百科 URL（如果存在）、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）以及实体在文本中出现的位置的索引。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）是一个 0~1 的数字，指的是该实体对于整个文本的突出性。对于上述文段，「Harry Potter and the Deathly Hallows」具有最高的显著性（译者：原文是「Rowling」，应该是 API 有所改善），这是因为这部作品是文段所表述内容的主题。Natural Language API 也可以识别用其他方式表述的相同的实体，比如说「Rowling」、「J. K. Rowling」和「Joanne Kathleen Rowling」都指向同一个维基百科页面。&lt;/p&gt;
 
 &lt;h1 id=&quot;使用-natural-language-api-进行情感分析&quot;&gt;使用 Natural Language API 进行情感分析&lt;/h1&gt;
 
@@ -1306,13 +1306,13 @@ export ftp_proxy=http://127.0.0.1:8123
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;该方法将返回 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polarity&lt;/code&gt; （极性）和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magnitude&lt;/code&gt; （强度）两个值（译者：原文是这两个值，但很明显现在还能看到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;score&lt;/code&gt; 这个值）。polarity是介于-1.0 ~ 1.0之间的数值，表示文本消极或积极的程度。magnitude是介于0 ~ ∞的数值，与polarity没有关系，它表示在文本中表达的感情的权重。权重较大的文本块单是增加长度，其magnitude也会变大。上文的polarity是100%积极。「love」、「greatest」、「ever」这样的单词会影响magnitude的值。&lt;/p&gt;
+&lt;p&gt;该方法将返回 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polarity&lt;/code&gt; （极性）和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magnitude&lt;/code&gt; （强度）两个值（译者：原文是这两个值，但很明显现在还能看到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;score&lt;/code&gt; 这个值）。polarity 是介于 - 1.0 ~ 1.0 之间的数值，表示文本消极或积极的程度。magnitude 是介于 0 ~ ∞的数值，与 polarity 没有关系，它表示在文本中表达的感情的权重。权重较大的文本块单是增加长度，其 magnitude 也会变大。上文的 polarity 是 100% 积极。「love」、「greatest」、「ever」这样的单词会影响 magnitude 的值。&lt;/p&gt;
 
 &lt;h1 id=&quot;分析语法与词性&quot;&gt;分析语法与词性&lt;/h1&gt;
 
-&lt;p&gt;让我们看看 Natural Language API 的第三个方法：文本注释。让我们进入文本的语言细节。annotateText方法提供了关于文本情感元素、语法元素的完整细节。使用该方法，可以知道文本中每个词语的词性（名词、动词、形容词等），以及各个单词如何与句子中的其他单词关联（是动词的原始形式，还是用来修饰语句）。&lt;/p&gt;
+&lt;p&gt;让我们看看 Natural Language API 的第三个方法：文本注释。让我们进入文本的语言细节。annotateText 方法提供了关于文本情感元素、语法元素的完整细节。使用该方法，可以知道文本中每个词语的词性（名词、动词、形容词等），以及各个单词如何与句子中的其他单词关联（是动词的原始形式，还是用来修饰语句）。&lt;/p&gt;
 
-&lt;p&gt;让我们通过简单的文段来使用这个方法。JSON 文件与之前的相似，但在这里我们需要添加一项 features 来告诉API你想要执行语法注释。请将request.json替换为如下内容。&lt;/p&gt;
+&lt;p&gt;让我们通过简单的文段来使用这个方法。JSON 文件与之前的相似，但在这里我们需要添加一项 features 来告诉 API 你想要执行语法注释。请将 request.json 替换为如下内容。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;request.json&lt;/strong&gt;&lt;/p&gt;
 
@@ -1361,7 +1361,7 @@ export ftp_proxy=http://127.0.0.1:8123
 },
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;让我们详细看看返回值。从 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;partOfSpeech&lt;/code&gt; 可以看到「Joanne」是一个名词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencyEdge&lt;/code&gt; 包含可用于创建&lt;a href=&quot;https://en.wikipedia.org/wiki/Parse_tree#Dependency-based_parse_trees&quot;&gt;依存句法分析树&lt;/a&gt;（依存構文木/Dependency-based parse trees）的数据。这个语法树是一个图表，用来显示句中各单词之间的关系。上述文段的依存句法分析树如下所示。&lt;/p&gt;
+&lt;p&gt;让我们详细看看返回值。从 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;partOfSpeech&lt;/code&gt; 可以看到「Joanne」是一个名词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencyEdge&lt;/code&gt; 包含可用于创建 &lt;a href=&quot;https://en.wikipedia.org/wiki/Parse_tree#Dependency-based_parse_trees&quot;&gt;依存句法分析树&lt;/a&gt;（依存構文木 / Dependency-based parse trees）的数据。这个语法树是一个图表，用来显示句中各单词之间的关系。上述文段的依存句法分析树如下所示。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-21-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1371,7 +1371,7 @@ export ftp_proxy=http://127.0.0.1:8123
   &lt;p&gt;&lt;a href=&quot;https://cloud.google.com/natural-language/&quot;&gt;https://cloud.google.com/natural-language/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;上述返回值中， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 是指具有指向「Joanne」的圆弧的标记（token）的索引。文段中的每一个标记（token）都可以看作是数组中的一个单词，「Joanne」的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 值是1，表示依存句法分析树中连接了「Rowling」这个单词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NN&lt;/code&gt; （修饰语句 noun compound （名词复合词）的略称）这个标签表示该词在改句子中的作用。「Joanne」是这个句子的主语「Rowling」的修饰词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lemma&lt;/code&gt; 是这个单词的规范化形式。比如，&lt;em&gt;run&lt;/em&gt;、&lt;em&gt;runs&lt;/em&gt;、&lt;em&gt;ran&lt;/em&gt;、&lt;em&gt;running&lt;/em&gt; 这些单词的 lemma 都是 run 。lemma 有助于你调查大量文本中某一单词的出现频率。&lt;/p&gt;
+&lt;p&gt;上述返回值中， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 是指具有指向「Joanne」的圆弧的标记（token）的索引。文段中的每一个标记（token）都可以看作是数组中的一个单词，「Joanne」的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 值是 1，表示依存句法分析树中连接了「Rowling」这个单词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NN&lt;/code&gt; （修饰语句 noun compound （名词复合词）的略称）这个标签表示该词在改句子中的作用。「Joanne」是这个句子的主语「Rowling」的修饰词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lemma&lt;/code&gt; 是这个单词的规范化形式。比如，&lt;em&gt;run&lt;/em&gt;、&lt;em&gt;runs&lt;/em&gt;、&lt;em&gt;ran&lt;/em&gt;、&lt;em&gt;running&lt;/em&gt; 这些单词的 lemma 都是 run 。lemma 有助于你调查大量文本中某一单词的出现频率。&lt;/p&gt;
 
 &lt;h1 id=&quot;其他语言的自然语言处理&quot;&gt;其他语言的自然语言处理&lt;/h1&gt;
 
@@ -1387,7 +1387,7 @@ export ftp_proxy=http://127.0.0.1:8123
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;（译者：句意是“日本的谷歌办公大楼在东京的六本木新城。”）&lt;/p&gt;
+&lt;p&gt;（译者：句意是 “日本的谷歌办公大楼在东京的六本木新城。”）&lt;/p&gt;
 
 &lt;p&gt;我们不必告诉 API 这个文段是什么语言，API 能够自动检测出来。我们以相同的方式发送 API 请求。&lt;/p&gt;
 
@@ -1457,19 +1457,19 @@ export ftp_proxy=http://127.0.0.1:8123
 &lt;p&gt;&lt;strong&gt;下一步&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;浏览 Natural Language API 文档的&lt;a href=&quot;https://cloud.google.com/natural-language/docs/tutorials&quot;&gt;向导&lt;/a&gt;。&lt;/li&gt;
+  &lt;li&gt;浏览 Natural Language API 文档的 &lt;a href=&quot;https://cloud.google.com/natural-language/docs/tutorials&quot;&gt;向导&lt;/a&gt;。&lt;/li&gt;
   &lt;li&gt;尝试使用 &lt;a href=&quot;https://cloud.google.com/vision/&quot;&gt;Vision API&lt;/a&gt; 、&lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Speech API&lt;/a&gt; 。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Natural Language APIでエンティティと感情を分析する</summary></entry><entry><title type="html">使用bypy在命令行上传文件到百度云盘</title><link href="https://inforest.site/2018/04/06/bypy-baiduyun/" rel="alternate" type="text/html" title="使用bypy在命令行上传文件到百度云盘" /><published>2018-04-06T00:00:00+08:00</published><updated>2018-04-06T00:00:00+08:00</updated><id>https://inforest.site/2018/04/06/bypy-baiduyun</id><content type="html" xml:base="https://inforest.site/2018/04/06/bypy-baiduyun/">&lt;p&gt;repo: &lt;a href=&quot;https://github.com/houtianze/bypy&quot;&gt;https://github.com/houtianze/bypy&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Natural Language API でエンティティと感情を分析する</summary></entry><entry><title type="html">使用 bypy 在命令行上传文件到百度云盘</title><link href="https://inforest.site/2018/04/06/bypy-baiduyun/" rel="alternate" type="text/html" title="使用 bypy 在命令行上传文件到百度云盘" /><published>2018-04-06T00:00:00+08:00</published><updated>2018-04-06T00:00:00+08:00</updated><id>https://inforest.site/2018/04/06/bypy-baiduyun</id><content type="html" xml:base="https://inforest.site/2018/04/06/bypy-baiduyun/">&lt;p&gt;repo: &lt;a href=&quot;https://github.com/houtianze/bypy&quot;&gt;https://github.com/houtianze/bypy&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install bypy 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install bypy
 
 # 执行任意命令进行授权
 bypy info
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#上传文件夹内的内容到app/bypy/
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#上传文件夹内的内容到 app/bypy/
 bypy upload 文件夹
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -1498,10 +1498,10 @@ pip install instagram-scraper
 
 sudo /etc/init.d/cron restart
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">repo：https://github.com/rarcega/instagram-scraper</summary></entry><entry><title type="html">常见内网网段</title><link href="https://inforest.site/2018/04/05/common-local-ip/" rel="alternate" type="text/html" title="常见内网网段" /><published>2018-04-05T00:00:00+08:00</published><updated>2018-04-05T00:00:00+08:00</updated><id>https://inforest.site/2018/04/05/common-local-ip</id><content type="html" xml:base="https://inforest.site/2018/04/05/common-local-ip/">&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;http://blog.kankanan.com/article/51857f51-ip-6bb5670954ea4e9b.html&quot;&gt;内网IP段有哪些&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;http://blog.kankanan.com/article/51857f51-ip-6bb5670954ea4e9b.html&quot;&gt;内网 IP 段有哪些&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;常见的内网IP段有：&lt;/p&gt;
+&lt;p&gt;常见的内网 IP 段有：&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;10.0.0.0/8
 10.0.0.0 - 10.255.255.255
@@ -1513,11 +1513,11 @@ sudo /etc/init.d/cron restart
 192.168.0.0 - 192.168.255.255
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;以上三个网段分别属于A、B、C三类IP地址，来自 《RFC 1918》。&lt;/p&gt;
+&lt;p&gt;以上三个网段分别属于 A、B、C 三类 IP 地址，来自 《RFC 1918》。&lt;/p&gt;
 
-&lt;p&gt;但是根据 《Reserved IP addresses - Wikipedia, the free encyclopedia》 及《RFC 6890 - Special-Purpose IP Address Registries》的描述， 还有很多其它的内网IP段（包括IPv6），以及其它用途的保留IP地址。&lt;/p&gt;
+&lt;p&gt;但是根据 《Reserved IP addresses - Wikipedia, the free encyclopedia》 及《RFC 6890 - Special-Purpose IP Address Registries》的描述， 还有很多其它的内网 IP 段（包括 IPv6），以及其它用途的保留 IP 地址。&lt;/p&gt;
 
-&lt;p&gt;其它IPv4内网段罗列如下：&lt;/p&gt;
+&lt;p&gt;其它 IPv4 内网段罗列如下：&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.0.0.0/8
 0.0.0.0 - 0.255.255.255
@@ -1526,7 +1526,7 @@ sudo /etc/init.d/cron restart
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;100.64.0.0/10
 100.64.0.0 - 100.127.255.255
-由运营商使用的私网IP段，随着IPv4地址池的耗光，会有更多用户被分配到这个网段。
+由运营商使用的私网 IP 段，随着 IPv4 地址池的耗光，会有更多用户被分配到这个网段。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.0/8
@@ -1536,24 +1536,24 @@ sudo /etc/init.d/cron restart
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;169.254.0.0/16
 169.254.0.0 - 169.254.255.255
-获取不到IP地址时使用，通常因为从DHCP服务器获取不到IP。
+获取不到 IP 地址时使用，通常因为从 DHCP 服务器获取不到 IP。
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;255.255.255.255/32
 255.255.255.255
 本网段的广播地址。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">内网IP段有哪些</summary></entry><entry><title type="html">译 - 使用谷歌Cloud Translation API翻译文本</title><link href="https://inforest.site/2018/04/05/google-translation-api/" rel="alternate" type="text/html" title="译 - 使用谷歌Cloud Translation API翻译文本" /><published>2018-04-05T00:00:00+08:00</published><updated>2018-04-05T00:00:00+08:00</updated><id>https://inforest.site/2018/04/05/google-translation-api</id><content type="html" xml:base="https://inforest.site/2018/04/05/google-translation-api/">&lt;blockquote&gt;
-  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-translation-intro-ja/index.html#0&quot;&gt;Translation APIでテキストをほんやくする&lt;/a&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">内网 IP 段有哪些</summary></entry><entry><title type="html">译 - 使用谷歌 Cloud Translation API 翻译文本</title><link href="https://inforest.site/2018/04/05/google-translation-api/" rel="alternate" type="text/html" title="译 - 使用谷歌 Cloud Translation API 翻译文本" /><published>2018-04-05T00:00:00+08:00</published><updated>2018-04-05T00:00:00+08:00</updated><id>https://inforest.site/2018/04/05/google-translation-api</id><content type="html" xml:base="https://inforest.site/2018/04/05/google-translation-api/">&lt;blockquote&gt;
+  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-translation-intro-ja/index.html#0&quot;&gt;Translation API でテキストをほんやくする&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
 
-&lt;p&gt;使用Cloud Translation，可以将任意的字符串翻译为API支持的语言。由于语言检测功能的存在，即使在源语言未知的情况下，也能使用该API。&lt;/p&gt;
+&lt;p&gt;使用 Cloud Translation，可以将任意的字符串翻译为 API 支持的语言。由于语言检测功能的存在，即使在源语言未知的情况下，也能使用该 API。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;将要学习的东西&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;创建Cloud Translation API请求，使用curl调用API&lt;/li&gt;
+  &lt;li&gt;创建 Cloud Translation API 请求，使用 curl 调用 API&lt;/li&gt;
   &lt;li&gt;翻译文本的方法&lt;/li&gt;
   &lt;li&gt;高级版（Premium Edition）的使用方法&lt;/li&gt;
   &lt;li&gt;检测语言&lt;/li&gt;
@@ -1562,7 +1562,7 @@ sudo /etc/init.d/cron restart
 &lt;p&gt;&lt;strong&gt;必要的准备&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;创建Google Cloud Platform项目&lt;/li&gt;
+  &lt;li&gt;创建 Google Cloud Platform 项目&lt;/li&gt;
   &lt;li&gt;浏览器（&lt;a href=&quot;https://www.google.com/chrome/browser/desktop/&quot;&gt;Chrome&lt;/a&gt;、&lt;a href=&quot;https://www.mozilla.org/firefox/&quot;&gt;Firefox&lt;/a&gt; 等）&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1570,27 +1570,27 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;&lt;strong&gt;根据自己的情况进行设置&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;还未拥有Google账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt;是必须的。登录Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
+&lt;p&gt;还未拥有 Google 账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt; 是必须的。登录 Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-39.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-52.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;请记住项目名称。任意一个Google Cloud项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
+&lt;p&gt;请记住项目名称。任意一个 Google Cloud 项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
 
-&lt;p&gt;Google Cloud Platform的新用户将赠与&lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于$ 300的试用金&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;Google Cloud Platform 的新用户将赠与 &lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于 $ 300 的试用金&lt;/a&gt;。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;用于教学的账号&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;教师将已有的项目进行设置，生成临时账号。若你得到了教师发放的临时账号，你将不必顾虑项目中产生的费用。但是，一旦该教学项目结束，所有的临时账号将被无效化。&lt;/p&gt;
 
-&lt;p&gt;当你从教师那收到了临时账号的用户名/密码，就能够登录Google Cloud Console（&lt;a href=&quot;https://console.cloud.google.com/&quot;&gt;https://console.cloud.google.com/&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;当你从教师那收到了临时账号的用户名 / 密码，就能够登录 Google Cloud Console（&lt;a href=&quot;https://console.cloud.google.com/&quot;&gt;https://console.cloud.google.com/&lt;/a&gt;）。&lt;/p&gt;
 
 &lt;p&gt;登录后，你将看到如下界面。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;启用translation-api&quot;&gt;启用Translation API&lt;/h1&gt;
+&lt;h1 id=&quot;启用-translation-api&quot;&gt;启用 Translation API&lt;/h1&gt;
 
 &lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
 
@@ -1600,7 +1600,7 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;点击 [&lt;strong&gt;启用API&lt;/strong&gt;] 。&lt;/p&gt;
+&lt;p&gt;点击 [&lt;strong&gt;启用 API&lt;/strong&gt;] 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1608,23 +1608,23 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;API已经启用的情况下，只会显示 [停用] 按钮。请不要停用API。&lt;/p&gt;
+&lt;p&gt;API 已经启用的情况下，只会显示 [停用] 按钮。请不要停用 API。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;API还未启用的情况下，点击[&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Translation API 。&lt;/p&gt;
+&lt;p&gt;API 还未启用的情况下，点击 [&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Translation API 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;等待数秒，API成功启用后，将显示如下。&lt;/p&gt;
+&lt;p&gt;等待数秒，API 成功启用后，将显示如下。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;激活cloud-shell&quot;&gt;激活Cloud Shell&lt;/h1&gt;
+&lt;h1 id=&quot;激活-cloud-shell&quot;&gt;激活 Cloud Shell&lt;/h1&gt;
 
-&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git等），并提供永久的5 GB主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
+&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git 等），并提供永久的 5 GB 主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
 
-&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动Cloud Shell。&lt;/p&gt;
+&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动 Cloud Shell。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1632,9 +1632,9 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;生成api-key&quot;&gt;生成API Key&lt;/h1&gt;
+&lt;h1 id=&quot;生成-api-key&quot;&gt;生成 API Key&lt;/h1&gt;
 
-&lt;p&gt;你将通过使用curl发送一个请求来调用 Translation API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
+&lt;p&gt;你将通过使用 curl 发送一个请求来调用 Translation API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-14-51.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -1648,14 +1648,14 @@ sudo /etc/init.d/cron restart
 
 &lt;p&gt;最后，复制生成好的密钥。&lt;/p&gt;
 
-&lt;p&gt;将密钥复制到剪贴板后，使用下述命令将其保存到 Cloud Shell 的环境变量中。下述的 &lt;strong&gt;YOUR_API_KEY&lt;/strong&gt; 请替换成剪贴板中的内容。&lt;/p&gt;
+&lt;p&gt;将密钥复制到剪贴板后，使用下述命令将其保存到 Cloud Shell 的环境变量中。下述的&lt;strong&gt;YOUR_API_KEY&lt;/strong&gt;请替换成剪贴板中的内容。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export API_KEY=YOUR_API_KEY
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h1 id=&quot;翻译文本&quot;&gt;翻译文本&lt;/h1&gt;
 
-&lt;p&gt;在此例中，将「My name is Steve」这个字符串翻译为西班牙语。使用下述的curl命令，将之前保存好的 API 密钥环境变量和将要翻译的文本一起，传递给 Translation API 。&lt;/p&gt;
+&lt;p&gt;在此例中，将「My name is Steve」这个字符串翻译为西班牙语。使用下述的 curl 命令，将之前保存好的 API 密钥环境变量和将要翻译的文本一起，传递给 Translation API 。&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TEXT=&quot;My%20name%20is%20Steve&quot;
 curl &quot;https://translation.googleapis.com/language/translate/v2?target=es&amp;amp;key=${API_KEY}&amp;amp;q=${TEXT}&quot;
@@ -1680,7 +1680,7 @@ curl &quot;https://translation.googleapis.com/language/translate/v2?target=es&am
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Premium 模式&lt;/strong&gt;&lt;/p&gt;
 
-  &lt;p&gt;Google Cloud Translation 在几乎所有翻译任务中都是用了 Standard Edition 模式。然而 Google 从最近开始，使用了更为强大的 &lt;a href=&quot;https://research.googleblog.com/2016/09/a-neural-network-for-machine.html&quot;&gt;Neural machine Translation System&lt;/a&gt; 来优化翻译服务。在这里，我们可以使用 Premium 模式。详情请参阅&lt;a href=&quot;https://cloud.google.com/translate/docs/premium&quot;&gt;此处的指南&lt;/a&gt;。&lt;/p&gt;
+  &lt;p&gt;Google Cloud Translation 在几乎所有翻译任务中都是用了 Standard Edition 模式。然而 Google 从最近开始，使用了更为强大的 &lt;a href=&quot;https://research.googleblog.com/2016/09/a-neural-network-for-machine.html&quot;&gt;Neural machine Translation System&lt;/a&gt; 来优化翻译服务。在这里，我们可以使用 Premium 模式。详情请参阅 &lt;a href=&quot;https://cloud.google.com/translate/docs/premium&quot;&gt;此处的指南&lt;/a&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h1 id=&quot;检测语言&quot;&gt;检测语言&lt;/h1&gt;
@@ -1716,7 +1716,7 @@ curl &quot;https://translation.googleapis.com/language/translate/v2/detect?key=$
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;本例中返回的语言是 「pt」和「ja」。它们是 &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_639-1&quot;&gt;ISO-639-1&lt;/a&gt; 的标识符，指葡萄牙语和日本语。关于可能的返回值，在&lt;a href=&quot;https://cloud.google.com/translate/docs/languages&quot;&gt;Translation API 支持的语言一览&lt;/a&gt;中可以查询。&lt;/p&gt;
+&lt;p&gt;本例中返回的语言是 「pt」和「ja」。它们是 &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_639-1&quot;&gt;ISO-639-1&lt;/a&gt; 的标识符，指葡萄牙语和日本语。关于可能的返回值，在 &lt;a href=&quot;https://cloud.google.com/translate/docs/languages&quot;&gt;Translation API 支持的语言一览&lt;/a&gt; 中可以查询。&lt;/p&gt;
 
 &lt;h1 id=&quot;恭喜&quot;&gt;恭喜！&lt;/h1&gt;
 
@@ -1725,7 +1725,7 @@ curl &quot;https://translation.googleapis.com/language/translate/v2/detect?key=$
 &lt;p&gt;&lt;strong&gt;学到的东西&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;创建Cloud Translation API请求，使用curl调用API&lt;/li&gt;
+  &lt;li&gt;创建 Cloud Translation API 请求，使用 curl 调用 API&lt;/li&gt;
   &lt;li&gt;翻译文本的方法&lt;/li&gt;
   &lt;li&gt;高级版（Premium Edition）的使用方法&lt;/li&gt;
   &lt;li&gt;检测语言&lt;/li&gt;
@@ -1736,4 +1736,4 @@ curl &quot;https://translation.googleapis.com/language/translate/v2/detect?key=$
 &lt;ul&gt;
   &lt;li&gt;通过常用的编程语言，使用客户端库，学习 &lt;a href=&quot;https://cloud.google.com/translate/docs/samples&quot;&gt;Translation API 的示例应用程序&lt;/a&gt;。&lt;/li&gt;
   &lt;li&gt;尝试使用 &lt;a href=&quot;https://cloud.google.com/vision/&quot;&gt;Vision API&lt;/a&gt; 、&lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Speech API&lt;/a&gt; 。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Translation APIでテキストをほんやくする</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Translation API でテキストをほんやくする</summary></entry></feed>
