@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-10T20:15:04+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用 iStyle 格式化 Verilog 代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用 iStyle 格式化 Verilog 代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-11T21:16:44+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用 iStyle 格式化 Verilog 代码</title><link href="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用 iStyle 格式化 Verilog 代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/2019/08/09/translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
   &lt;p&gt;原文：&lt;a href=&quot;https://qiita.com/kkumt93/items/70766645c07c298d19c3&quot;&gt;Verilog でコード整形&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -928,6 +928,21 @@
   &lt;li&gt;お引き受けいたしかねます。／难以承担。&lt;/li&gt;
   &lt;li&gt;あいつならそういうことをしかねない。／他能做出这种事来。&lt;/li&gt;
   &lt;li&gt;誤解を招き兼ねない。／可能会引起误解。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h5 id=&quot;2020-年-7-月-11-日&quot;&gt;2020 年 7 月 11 日&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;くじける【挫ける】&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;沮丧；挫伤.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;手がくじける。／手挫伤了。&lt;/li&gt;
+  &lt;li&gt;気がくじける。／灰心了。&lt;/li&gt;
+  &lt;li&gt;( 度重:たびかさ )なる失敗にもくじけない。／百折不挠。&lt;/li&gt;
+  &lt;li&gt;夫は一度ぐらいの失敗でくじけるような人ではない。／我丈夫不是那种失败了一次就气馁的人。&lt;/li&gt;
 &lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">每天( 雾 )一个日语单词😂</summary></entry><entry><title type="html">配置澎峰 Perf-V 开发板 RISC-V 开发环境</title><link href="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/" rel="alternate" type="text/html" title="配置澎峰 Perf-V 开发板 RISC-V 开发环境" /><published>2018-10-30T00:00:00+08:00</published><updated>2018-10-30T00:00:00+08:00</updated><id>https://inforest.site/2018/10/30/per-f-risc-v-dev-env</id><content type="html" xml:base="https://inforest.site/2018/10/30/per-f-risc-v-dev-env/">&lt;p&gt;实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。&lt;/p&gt;
 
 &lt;p&gt;虽然澎峰直接给了配置好的虚拟机开发环境，不过因为 Ubuntu16.03 用着不顺手就想要自己把环境配出来。&lt;/p&gt;
