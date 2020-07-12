@@ -5,19 +5,19 @@ set codingpw [lindex $argv 1]
 cd docs
 spawn git push coding master
 expect {
-    "Password*" {send "$codingpw\r\n"}
+    "Password*" {send "$codingpw\n"}
 }
 expect eof
 
 spawn git push githubpage master
 expect {
-    "Password*" {send "$githubpw\r\n"}
+    "Password*" {send "$githubpw\n"}
 }
 expect eof
 
 cd ..
 spawn git push origin master
 expect {
-    "Password*" {send "$githubpw\r\n"}
+    "Password*" {send "$githubpw\n"}
 }
 expect eof
