@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-16T15:35:17+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用 iStyle 格式化 Verilog 代码</title><link href="https://inforest.site/20190809-translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用 iStyle 格式化 Verilog 代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/20190809-translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-16T20:35:04+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">译 - 使用 iStyle 格式化 Verilog 代码</title><link href="https://inforest.site/20190809-translate-use-istyle-to-format-verilog-code/" rel="alternate" type="text/html" title="译 - 使用 iStyle 格式化 Verilog 代码" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>https://inforest.site/translate-use-istyle-to-format-verilog-code</id><content type="html" xml:base="https://inforest.site/20190809-translate-use-istyle-to-format-verilog-code/">&lt;blockquote&gt;
   &lt;p&gt;原文：&lt;a href=&quot;https://qiita.com/kkumt93/items/70766645c07c298d19c3&quot;&gt;Verilog でコード整形&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
@@ -12,7 +12,7 @@
 
 &lt;p&gt;&lt;strong&gt;可执行文件&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;https://github.com/HayasiKei/istyle-verilog-formatter/releases/tag/v1.21_x86_64&lt;/p&gt;
+&lt;p&gt;https://github.com/0qinghao/istyle-verilog-formatter/releases/tag/v1.21_x86_64&lt;/p&gt;
 
 &lt;h1 id=&quot;格式化选项&quot;&gt;格式化选项&lt;/h1&gt;
 
@@ -961,7 +961,23 @@
 
 &lt;hr /&gt;
 
-&lt;h5 id=&quot;2020年7月13日&quot;&gt;2020年7月13日&lt;/h5&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">每天( 雾 )一个日语单词 😂</summary></entry><entry><title type="html">配置澎峰 Perf-V 开发板 RISC-V 开发环境</title><link href="https://inforest.site/20181030-per-f-risc-v-dev-env/" rel="alternate" type="text/html" title="配置澎峰 Perf-V 开发板 RISC-V 开发环境" /><published>2018-10-30T00:00:00+08:00</published><updated>2018-10-30T00:00:00+08:00</updated><id>https://inforest.site/per-f-risc-v-dev-env</id><content type="html" xml:base="https://inforest.site/20181030-per-f-risc-v-dev-env/">&lt;p&gt;实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。&lt;/p&gt;
+&lt;h5 id=&quot;2020-年-7-月-16-日&quot;&gt;2020 年 7 月 16 日&lt;/h5&gt;
+
+&lt;p&gt;&lt;strong&gt;うきよ【浮世】&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;尘世；人生；流行的；好色的.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;浮世の( 煩:わずら )わしさ。／尘世的苦恼。&lt;/li&gt;
+  &lt;li&gt;浮世の儚さ。／人生的变幻无常。&lt;/li&gt;
+  &lt;li&gt;浮世を離れた( 山里:やまさと )。／远离尘世的山村。&lt;/li&gt;
+  &lt;li&gt;浮世を捨てる。／抛开尘世；死亡。&lt;/li&gt;
+  &lt;li&gt;浮世離れ。／不通世俗。&lt;/li&gt;
+  &lt;li&gt;浮世男。／时髦的人物；好色的男子。&lt;/li&gt;
+  &lt;li&gt;浮世の絆。／尘世的羁绊。&lt;/li&gt;
+  &lt;li&gt;浮世は夢。／浮生若梦。&lt;/li&gt;
+  &lt;li&gt;ままにならぬが浮世の( 常:つね )。／难如心愿人世之常；不如意事十之八九。&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">每天( 雾 )一个日语单词 😂</summary></entry><entry><title type="html">配置澎峰 Perf-V 开发板 RISC-V 开发环境</title><link href="https://inforest.site/20181030-per-f-risc-v-dev-env/" rel="alternate" type="text/html" title="配置澎峰 Perf-V 开发板 RISC-V 开发环境" /><published>2018-10-30T00:00:00+08:00</published><updated>2018-10-30T00:00:00+08:00</updated><id>https://inforest.site/per-f-risc-v-dev-env</id><content type="html" xml:base="https://inforest.site/20181030-per-f-risc-v-dev-env/">&lt;p&gt;实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。&lt;/p&gt;
 
 &lt;p&gt;虽然澎峰直接给了配置好的虚拟机开发环境，不过因为 Ubuntu16.03 用着不顺手就想要自己把环境配出来。&lt;/p&gt;
 
