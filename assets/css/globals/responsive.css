@@ -44,9 +44,8 @@
 
   .column,
   .one-third-column {
-    width   : 100% !important;
-    float   : none;
-    position: fixed;
+    width: 100% !important;
+    float: none;
   }
 
   .home .banner .collection-head {
