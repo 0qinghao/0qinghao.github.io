@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-23T21:26:37+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">vim 在 Verilog 中的应用——生成相似代码</title><link href="https://inforest.site/20200723-vim-app-in-verilog-generate-similar-code/" rel="alternate" type="text/html" title="vim 在 Verilog 中的应用——生成相似代码" /><published>2020-07-23T00:00:00+08:00</published><updated>2020-07-23T00:00:00+08:00</updated><id>https://inforest.site/vim-app-in-verilog-generate-similar-code</id><content type="html" xml:base="https://inforest.site/20200723-vim-app-in-verilog-generate-similar-code/">&lt;p&gt;vim 作为最出色的文本编辑器之一，有着丰富的内置命令和各色各样的开源插件，可以说是杀鸡屠龙无所不能。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-24T20:51:01+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://inforest.site/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
+当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 配置时，GitHub 将在你 push 后自动进行在线构建。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-20-40-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;查看 repo 的提交历史将能看到构建成功的消息，如果构建失败则会收到一封邮件报告。因此理论上我们在本地甚至不需要配置 Jekyll 环境，只需要保证 push 的内容具备让 GitHub 进行在线构建的条件即可。&lt;/p&gt;
+
+&lt;h3 id=&quot;在线构建的局限性&quot;&gt;在线构建的局限性&lt;/h3&gt;
+
+&lt;p&gt;将构建的任务交给 GitHub 确实十分方便，也能满足绝大部分用户的需求。但我们注意到 GitHub 提供的在线构建服务并不支持所有 Jekyll 插件，支持列表可以在这里查询：&lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;https://pages.github.com/versions/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;而很不幸的是，有一个插件对我来说是必不可少的，而它却不在支持列表中。这个插件是 &lt;a href=&quot;https://github.com/guentoan/jekyll-furigana&quot;&gt;jekyll-furigana&lt;/a&gt;，用于给文本注音，主要应用场景有：&lt;/p&gt;
+
+&lt;p&gt;( 日本語:にほんご )の( 漢字:かんじ )に( 振:ふ )り( 仮名:がな )を( 編集:へんしゅう )する&lt;/p&gt;
+
+&lt;p&gt;( 中:zhōng )( 文:wén )拼音注音&lt;/p&gt;
+
+&lt;p&gt;( 奇奇怪怪的用法:😀😁🤣😑🤨😮😶 )&lt;/p&gt;
+
+&lt;p&gt;幸运的是 GitHub page 支持关闭在线构建，代价则是用户必须在本地配置好 Jekyll 环境，构建、推送构建完成的静态网页到 GitHub page repo。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins&quot;&gt;GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;配置-jekyll-furigana-插件&quot;&gt;配置 jekyll-furigana 插件&lt;/h3&gt;
+
+&lt;p&gt;配置 Jekyll 插件的前提当然是配置好本地 Jekyll 环境。这里默认大家已经配置好了，如果还没配置的可以跟着&lt;a href=&quot;http://jekyllcn.com/docs/installation/&quot;&gt;官方文档&lt;/a&gt;做，这里只描述插件的配置方法。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在 Gemfile 中配置 jekyll-furigana 插件
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://rubygems.org'&lt;/span&gt;
+ gem &lt;span class=&quot;s1&quot;&gt;'github-pages'&lt;/span&gt;, group: :jekyll_plugins
+ gem &lt;span class=&quot;s1&quot;&gt;'tzinfo-data'&lt;/span&gt;
+ gem &lt;span class=&quot;s1&quot;&gt;'jekyll-furigana'&lt;/span&gt;, group: :jekyll_plugins
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;在 Jekyll 配置文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plugins:&lt;/code&gt; 部分配置插件
+    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; plugins:
+     - jekyll-github-metadata
+     - rouge
+     - jekyll-paginate
+     - jekyll-sitemap
+     - jekyll-feed
+     - jemoji
+     - jekyll-furigana
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;在需要启用注音功能的 markdown 博客文件头中加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;furigana: true&lt;/code&gt;
+    &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt; ---&lt;/span&gt;
+ layout: post
+ title: 在基于 Jekyll 的博客中加入文字的注音
+ categories: [日语]
+ furigana: true
+&lt;span class=&quot;p&quot;&gt; ---
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts/post.html&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt; 过滤器，加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;furigana&lt;/code&gt; 过滤器
+ &lt;img src=&quot;/assets/images/2020-07-24-20-20-27.png&quot; alt=&quot;&quot; /&gt;
+    &lt;ul&gt;
+      &lt;li&gt;默认情况下是修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post.html&lt;/code&gt; 文件，如果你的 markdown 文件头中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt; 属性不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 那就要去修改对应的文件。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
+
+&lt;p&gt;jekyll-furigana 插件有多种使用格式，可选用下面任意一种。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-24-20-23-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;他们在启用了插件的页面上，都将被渲染为：&lt;/p&gt;
+
+&lt;p&gt;(日本語:にほんご)&lt;/p&gt;
+
+&lt;h3 id=&quot;编译静态网页推送到-github-page-repo&quot;&gt;编译静态网页推送到 GitHub page repo&lt;/h3&gt;
+
+&lt;p&gt;在根目录下编译静态网页，输出到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./docs&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; ./docs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; 文件夹内的内容推送到 GitHub page repo&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ./docs
+
+git init
+
+git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
+
+git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;test furigana&quot;&lt;/span&gt;
+
+git remote add origin https://your-repo-url.git
+
+git push origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;大约 2 分钟之后，即可打开网页检查插件是否生效。&lt;/p&gt;
+
+&lt;p&gt;最后，感谢你阅读文章。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">越来越多的人选择将博客托管在 GitHub page 或是国内的 Coding page，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。</summary></entry><entry><title type="html">vim 在 Verilog 中的应用——生成相似代码</title><link href="https://inforest.site/20200723-vim-app-in-verilog-generate-similar-code/" rel="alternate" type="text/html" title="vim 在 Verilog 中的应用——生成相似代码" /><published>2020-07-23T00:00:00+08:00</published><updated>2020-07-23T00:00:00+08:00</updated><id>https://inforest.site/vim-app-in-verilog-generate-similar-code</id><content type="html" xml:base="https://inforest.site/20200723-vim-app-in-verilog-generate-similar-code/">&lt;p&gt;vim 作为最出色的文本编辑器之一，有着丰富的内置命令和各色各样的开源插件，可以说是杀鸡屠龙无所不能。
 但同时 vim 的入门门槛高、学习曲线陡峭，也使得许多人或是望而生畏，或是浅尝辄止。当然也包括我，我在本科阶段第一次接触 vim 的时候，多半是带着一些“装x”的中二情感在强行用，直到最近才开始系统地学习、使用。目前使用的模式是在 VSCode 中激活&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=vscodevim.vim&quot;&gt; vim 键映射&lt;/a&gt;，虽然有很多大牛选择从零将 vim 打造成完整的 IDE，但我始终认为 vim 的强处在于文本处理，IDE 部分还是交给 VSCode 吧。&lt;/p&gt;
 
 &lt;p&gt;回到正题，我的主要开发语言是 Verilog，在 Verilog 代码中经常会出现一整段十分相似的代码，一般是只有数字编号不同的内容。例如在对一整组信号做打拍时，这种时候可以应用 vim 的宏功能来快速生成代码。&lt;/p&gt;
@@ -872,198 +971,4 @@ sudo /etc/init.d/cron restart
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;255.255.255.255/32
 255.255.255.255
 本网段的广播地址。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">内网 IP 段有哪些</summary></entry><entry><title type="html">译 - 使用谷歌 Cloud Translation API 翻译文本</title><link href="https://inforest.site/20180405-google-translation-api/" rel="alternate" type="text/html" title="译 - 使用谷歌 Cloud Translation API 翻译文本" /><published>2018-04-05T00:00:00+08:00</published><updated>2018-04-05T00:00:00+08:00</updated><id>https://inforest.site/google-translation-api</id><content type="html" xml:base="https://inforest.site/20180405-google-translation-api/">&lt;blockquote&gt;
-  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-translation-intro-ja/index.html#0&quot;&gt;Translation API でテキストをほんやくする&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
-
-&lt;p&gt;使用 Cloud Translation，可以将任意的字符串翻译为 API 支持的语言。由于语言检测功能的存在，即使在源语言未知的情况下，也能使用该 API。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;将要学习的东西&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;创建 Cloud Translation API 请求，使用 curl 调用 API&lt;/li&gt;
-  &lt;li&gt;翻译文本的方法&lt;/li&gt;
-  &lt;li&gt;高级版（Premium Edition）的使用方法&lt;/li&gt;
-  &lt;li&gt;检测语言&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;必要的准备&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;创建 Google Cloud Platform 项目&lt;/li&gt;
-  &lt;li&gt;浏览器（&lt;a href=&quot;https://www.google.com/chrome/browser/desktop/&quot;&gt;Chrome&lt;/a&gt;、&lt;a href=&quot;https://www.mozilla.org/firefox/&quot;&gt;Firefox&lt;/a&gt; 等）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;设置和一些说明&quot;&gt;设置和一些说明&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;根据自己的情况进行设置&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;还未拥有 Google 账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt; 是必须的。登录 Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-39.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-11-52.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;请记住项目名称。任意一个 Google Cloud 项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
-
-&lt;p&gt;Google Cloud Platform 的新用户将赠与 &lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于 $300 的试用金&lt;/a&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;用于教学的账号&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;教师将已有的项目进行设置，生成临时账号。若你得到了教师发放的临时账号，你将不必顾虑项目中产生的费用。但是，一旦该教学项目结束，所有的临时账号将被无效化。&lt;/p&gt;
-
-&lt;p&gt;当你从教师那收到了临时账号的用户名 / 密码，就能够登录 Google Cloud Console（&lt;a href=&quot;https://console.cloud.google.com/&quot;&gt;https://console.cloud.google.com/&lt;/a&gt;）。&lt;/p&gt;
-
-&lt;p&gt;登录后，你将看到如下界面。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;启用-translation-api&quot;&gt;启用 Translation API&lt;/h1&gt;
-
-&lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在下拉菜单中选择 [&lt;strong&gt;API Manager&lt;/strong&gt;]&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;点击 [&lt;strong&gt;启用 API&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后，在搜索框中输入「translate」。点击 [&lt;strong&gt;Google Cloud Translation API&lt;/strong&gt;]。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-38.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;API 已经启用的情况下，只会显示 [停用] 按钮。请不要停用 API。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-12-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;API 还未启用的情况下，点击 [&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Translation API 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;等待数秒，API 成功启用后，将显示如下。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-17.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;激活-cloud-shell&quot;&gt;激活 Cloud Shell&lt;/h1&gt;
-
-&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git 等），并提供永久的 5 GB 主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
-
-&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动 Cloud Shell。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cloud Shell 将在控制台底部的新窗口中打开，并显示命令行提示符。请等待提示符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user@project:~$&lt;/code&gt; 出现。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-13-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;生成-api-key&quot;&gt;生成 API Key&lt;/h1&gt;
-
-&lt;p&gt;你将通过使用 curl 发送一个请求来调用 Translation API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-14-51.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后，在 [&lt;strong&gt;凭据&lt;/strong&gt;] 选项卡中点击 [&lt;strong&gt;创建凭据&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-15-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在下拉菜单中选择  [&lt;strong&gt;API 密钥&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-15-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最后，复制生成好的密钥。&lt;/p&gt;
-
-&lt;p&gt;将密钥复制到剪贴板后，使用下述命令将其保存到 Cloud Shell 的环境变量中。下述的&lt;strong&gt;YOUR_API_KEY&lt;/strong&gt;请替换成剪贴板中的内容。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export API_KEY=YOUR_API_KEY
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;翻译文本&quot;&gt;翻译文本&lt;/h1&gt;
-
-&lt;p&gt;在此例中，将「My name is Steve」这个字符串翻译为西班牙语。使用下述的 curl 命令，将之前保存好的 API 密钥环境变量和将要翻译的文本一起，传递给 Translation API 。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TEXT=&quot;My%20name%20is%20Steve&quot;
-curl &quot;https://translation.googleapis.com/language/translate/v2?target=es&amp;amp;key=${API_KEY}&amp;amp;q=${TEXT}&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;你将得到形式如下的响应。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;data&quot;: {
-    &quot;translations&quot;: [
-      {
-        &quot;translatedText&quot;: &quot;Mi nombre es Steve&quot;,
-        &quot;detectedSourceLanguage&quot;: &quot;en&quot;
-      }
-    ]
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;响应中，你可以看到翻译出的文本和 API 检测到的源语言。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;Premium 模式&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;Google Cloud Translation 在几乎所有翻译任务中都是用了 Standard Edition 模式。然而 Google 从最近开始，使用了更为强大的 &lt;a href=&quot;https://research.googleblog.com/2016/09/a-neural-network-for-machine.html&quot;&gt;Neural machine Translation System&lt;/a&gt; 来优化翻译服务。在这里，我们可以使用 Premium 模式。详情请参阅 &lt;a href=&quot;https://cloud.google.com/translate/docs/premium&quot;&gt;此处的指南&lt;/a&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;检测语言&quot;&gt;检测语言&lt;/h1&gt;
-
-&lt;p&gt;除了文本翻译以外，Translation API 还能用来检测文本的语言。此例中，我们将检测两个字符串的语言。下面将使用 curl 命令，把之前保存的 API 密钥环境变量和待检测的文本一起传递给 Translation API 。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;TEXT_ONE=&quot;Meu%20nome%20é%20Steven&quot;
-TEXT_TWO=&quot;日本のグーグルのオフィスは、東京の六本木ヒルズにあります&quot;
-curl &quot;https://translation.googleapis.com/language/translate/v2/detect?key=${API_KEY}&amp;amp;q=${TEXT_ONE}&amp;amp;q=${TEXT_TWO}&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;你将得到形式如下的响应。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;data&quot;: {
-    &quot;detections&quot;: [
-      [
-        {
-          &quot;confidence&quot;: 0.84644311666488647,
-          &quot;isReliable&quot;: false,
-          &quot;language&quot;: &quot;pt&quot;
-        }
-      ],
-      [
-        {
-          &quot;confidence&quot;: 1,
-          &quot;isReliable&quot;: false,
-          &quot;language&quot;: &quot;ja&quot;
-        }
-      ]
-    ]
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;本例中返回的语言是 「pt」和「ja」。它们是 &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO_639-1&quot;&gt;ISO-639-1&lt;/a&gt; 的标识符，指葡萄牙语和日本语。关于可能的返回值，在 &lt;a href=&quot;https://cloud.google.com/translate/docs/languages&quot;&gt;Translation API 支持的语言一览&lt;/a&gt; 中可以查询。&lt;/p&gt;
-
-&lt;h1 id=&quot;恭喜&quot;&gt;恭喜！&lt;/h1&gt;
-
-&lt;p&gt;在此次向导中，我们学习了如何使用 Cloud Translation API 进行文本的翻译。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;学到的东西&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;创建 Cloud Translation API 请求，使用 curl 调用 API&lt;/li&gt;
-  &lt;li&gt;翻译文本的方法&lt;/li&gt;
-  &lt;li&gt;高级版（Premium Edition）的使用方法&lt;/li&gt;
-  &lt;li&gt;检测语言&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;下一步&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;通过常用的编程语言，使用客户端库，学习 &lt;a href=&quot;https://cloud.google.com/translate/docs/samples&quot;&gt;Translation API 的示例应用程序&lt;/a&gt;。&lt;/li&gt;
-  &lt;li&gt;尝试使用 &lt;a href=&quot;https://cloud.google.com/vision/&quot;&gt;Vision API&lt;/a&gt; 、&lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Speech API&lt;/a&gt; 。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">原文：Translation API でテキストをほんやくする</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">内网 IP 段有哪些</summary></entry></feed>
