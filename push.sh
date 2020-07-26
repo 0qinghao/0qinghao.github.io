@@ -1,5 +1,5 @@
 #!/bin/bash
-jekyll build --destination ./docs
+bundle exec jekyll build --destination ./docs
 cp ./CNAME ./docs/
 touch ./docs/.nojekyll
 
