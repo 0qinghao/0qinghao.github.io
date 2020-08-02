@@ -67,6 +67,8 @@
   
   
   
+  
+  
 
   
     {
@@ -277,6 +279,13 @@
       "category" : "日语",
       "content": "越来越多的人选择将博客托管在 GitHub page 或是国内的 Coding page，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。 当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 _config.yml 配置时，GitHub 将在你 push 后自动进行在线构建。 查看 repo 的提交历史将能看到构建成功的消息，如果构建失败则会收到一封邮件报告。因此理论上我们在本地甚至不需要配置 Jekyll 环境，只需要保证 push 的内容具备让 GitHub 进行在线构建的条件即可。 在线构建的局限性 将构建的任务交给 GitHub 确实十分方便，也能满足绝大部分用户的需求。但我们注意到 GitHub 提供的在线构建服务并不支持所有 Jekyll 插件，支持列表可以在这里查询：https://pages.github.com/versions/ 而很不幸的是，有一个插件对我来说是必不可少的，而它却不在支持列表中。这个插件是 jekyll-furigana，用于给文本注音，主要应用场景有： ( 日本語:にほんご )の( 漢字:かんじ )に( 振:ふ )り( 仮名:がな )を( 編集:へんしゅう )する ( 中:zhōng )( 文:wén )拼音注音 ( 奇奇怪怪的用法:😀😁🤣😑🤨😮😶 ) 幸运的是 GitHub page 支持关闭在线构建，代价则是用户必须在本地配置好 Jekyll 环境，构建、推送构建完成的静态网页到 GitHub page repo。  GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub. 配置 jekyll-furigana 插件 配置 Jekyll 插件的前提当然是配置好本地 Jekyll 环境。这里默认大家已经配置好了，如果还没配置的可以跟着官方文档做，这里只描述插件的配置方法。  在 Gemfile 中配置 jekyll-furigana 插件 source 'https://rubygems.org' gem 'github-pages', group: :jekyll_plugins gem 'tzinfo-data' gem 'jekyll-furigana', group: :jekyll_plugins   安装 $ bundle   在 Jekyll 配置文件 _config.yml 中的 plugins: 部分配置插件 plugins: - jekyll-github-metadata - rouge - jekyll-paginate - jekyll-sitemap - jekyll-feed - jemoji - jekyll-furigana   在需要启用注音功能的 markdown 博客文件头中加入 furigana: true --- layout: post title: 在基于 Jekyll 的博客中加入文字的注音 categories: [日语] furigana: true ---   修改 _layouts/post.html 中的 content 过滤器，加入 furigana 过滤器   默认情况下是修改 post.html 文件，如果你的 markdown 文件头中的 layout 属性不是 post 那就要去修改对应的文件。   使用方法 jekyll-furigana 插件有多种使用格式，可选用下面任意一种。 他们在启用了插件的页面上，都将被渲染为： (日本語:にほんご) 编译静态网页推送到 GitHub page repo 在根目录下编译静态网页，输出到 ./docs jekyll build --destination ./docs 将 docs 文件夹内的内容推送到 GitHub page repo cd ./docs git init git add -A git commit -m test furigana git remote add origin https://your-repo-url.git git push origin master 大约 2 分钟之后，即可打开网页检查插件是否生效。 最后，感谢你阅读文章。 ",
       "url"      : "https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/"
+    } ,
+  
+    {
+      "title"    : "值得一记的 vim 使用技巧",
+      "category" : "vim",
+      "content": "记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。 对括号内的文本操作 不仅限括号，可理解为成对符号内的文本操作。    命令  功能     ci(  修改 () 内的文本    di(  删除 () 内的文本    yi(  复制 () 内的文本    vi(  选中 () 内的文本    ci”  修改 “” 内的文本    ci[  修改 [] 内的文本   数值自增 / 自减    命令  功能     Ctrl + a  往后查找第一个数字，并使其 +1 （会识别数字的正负性）    Ctrl + x  往后查找第一个数字，并使其 -1 （会识别数字的正负性）  ",
+      "url"      : "https://inforest.site/20200802-vim-technique/"
     } ,
   
     {
@@ -718,6 +727,13 @@
       "category" : "日语",
       "content": "つかむ【掴む】 抓住；掌握；获得；理解.  手を掴んで放さない。／抓住手不放。 イヌのしっぽを掴む。／抓住狗的尾巴。 雲をつかむような話。／没根据的话。 チャンスを掴む。／抓住机会。 文の( 大意:たいい )を掴む。／领会文章的大意。 ( 証拠:しょうこ )を掴んだ。／抓住了证据。 彼は聞く人の心を掴む話し方をする。／他说话的方式很能抓住听讲人的心理。 コツを掴めば作業が早くなる。／抓住诀窍的话，工作会快起来。 固定客を掴む。／抓住固定客源。 株で( 大金:たいきん )を掴んだ。／玩股票赚了很多钱。 ",
       "url"      : "https://inforest.site/20200731-tango-tukamu/"
+    } ,
+  
+    {
+      "title"    : "【每日一词】見通す",
+      "category" : "日语",
+      "content": "みとおす【見通す】 推测；预料；眺望；看透；看到最后.  こうした結果になることは早くから見通していた。／早就预料到会有这种结果。 当時において事件の( 全容:ぜんよう )を見通すことは不可能だった。／当时就能洞察到事件的全貌是不可能的事。 相手の心を見通す。／看穿对方的心思。 敵の陰謀をみとおす。／看穿敌人的阴谋。 退屈な映画だったが、我慢して最後まで見通した。／虽然电影不精彩，却耐着性子看完。 ( 対岸:たいがん )の山々を見通す。／眺望对岸的群山。 ",
+      "url"      : "https://inforest.site/20200802-tango-mitoosu/"
     } 
   
 ]

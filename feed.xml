@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-07-31T21:24:49+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://inforest.site/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-08-02T19:48:02+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://inforest.site/20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://inforest.site/vim-technique</id><content type="html" xml:base="https://inforest.site/20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
+
+&lt;h3 id=&quot;对括号内的文本操作&quot;&gt;对括号内的文本操作&lt;/h3&gt;
+
+&lt;p&gt;不仅限括号，可理解为成对符号内的文本操作。&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ci(&lt;/td&gt;
+      &lt;td&gt;修改 () 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;di(&lt;/td&gt;
+      &lt;td&gt;删除 () 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;yi(&lt;/td&gt;
+      &lt;td&gt;复制 () 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;vi(&lt;/td&gt;
+      &lt;td&gt;选中 () 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ci”&lt;/td&gt;
+      &lt;td&gt;修改 “” 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ci[&lt;/td&gt;
+      &lt;td&gt;修改 [] 内的文本&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;数值自增--自减&quot;&gt;数值自增 / 自减&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt;&lt;/td&gt;
+      &lt;td&gt;往后查找第一个数字，并使其 +1 （会识别数字的正负性）&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;x&lt;/kbd&gt;&lt;/td&gt;
+      &lt;td&gt;往后查找第一个数字，并使其 -1 （会识别数字的正负性）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。</summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://inforest.site/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
 当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 配置时，GitHub 将在你 push 后自动进行在线构建。&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-20-40-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -926,49 +986,4 @@ pip install instagram-scraper
 */1 * * * * Rin instagram-scraper 用户名 -d 存放文件夹
 
 sudo /etc/init.d/cron restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">repo：https://github.com/rarcega/instagram-scraper</summary></entry><entry><title type="html">常见内网网段</title><link href="https://inforest.site/20180405-common-local-ip/" rel="alternate" type="text/html" title="常见内网网段" /><published>2018-04-05T00:00:00+08:00</published><updated>2018-04-05T00:00:00+08:00</updated><id>https://inforest.site/common-local-ip</id><content type="html" xml:base="https://inforest.site/20180405-common-local-ip/">&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;http://blog.kankanan.com/article/51857f51-ip-6bb5670954ea4e9b.html&quot;&gt;内网 IP 段有哪些&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;常见的内网 IP 段有：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;10.0.0.0/8
-10.0.0.0 - 10.255.255.255
-
-172.16.0.0/12
-172.16.0.0 - 172.31.255.255
-
-192.168.0.0/16
-192.168.0.0 - 192.168.255.255
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;以上三个网段分别属于 A、B、C 三类 IP 地址，来自 《RFC 1918》。&lt;/p&gt;
-
-&lt;p&gt;但是根据 《Reserved IP addresses - Wikipedia, the free encyclopedia》 及《RFC 6890 - Special-Purpose IP Address Registries》的描述， 还有很多其它的内网 IP 段（包括 IPv6），以及其它用途的保留 IP 地址。&lt;/p&gt;
-
-&lt;p&gt;其它 IPv4 内网段罗列如下：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0.0.0.0/8
-0.0.0.0 - 0.255.255.255
-用于当前网络内的广播消息。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;100.64.0.0/10
-100.64.0.0 - 100.127.255.255
-由运营商使用的私网 IP 段，随着 IPv4 地址池的耗光，会有更多用户被分配到这个网段。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;127.0.0.0/8
-127.0.0.0 - 127.255.255.255
-本机回环地址。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;169.254.0.0/16
-169.254.0.0 - 169.254.255.255
-获取不到 IP 地址时使用，通常因为从 DHCP 服务器获取不到 IP。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;255.255.255.255/32
-255.255.255.255
-本网段的广播地址。
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">内网 IP 段有哪些</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">repo：https://github.com/rarcega/instagram-scraper</summary></entry></feed>
