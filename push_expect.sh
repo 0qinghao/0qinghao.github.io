@@ -2,7 +2,7 @@
 set githubpw [lindex $argv 0]
 set codingpw [lindex $argv 1]
 
-cd docs
+cd ../0qinghao.github.io
 spawn git push coding master
 expect {
     "Password*" {send "$codingpw\n"}
@@ -15,7 +15,7 @@ expect {
 }
 expect eof
 
-cd ..
+cd ../jekyll.0qinghao.github.io
 spawn git push origin master
 expect {
     "Password*" {send "$githubpw\n"}
