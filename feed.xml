@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-08-07T22:30:42+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://inforest.site/20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://inforest.site/vim-technique</id><content type="html" xml:base="https://inforest.site/20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="https://inforest.site/feed.xml" rel="self" type="application/atom+xml" /><link href="https://inforest.site/" rel="alternate" type="text/html" /><updated>2020-08-08T20:53:33+08:00</updated><id>https://inforest.site/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://inforest.site/20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://inforest.site/vim-technique</id><content type="html" xml:base="https://inforest.site/20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
 
 &lt;h3 id=&quot;对括号内的文本操作&quot;&gt;对括号内的文本操作&lt;/h3&gt;
 
@@ -56,6 +56,27 @@
     &lt;tr&gt;
       &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;x&lt;/kbd&gt;&lt;/td&gt;
       &lt;td&gt;往后查找第一个数字，并使其 -1 （会识别数字的正负性）&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;移动到空行&quot;&gt;移动到空行&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;{&lt;/td&gt;
+      &lt;td&gt;移动到上一个空行&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;}&lt;/td&gt;
+      &lt;td&gt;移动到下一个空行&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。</summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://inforest.site/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://inforest.site/20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
