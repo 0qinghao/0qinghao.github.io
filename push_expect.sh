@@ -9,7 +9,7 @@ cd ../0qinghao.github.io
 # }
 # expect eof
 
-spawn git push githubpage master
+spawn git push origin master
 expect {
     "Password*" {send "$githubpw\n"}
 }
