@@ -6,4 +6,4 @@ touch ./docs/.nojekyll
 
 git add -A
 git commit -m "$*"
-# git push origin master
+git push origin master
