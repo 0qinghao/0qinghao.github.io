@@ -1,0 +1,24 @@
+- name: 软件
+  keywords:
+      - H.264/265/266 编解码算法
+      - C/C++
+      - Python
+
+- name: 硬件
+  keywords:
+      - Verilog
+      - Synopsys 前端系列
+
+- name: 其他
+  keywords:
+      - 日语
+      - 服务器运维
+      - matlab/bash shell 等脚本
+
+# - name: Windows Developer Keywords
+#   keywords:
+#       - Win32 SDK
+#       - DuiLib
+#       - WTL
+#       - COM
+#       - WinDbg

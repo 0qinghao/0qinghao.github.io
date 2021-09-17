@@ -1,0 +1,144 @@
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://0qinghao.github.io/
+date_format: "ordinal"
+title: 林间
+subtitle: "<a href='https://0qinghao.github.io/'>InForest InfoRest</a><br/>若非琐事相牵绊 即起行 遍览天下众山河"
+subtitle: "InForest InfoRest <br>若非琐事相牵绊 即起行 遍览天下众山河"
+description: "林庆毫的个人空间"
+keywords: 博客, 个人空间
+timezone: Asia/Shanghai
+encoding: "utf-8"
+side_bar_repo_limit: 5
+repository: 0qinghao/0qinghao.github.io
+# 对 css 和 js 资源的 cdn 加速配置
+cdn:
+    jsdelivr:
+        enabled: true
+# 组件配置
+components:
+    # 分享
+    share:
+        enabled: true
+    # 不蒜子访问统计
+    busuanzi:
+        enabled: true
+        start_date: 2020-06-16
+# 压缩页面内容
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+# 文章字数统计
+word_count:
+    enabled: true
+
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: Qinghao Lin
+organization: 
+organization_url: 
+github_username: 0qinghao
+location: Shanghai, China
+email: qhlin96@foxmail.com
+
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
+
+  -
+    href: /ja_page/
+    label: 日语
+
+  -
+    href: /categories/
+    label: 分类
+
+  -
+    href: /archives/
+    label: 归档
+
+  -
+    href: /open-source/
+    label: 开源
+
+  -
+    href: /links/
+    label: 链接
+
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
+highlighter: rouge
+math_engine: mathjax
+paginate: 10
+incremental: false
+quiet: false
+excerpt_separator: "\n"
+permalink: /:year:month:day-:title/
+plugins:
+    - jekyll-github-metadata
+    - rouge
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+    - jekyll-furigana
+#     - jekyll-html-pipeline
+#     - jekyll-mentions
+collections:
+    ja_page:
+        output: true
+        permalink: /:year:month:day-:title/
+        # permalink: /:path/
+
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+# https://disqus.com
+# disqus:
+#     username: 
+# https://imsun.net/posts/gitment-introduction/
+# gitment:
+#     owner: 0qinghao
+#     repo: blog-comments
+#     oauth:
+#         client_id: 52d9553406b63c5df779
+#         client_secret: a226f4d14d3665a36ef4675a3422d810ec8cf1f0
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: 0qinghao
+    repo: blog-comments
+    clientID: 14d87e39600a8b712585
+    clientSecret: 19d9a7c7ab6449dfa69185fdcd5bb4b879c76adf
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+
+# ---------------- #
+#      Search      #
+# ---------------- #
+simple_jekyll_search:
+    # 是否支持全文搜索
+    fulltext: true
+    # 最多显示多少条搜索结果
+    limit: 30
