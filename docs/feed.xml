@@ -1,64 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-03-21T17:15:56+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-03-21T17:21:35+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
 
 &lt;p&gt;蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。&lt;/p&gt;
 
 &lt;h3 id=&quot;蓝鹰的几个对怪易伤-debuff&quot;&gt;蓝鹰的几个对怪易伤 debuff&lt;/h3&gt;
 
 &lt;ol&gt;
-  &lt;li&gt;水炮&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水炮
+ &lt;img src=&quot;/assets/images/2022-03-21-16-19-25.png&quot; alt=&quot;&quot; /&gt;
+ 【所有属性抗性减少】30%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水狱
+ &lt;img src=&quot;/assets/images/2022-03-21-16-21-36.png&quot; alt=&quot;&quot; /&gt;
+ 【所有属性抗性减少】20%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;虚弱之水
+ &lt;img src=&quot;/assets/images/2022-03-21-16-22-26.png&quot; alt=&quot;&quot; /&gt;
+ 【所有属性抗性减少】9%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;冰霜结晶
+ &lt;img src=&quot;/assets/images/2022-03-21-16-25-26.png&quot; alt=&quot;&quot; /&gt;
+ 【所受伤害增加】10%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;珍珠中的加勒比
+ &lt;img src=&quot;/assets/images/2022-03-21-16-27-06.png&quot; alt=&quot;&quot; /&gt;
+ 【所受伤害增加】30.5%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;裁决金锤
+ &lt;img src=&quot;/assets/images/2022-03-21-16-28-13.png&quot; alt=&quot;&quot; /&gt;
+ 【所受伤害增加】45%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;轮回道场
+ &lt;img src=&quot;/assets/images/2022-03-21-16-29-11.png&quot; alt=&quot;&quot; /&gt;
+ 【所受伤害增加】5%&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-19-25.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所有属性抗性减少】30%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;水狱&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-21-36.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所有属性抗性减少】20%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;虚弱之水&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-22-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所有属性抗性减少】9%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;冰霜结晶&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-25-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所受伤害增加】10%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;珍珠中的加勒比&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-27-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所受伤害增加】30.5%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;裁决金锤&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-28-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所受伤害增加】45%&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;轮回道场&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-29-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;【所受伤害增加】5%&lt;/p&gt;
 
 &lt;h3 id=&quot;debuff-的单独测试&quot;&gt;debuff 的单独测试&lt;/h3&gt;
 
@@ -92,12 +74,11 @@
 
 &lt;p&gt;同样地，合理猜测所有的【所受伤害增加】都属于同一乘区，是加算的。&lt;/p&gt;
 
-&lt;p&gt;让怪同时挂上【冰霜结晶】（10%）和【轮回道场】的【唤水】（5%）测试，增伤 14.71%≈15%
-让怪同时挂上【裁决金锤】的【神圣海域】（45%）和【冰霜结晶】（10%）测试，增伤 53.86≈55%&lt;/p&gt;
+&lt;p&gt;让怪同时挂上【冰霜结晶】（10%）和【轮回道场】的【唤水】（5%）测试，增伤 14.71%≈15%&lt;/p&gt;
+
+&lt;p&gt;让怪同时挂上【裁决金锤】的【神圣海域】（45%）和【冰霜结晶】（10%）测试，增伤 53.86≈55%&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-54-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;觉醒的 30.5% 增伤同样，不贴图了。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;结论2：【所受伤害增加】的 4 个 debuff 属于同一乘区，加算。&lt;/strong&gt;&lt;/p&gt;
 
