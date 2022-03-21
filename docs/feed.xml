@@ -1,4 +1,89 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2021-09-17T16:52:33+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io//20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io//vim-technique</id><content type="html" xml:base="https://0qinghao.github.io//20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-03-21T17:13:28+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
+
+&lt;p&gt;蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。&lt;/p&gt;
+
+&lt;h3 id=&quot;蓝鹰的几个对怪易伤-debuff&quot;&gt;蓝鹰的几个对怪易伤 debuff&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;水炮
+&lt;img src=&quot;/assets/images/2022-03-21-16-19-25.png&quot; alt=&quot;&quot; /&gt;
+【所有属性抗性减少】30%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;水狱
+&lt;img src=&quot;/assets/images/2022-03-21-16-21-36.png&quot; alt=&quot;&quot; /&gt;
+【所有属性抗性减少】20%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;虚弱之水
+&lt;img src=&quot;/assets/images/2022-03-21-16-22-26.png&quot; alt=&quot;&quot; /&gt;
+【所有属性抗性减少】9%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;冰霜结晶
+&lt;img src=&quot;/assets/images/2022-03-21-16-25-26.png&quot; alt=&quot;&quot; /&gt;
+【所受伤害增加】10%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;珍珠中的加勒比
+&lt;img src=&quot;/assets/images/2022-03-21-16-27-06.png&quot; alt=&quot;&quot; /&gt;
+【所受伤害增加】30.5%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;裁决金锤
+&lt;img src=&quot;/assets/images/2022-03-21-16-28-13.png&quot; alt=&quot;&quot; /&gt;
+【所受伤害增加】45%&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;轮回道场
+&lt;img src=&quot;/assets/images/2022-03-21-16-29-11.png&quot; alt=&quot;&quot; /&gt;
+【所受伤害增加】5%&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;debuff-的单独测试&quot;&gt;debuff 的单独测试&lt;/h3&gt;
+
+&lt;p&gt;首先测试 7 个 debuff 单独生效时的效果，毕竟这游戏文本与实际不符也不是一次两次了。&lt;/p&gt;
+
+&lt;p&gt;测试对象是天空塔第 1 层，第 23 层，不要问我为什么，随便挑的。测试时除了必要的装备和技能，其他配置全部清空。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-38-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;好在非常顺利，所有的 7 个 debuff 文本与实际相符。【所有属性抗性减少】和【所受伤害增加】都使伤害提升了与文本一致的数值。&lt;/p&gt;
+
+&lt;p&gt;这里另外说一句，【所有属性抗性减少】对无属性的伤害同样生效。&lt;/p&gt;
+
+&lt;h3 id=&quot;debuff-加算乘算的测试&quot;&gt;debuff 加算乘算的测试&lt;/h3&gt;
+
+&lt;p&gt;我们可以合理地猜测，所有的【所有属性抗性减少】都属于同一乘区，是加算的。&lt;/p&gt;
+
+&lt;p&gt;让怪同时挂上【水炮】（30%）和【水狱】（20%）两个 debuff，测试结果：
+&lt;img src=&quot;/assets/images/2022-03-21-16-47-11.png&quot; alt=&quot;&quot; /&gt;
+接近 50%，符合加算的猜想。&lt;/p&gt;
+
+&lt;p&gt;让怪同时挂上【水炮】（30%）和【水狱】（20%）和【虚弱之水】（只打了2个符文，5%）三个 debuff，测试结果：
+&lt;img src=&quot;/assets/images/2022-03-21-16-50-27.png&quot; alt=&quot;&quot; /&gt;
+比理论 55% 略高一些，是因为打了虚弱之水的装备触发了智力 buff。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;结论1：【所有属性抗性减少】的 3 个 debuff 属于同一乘区，加算。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;同样地，合理猜测所有的【所受伤害增加】都属于同一乘区，是加算的。&lt;/p&gt;
+
+&lt;p&gt;让怪同时挂上【冰霜结晶】（10%）和【轮回道场】的【唤水】（5%）测试，增伤 14.71%≈15%
+让怪同时挂上【裁决金锤】的【神圣海域】（45%）和【冰霜结晶】（10%）测试，增伤 53.86≈55%
+&lt;img src=&quot;/assets/images/2022-03-21-16-54-20.png&quot; alt=&quot;&quot; /&gt;
+觉醒的 30.5% 增伤同样，不贴图了。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;结论2：【所受伤害增加】的 4 个 debuff 属于同一乘区，加算。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;最后，测试【所有属性抗性减少】和【所受伤害增加】是否属于各自独立的乘区。&lt;/p&gt;
+
+&lt;p&gt;测到这里已经累了，所以只测试了【裁决金锤】的【所受伤害增加45%】和水炮的【所有属性抗性减少30%】一起生效的情况：
+&lt;img src=&quot;/assets/images/2022-03-21-17-03-26.png&quot; alt=&quot;&quot; /&gt;
+1.45*1.3=1.885，乘算。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;结论3：【所受伤害增加】和【所有属性抗性减少】属于两个独立的乘区，乘算。&lt;/strong&gt;&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。</summary></entry><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io//20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io//vim-technique</id><content type="html" xml:base="https://0qinghao.github.io//20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
 
 &lt;h3 id=&quot;对括号内的文本操作&quot;&gt;对括号内的文本操作&lt;/h3&gt;
 
@@ -989,22 +1074,4 @@ sudo nano /etc/crontab
 */1 * * * * Rin bypy upload 文件夹
 
 sudo /etc/init.d/cron restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html">repo: https://github.com/houtianze/bypy</summary></entry><entry><title type="html">インスタグラム爬图</title><link href="https://0qinghao.github.io//20180406-ins-python-scraper/" rel="alternate" type="text/html" title="インスタグラム爬图" /><published>2018-04-06T00:00:00+08:00</published><updated>2018-04-06T00:00:00+08:00</updated><id>https://0qinghao.github.io//ins-python-scraper</id><content type="html" xml:base="https://0qinghao.github.io//20180406-ins-python-scraper/">&lt;p&gt;repo：&lt;a href=&quot;https://github.com/rarcega/instagram-scraper&quot;&gt;https://github.com/rarcega/instagram-scraper&lt;/a&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# https://github.com/rarcega/instagram-scraper/blob/master/setup.py
-sudo python setup.py install
-
-pip install instagram-scraper
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;instagram-scraper 用户名 -u 你的用户名 -p 你的密码 -d 存放文件夹
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;定时爬取&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo nano /etc/crontab
-
-*/1 * * * * Rin instagram-scraper 用户名 -d 存放文件夹
-
-sudo /etc/init.d/cron restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="python" /><category term="linux" /><summary type="html">repo：https://github.com/rarcega/instagram-scraper</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html">repo: https://github.com/houtianze/bypy</summary></entry></feed>
