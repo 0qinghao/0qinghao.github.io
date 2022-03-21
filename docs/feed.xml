@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-03-21T18:08:59+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-03-21T18:28:34+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
 
 &lt;p&gt;蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。&lt;/p&gt;
 
@@ -145,7 +145,17 @@
 
 &lt;p&gt;还有一点，【海之歌】是有 30 秒 cd 的，在团本中可以通过上 buff 刷 cd，但也确实存在一定的真空期。综上，【最强音】的实战增幅砍一半，算 5% 不过分吧。&lt;/p&gt;
 
-&lt;p&gt;因此，我个人看来，【最强音】并不是很优秀的辅助符文，我选择不打。非要打的话优先级也很低，最多在出齐红装后补上。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。</summary></entry><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io//20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io//vim-technique</id><content type="html" xml:base="https://0qinghao.github.io//20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
+&lt;p&gt;因此，我个人看来，【最强音】并不是很优秀的辅助符文，我选择不打。非要打的话优先级也很低，最多在出齐红装后补上。&lt;/p&gt;
+
+&lt;h3 id=&quot;杂谈大海啸与平-a&quot;&gt;杂谈：【大海啸】与平 A&lt;/h3&gt;
+
+&lt;p&gt;在征服者大行其道的版本，如何提升平 A 伤害也是个热门话题。&lt;/p&gt;
+
+&lt;p&gt;吧里偶尔会出现【大海啸】对平 A 无效的说法，理由是平 A 不属于【技能】……&lt;/p&gt;
+
+&lt;p&gt;其实只要搞清楚【所有技能伤害】对平 A 有没有加成就行了。测试结果：有&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-18-28-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。</summary></entry><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io//20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io//vim-technique</id><content type="html" xml:base="https://0qinghao.github.io//20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
 
 &lt;h3 id=&quot;对括号内的文本操作&quot;&gt;对括号内的文本操作&lt;/h3&gt;
 
