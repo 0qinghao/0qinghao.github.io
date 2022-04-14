@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-04-14T16:40:35+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-04-14T16:43:05+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;这描述一度让人以为 4 个转属性符文能使最终伤害同时吃 4 个加成，即打上水暗火符文后，【光电鳗】的伤害变成 x * (1 + 水强% + 光强% + 火强% + 暗强%)。&lt;/p&gt;
+
+&lt;p&gt;但是经过我和其他吧友的简单测试，这纯属无稽之谈，现在还是和更新前一样，吃最高的。至于有部分玩家感觉更新完伤害更高了，有可能是因为官方还修复了 A 属性转 B 属性随动的 bug，这涉及到振奋、放流、高爆以及所有穿属强套的玩家。&lt;/p&gt;
+
+&lt;p&gt;经吧友提醒，上述描述修复的可能是另一个大部分玩家不会碰到的 bug：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-16-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;接下来描述我进行的测试。&lt;/p&gt;
+
+&lt;p&gt;天空塔 1 层；
+技能点清空；
+卡牌清空；
+装备只带 3 件防具，且这 3 件不会触发任何影响测试的 buff；
+使用【无属性 旗鱼】【暗属性 墨汁弹】【光属性 电鳗】测试打【符文：寒冰】后是否会叠加吃原属性和水属性 2 种属强；&lt;/p&gt;
+
+&lt;p&gt;打满【寒冰】前：&lt;/p&gt;
+
+&lt;p&gt;测试数据及其中一次墨汁弹伤害：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-23-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-24-41.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;打满【寒冰】后：&lt;/p&gt;
+
+&lt;p&gt;测试数据及其中一次墨汁弹伤害：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-26-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-27-41.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;关键数据：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-28-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;面板、buff 栏全在截图中有，可验证。&lt;/p&gt;
+
+&lt;p&gt;接下来是紧张刺激的计算验证环节。&lt;/p&gt;
+
+&lt;p&gt;如果不叠加，即打了【寒冰】后，水强达到 100.27%，远高于其他。【墨汁弹】会从吃 35.65% 的暗强变为吃 100.27% 的水强，提升率是 (1+100.27%)/(1+35.65%)-1=47.64%。&lt;/p&gt;
+
+&lt;p&gt;类似地，电鳗从吃光变吃水，旗鱼从吃无变吃水，理论数据如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-31-59.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果叠加，即打了【寒冰】后，【墨汁弹】同时吃 35.65% 的暗强和 100.27% 的水强，提升率是 75.31%，理论数据如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-33-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;理论计算完毕，我们来对比实际数据：&lt;/p&gt;
+
+&lt;p&gt;打【寒冰】后，【墨汁弹】伤害从 2603 提升到 3850，提升率 47.89%，与不叠加的理论值误差 0.2%，严格控制变量就能得出精确的结果：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-33-54.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;因此得出结论：属强转换符文的效果仍是使技能吃转换属强，不叠加多属强。&lt;/p&gt;
+
+&lt;p&gt;另外，附上 xls 公式审阅，欢迎 debug：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-39-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;后话：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;大部分人没有认真在玩这个游戏（当然这个睿智策划确实不值得我们认真去玩！）。他们不理解一个 buff/debuff 的实战效果；不理解什么叫做控制变量；不理解奶妈在什么情况下几乎没作用，在什么情况下顶 2 个队友；不理解强化的收益；不理解什么时候需要主属性；不理解六边形战士……&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;我是傻x，为什么浪费时间和钱做这个显而易见的测试&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：</summary></entry><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io//20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io//20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
 
 &lt;p&gt;蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。&lt;/p&gt;
 
@@ -1134,24 +1211,4 @@ export ftp_proxy=http://127.0.0.1:8123
 &lt;ul&gt;
   &lt;li&gt;浏览 Natural Language API 文档的 &lt;a href=&quot;https://cloud.google.com/natural-language/docs/tutorials&quot;&gt;向导&lt;/a&gt;。&lt;/li&gt;
   &lt;li&gt;尝试使用 &lt;a href=&quot;https://cloud.google.com/vision/&quot;&gt;Vision API&lt;/a&gt; 、&lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Speech API&lt;/a&gt; 。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><category term="google cloud" /><summary type="html">原文：Natural Language API でエンティティと感情を分析する</summary></entry><entry><title type="html">使用 bypy 在命令行上传文件到百度云盘</title><link href="https://0qinghao.github.io//20180406-bypy-baiduyun/" rel="alternate" type="text/html" title="使用 bypy 在命令行上传文件到百度云盘" /><published>2018-04-06T00:00:00+08:00</published><updated>2018-04-06T00:00:00+08:00</updated><id>https://0qinghao.github.io//bypy-baiduyun</id><content type="html" xml:base="https://0qinghao.github.io//20180406-bypy-baiduyun/">&lt;p&gt;repo: &lt;a href=&quot;https://github.com/houtianze/bypy&quot;&gt;https://github.com/houtianze/bypy&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;安装&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install bypy
-
-# 执行任意命令进行授权
-bypy info
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#上传文件夹内的内容到 app/bypy/
-bypy upload 文件夹
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#定时执行上传
-sudo nano /etc/crontab
-
-*/1 * * * * Rin bypy upload 文件夹
-
-sudo /etc/init.d/cron restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html">repo: https://github.com/houtianze/bypy</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><category term="google cloud" /><summary type="html">原文：Natural Language API でエンティティと感情を分析する</summary></entry></feed>
