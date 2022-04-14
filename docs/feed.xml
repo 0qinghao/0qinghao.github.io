@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-04-14T16:43:05+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-04-14T16:52:22+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。&lt;/p&gt;
@@ -7,6 +7,8 @@
 &lt;p&gt;这描述一度让人以为 4 个转属性符文能使最终伤害同时吃 4 个加成，即打上水暗火符文后，【光电鳗】的伤害变成 x * (1 + 水强% + 光强% + 火强% + 暗强%)。&lt;/p&gt;
 
 &lt;p&gt;但是经过我和其他吧友的简单测试，这纯属无稽之谈，现在还是和更新前一样，吃最高的。至于有部分玩家感觉更新完伤害更高了，有可能是因为官方还修复了 A 属性转 B 属性随动的 bug，这涉及到振奋、放流、高爆以及所有穿属强套的玩家。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-45-58.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;经吧友提醒，上述描述修复的可能是另一个大部分玩家不会碰到的 bug：&lt;/p&gt;
 
