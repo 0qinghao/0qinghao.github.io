@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-04-14T16:52:22+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-05-18T11:16:40+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。&lt;/p&gt;
@@ -62,7 +62,11 @@
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-33-54.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;因此得出结论：属强转换符文的效果仍是使技能吃转换属强，不叠加多属强。&lt;/p&gt;
+&lt;p&gt;因此得出结论：&lt;/p&gt;
+
+&lt;p&gt;属强转换符文的效果仍是使技能吃转换属强，不叠加多属强。&lt;/p&gt;
+
+&lt;p&gt;这类符文带来的收益大小，计算起来十分方便，简单来说就是转换前后两属性差值越大提升越大，一般差 50%（或者实战状态下叠满 buff 差 100%） 以上才会有比较明显的效果，否则不如打本职业符文。&lt;/p&gt;
 
 &lt;p&gt;另外，附上 xls 公式审阅，欢迎 debug：&lt;/p&gt;
 
