@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-05-18T11:16:40+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-11-13T21:47:13+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io//20220414-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
+
+&lt;p&gt;虽然算下来数值不高，但这种白送属性的事玩家们自然是喜闻乐见的。&lt;/p&gt;
+
+&lt;h2 id=&quot;技巧改版提升大奶辅助能力&quot;&gt;技巧改版提升大奶辅助能力&lt;/h2&gt;
+
+&lt;p&gt;这之中最让我振奋的是关于奶妈的修改（除了改祝福给新卡让道这点）。作为游戏中唯一一个会去堆技巧属性的职业——辅助奶妈，相比于其他职业的蚊子腿收益，这次技巧改版让认真培养的辅助奶的能力上升了一个台阶，官方确实意识到了大家诟病已久的大奶小奶差距甚小的问题。&lt;/p&gt;
+
+&lt;p&gt;这次技巧改版，【水之祝福】buff 从【伤害增加】变成了【技能伤】，并且在基础数值上额外增加了 5% 技巧比例的技能伤；【海之祭坛】buff 在基础数值上额外增加了 10% 技巧比例的属强。&lt;/p&gt;
+
+&lt;p&gt;一个优秀的辅助奶实战时会有 300% 以上的技巧值，也就是说能比白板奶多出 15% 技能伤和 30% 属强，粗略地可以看作多了一组 3 孔符文的辅助能力。相信未来玩家数值的增加和后续改版会进一步拉开精品奶与混子奶的差距。&lt;/p&gt;
+
+&lt;p&gt;我不由地产生了“一切都好起来了”的感觉，直到，我发现了这个 bug……&lt;/p&gt;
+
+&lt;h2 id=&quot;新瓶装旧酒又是计算对象选错的-bug&quot;&gt;新瓶装旧酒，又是计算对象选错的 bug&lt;/h2&gt;
+
+&lt;p&gt;相信对奶妈有过一定研究的老玩家一定还记得从开服开始，持续了一年左右的【唤水】bug ：&lt;/p&gt;
+
+&lt;p&gt;简单来说，在小半年前修复之前，【唤水】会给队友增加【攻击力】，数值是【智力】* 2.5%&lt;/p&gt;
+
+&lt;p&gt;但那时的致命 bug 是：计算时用的是队友的智力而不是奶妈的智力，也就是说半年前，唤水砸到赤面头上之后，赤面的【攻击力】爆增了 ⑨*2.5%=0.0225 点！&lt;/p&gt;
+
+&lt;p&gt;是的，你没有猜错，这次技巧改版出现了一模一样的 bug。奶妈 buff 增益值的技巧部分在计算时，使用的是队友的【技巧】而不是奶妈的【技巧】。&lt;/p&gt;
+
+&lt;p&gt;也就是说，当你的极品辅助奶妈队友砸了一个祭坛后，你在获得了技能本身的基础属强后，额外获得了（你的技巧值）5.5% * 10% = 0.55% 点属强！而不是理论上的 （奶妈的技巧值）300% * 10% = 30%&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-11-13-21-28-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;【水之祝福】的技巧部分也有相同的问题，想要复现又不想双开的朋友，找个奶妈队友进图，分别观察点满潜力技巧前后，自己的技能伤面板变化就能验证了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2022-11-13-21-31-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果有为数不多的辅助雪崩玩家看到这，肯定想要问【无畏】增加的【所有攻击伤害】技巧部分是不是也有同样的问题。这里直接告诉你答案，是的。图就不上了，很容易就能验证复现。&lt;/p&gt;
+
+&lt;p&gt;最后，还有一个并不是本次更新后出现，而是老早就有，也属于同类的 bug。奶妈【神圣海域】会给队友附加护盾，护盾厚度与【智力】挂钩，这里的计算对象同样错选成了队友的。&lt;/p&gt;
+
+&lt;h2 id=&quot;请尽快修复&quot;&gt;请尽快修复&lt;/h2&gt;
+
+&lt;p&gt;我能理解雷火缺人手，年底了开发任务也重。但我相信工程师们有过小半年前修复【唤水】同类 bug 的经验，这次处理起来应该会得心应手一些。也不求多快，请在新图新团本出来之前修复吧！一个热爱辅助职业的普通玩家的深夜牢骚。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><summary type="html">11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…</summary></entry><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io//20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io//20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。&lt;/p&gt;
@@ -847,374 +885,4 @@ export ftp_proxy=http://127.0.0.1:8123
 
 &lt;p&gt;我对 CMD/LX 终端设置代理的出发点，是为了使用 Google 的一个 API，设置后确实能够成功使用。另外似乎对 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 等指令也有效果，安装 python 模块时的下载速度有比较明显的提升。不过说到底只是在总结如何使用别人做好的工具，很多原理还是没有明白，如果文中有何纰漏，恳请指正。&lt;/p&gt;
 
-&lt;p&gt;感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="shadowsocks" /><category term="linux" /><summary type="html">在之前的博文中分享了如何 使用 Google 云计算引擎搭建 SS 服务器，如何 使用 SS 客户端，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 CMD 窗口和 Linux 的 LX 终端 中，让 wget curl 等命令使用代理需要进行的一些配置。</summary></entry><entry><title type="html">译 - 使用 Natural Language API 分析文本的实体与情感</title><link href="https://0qinghao.github.io//20180407-google-natural-language-api/" rel="alternate" type="text/html" title="译 - 使用 Natural Language API 分析文本的实体与情感" /><published>2018-04-07T00:00:00+08:00</published><updated>2018-04-07T00:00:00+08:00</updated><id>https://0qinghao.github.io//google-natural-language-api</id><content type="html" xml:base="https://0qinghao.github.io//20180407-google-natural-language-api/">&lt;blockquote&gt;
-  &lt;p&gt;原文：&lt;a href=&quot;https://codelabs.developers.google.com/codelabs/cloud-nl-intro-ja/index.html?index=..%2F..%2Fspringone#0&quot;&gt;Natural Language API でエンティティと感情を分析する&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&quot;概要&quot;&gt;概要&lt;/h1&gt;
-
-&lt;p&gt;使用 Cloud Natural Language API ，可以从文本中提取实体、分析情感、解析文本构成。&lt;/p&gt;
-
-&lt;p&gt;此次向导中，我们将针对 Natural Language API 的 3 个方法： &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeEntities&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeSentiment&lt;/code&gt; 和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotateText&lt;/code&gt; 进行学习。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;将要学习的东西&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;构造 Natural Language API 请求，并使用 curl 发送请求&lt;/li&gt;
-  &lt;li&gt;使用 Natural Language API 提取文本中的实体，并进行情感分析&lt;/li&gt;
-  &lt;li&gt;使用 Natural Language API 对文本进行语言分析（语法、词性等）&lt;/li&gt;
-  &lt;li&gt;使用不同的语言构造 Natural Language API 请求&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;必要的准备&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;创建 Google Cloud Platform 项目&lt;/li&gt;
-  &lt;li&gt;浏览器（&lt;a href=&quot;https://www.google.com/chrome/browser/desktop/&quot;&gt;Chrome&lt;/a&gt;、&lt;a href=&quot;https://www.mozilla.org/firefox/&quot;&gt;Firefox&lt;/a&gt; 等）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;设置和一些说明&quot;&gt;设置和一些说明&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;根据自己的情况进行设置&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;还未拥有 Google 账号（Gmail / Google Apps）的情况下，&lt;a href=&quot;https://accounts.google.com/SignUp&quot;&gt;创建账号&lt;/a&gt; 是必须的。登录 Google Cloud Platform Console（&lt;a href=&quot;http://console.cloud.google.com/&quot;&gt;console.cloud.google.com&lt;/a&gt;），创建一个新项目。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;请记住项目名称。任意一个 Google Cloud 项目都拥有唯一的名称（上述的名称已经被使用了，所以实际上无法使用）。&lt;/p&gt;
-
-&lt;p&gt;Google Cloud Platform 的新用户将赠与 &lt;a href=&quot;https://console.developers.google.com/billing/freetrial&quot;&gt;相当于 $300 的试用金&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h1 id=&quot;启用-cloud-natural-language-api&quot;&gt;启用 Cloud Natural Language API&lt;/h1&gt;
-
-&lt;p&gt;点击屏幕左上角的菜单图标。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在下拉菜单中选择 [&lt;strong&gt;API Manager&lt;/strong&gt;]&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;点击 [&lt;strong&gt;启用 API&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-18-31.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后，在搜索框中输入「Language」。点击 [&lt;strong&gt;Google Cloud Natural Language API&lt;/strong&gt;]。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;点击 [&lt;strong&gt;启用&lt;/strong&gt;]，启用 Cloud Natural Language API 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-19-13.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;等待数秒，API 成功启用后，将显示如下。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;激活-cloud-shell&quot;&gt;激活 Cloud Shell&lt;/h1&gt;
-
-&lt;p&gt;Google Cloud Shell 是在云端运行的命令行环境。这台基于 Debian 的虚拟机能够加载任何您需要的开发工具（gcloud、bq、git 等），并提供永久的 5 GB 主目录。这次教程将使用 Cloud Shell 创建对 Translation API 的请求。&lt;/p&gt;
-
-&lt;p&gt;点击标题栏右侧的 [激活 Google Cloud Shell] 按钮（&lt;strong&gt;&amp;gt;_&lt;/strong&gt;），启动 Cloud Shell。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-14.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Cloud Shell 将在控制台底部的新窗口中打开，并显示命令行提示符。请等待提示符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user@project:~$&lt;/code&gt; 出现。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-23.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;生成-api-key&quot;&gt;生成 API Key&lt;/h1&gt;
-
-&lt;p&gt;你将通过使用 curl 发送一个请求来调用 Natural Language API 。在发送请求时，你需要在 URL 中插入一个生成的 API 密钥。为了创建 API 密钥，让我们点击侧边栏的 [API Manager] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-32.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;然后，在 [&lt;strong&gt;凭据&lt;/strong&gt;] 选项卡中点击 [&lt;strong&gt;创建凭据&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-37.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;在下拉菜单中选择  [&lt;strong&gt;API 密钥&lt;/strong&gt;] 。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-20-50.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;最后，复制生成好的密钥。此密钥将在向导的后半部分中用到。&lt;/p&gt;
-
-&lt;p&gt;你已获得 API 密钥，我们将其保存在环境变量中，以便每次调用 API 时不需要重复插入 API 密钥值。你可以将密钥保存在 Cloud Shell 中，下述的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;your_api_key&amp;gt;&lt;/code&gt; 请替换成之前复制的内容。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;export API_KEY=&amp;lt;YOUR_API_KEY&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;构造分析文本中实体的请求&quot;&gt;构造分析文本中实体的请求&lt;/h1&gt;
-
-&lt;p&gt;第一个介绍的 Natural Language API 方法是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeEntities&lt;/code&gt; 。API 使用此方法从文本中提取出实体（人物、场所、事件等）。为了试用 API 的实体分析功能，我们将引用最近新闻中的以下句子。&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;LONDON — J. K. Rowling always said that the seventh Harry Potter book, “Harry Potter and the Deathly Hallows, “ would be the last in the series, and so far she has kept to her word.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;对  Natural Language API 发出的请求可以事先保存在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;request.json&lt;/code&gt; 文件中。首先，我们在 Cloud Shell 中生成这个文件。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch request.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后，使用任意一个文本编辑器（ &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nano&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vim&lt;/code&gt; 、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;emacs&lt;/code&gt; ）打开生成的文件。在文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;request.json&lt;/code&gt; 中添加如下内容。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;request.json&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;document&quot;:{
-    &quot;type&quot;:&quot;PLAIN_TEXT&quot;,
-    &quot;content&quot;:&quot;LONDON — J. K. Rowling always said that the seventh Harry Potter book, ‘Harry Potter and the Deathly Hallows,' would be the last in the series, and so far she has kept to her word.&quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在这个请求文件中，保存了即将发送给 Natural Language API 的文本的相关信息。type 属性的值可以是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PLAIN_TEXT&lt;/code&gt; 或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTML&lt;/code&gt; 。content 中存放了将要发送给  Natural Language API 分析的文本。Natural Language API 还支持直接发送存储在 Google Cloud Storage 中的文件。直接从 Google Cloud Storage 发送文件时，请将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt; 替换为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gcsContentUri&lt;/code&gt; ，并将其值设置为云端文件的 uri 地址。&lt;/p&gt;
-
-&lt;h1 id=&quot;调用-natural-language-api&quot;&gt;调用 Natural Language API&lt;/h1&gt;
-
-&lt;p&gt;现在，我们将使用 curl 命令，把请求文件和之前保存好的 API 密钥环境变量一起，发送给  Natural Language API （全放在一条命令里面）。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &quot;https://language.googleapis.com/v1/documents:analyzeEntities?key=${API_KEY}&quot; -s -X POST -H &quot;Content-Type: application/json&quot; --data-binary @request.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;你将得到形式如下的响应。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;entities&quot;: [
-    {
-      &quot;name&quot;: &quot;Harry Potter and the Deathly Hallows&quot;,
-      &quot;type&quot;: &quot;WORK_OF_ART&quot;,
-      &quot;metadata&quot;: {
-        &quot;mid&quot;: &quot;/m/03bkkv&quot;,
-        &quot;wikipedia_url&quot;: &quot;https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows&quot;
-      },
-      &quot;salience&quot;: 0.30040884,
-      &quot;mentions&quot;: [
-        {
-          &quot;text&quot;: {
-            &quot;content&quot;: &quot;book&quot;,
-            &quot;beginOffset&quot;: -1
-          },
-          &quot;type&quot;: &quot;COMMON&quot;
-        }
-      ]
-    }
-  ],
-  ...
-  ...
-  &quot;language&quot;: &quot;en&quot;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在响应中，我们可以看到 API 从句子里检测到了 6 个实体（译者：原文是 4 个，但实际运行时得到 6 个，应该是 API 有所改善）。对于每个实体，你将得到实体的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;type&lt;/code&gt; 、关联的维基百科 URL（如果存在）、 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）以及实体在文本中出现的位置的索引。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;salience&lt;/code&gt; （显著性）是一个 0~1 的数字，指的是该实体对于整个文本的突出性。对于上述文段，「Harry Potter and the Deathly Hallows」具有最高的显著性（译者：原文是「Rowling」，应该是 API 有所改善），这是因为这部作品是文段所表述内容的主题。Natural Language API 也可以识别用其他方式表述的相同的实体，比如说「Rowling」、「J. K. Rowling」和「Joanne Kathleen Rowling」都指向同一个维基百科页面。&lt;/p&gt;
-
-&lt;h1 id=&quot;使用-natural-language-api-进行情感分析&quot;&gt;使用 Natural Language API 进行情感分析&lt;/h1&gt;
-
-&lt;p&gt;除了提取实体，Natural Language API 还可以分析文本块的情感。JSON 请求文件与之前的那个具有相同的参数，但这次我们更改一下文本，换成一段具有更强烈情感的内容。请修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;request.json&lt;/code&gt; 为如下内容，或者换成你喜欢的文段。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;request.json&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;document&quot;:{
-    &quot;type&quot;:&quot;PLAIN_TEXT&quot;,
-    &quot;content&quot;:&quot;I love everything about Harry Potter. It's the greatest book ever written.&quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后把请求发送到 API 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;analyzeSentiment&lt;/code&gt; 端点。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &quot;https://language.googleapis.com/v1/documents:analyzeSentiment?key=${API_KEY}&quot; -s -X POST -H &quot;Content-Type: application/json&quot; --data-binary @request.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;你将得到形式如下的响应。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;documentSentiment&quot;: {
-    &quot;polarity&quot;: 1,
-    &quot;magnitude&quot;: 1.5,
-    &quot;score&quot;: 0.7
-  },
-  &quot;language&quot;: &quot;en&quot;,
-  &quot;sentences&quot;: [
-    {
-      &quot;text&quot;: {
-        &quot;content&quot;: &quot;I love everything about Harry Potter.&quot;,
-        &quot;beginOffset&quot;: -1
-      },
-      &quot;sentiment&quot;: {
-        &quot;polarity&quot;: 1,
-        &quot;magnitude&quot;: 0.6,
-        &quot;score&quot;: 0.6
-      }
-    },
-    {
-      &quot;text&quot;: {
-        &quot;content&quot;: &quot;It's the greatest book ever written.&quot;,
-        &quot;beginOffset&quot;: -1
-      },
-      &quot;sentiment&quot;: {
-        &quot;polarity&quot;: 1,
-        &quot;magnitude&quot;: 0.8,
-        &quot;score&quot;: 0.8
-      }
-    }
-  ]
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;该方法将返回 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;polarity&lt;/code&gt; （极性）和 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;magnitude&lt;/code&gt; （强度）两个值（译者：原文是这两个值，但很明显现在还能看到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;score&lt;/code&gt; 这个值）。polarity 是介于 - 1.0 ~ 1.0 之间的数值，表示文本消极或积极的程度。magnitude 是介于 0 ~ ∞的数值，与 polarity 没有关系，它表示在文本中表达的感情的权重。权重较大的文本块单是增加长度，其 magnitude 也会变大。上文的 polarity 是 100% 积极。「love」、「greatest」、「ever」这样的单词会影响 magnitude 的值。&lt;/p&gt;
-
-&lt;h1 id=&quot;分析语法与词性&quot;&gt;分析语法与词性&lt;/h1&gt;
-
-&lt;p&gt;让我们看看 Natural Language API 的第三个方法：文本注释。让我们进入文本的语言细节。annotateText 方法提供了关于文本情感元素、语法元素的完整细节。使用该方法，可以知道文本中每个词语的词性（名词、动词、形容词等），以及各个单词如何与句子中的其他单词关联（是动词的原始形式，还是用来修饰语句）。&lt;/p&gt;
-
-&lt;p&gt;让我们通过简单的文段来使用这个方法。JSON 文件与之前的相似，但在这里我们需要添加一项 features 来告诉 API 你想要执行语法注释。请将 request.json 替换为如下内容。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;request.json&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;document&quot;:{
-    &quot;type&quot;:&quot;PLAIN_TEXT&quot;,
-    &quot;content&quot;:&quot;Joanne Rowling is a British novelist, screenwriter and film producer.&quot;
-  },
-  &quot;features&quot;:{
-    &quot;extractSyntax&quot;:true
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;然后把请求发送到 API 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;annotateText&lt;/code&gt; 端点。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &quot;https://language.googleapis.com/v1/documents:annotateText?key=${API_KEY}&quot; -s -X POST -H &quot;Content-Type: application/json&quot; --data-binary @request.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;响应中，对于句子中的每一个标记（token），会返回以下对象。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;text&quot;: {
-	&quot;content&quot;: &quot;Joanne&quot;,
-	&quot;beginOffset&quot;: -1
-  },
-  &quot;partOfSpeech&quot;: {
-	&quot;tag&quot;: &quot;NOUN&quot;,
-	&quot;aspect&quot;: &quot;ASPECT_UNKNOWN&quot;,
-	&quot;case&quot;: &quot;CASE_UNKNOWN&quot;,
-	&quot;form&quot;: &quot;FORM_UNKNOWN&quot;,
-	&quot;gender&quot;: &quot;GENDER_UNKNOWN&quot;,
-	&quot;mood&quot;: &quot;MOOD_UNKNOWN&quot;,
-	&quot;number&quot;: &quot;SINGULAR&quot;,
-	&quot;person&quot;: &quot;PERSON_UNKNOWN&quot;,
-	&quot;proper&quot;: &quot;PROPER&quot;,
-	&quot;reciprocity&quot;: &quot;RECIPROCITY_UNKNOWN&quot;,
-	&quot;tense&quot;: &quot;TENSE_UNKNOWN&quot;,
-	&quot;voice&quot;: &quot;VOICE_UNKNOWN&quot;
-  },
-  &quot;dependencyEdge&quot;: {
-	&quot;headTokenIndex&quot;: 1,
-	&quot;label&quot;: &quot;NN&quot;
-  },
-  &quot;lemma&quot;: &quot;Joanne&quot;
-},
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;让我们详细看看返回值。从 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;partOfSpeech&lt;/code&gt; 可以看到「Joanne」是一个名词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dependencyEdge&lt;/code&gt; 包含可用于创建 &lt;a href=&quot;https://en.wikipedia.org/wiki/Parse_tree#Dependency-based_parse_trees&quot;&gt;依存句法分析树&lt;/a&gt;（依存構文木 / Dependency-based parse trees）的数据。这个语法树是一个图表，用来显示句中各单词之间的关系。上述文段的依存句法分析树如下所示。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-21-03.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;注：&lt;/strong&gt;使用下面的 demo ，你可以在浏览器中创建自己的依存句法分析树。&lt;/p&gt;
-
-  &lt;p&gt;&lt;a href=&quot;https://cloud.google.com/natural-language/&quot;&gt;https://cloud.google.com/natural-language/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;上述返回值中， &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 是指具有指向「Joanne」的圆弧的标记（token）的索引。文段中的每一个标记（token）都可以看作是数组中的一个单词，「Joanne」的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;headTokenIndex&lt;/code&gt; 值是 1，表示依存句法分析树中连接了「Rowling」这个单词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;NN&lt;/code&gt; （修饰语句 noun compound （名词复合词）的略称）这个标签表示该词在改句子中的作用。「Joanne」是这个句子的主语「Rowling」的修饰词。 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lemma&lt;/code&gt; 是这个单词的规范化形式。比如，&lt;em&gt;run&lt;/em&gt;、&lt;em&gt;runs&lt;/em&gt;、&lt;em&gt;ran&lt;/em&gt;、&lt;em&gt;running&lt;/em&gt; 这些单词的 lemma 都是 run 。lemma 有助于你调查大量文本中某一单词的出现频率。&lt;/p&gt;
-
-&lt;h1 id=&quot;其他语言的自然语言处理&quot;&gt;其他语言的自然语言处理&lt;/h1&gt;
-
-&lt;p&gt;Natural Language API 还支持其他很多语言的实体分析和语法注释。现在我们以日语为例，尝试进行日语文段的实体分析。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;request.json&lt;/strong&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;document&quot;:{
-    &quot;type&quot;:&quot;PLAIN_TEXT&quot;,
-    &quot;content&quot;:&quot;日本のグーグルのオフィスは、東京の六本木ヒルズにあります&quot;
-  }
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;（译者：句意是 “日本的谷歌办公大楼在东京的六本木新城。”）&lt;/p&gt;
-
-&lt;p&gt;我们不必告诉 API 这个文段是什么语言，API 能够自动检测出来。我们以相同的方式发送 API 请求。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;curl &quot;https://language.googleapis.com/v1/documents:analyzeEntities?key=${API_KEY}&quot; -s -X POST -H &quot;Content-Type: application/json&quot; --data-binary @request.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;你将得到形式如下的响应。&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{
-  &quot;entities&quot;: [
-    {
-      &quot;name&quot;: &quot;日本&quot;,
-      &quot;type&quot;: &quot;LOCATION&quot;,
-      &quot;metadata&quot;: {
-        &quot;wikipedia_url&quot;: &quot;https://en.wikipedia.org/wiki/Japan&quot;,
-        &quot;mid&quot;: &quot;/m/03_3d&quot;
-      },
-      &quot;salience&quot;: 0.23854347,
-      &quot;mentions&quot;: [
-        {
-          &quot;text&quot;: {
-            &quot;content&quot;: &quot;日本&quot;,
-            &quot;beginOffset&quot;: -1
-          },
-          &quot;type&quot;: &quot;PROPER&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;グーグル&quot;,
-      &quot;type&quot;: &quot;ORGANIZATION&quot;,
-      &quot;metadata&quot;: {
-        &quot;mid&quot;: &quot;/m/045c7b&quot;,
-        &quot;wikipedia_url&quot;: &quot;https://en.wikipedia.org/wiki/Google&quot;
-      },
-      &quot;salience&quot;: 0.21155767,
-      &quot;mentions&quot;: [
-        {
-          &quot;text&quot;: {
-            &quot;content&quot;: &quot;グーグル&quot;,
-            &quot;beginOffset&quot;: -1
-          },
-          &quot;type&quot;: &quot;PROPER&quot;
-        }
-      ]
-    },
-    ......
-    ......
-  ],
-  &quot;language&quot;: &quot;ja&quot;
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;恭喜&quot;&gt;恭喜！&lt;/h1&gt;
-
-&lt;p&gt;通过此次向导，我们尝试执行了实体提取、情感分析和语法注释，学会了如何使用 Natural Language API 进行文本分析。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;学到的东西&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;构造 Natural Language API 请求，并使用 curl 发送请求&lt;/li&gt;
-  &lt;li&gt;使用 Natural Language API 提取文本中的实体，并进行情感分析&lt;/li&gt;
-  &lt;li&gt;使用 Natural Language API 对文本进行语言分析（语法、词性等）&lt;/li&gt;
-  &lt;li&gt;使用不同的语言构造 Natural Language API 请求&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;下一步&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;浏览 Natural Language API 文档的 &lt;a href=&quot;https://cloud.google.com/natural-language/docs/tutorials&quot;&gt;向导&lt;/a&gt;。&lt;/li&gt;
-  &lt;li&gt;尝试使用 &lt;a href=&quot;https://cloud.google.com/vision/&quot;&gt;Vision API&lt;/a&gt; 、&lt;a href=&quot;https://cloud.google.com/speech/&quot;&gt;Speech API&lt;/a&gt; 。&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Qinghao Lin</name></author><category term="google cloud" /><summary type="html">原文：Natural Language API でエンティティと感情を分析する</summary></entry></feed>
+&lt;p&gt;感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="shadowsocks" /><category term="linux" /><summary type="html">在之前的博文中分享了如何 使用 Google 云计算引擎搭建 SS 服务器，如何 使用 SS 客户端，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 CMD 窗口和 Linux 的 LX 终端 中，让 wget curl 等命令使用代理需要进行的一些配置。</summary></entry></feed>
