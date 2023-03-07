@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2022-11-13T21:49:16+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io//20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io//20221113-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2023-03-07T11:12:23+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io//20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io//20221113-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
 
 &lt;p&gt;虽然算下来数值不高，但这种白送属性的事玩家们自然是喜闻乐见的。&lt;/p&gt;
 
@@ -341,7 +341,7 @@
     &lt;/tr&gt;
     &lt;tr&gt;
       &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;x&lt;/kbd&gt;&lt;/td&gt;
-      &lt;td&gt;往后查找第一个数字，并使其 -1 （会识别数字的正负性）&lt;/td&gt;
+      &lt;td&gt;往后查找第一个数字，并使其 -1&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
@@ -363,6 +363,43 @@
     &lt;tr&gt;
       &lt;td&gt;}&lt;/td&gt;
       &lt;td&gt;移动到下一个空行&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;基于当前屏幕的定位&quot;&gt;基于当前屏幕的定位&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;功能&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;H&lt;/td&gt;
+      &lt;td&gt;（保持屏幕不动） 光标移动到屏幕顶部&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;M&lt;/td&gt;
+      &lt;td&gt;光标移动到屏幕中间&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;L&lt;/td&gt;
+      &lt;td&gt;光标移动到屏幕底部&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zt&lt;/td&gt;
+      &lt;td&gt;（使屏幕滚动） 将当前行置于屏幕顶部&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zz&lt;/td&gt;
+      &lt;td&gt;将当前行置于屏幕中间&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;zb&lt;/td&gt;
+      &lt;td&gt;将当前行置于屏幕底部&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;</content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="linux" /><summary type="html">记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。</summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://0qinghao.github.io//20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://0qinghao.github.io//add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://0qinghao.github.io//20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
