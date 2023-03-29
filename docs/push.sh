@@ -1,5 +1,5 @@
 #!/bin/bash
-bundle exec jekyll build --destination ./docs
+# bundle exec jekyll build --destination ./docs
 cp ./baidu* ./docs
 cp ./google* ./docs
 touch ./docs/.nojekyll

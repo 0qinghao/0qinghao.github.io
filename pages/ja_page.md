@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 日语专栏
+title: 每日一词
 description: 日更自己每天学习的一个日语单词( 雾 ), 更新频繁, 内容不多不适合放主页, 单独开一个页面放置
 keywords: 日语
 comments: true
