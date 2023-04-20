@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2023-03-29T12:36:25+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io//20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io//20221113-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://0qinghao.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io//" rel="alternate" type="text/html" /><updated>2023-04-20T17:20:54+08:00</updated><id>https://0qinghao.github.io//feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">获取 /dev/sdx 设备的 UUID 和 USB Version 等信息</title><link href="https://0qinghao.github.io//20230414-get-usb-dev-sdx-info/" rel="alternate" type="text/html" title="获取 /dev/sdx 设备的 UUID 和 USB Version 等信息" /><published>2023-04-14T00:00:00+08:00</published><updated>2023-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io//get-usb-dev-sdx-info</id><content type="html" xml:base="https://0qinghao.github.io//20230414-get-usb-dev-sdx-info/">&lt;p&gt;同事碰到一个痛点，在做板上测试时插入了多个 U 盘，由于 Linux 系统对接入设备的枚举命名，即 sda/sdb…sdf。通过热拔插确实可以确定一次，但重启后的名称分配并不稳定，导致最后无法区分 sda 对应的是哪一个设备。&lt;/p&gt;
+
+&lt;p&gt;查找到解决方案，可绑定 UUID 到固定的 sdx。在之后的文章将记录使用 udev rule 的绑定方法，这里只记录一个快速确定 sdx 对应设备的方案。&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;udevadm info -n /dev/sdb
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;我们将得到类似下述的信息：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-04-14-10-38-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;如果根据 VENDOR 等信息能够确定设备，那到这就足够了，否则就需要加上 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; 选项获得详尽的设备信息，进而判断。&lt;/p&gt;
+
+&lt;p&gt;又或者，你对判断哪个设备号是谁并没有兴趣，只想知道 sdb 的 USB 协议是 2.0 还是 3.0，那么类似这样的命令能够帮助你：&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;udevadm info -n /dev/sdb -a | grep version
+udevadm info -n /dev/sdb -a | grep speed # 2.0 协议的速度是 480Mbps，3.0 则是 5000Mbps
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/2023-04-14-10-44-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;之后的文章将总结如何将 UUID 与设备号 sdx 绑定起来。最后，感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html">同事碰到一个痛点，在做板上测试时插入了多个 U 盘，由于 Linux 系统对接入设备的枚举命名，即 sda/sdb…sdf。通过热拔插确实可以确定一次，但重启后的名称分配并不稳定，导致最后无法区分 sda 对应的是哪一个设备。</summary></entry><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io//20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io//NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io//20221113-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
 
 &lt;p&gt;虽然算下来数值不高，但这种白送属性的事玩家们自然是喜闻乐见的。&lt;/p&gt;
 
@@ -822,104 +843,4 @@ ATTRS{idProduct}==&quot;6010&quot;, MODE=&quot;664&quot;, GROUP=&quot;plugdev&qu
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd freedom-e-sdk
 make software PROGRAM=demo_gpio BOARD=Perf-V-creative-board
 make upload PROGRAM=demo_gpio BOARD=Perf-V-creative-board
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="risc-v" /><category term="linux" /><summary type="html">实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。</summary></entry><entry><title type="html">在 Windows 命令行、Linux 终端使用代理</title><link href="https://0qinghao.github.io//20180919-proxy-set-in-windows-and-linux/" rel="alternate" type="text/html" title="在 Windows 命令行、Linux 终端使用代理" /><published>2018-09-19T00:00:00+08:00</published><updated>2018-09-19T00:00:00+08:00</updated><id>https://0qinghao.github.io//proxy-set-in-windows-and-linux</id><content type="html" xml:base="https://0qinghao.github.io//20180919-proxy-set-in-windows-and-linux/">&lt;p&gt;在之前的博文中分享了如何 &lt;a href=&quot;https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/&quot;&gt;使用 Google 云计算引擎搭建 SS 服务器&lt;/a&gt;，如何 &lt;a href=&quot;https://0qinghao.github.io/inforest/2018/03/06/shadowsocks-clients/&quot;&gt;使用 SS 客户端&lt;/a&gt;，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CMD&lt;/code&gt; 窗口和 Linux 的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LX 终端 &lt;/code&gt; 中，让 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt;  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl&lt;/code&gt; 等命令使用代理需要进行的一些配置。&lt;/p&gt;
-
-&lt;h1 id=&quot;windows-命令行代理&quot;&gt;Windows 命令行代理&lt;/h1&gt;
-
-&lt;p&gt;假设你已经使用了 SS 客户端，本地 socks5 代理为 127.0.0.1:1080&lt;/p&gt;
-
-&lt;p&gt;在 CMD 窗口输入如下指令设置代理：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;set http_proxy=socks5://127.0.0.1:1080
-set https_proxy=socks5://127.0.0.1:1080
-set ftp_proxy=socks5://127.0.0.1:1080
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;测试 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;curl https://www.facebook.com&lt;/code&gt; 能得到返回结果。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-40.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;取消代理命令：&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;set http_proxy=
-set https_proxy=
-set ftp_proxy=
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;设置代理后只对当前命令行窗口生效，重新打开 CDM 需要再次设置。&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;linux-lx-终端代理&quot;&gt;Linux LX 终端代理&lt;/h1&gt;
-
-&lt;p&gt;由于 Linux 下 SS 客户端仅代理 socks5 协议的流量（如果不是这个原因恳请指正）。所以想在 LX 终端使用代理，需要在 SS 的 socks5 流量前再接一个代理，允许 http、https、ftp 协议流量通过。&lt;/p&gt;
-
-&lt;p&gt;我们也假定本地 socks5 代理为 127.0.0.1:1080&lt;/p&gt;
-
-&lt;h2 id=&quot;安装-polipo&quot;&gt;安装 polipo&lt;/h2&gt;
-
-&lt;p&gt;Debian 下直接使用 apt 命令安装：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt update
-&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;apt &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;polipo
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;编辑配置文件：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;sudo nano /etc/polipo/config
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;配置内容如下&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;# This file only needs to list configuration variables that deviate
-# from the default values.  See /usr/share/doc/polipo/examples/config.sample
-# and &quot;polipo -v&quot; for variables you can tweak and further information.
-
-logSyslog = true
-logFile = /var/log/polipo/polipo.log
-
-proxyAddress = &quot;0.0.0.0&quot;
-
-socksParentProxy = &quot;127.0.0.1:1080&quot;
-socksProxyType = socks5
-
-chunkHighMark = 50331648
-objectHighMark = 16384
-
-dnsQueryIPv6 = no
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;按 &lt;kbd&gt;CTRL&lt;/kbd&gt;+&lt;kbd&gt;X&lt;/kbd&gt;，&lt;kbd&gt;Y&lt;/kbd&gt; 保存退出。&lt;/p&gt;
-
-&lt;p&gt;重启 polipo 服务：&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;service polipo restart
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;启用代理&quot;&gt;启用代理&lt;/h2&gt;
-
-&lt;p&gt;通过 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;service polipo status&lt;/code&gt; 命令，我们可以看到新的监听端口为&lt;strong&gt;8123&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-47.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;因此，LX 终端启用代理的命令为：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-nohighlight&quot;&gt;export http_proxy=http://127.0.0.1:8123
-export https_proxy=http://127.0.0.1:8123
-export ftp_proxy=http://127.0.0.1:8123
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;同样，直接输入上述命令设置的代理也是临时的。一个比较实用的方法是在~/.bashrc 文件中设置环境，之后就不需要再手动设置了。&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;sudo &lt;/span&gt;nano ~/.bashrc
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;在文件最后插入上述三条指令，保存。&lt;/p&gt;
-
-&lt;p&gt;测试 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;wget&lt;/code&gt; 指令：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-06-20-22-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;小结&quot;&gt;小结&lt;/h1&gt;
-
-&lt;p&gt;我对 CMD/LX 终端设置代理的出发点，是为了使用 Google 的一个 API，设置后确实能够成功使用。另外似乎对 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pip&lt;/code&gt; 等指令也有效果，安装 python 模块时的下载速度有比较明显的提升。不过说到底只是在总结如何使用别人做好的工具，很多原理还是没有明白，如果文中有何纰漏，恳请指正。&lt;/p&gt;
-
-&lt;p&gt;感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="shadowsocks" /><category term="linux" /><summary type="html">在之前的博文中分享了如何 使用 Google 云计算引擎搭建 SS 服务器，如何 使用 SS 客户端，已经满足了科学上网的基本需求。这次将要总结在 Windows 的 CMD 窗口和 Linux 的 LX 终端 中，让 wget curl 等命令使用代理需要进行的一些配置。</summary></entry></feed>
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="risc-v" /><category term="linux" /><summary type="html">实验室买了一块 Perf-V 开发板，准备开始做 RISC-V 相关的工作。</summary></entry></feed>

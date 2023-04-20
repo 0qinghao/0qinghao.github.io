@@ -58,7 +58,7 @@ deactivate
 
 # 配置 Cloud Speech API 客户端库
 
-我们假定你已经有合适的代理，能够使用谷歌服务，并且已经开始使用 [Google 云平台](https://cloud.google.com/)。如果你有疑问，或许可以参考 [这篇文章](https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/)。
+我们假定你已经有合适的方法，能够使用谷歌服务，并且已经开始使用 [Google 云平台](https://cloud.google.com/)。如果你有疑问，或许可以参考 [这篇文章](https://0qinghao.github.io/inforest/2018/02/27/google-cloud-engine-ss-server/)。
 
 ## 安装客户端库
 
