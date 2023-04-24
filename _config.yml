@@ -2,10 +2,10 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: https://0qinghao.github.io/
+url: https://0qinghao.github.io
 date_format: "ordinal"
 title: 林间
-subtitle: "<a href='https://0qinghao.github.io/'>InForest InfoRest</a><br/>若非琐事相牵绊 即起行 遍览天下众山河"
+subtitle: "<a href='https://0qinghao.github.io'>InForest InfoRest</a><br/>若非琐事相牵绊 即起行 遍览天下众山河"
 subtitle: "InForest InfoRest <br>若非琐事相牵绊 即起行 遍览天下众山河"
 description: "林庆毫的个人空间"
 keywords: 博客, 个人空间
