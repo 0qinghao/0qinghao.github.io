@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 正则匹配包括换行符在内的任意字符
-categories: [regerx]
+categories: [regex]
 description: 使用正则表达式匹配包括换行符在内的任意字符
 keywords: regex, 正则, 匹配任意字符
 furigana: false
