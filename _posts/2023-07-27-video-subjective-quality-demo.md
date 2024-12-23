@@ -11,51 +11,93 @@ furigana: false
 
 # 关于主观质量评价
 
-和在实验室测试算法，用 JCTVC/JVET 标准测试序列跑一批 BD-Rate 出来不一样，在工业上测试一个监控系统时，更多地是看主观效果，即平均主观分数 (Mean Opinion Score, MOS)。简单来说就是找一群人观看多组视频，在不知道哪个视频由哪个编码器产生的情况下，对多组视频打分，以最终得分评判编码器的好坏。
+在视频编解码领域，主观质量评价是衡量视频编码器性能的重要方法之一。与实验室环境中通过 JCTVC/JVET 标准测试序列计算 BD-Rate 不同，工业界更关注视频的主观质量，即平均主观分数 (Mean Opinion Score, MOS)。MOS 是通过让一组观察者在不知情的情况下观看并评分多组视频序列，从而评估编码器性能的指标。
 
-各类标准文档中有描述如何进行主观质量评价，总体上都是先播 A 再播 B，或者 A B 交叉着播，我们在测试时为了增加对比性，直接找个大屏幕同时播放多个编码器产生的序列，整体测试流程走下来比较顺利。
+标准文档中详细描述了主观质量评价的流程，通常采用 A/B 对比或交叉播放的方式。然而，为了增强对比效果，我们在测试中采用了同时播放多个编码器生成的视频序列的方法。这种方法不仅直观，而且能够更有效地展示不同编码器的性能差异。
 
-有一点值得提一下：现在很多中高档的大屏幕会自带很多图像优化滤镜，务必在进行测试前把设置全部过一遍，确保没有打开屏幕提供的图像优化功能。
+需要注意的是，许多中高端显示设备自带图像优化滤镜，这些滤镜可能会影响主观质量评价的准确性。因此，在进行测试前，务必检查并关闭所有图像优化功能，以确保测试结果的客观性和准确性。
+
+通过这种方式，我们能够更全面地评估视频编码器的主观质量表现，从而为算法的优化和改进提供可靠的数据支持。
 
 # 一个用于主观评价的脚本
 
 前面配置码流路径的一大部分不重要，核心命令都在 ffmpeg 的复杂滤波器部分了。描述起来倒也简单，只需要把多个输入依次裁剪、缩放，然后把他们依次放在指定坐标即可。
 
+**ffmpeg 命令中的 -filter_complex 部分解释**
+
+1. `nullsrc=size=$sw`x$sh`:rate=25[base]`:
+   - 创建一个空白视频源，大小为 `$sw` x `$sh`，帧率为 25。这个空白视频源作为基础图层。
+
+2. `[0:v]crop=1920:1080:0:0,scale=$($sw/2):$($sh/2):$special_cfg0[0:tmp]`:
+   - 对第一个输入视频流进行裁剪，裁剪后的大小为 1920x1080。
+   - 将裁剪后的视频流缩放到屏幕的一半大小（\$sw/2 x \$sh/2）。
+   - 应用 `$special_cfg0` 中的特殊配置（如果有）。
+   - 将处理后的视频流命名为 `[0:tmp]`。
+   - 重复上述步骤，得到 `[1:tmp]` `[2:tmp]` `[3:tmp]`
+
+3. `[base][0:tmp]overlay=0:0[a]`:
+   - 将第一个处理后的视频流 `[0:tmp]` 叠加到基础图层 `[base]` 的左上角 (0,0) 位置。
+   - 将结果命名为 `[a]`。
+
+4. `[a][1:tmp]overlay=$($sw/2):0[b]`:
+   - 将第二个处理后的视频流 `[1:tmp]` 叠加到 `[a]` 的右上角 ($sw/2,0) 位置。
+   - 将结果命名为 `[b]`。
+
+5. `[b][2:tmp]overlay=0:$($sh/2)[c]`:
+   - 将第三个处理后的视频流 `[2:tmp]` 叠加到 `[b]` 的左下角 (0,$sh/2) 位置。
+   - 将结果命名为 `[c]`。
+
+6. `[c][3:tmp]overlay=$($sw/2):$($sh/2)[d]`:
+   - 将第四个处理后的视频流 `[3:tmp]` 叠加到 `[c]` 的右下角 ($sw/2,$sh/2) 位置。
+   - 将结果命名为 `[d]`。
+
+7. `[d]setpts=25/$speed*PTS`:
+    - 调整最终视频流的播放速度，速度由 `$speed` 参数决定。
+
+通过这些滤镜，脚本将四个输入视频流裁剪、缩放并拼接成一个 2x2 的网格，并调整播放速度，最终生成一个合成视频流。
+
 ffplay 部分主要是给多个画面增加标注，如不需要也可简化复杂滤波器部分。
 
+脚本运行后的界面类似如下，可以方便地对比多个画面。
+
+![](/assets/images/2024-12-20-15-38-00.png)
 
 ```powershell
 # stream folder, stream suffix, label
 # 2x2 raster
-$f0 = "D:\board_demo_stream\2023_09_22_XC00_cbr\"
-$f1 = "D:\board_demo_stream\2023_09_22_XC00_cbr\"
-$f2 = "D:\board_demo_stream\2023_09_22_XC00_cbr\"
-$f3 = "D:\run_enc\ResultRC_2023_09_27_0127 0922 df128 saomvx2 forcepart0 skip91 lx0.7 intraw6\"
+$f0 = "T:\xxxxxxx\CBR2M"
+$f1 = "T:\xxxxxxx\VBRL"
+$f2 = "T:\xxxxxxx\VBRM"
+$f3 = "T:\xxxxxxx\VBRH"
 
-$suffix0 = "PTV3.h265"
-$suffix1 = "XC01.h265"
-$suffix2 = "FY11.h265"
-$suffix3 = "_cbr_2M.h265"
+$suffix0 = "_cbr_2M.h265"
+$suffix1 = "_vbrL_2M.h265"
+$suffix2 = "_vbrM_2M.h265"
+$suffix3 = "_vbrH_2M.h265"
 
 ### 如果要求调整画面顺序, 只修改这部分 start ###
 # Get seq name, cat string
 $seq = $args[0]
-$stm0 = "$f0\$seq\$suffix0"
-$stm1 = "$f1\$seq\$suffix1"
-$stm2 = "$f2\$seq\$suffix2"
+$stm0 = "$f0\$seq\$seq$suffix0"
+$stm1 = "$f1\$seq\$seq$suffix1"
+$stm2 = "$f2\$seq\$seq$suffix2"
 $stm3 = "$f3\$seq\$seq$suffix3"
 
 # Set labels
-$label0 = "PTv3"
-$label1 = "XC01"
-$label2 = "FY11"
-$label3 = "XC00 preview"
+$label0 = "cbr 2M"
+$label1 = "vbrl 2M"
+$label2 = "vbrm 2M"
+$label3 = "vbrh 2M"
 
 # Special configurations
-$special_cfg0 = "out_range=full"
+$special_cfg0 = ""
 $special_cfg1 = ""
 $special_cfg2 = ""
 $special_cfg3 = ""
+# $special_cfg0 = "out_range=full"
+# $special_cfg1 = "out_range=full"
+# $special_cfg2 = "out_range=full"
+# $special_cfg3 = "out_range=full"
 
 # Check if PTv3 stream exists
 if (-not (Test-Path -Path $stm0 -PathType Leaf)) {
@@ -69,8 +111,8 @@ if (-not (Test-Path -Path $stm0 -PathType Leaf)) {
 $speed = 25
 
 # ffmpeg / ffplay paths
-$ffmpeg = "D:\Program Files (x86)\ffmpeg\bin\ffmpeg.exe"
-$ffplay = "D:\Program Files (x86)\ffmpeg\bin\ffplay.exe"
+$ffmpeg = "C:\Users\rin.lin\ffmpeg\bin\ffmpeg.exe"
+$ffplay = "C:\Users\rin.lin\ffmpeg\bin\ffplay.exe"
 
 # Set screen size
 $sw = 1920 * 2
@@ -98,8 +140,17 @@ cmd /c $cmdCommand
 
 这个脚本可展示 2 个序列的 Y/UV 差异，是后续重新改写的，增加了简单的交互功能，发给其他同事用会更方便一点。
 
-增加的 Y/UV 差异也是使用复杂滤波器实现的```[0:v]format=yuva420p,lut=c1=0:c2=0:c3=128,negate[v0yforcmp]```。
+**解释生成差异图像的滤镜命令**
 
+1. `format=yuva420p`：将输入视频格式转换为 YUVA420P，这是一个包含透明度通道的 YUV 格式。
+2. `lut=c1=0:c2=0:c3=128`：使用查找表 (LUT) 滤镜，将 U 和 V 分量设置为 0，透明度通道设置为 128。这样可以突出显示 Y 分量。
+3. `negate`：对视频进行反相处理，使得差异更加明显。
+4. `blend=all_mode=difference:all_opacity=1`：将两个视频帧进行差异混合，显示出两个视频帧之间的差异。
+
+通过这些滤镜，脚本能够生成两个视频序列的 Y/UV 差异图像，并将其传递给 ffplay 进行显示。
+
+
+![](/assets/images/2024-12-20-15-54-08.png)
 
 ```powershell
 #################### para part ####################
