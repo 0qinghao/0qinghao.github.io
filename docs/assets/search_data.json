@@ -331,6 +331,13 @@
     } ,
   
     {
+      "title"    : "在 Windows 上编译基于 Jekyll 的博客站",
+      "category" : "jekyll",
+      "content": "在 Windows 上编译基于 Jekyll 的博客站 虽然 Jekyll 官方并未正式支持 Windows 平台，但通过以下步骤我们依然可以在 Windows 系统上成功搭建 Jekyll 环境。本教程将手把手教你从零开始配置环境到完成站点构建。 环境准备 1. 安装 Ruby 和 Devkit 访问 RubyInstaller 下载页面，选择带有 Devkit 的最新版本（写博客时使用的是 3.3.7 版本）： 双击安装程序，务必勾选”Add Ruby executables to your PATH” 安装最后一步时，必须勾选运行 ridk install 在 ridk install 的组件选择界面，保持默认的 1 3 选项按回车确认  2. 验证 Ruby 安装 打开新的 PowerShell 窗口（重要！确保环境变量生效）： ruby -v # 应显示类似 ruby 3.x.x 的版本信息 gem -v # 应显示 RubyGems 版本号 安装 Jekyll 核心组件 1. 安装 Jekyll 和 Bundler # 按需使用 # $Env:http_proxy=http://127.0.0.1:1080 # $Env:https_proxy=http://127.0.0.1:1080 # 安装核心组件 gem install jekyll bundler # 验证安装 jekyll -v # 应显示 Jekyll 版本号 构建你的博客站 1. 安装依赖包 # 切换到博客目录下 bundle install 2. 构建静态文件 # 指定输出目录为 docs（适配 GitHub Pages） bundle exec jekyll build --destination ./docs # 本地实时预览（默认端口4000） bundle exec jekyll serve 常见问题解决 GitHub Metadata 警告处理 如果你的个人博客站包含了 github-pages 这个插件，可能会和我一样碰到 GitHub Metadata No GitHub API authentication could be found 这个问题，参考下述网站，配置 API key 可以解决这个问题，本文不再赘述。 Jekyll with GitHub Pages - Fix the “GitHub Metadata No GitHub API authentication could be found” Error Error: Repository access blocked #151 部署到 GitHub Pages 将构建好的 docs 目录推送到 GitHub 仓库 在仓库 Settings -&gt; Pages 中设置发布分支和目录 访问 https://&lt;你的用户名&gt;.github.io/&lt;仓库名&gt; 查看效果 现在你已经拥有完整的本地写作环境，可以开始创作你的技术博客了！ ",
+      "url"      : "https://0qinghao.github.io/20241112-build_jekyll_project_in_windows/"
+    } ,
+  
+    {
       "title"    : "正则匹配包括换行符在内的任意字符",
       "category" : "regex",
       "content": "在平时的工作中，经常会用到正则来搜索、编辑文本。最近恰好碰到个场景，需要筛选出符合某些条件的任意字符，包括换行符，即结果可能是多行文本。匹配任意字符很简单：使用 .* 即可，但在大多数情况下是把换行符排除在外的。 因此，我们需要利用高中学习的一个基础知识来造一个包含任意字符的全集：一个集合和他的补集的并集是全集。 我们知道正则里有 3 个最常用的集合：  d 是数字的集合，  s 是空白符的集合,   w 是字母和数字的集合。可能也知道对应的   D 是非数字的集合，  S 是非空白符的集合，  W 是非字母非数字的集合。因此我们可以使用 [  d  D] 或 [  s  S] 或 [  w  W] 来表示包括换行符在内的任意字符。 这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。 ",

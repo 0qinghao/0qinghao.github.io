@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://0qinghao.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io/" rel="alternate" type="text/html" /><updated>2025-02-22T19:08:27+08:00</updated><id>https://0qinghao.github.io/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">2024-2025 元旦潮汕旅游计划</title><link href="https://0qinghao.github.io/20241230-travel_chaoshan/" rel="alternate" type="text/html" title="2024-2025 元旦潮汕旅游计划" /><published>2024-12-30T00:00:00+08:00</published><updated>2024-12-30T00:00:00+08:00</updated><id>https://0qinghao.github.io/travel_chaoshan</id><content type="html" xml:base="https://0qinghao.github.io/20241230-travel_chaoshan/"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://0qinghao.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io/" rel="alternate" type="text/html" /><updated>2025-02-22T23:26:10+08:00</updated><id>https://0qinghao.github.io/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">2024-2025 元旦潮汕旅游计划</title><link href="https://0qinghao.github.io/20241230-travel_chaoshan/" rel="alternate" type="text/html" title="2024-2025 元旦潮汕旅游计划" /><published>2024-12-30T00:00:00+08:00</published><updated>2024-12-30T00:00:00+08:00</updated><id>https://0qinghao.github.io/travel_chaoshan</id><content type="html" xml:base="https://0qinghao.github.io/20241230-travel_chaoshan/"><![CDATA[<hr />
 
 <p><strong>第一天：上海 → 潮汕 / 深圳 → 潮汕</strong></p>
 
@@ -69,7 +69,73 @@
 
 <p><img src="/assets/images/2024-11-27-22-22-18.png" alt="" /></p>
 
-<p>这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。</p>]]></content><author><name>Qinghao Lin</name></author><category term="regex" /><summary type="html"><![CDATA[使用正则表达式匹配包括换行符在内的任意字符]]></summary></entry><entry><title type="html">C/C++ assert 自定义提示信息</title><link href="https://0qinghao.github.io/20230821-C_assert_comment/" rel="alternate" type="text/html" title="C/C++ assert 自定义提示信息" /><published>2023-08-21T00:00:00+08:00</published><updated>2023-08-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/C_assert_comment</id><content type="html" xml:base="https://0qinghao.github.io/20230821-C_assert_comment/"><![CDATA[<p>在 C/C++ 开发中，<code class="language-plaintext highlighter-rouge">assert</code> 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 <code class="language-plaintext highlighter-rouge">assert</code> 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 <code class="language-plaintext highlighter-rouge">assert</code> 触发时输出自定义的提示信息，从而更快地定位问题。</p>
+<p>这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。</p>]]></content><author><name>Qinghao Lin</name></author><category term="regex" /><summary type="html"><![CDATA[使用正则表达式匹配包括换行符在内的任意字符]]></summary></entry><entry><title type="html">在 Windows 上编译基于 Jekyll 的博客站</title><link href="https://0qinghao.github.io/20241112-build_jekyll_project_in_windows/" rel="alternate" type="text/html" title="在 Windows 上编译基于 Jekyll 的博客站" /><published>2024-11-12T00:00:00+08:00</published><updated>2024-11-12T00:00:00+08:00</updated><id>https://0qinghao.github.io/build_jekyll_project_in_windows</id><content type="html" xml:base="https://0qinghao.github.io/20241112-build_jekyll_project_in_windows/"><![CDATA[<h1 id="在-windows-上编译基于-jekyll-的博客站">在 Windows 上编译基于 Jekyll 的博客站</h1>
+
+<p>虽然 Jekyll 官方并未正式支持 Windows 平台，但通过以下步骤我们依然可以在 Windows 系统上成功搭建 Jekyll 环境。本教程将手把手教你从零开始配置环境到完成站点构建。</p>
+
+<h2 id="环境准备">环境准备</h2>
+
+<h3 id="1-安装-ruby-和-devkit">1. 安装 Ruby 和 Devkit</h3>
+<p>访问 <a href="https://rubyinstaller.org/downloads/">RubyInstaller 下载页面</a>，选择带有 Devkit 的最新版本（写博客时使用的是 3.3.7 版本）：</p>
+<ul>
+  <li>双击安装程序，<strong>务必勾选”Add Ruby executables to your PATH”</strong></li>
+  <li>安装最后一步时，<strong>必须勾选运行 ridk install</strong></li>
+  <li>在 ridk install 的组件选择界面，保持默认的 <code class="language-plaintext highlighter-rouge">1 3</code> 选项按回车确认</li>
+</ul>
+
+<p><img src="/assets/images/2025-02-22-18-08-19.png" alt="" /></p>
+
+<h3 id="2-验证-ruby-安装">2. 验证 Ruby 安装</h3>
+<p>打开新的 PowerShell 窗口（重要！确保环境变量生效）：</p>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ruby</span><span class="w"> </span><span class="nt">-v</span><span class="w">   </span><span class="c"># 应显示类似 ruby 3.x.x 的版本信息</span><span class="w">
+</span><span class="n">gem</span><span class="w"> </span><span class="nt">-v</span><span class="w">    </span><span class="c"># 应显示 RubyGems 版本号</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="安装-jekyll-核心组件">安装 Jekyll 核心组件</h2>
+
+<h3 id="1-安装-jekyll-和-bundler">1. 安装 Jekyll 和 Bundler</h3>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 按需使用</span><span class="w">
+</span><span class="c"># $Env:http_proxy="http://127.0.0.1:1080"</span><span class="w">
+</span><span class="c"># $Env:https_proxy="http://127.0.0.1:1080"</span><span class="w">
+
+</span><span class="c"># 安装核心组件</span><span class="w">
+</span><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">bundler</span><span class="w">
+
+</span><span class="c"># 验证安装</span><span class="w">
+</span><span class="n">jekyll</span><span class="w"> </span><span class="nt">-v</span><span class="w">  </span><span class="c"># 应显示 Jekyll 版本号</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="构建你的博客站">构建你的博客站</h2>
+
+<h3 id="1-安装依赖包">1. 安装依赖包</h3>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 切换到博客目录下</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">install</span><span class="w">
+</span></code></pre></div></div>
+
+<h3 id="2-构建静态文件">2. 构建静态文件</h3>
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># 指定输出目录为 docs（适配 GitHub Pages）</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">build</span><span class="w"> </span><span class="nt">--destination</span><span class="w"> </span><span class="o">.</span><span class="nx">/docs</span><span class="w">
+
+</span><span class="c"># 本地实时预览（默认端口4000）</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">serve</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="常见问题解决">常见问题解决</h2>
+
+<h3 id="github-metadata-警告处理">GitHub Metadata 警告处理</h3>
+
+<p>如果你的个人博客站包含了 github-pages 这个插件，可能会和我一样碰到 <code class="language-plaintext highlighter-rouge">GitHub Metadata No GitHub API authentication could be found</code> 这个问题，参考下述网站，配置 API key 可以解决这个问题，本文不再赘述。
+<a href="https://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html">Jekyll with GitHub Pages - Fix the “GitHub Metadata No GitHub API authentication could be found” Error</a>
+<a href="https://github.com/Yikun/hub-mirror-action/issues/151">Error: Repository access blocked #151</a></p>
+
+<h2 id="部署到-github-pages">部署到 GitHub Pages</h2>
+<ol>
+  <li>将构建好的 docs 目录推送到 GitHub 仓库</li>
+  <li>在仓库 Settings -&gt; Pages 中设置发布分支和目录</li>
+  <li>访问 <code class="language-plaintext highlighter-rouge">https://&lt;你的用户名&gt;.github.io/&lt;仓库名&gt;</code> 查看效果</li>
+</ol>
+
+<p>现在你已经拥有完整的本地写作环境，可以开始创作你的技术博客了！</p>]]></content><author><name>Qinghao Lin</name></author><category term="jekyll" /><summary type="html"><![CDATA[在本地 Windows 环境构建静态网站，推送 GitHub Pages / Coding Pages 的完整指南]]></summary></entry><entry><title type="html">C/C++ assert 自定义提示信息</title><link href="https://0qinghao.github.io/20230821-C_assert_comment/" rel="alternate" type="text/html" title="C/C++ assert 自定义提示信息" /><published>2023-08-21T00:00:00+08:00</published><updated>2023-08-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/C_assert_comment</id><content type="html" xml:base="https://0qinghao.github.io/20230821-C_assert_comment/"><![CDATA[<p>在 C/C++ 开发中，<code class="language-plaintext highlighter-rouge">assert</code> 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 <code class="language-plaintext highlighter-rouge">assert</code> 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 <code class="language-plaintext highlighter-rouge">assert</code> 触发时输出自定义的提示信息，从而更快地定位问题。</p>
 
 <h1 id="示例代码">示例代码</h1>
 <p>以下是一个简单的代码示例：</p>
@@ -773,103 +839,4 @@ udevadm info -n /dev/sdb -a | grep speed # 2.0 协议的速度是 480Mbps，3.0 
       <td>将当前行置于屏幕底部</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="linux" /><summary type="html"><![CDATA[一些日常 coding 时让自己感觉“原来还可以这样”的 vim 使用技巧]]></summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://0qinghao.github.io/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/"><![CDATA[<p>越来越多的人选择将博客托管在 <a href="https://pages.github.com/">GitHub page</a> 或是国内的 <a href="https://help.coding.net/docs/devops/cd/static-website.html">Coding page</a>，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
-当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 <code class="language-plaintext highlighter-rouge">_config.yml</code> 配置时，GitHub 将在你 push 后自动进行在线构建。</p>
-
-<p><img src="/assets/images/2020-07-23-20-40-26.png" alt="" /></p>
-
-<p>查看 repo 的提交历史将能看到构建成功的消息，如果构建失败则会收到一封邮件报告。因此理论上我们在本地甚至不需要配置 Jekyll 环境，只需要保证 push 的内容具备让 GitHub 进行在线构建的条件即可。</p>
-
-<h3 id="在线构建的局限性">在线构建的局限性</h3>
-
-<p>将构建的任务交给 GitHub 确实十分方便，也能满足绝大部分用户的需求。但我们注意到 GitHub 提供的在线构建服务并不支持所有 Jekyll 插件，支持列表可以在这里查询：<a href="https://pages.github.com/versions/">https://pages.github.com/versions/</a></p>
-
-<p>而很不幸的是，有一个插件对我来说是必不可少的，而它却不在支持列表中。这个插件是 <a href="https://github.com/guentoan/jekyll-furigana">jekyll-furigana</a>，用于给文本注音，主要应用场景有：</p>
-
-<p>( 日本語:にほんご )の( 漢字:かんじ )に( 振:ふ )り( 仮名:がな )を( 編集:へんしゅう )する</p>
-
-<p>( 中:zhōng )( 文:wén )拼音注音</p>
-
-<p>( 奇奇怪怪的用法:😀😁🤣😑🤨😮😶 )</p>
-
-<p>幸运的是 GitHub page 支持关闭在线构建，代价则是用户必须在本地配置好 Jekyll 环境，构建、推送构建完成的静态网页到 GitHub page repo。</p>
-
-<blockquote>
-  <p><a href="https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins">GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.</a></p>
-</blockquote>
-
-<h3 id="配置-jekyll-furigana-插件">配置 jekyll-furigana 插件</h3>
-
-<p>配置 Jekyll 插件的前提当然是配置好本地 Jekyll 环境。这里默认大家已经配置好了，如果还没配置的可以跟着<a href="http://jekyllcn.com/docs/installation/">官方文档</a>做，这里只描述插件的配置方法。</p>
-
-<ol>
-  <li>在 Gemfile 中配置 jekyll-furigana 插件
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">source</span> <span class="s1">'https://rubygems.org'</span>
- gem <span class="s1">'github-pages'</span>, group: :jekyll_plugins
- gem <span class="s1">'tzinfo-data'</span>
- gem <span class="s1">'jekyll-furigana'</span>, group: :jekyll_plugins
-</code></pre></div>    </div>
-  </li>
-  <li>安装
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>bundle
-</code></pre></div>    </div>
-  </li>
-  <li>在 Jekyll 配置文件 <code class="language-plaintext highlighter-rouge">_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">plugins:</code> 部分配置插件
-    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> plugins:
-     - jekyll-github-metadata
-     - rouge
-     - jekyll-paginate
-     - jekyll-sitemap
-     - jekyll-feed
-     - jemoji
-     - jekyll-furigana
-</code></pre></div>    </div>
-  </li>
-  <li>在需要启用注音功能的 markdown 博客文件头中加入 <code class="language-plaintext highlighter-rouge">furigana: true</code>
-    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p"> ---</span>
- layout: post
- title: 在基于 Jekyll 的博客中加入文字的注音
- categories: [日语]
- furigana: true
-<span class="p"> ---
-</span></code></pre></div>    </div>
-  </li>
-  <li>修改 <code class="language-plaintext highlighter-rouge">_layouts/post.html</code> 中的 <code class="language-plaintext highlighter-rouge">content</code> 过滤器，加入 <code class="language-plaintext highlighter-rouge">furigana</code> 过滤器
- <img src="/assets/images/2020-07-24-20-20-27.png" alt="" />
-    <ul>
-      <li>默认情况下是修改 <code class="language-plaintext highlighter-rouge">post.html</code> 文件，如果你的 markdown 文件头中的 <code class="language-plaintext highlighter-rouge">layout</code> 属性不是 <code class="language-plaintext highlighter-rouge">post</code> 那就要去修改对应的文件。</li>
-    </ul>
-  </li>
-</ol>
-
-<h3 id="使用方法">使用方法</h3>
-
-<p>jekyll-furigana 插件有多种使用格式，可选用下面任意一种。</p>
-
-<p><img src="/assets/images/2020-07-24-20-23-07.png" alt="" /></p>
-
-<p>他们在启用了插件的页面上，都将被渲染为：</p>
-
-<p>(日本語:にほんご)</p>
-
-<h3 id="编译静态网页推送到-github-page-repo">编译静态网页推送到 GitHub page repo</h3>
-
-<p>在根目录下编译静态网页，输出到 <code class="language-plaintext highlighter-rouge">./docs</code></p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build <span class="nt">--destination</span> ./docs
-</code></pre></div></div>
-<p>将 <code class="language-plaintext highlighter-rouge">docs</code> 文件夹内的内容推送到 GitHub page repo</p>
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ./docs
-
-git init
-
-git add <span class="nt">-A</span>
-
-git commit <span class="nt">-m</span> <span class="s2">"test furigana"</span>
-
-git remote add origin https://your-repo-url.git
-
-git push origin master
-</code></pre></div></div>
-<p>大约 2 分钟之后，即可打开网页检查插件是否生效。</p>
-
-<p>最后，感谢你阅读文章。</p>]]></content><author><name>Qinghao Lin</name></author><category term="日语" /><category term="linux" /><category term="jekyll" /><summary type="html"><![CDATA[在使用 jekyll 构建的博客文章中加入注音, 同时涉及本地构建静态网站推送 github page / coding page 的方法]]></summary></entry></feed>
+</table>]]></content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="linux" /><summary type="html"><![CDATA[一些日常 coding 时让自己感觉“原来还可以这样”的 vim 使用技巧]]></summary></entry></feed>
