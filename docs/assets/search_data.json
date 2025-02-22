@@ -326,7 +326,7 @@
     {
       "title"    : "C/C++ assert 自定义提示信息",
       "category" : "C/C++",
-      "content": "C/C++ assert 自定义提示信息 在 C/C++ 开发中，assert 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 assert 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 assert 触发时输出自定义的提示信息，从而更快地定位问题。 示例代码 以下是一个简单的代码示例： #include &lt;stdio.h&gt; #include &lt;assert.h&gt; typedef unsigned char uint8; void main() {  uint8 log2_cu_size = 5; // 常规的 assert 语句  assert(5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size); // 带自定义提示信息的 assert  assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)); printf(cu_size = %d, 1 &lt;&lt; log2_cu_size); return; } 在这段代码中，第一处 assert 是标准的用法，如果 CU 尺寸异常，程序会直接中断并输出默认的 assert 错误信息。 第二行 assert 使用了一个小技巧，在条件之前添加了一个字符串 illegal CU size，这样在条件不满足时会输出这段信息。 运行结果分析 假设运行上述代码时 log2_cu_size = 5，则第一行和第二行的断言都会失败。  对于第一处的 assert，输出类似： assert_comment.c:8: main: Assertion `5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size' failed. 对于第二处的 assert，输出会包含额外的提示信息： assert_comment.c:9: main: Assertion `(illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)' failed. 技巧背后的原理 在 C/C++ 中，逗号表达式的结果是最后一个表达式的值。因此，assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)) 实际上会忽略字符串 illegal CU size，只对 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size 进行断言检查。然而，字符串 illegal CU size 会被 assert 错误信息捕获并输出。 注意事项 避免复杂提示信息：提示信息应当简洁明了，便于快速理解问题所在。 仅在开发环境使用：assert 通常在 Debug 模式下使用。在 Release 模式中，建议移除断言检查以提升性能。 搭配日志使用：对于复杂的程序，建议结合日志记录系统一起使用，以便更全面地了解程序的运行情况。 总结 通过在 assert 语句中使用逗号表达式，我们可以轻松添加自定义提示信息。这种方法简单有效，可以显著提高程序调试效率。希望本文的分享对你的开发工作有所帮助！ 如果你有其他关于 assert 的技巧，欢迎留言讨论。 ",
+      "content": "在 C/C++ 开发中，assert 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 assert 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 assert 触发时输出自定义的提示信息，从而更快地定位问题。 示例代码 以下是一个简单的代码示例： #include &lt;stdio.h&gt; #include &lt;assert.h&gt; typedef unsigned char uint8; void main() {  uint8 log2_cu_size = 5; // 常规的 assert 语句  assert(5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size); // 带自定义提示信息的 assert  assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)); printf(cu_size = %d, 1 &lt;&lt; log2_cu_size); return; } 在这段代码中，第一处 assert 是标准的用法，如果 CU 尺寸异常，程序会直接中断并输出默认的 assert 错误信息。 第二行 assert 使用了一个小技巧，在条件之前添加了一个字符串 illegal CU size，这样在条件不满足时会输出这段信息。 运行结果分析 假设运行上述代码时 log2_cu_size = 5，则第一行和第二行的断言都会失败。  对于第一处的 assert，输出类似： assert_comment.c:8: main: Assertion `5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size' failed. 对于第二处的 assert，输出会包含额外的提示信息： assert_comment.c:9: main: Assertion `(illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)' failed. 技巧背后的原理 在 C/C++ 中，逗号表达式的结果是最后一个表达式的值。因此，assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)) 实际上会忽略字符串 illegal CU size，只对 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size 进行断言检查。然而，字符串 illegal CU size 会被 assert 错误信息捕获并输出。 注意事项 避免复杂提示信息：提示信息应当简洁明了，便于快速理解问题所在。 仅在开发环境使用：assert 通常在 Debug 模式下使用。在 Release 模式中，建议移除断言检查以提升性能。 搭配日志使用：对于复杂的程序，建议结合日志记录系统一起使用，以便更全面地了解程序的运行情况。 总结 通过在 assert 语句中使用逗号表达式，我们可以轻松添加自定义提示信息。这种方法简单有效，可以显著提高程序调试效率。希望本文的分享对你的开发工作有所帮助！ 如果你有其他关于 assert 的技巧，欢迎留言讨论。 ",
       "url"      : "https://0qinghao.github.io/20230821-C_assert_comment/"
     } ,
   
@@ -335,6 +335,13 @@
       "category" : "regex",
       "content": "在平时的工作中，经常会用到正则来搜索、编辑文本。最近恰好碰到个场景，需要筛选出符合某些条件的任意字符，包括换行符，即结果可能是多行文本。匹配任意字符很简单：使用 .* 即可，但在大多数情况下是把换行符排除在外的。 因此，我们需要利用高中学习的一个基础知识来造一个包含任意字符的全集：一个集合和他的补集的并集是全集。 我们知道正则里有 3 个最常用的集合：  d 是数字的集合，  s 是空白符的集合,   w 是字母和数字的集合。可能也知道对应的   D 是非数字的集合，  S 是非空白符的集合，  W 是非字母非数字的集合。因此我们可以使用 [  d  D] 或 [  s  S] 或 [  w  W] 来表示包括换行符在内的任意字符。 这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。 ",
       "url"      : "https://0qinghao.github.io/20241127-regex_match_everything_include_crlf/"
+    } ,
+  
+    {
+      "title"    : "2024-2025 元旦潮汕旅游计划",
+      "category" : "旅游",
+      "content": " 第一天：上海 → 潮汕 / 深圳 → 潮汕  下午 16:20 到达潮汕，租车自驾 高铁站 → 汕头老城（约40分钟）  会路过 苏南勤记 或 杏花吴记 吃晚饭，都是火锅类   汕头老城：逛吃  游览 老庙、老建筑、非遗美食街  如果有时间，可以在 海滨长廊 吹海风，喝 功夫茶   凯亚伦汕头高铁店 旅馆（约15分钟车程）  第二天：汕头 → 南澳岛  早餐 后出发去 南澳岛（约35分钟） 环岛游：  长山尾灯塔、钱澳湾灯塔、三囱崖灯塔、青澳湾、北回归线广场、总兵府博物馆、孤独的树   午餐：在当地菜市场买新鲜海鲜，去附近的餐馆加工 下午16:00：如果时间合适，可以乘船出海收网（涨潮时，16:00 满潮） 找个地方看 日落，约18:00开始退潮，赶海 晚餐：当地海鲜大排档？ 回旅馆  第三天：汕头 → 潮州  早餐 后前往 潮博馆（约15分钟车程）  参观 潮博馆   潮博馆 → 潮州古城（约50分钟车程）  午餐时可以在路上经过的 苏南勤记卤鹅 吃   潮州古城：  牌坊街、广济桥、开元寺、韩文公祠 都在这一片   前往 潮汕高铁站（约30分钟车程），准备返程，可以简单吃个晚饭  ",
+      "url"      : "https://0qinghao.github.io/20241230-travel_chaoshan/"
     } ,
   
     {
@@ -884,7 +891,7 @@
     } ,
   
     {
-      "title"    : "【每日一词】得物",
+      "title"    : "【每日一词】靄",
       "category" : "日语",
       "content": "もや【靄】 霭；烟霭；云气；轻雾  靄が晴れる。／雾霭消散。 靄が薄れる。 目の( 手術:しゅじゅつ )後、しばらくは( 視:し )界に靄がかかった状態が続いた。 朝靄。 ( 湖:みずうみ )に靄が一面に立ち込めた。／湖面上烟霭弥漫。 ",
       "url"      : "https://0qinghao.github.io/20241130-tango-moya/"
@@ -916,6 +923,20 @@
       "category" : "日语",
       "content": "うつむき【俯き】 低头；脸朝下看；朝下弯  うつむき加減。／稍微低着头；略弯着腰。 うつむき加減に歩く。 ",
       "url"      : "https://0qinghao.github.io/20241222-tango-utumuki/"
+    } ,
+  
+    {
+      "title"    : "【每日一词】分かち合う",
+      "category" : "日语",
+      "content": "わかちあう【分かち合う】 分享；分担  責任を分かち合う。 (苦楽:くらく)を分かち合う。 苦しみと楽しみを分かち合う。 ",
+      "url"      : "https://0qinghao.github.io/20250108-tango-wakatiau/"
+    } ,
+  
+    {
+      "title"    : "【每日一词】募る",
+      "category" : "日语",
+      "content": "つのる【募る】 招募；越来越厉害；激化  電車に(志願者:しがんしゃ)を募るポスターが(掛:か)かっている。 彼女への想いは募る一方だった。／对她的爱慕之情与日俱增。 風が吹き募る。 ",
+      "url"      : "https://0qinghao.github.io/20250109-tango-tunoru/"
     } 
   
 ]

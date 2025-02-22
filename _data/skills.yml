@@ -1,19 +1,25 @@
 - name: 软件
   keywords:
-      - H.264/265/266 编解码算法
+      - H.264/H.265/H.266/AVS3 编解码算法
       - C/C++
       - Python
+
+- name: 驱动
+  keywords:
+      - VEU 驱动开发（学习中）
 
 - name: 硬件
   keywords:
       - Verilog
       - Synopsys 前端系列
+      - HAPS/T32 FPGA 开发、验证（学习中）
 
 - name: 其他
   keywords:
       - 日语
       - 服务器运维
       - matlab/bash shell 等脚本
+      - AI 辅助开发工具
 
 # - name: Windows Developer Keywords
 #   keywords:

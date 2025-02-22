@@ -1,762 +1,821 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="https://0qinghao.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io/" rel="alternate" type="text/html" /><updated>2024-12-23T15:26:44+08:00</updated><id>https://0qinghao.github.io/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">正则匹配包括换行符在内的任意字符</title><link href="https://0qinghao.github.io/20241127-regex_match_everything_include_crlf/" rel="alternate" type="text/html" title="正则匹配包括换行符在内的任意字符" /><published>2024-11-27T00:00:00+08:00</published><updated>2024-11-27T00:00:00+08:00</updated><id>https://0qinghao.github.io/regex_match_everything_include_crlf</id><content type="html" xml:base="https://0qinghao.github.io/20241127-regex_match_everything_include_crlf/">&lt;p&gt;在平时的工作中，经常会用到正则来搜索、编辑文本。最近恰好碰到个场景，需要筛选出符合某些条件的任意字符，包括换行符，即结果可能是多行文本。匹配任意字符很简单：使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.*&lt;/code&gt; 即可，但在大多数情况下是把换行符排除在外的。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://0qinghao.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://0qinghao.github.io/" rel="alternate" type="text/html" /><updated>2025-02-22T19:08:27+08:00</updated><id>https://0qinghao.github.io/feed.xml</id><title type="html">林间</title><subtitle>林庆毫的个人空间</subtitle><author><name>Qinghao Lin</name></author><entry><title type="html">2024-2025 元旦潮汕旅游计划</title><link href="https://0qinghao.github.io/20241230-travel_chaoshan/" rel="alternate" type="text/html" title="2024-2025 元旦潮汕旅游计划" /><published>2024-12-30T00:00:00+08:00</published><updated>2024-12-30T00:00:00+08:00</updated><id>https://0qinghao.github.io/travel_chaoshan</id><content type="html" xml:base="https://0qinghao.github.io/20241230-travel_chaoshan/"><![CDATA[<hr />
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-11-27-22-13-09.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><strong>第一天：上海 → 潮汕 / 深圳 → 潮汕</strong></p>
 
-&lt;p&gt;因此，我们需要利用高中学习的一个基础知识来造一个包含任意字符的全集：一个集合和他的补集的并集是全集。&lt;/p&gt;
+<ul>
+  <li><strong>下午 16:20</strong> 到达潮汕，租车自驾</li>
+  <li><strong>高铁站 → 汕头老城</strong>（约40分钟）
+    <ul>
+      <li>会路过 <strong>苏南勤记</strong> 或 <strong>杏花吴记</strong> 吃晚饭，都是火锅类</li>
+    </ul>
+  </li>
+  <li><strong>汕头老城</strong>：逛吃
+    <ul>
+      <li>游览 <strong>老庙</strong>、<strong>老建筑</strong>、<strong>非遗美食街</strong></li>
+      <li>如果有时间，可以在 <strong>海滨长廊</strong> 吹海风，喝 <strong>功夫茶</strong></li>
+    </ul>
+  </li>
+  <li><strong>凯亚伦汕头高铁店</strong> 旅馆（约15分钟车程）</li>
+</ul>
 
-&lt;p&gt;我们知道正则里有 3 个最常用的集合：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\d&lt;/code&gt; 是数字的集合，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\s&lt;/code&gt; 是空白符的集合, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\w&lt;/code&gt; 是字母和数字的集合。可能也知道对应的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\D&lt;/code&gt; 是非数字的集合，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\S&lt;/code&gt; 是非空白符的集合，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\W&lt;/code&gt; 是非字母非数字的集合。因此我们可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[\d\D]&lt;/code&gt; 或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[\s\S]&lt;/code&gt; 或 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[\w\W]&lt;/code&gt; 来表示包括换行符在内的任意字符。&lt;/p&gt;
+<hr />
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-11-27-22-22-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><strong>第二天：汕头 → 南澳岛</strong></p>
 
-&lt;p&gt;这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="regex" /><summary type="html">在平时的工作中，经常会用到正则来搜索、编辑文本。最近恰好碰到个场景，需要筛选出符合某些条件的任意字符，包括换行符，即结果可能是多行文本。匹配任意字符很简单：使用 .* 即可，但在大多数情况下是把换行符排除在外的。</summary></entry><entry><title type="html">C/C++ assert 自定义提示信息</title><link href="https://0qinghao.github.io/20230821-C_assert_comment/" rel="alternate" type="text/html" title="C/C++ assert 自定义提示信息" /><published>2023-08-21T00:00:00+08:00</published><updated>2023-08-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/C_assert_comment</id><content type="html" xml:base="https://0qinghao.github.io/20230821-C_assert_comment/">&lt;h1 id=&quot;cc-assert-自定义提示信息&quot;&gt;C/C++ assert 自定义提示信息&lt;/h1&gt;
+<ul>
+  <li><strong>早餐</strong> 后出发去 <strong>南澳岛</strong>（约35分钟）</li>
+  <li><strong>环岛游</strong>：
+    <ul>
+      <li><strong>长山尾灯塔</strong>、<strong>钱澳湾灯塔</strong>、<strong>三囱崖灯塔</strong>、<strong>青澳湾</strong>、<strong>北回归线广场</strong>、<strong>总兵府博物馆</strong>、<strong>孤独的树</strong></li>
+    </ul>
+  </li>
+  <li><strong>午餐</strong>：在当地菜市场买新鲜海鲜，去附近的餐馆加工</li>
+  <li><strong>下午16:00</strong>：如果时间合适，可以乘船出海收网（涨潮时，16:00 满潮）</li>
+  <li>找个地方看 <strong>日落</strong>，约18:00开始退潮，赶海</li>
+  <li><strong>晚餐</strong>：当地海鲜大排档？</li>
+  <li>回旅馆</li>
+</ul>
 
-&lt;p&gt;在 C/C++ 开发中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 触发时输出自定义的提示信息，从而更快地定位问题。&lt;/p&gt;
+<hr />
 
-&lt;h2 id=&quot;示例代码&quot;&gt;示例代码&lt;/h2&gt;
-&lt;p&gt;以下是一个简单的代码示例：&lt;/p&gt;
+<p><strong>第三天：汕头 → 潮州</strong></p>
 
-&lt;div class=&quot;language-c highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;assert.h&amp;gt;
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;typedef&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;unsigned&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uint8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<ul>
+  <li><strong>早餐</strong> 后前往 <strong>潮博馆</strong>（约15分钟车程）
+    <ul>
+      <li>参观 <strong>潮博馆</strong></li>
+    </ul>
+  </li>
+  <li><strong>潮博馆 → 潮州古城</strong>（约50分钟车程）
+    <ul>
+      <li>午餐时可以在路上经过的 <strong>苏南勤记卤鹅</strong> 吃</li>
+    </ul>
+  </li>
+  <li><strong>潮州古城</strong>：
+    <ul>
+      <li><strong>牌坊街</strong>、<strong>广济桥</strong>、<strong>开元寺</strong>、<strong>韩文公祠</strong> 都在这一片</li>
+    </ul>
+  </li>
+  <li>前往 <strong>潮汕高铁站</strong>（约30分钟车程），准备返程，可以简单吃个晚饭</li>
+</ul>
 
-&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;uint8&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+<hr />]]></content><author><name>Qinghao Lin</name></author><category term="旅游" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">正则匹配包括换行符在内的任意字符</title><link href="https://0qinghao.github.io/20241127-regex_match_everything_include_crlf/" rel="alternate" type="text/html" title="正则匹配包括换行符在内的任意字符" /><published>2024-11-27T00:00:00+08:00</published><updated>2024-11-27T00:00:00+08:00</updated><id>https://0qinghao.github.io/regex_match_everything_include_crlf</id><content type="html" xml:base="https://0qinghao.github.io/20241127-regex_match_everything_include_crlf/"><![CDATA[<p>在平时的工作中，经常会用到正则来搜索、编辑文本。最近恰好碰到个场景，需要筛选出符合某些条件的任意字符，包括换行符，即结果可能是多行文本。匹配任意字符很简单：使用 <code class="language-plaintext highlighter-rouge">.*</code> 即可，但在大多数情况下是把换行符排除在外的。</p>
 
-    &lt;span class=&quot;c1&quot;&gt;// 常规的 assert 语句&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<p><img src="/assets/images/2024-11-27-22-13-09.png" alt="" /></p>
 
-    &lt;span class=&quot;c1&quot;&gt;// 带自定义提示信息的 assert&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;assert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;illegal CU size&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+<p>因此，我们需要利用高中学习的一个基础知识来造一个包含任意字符的全集：一个集合和他的补集的并集是全集。</p>
 
-    &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;cu_size = %d&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;log2_cu_size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+<p>我们知道正则里有 3 个最常用的集合：<code class="language-plaintext highlighter-rouge">\d</code> 是数字的集合，<code class="language-plaintext highlighter-rouge">\s</code> 是空白符的集合, <code class="language-plaintext highlighter-rouge">\w</code> 是字母和数字的集合。可能也知道对应的 <code class="language-plaintext highlighter-rouge">\D</code> 是非数字的集合，<code class="language-plaintext highlighter-rouge">\S</code> 是非空白符的集合，<code class="language-plaintext highlighter-rouge">\W</code> 是非字母非数字的集合。因此我们可以使用 <code class="language-plaintext highlighter-rouge">[\d\D]</code> 或 <code class="language-plaintext highlighter-rouge">[\s\S]</code> 或 <code class="language-plaintext highlighter-rouge">[\w\W]</code> 来表示包括换行符在内的任意字符。</p>
 
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<p><img src="/assets/images/2024-11-27-22-22-18.png" alt="" /></p>
 
-&lt;p&gt;在这段代码中，第一处 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 是标准的用法，如果 CU 尺寸异常，程序会直接中断并输出默认的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 错误信息。&lt;/p&gt;
+<p>这个小技巧可以用在不方便进行多行匹配的场景里，能降低不少工作量。</p>]]></content><author><name>Qinghao Lin</name></author><category term="regex" /><summary type="html"><![CDATA[使用正则表达式匹配包括换行符在内的任意字符]]></summary></entry><entry><title type="html">C/C++ assert 自定义提示信息</title><link href="https://0qinghao.github.io/20230821-C_assert_comment/" rel="alternate" type="text/html" title="C/C++ assert 自定义提示信息" /><published>2023-08-21T00:00:00+08:00</published><updated>2023-08-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/C_assert_comment</id><content type="html" xml:base="https://0qinghao.github.io/20230821-C_assert_comment/"><![CDATA[<p>在 C/C++ 开发中，<code class="language-plaintext highlighter-rouge">assert</code> 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 <code class="language-plaintext highlighter-rouge">assert</code> 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 <code class="language-plaintext highlighter-rouge">assert</code> 触发时输出自定义的提示信息，从而更快地定位问题。</p>
 
-&lt;p&gt;第二行 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 使用了一个小技巧，在条件之前添加了一个字符串 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;illegal CU size&quot;&lt;/code&gt;，这样在条件不满足时会输出这段信息。&lt;/p&gt;
+<h1 id="示例代码">示例代码</h1>
+<p>以下是一个简单的代码示例：</p>
 
-&lt;h2 id=&quot;运行结果分析&quot;&gt;运行结果分析&lt;/h2&gt;
-&lt;p&gt;假设运行上述代码时 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log2_cu_size = 5&lt;/code&gt;，则第一行和第二行的断言都会失败。&lt;/p&gt;
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;assert.h&gt;</span><span class="cp">
+</span>
+<span class="k">typedef</span> <span class="kt">unsigned</span> <span class="kt">char</span> <span class="n">uint8</span><span class="p">;</span>
 
-&lt;ul&gt;
-  &lt;li&gt;对于第一处的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt;，输出类似：&lt;/li&gt;
-&lt;/ul&gt;
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">uint8</span> <span class="n">log2_cu_size</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;assert_comment.c:8: main: Assertion `5 &amp;gt; log2_cu_size &amp;amp;&amp;amp; 2 &amp;lt; log2_cu_size&apos; failed.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="c1">// 常规的 assert 语句</span>
+    <span class="n">assert</span><span class="p">(</span><span class="mi">5</span> <span class="o">&gt;</span> <span class="n">log2_cu_size</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">log2_cu_size</span><span class="p">);</span>
 
-&lt;ul&gt;
-  &lt;li&gt;对于第二处的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt;，输出会包含额外的提示信息：&lt;/li&gt;
-&lt;/ul&gt;
+    <span class="c1">// 带自定义提示信息的 assert</span>
+    <span class="n">assert</span><span class="p">((</span><span class="s">"illegal CU size"</span><span class="p">,</span> <span class="mi">5</span> <span class="o">&gt;</span> <span class="n">log2_cu_size</span> <span class="o">&amp;&amp;</span> <span class="mi">2</span> <span class="o">&lt;</span> <span class="n">log2_cu_size</span><span class="p">));</span>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;assert_comment.c:9: main: Assertion `(&quot;illegal CU size&quot;, 5 &amp;gt; log2_cu_size &amp;amp;&amp;amp; 2 &amp;lt; log2_cu_size)&apos; failed.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+    <span class="n">printf</span><span class="p">(</span><span class="s">"cu_size = %d"</span><span class="p">,</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">log2_cu_size</span><span class="p">);</span>
 
-&lt;h2 id=&quot;技巧背后的原理&quot;&gt;技巧背后的原理&lt;/h2&gt;
-&lt;p&gt;在 C/C++ 中，逗号表达式的结果是最后一个表达式的值。因此，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert((&quot;illegal CU size&quot;, 5 &amp;gt; log2_cu_size &amp;amp;&amp;amp; 2 &amp;lt; log2_cu_size))&lt;/code&gt; 实际上会忽略字符串 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;illegal CU size&quot;&lt;/code&gt;，只对 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5 &amp;gt; log2_cu_size &amp;amp;&amp;amp; 2 &amp;lt; log2_cu_size&lt;/code&gt; 进行断言检查。然而，字符串 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&quot;illegal CU size&quot;&lt;/code&gt; 会被 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 错误信息捕获并输出。&lt;/p&gt;
+    <span class="k">return</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
-&lt;h2 id=&quot;注意事项&quot;&gt;注意事项&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;&lt;strong&gt;避免复杂提示信息&lt;/strong&gt;：提示信息应当简洁明了，便于快速理解问题所在。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;仅在开发环境使用&lt;/strong&gt;：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 通常在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Debug&lt;/code&gt; 模式下使用。在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Release&lt;/code&gt; 模式中，建议移除断言检查以提升性能。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;搭配日志使用&lt;/strong&gt;：对于复杂的程序，建议结合日志记录系统一起使用，以便更全面地了解程序的运行情况。&lt;/li&gt;
-&lt;/ol&gt;
+<p>在这段代码中，第一处 <code class="language-plaintext highlighter-rouge">assert</code> 是标准的用法，如果 CU 尺寸异常，程序会直接中断并输出默认的 <code class="language-plaintext highlighter-rouge">assert</code> 错误信息。</p>
 
-&lt;h2 id=&quot;总结&quot;&gt;总结&lt;/h2&gt;
-&lt;p&gt;通过在 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 语句中使用逗号表达式，我们可以轻松添加自定义提示信息。这种方法简单有效，可以显著提高程序调试效率。希望本文的分享对你的开发工作有所帮助！&lt;/p&gt;
+<p>第二行 <code class="language-plaintext highlighter-rouge">assert</code> 使用了一个小技巧，在条件之前添加了一个字符串 <code class="language-plaintext highlighter-rouge">"illegal CU size"</code>，这样在条件不满足时会输出这段信息。</p>
 
-&lt;p&gt;如果你有其他关于 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;assert&lt;/code&gt; 的技巧，欢迎留言讨论。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="C/C++" /><summary type="html">C/C++ assert 自定义提示信息</summary></entry><entry><title type="html">一个视频主观质量对比脚本</title><link href="https://0qinghao.github.io/20230727-video-subjective-quality-demo/" rel="alternate" type="text/html" title="一个视频主观质量对比脚本" /><published>2023-07-27T00:00:00+08:00</published><updated>2023-07-27T00:00:00+08:00</updated><id>https://0qinghao.github.io/video-subjective-quality-demo</id><content type="html" xml:base="https://0qinghao.github.io/20230727-video-subjective-quality-demo/">&lt;p&gt;最近开发了几个提升 H265 主观质量的算法，需要做个 demo 进行展示。mentor 以前采用的方案是使用开发板，写了个简单的应用程序使其同时解码多个码流，拼接好后输出到 HDMI 接口。我有点嫌弃搭建环境太过麻烦，还需要准备串口，因此自己撸了一个 Windows 下的脚本，调用 ffmpeg 实现。整体效果不错，而且使用起来也比较方便，唯一的不足是 ffmpeg 软解速度远远比不上开发板，4 路 1080p 播放的情况下，大约只能做到 10 fps。&lt;/p&gt;
+<h1 id="运行结果分析">运行结果分析</h1>
+<p>假设运行上述代码时 <code class="language-plaintext highlighter-rouge">log2_cu_size = 5</code>，则第一行和第二行的断言都会失败。</p>
 
-&lt;h1 id=&quot;关于主观质量评价&quot;&gt;关于主观质量评价&lt;/h1&gt;
+<ul>
+  <li>对于第一处的 <code class="language-plaintext highlighter-rouge">assert</code>，输出类似：</li>
+</ul>
 
-&lt;p&gt;在视频编解码领域，主观质量评价是衡量视频编码器性能的重要方法之一。与实验室环境中通过 JCTVC/JVET 标准测试序列计算 BD-Rate 不同，工业界更关注视频的主观质量，即平均主观分数 (Mean Opinion Score, MOS)。MOS 是通过让一组观察者在不知情的情况下观看并评分多组视频序列，从而评估编码器性能的指标。&lt;/p&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assert_comment.c:8: main: Assertion `5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size' failed.
+</code></pre></div></div>
 
-&lt;p&gt;标准文档中详细描述了主观质量评价的流程，通常采用 A/B 对比或交叉播放的方式。然而，为了增强对比效果，我们在测试中采用了同时播放多个编码器生成的视频序列的方法。这种方法不仅直观，而且能够更有效地展示不同编码器的性能差异。&lt;/p&gt;
+<ul>
+  <li>对于第二处的 <code class="language-plaintext highlighter-rouge">assert</code>，输出会包含额外的提示信息：</li>
+</ul>
 
-&lt;p&gt;需要注意的是，许多中高端显示设备自带图像优化滤镜，这些滤镜可能会影响主观质量评价的准确性。因此，在进行测试前，务必检查并关闭所有图像优化功能，以确保测试结果的客观性和准确性。&lt;/p&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assert_comment.c:9: main: Assertion `("illegal CU size", 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)' failed.
+</code></pre></div></div>
 
-&lt;p&gt;通过这种方式，我们能够更全面地评估视频编码器的主观质量表现，从而为算法的优化和改进提供可靠的数据支持。&lt;/p&gt;
+<h1 id="技巧背后的原理">技巧背后的原理</h1>
+<p>在 C/C++ 中，逗号表达式的结果是最后一个表达式的值。因此，<code class="language-plaintext highlighter-rouge">assert(("illegal CU size", 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size))</code> 实际上会忽略字符串 <code class="language-plaintext highlighter-rouge">"illegal CU size"</code>，只对 <code class="language-plaintext highlighter-rouge">5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size</code> 进行断言检查。然而，字符串 <code class="language-plaintext highlighter-rouge">"illegal CU size"</code> 会被 <code class="language-plaintext highlighter-rouge">assert</code> 错误信息捕获并输出。</p>
 
-&lt;h1 id=&quot;一个用于主观评价的脚本&quot;&gt;一个用于主观评价的脚本&lt;/h1&gt;
+<h1 id="注意事项">注意事项</h1>
+<ol>
+  <li><strong>避免复杂提示信息</strong>：提示信息应当简洁明了，便于快速理解问题所在。</li>
+  <li><strong>仅在开发环境使用</strong>：<code class="language-plaintext highlighter-rouge">assert</code> 通常在 <code class="language-plaintext highlighter-rouge">Debug</code> 模式下使用。在 <code class="language-plaintext highlighter-rouge">Release</code> 模式中，建议移除断言检查以提升性能。</li>
+  <li><strong>搭配日志使用</strong>：对于复杂的程序，建议结合日志记录系统一起使用，以便更全面地了解程序的运行情况。</li>
+</ol>
 
-&lt;p&gt;前面配置码流路径的一大部分不重要，核心命令都在 ffmpeg 的复杂滤波器部分了。描述起来倒也简单，只需要把多个输入依次裁剪、缩放，然后把他们依次放在指定坐标即可。&lt;/p&gt;
+<h1 id="总结">总结</h1>
+<p>通过在 <code class="language-plaintext highlighter-rouge">assert</code> 语句中使用逗号表达式，我们可以轻松添加自定义提示信息。这种方法简单有效，可以显著提高程序调试效率。希望本文的分享对你的开发工作有所帮助！</p>
 
-&lt;p&gt;&lt;strong&gt;ffmpeg 命令中的 -filter_complex 部分解释&lt;/strong&gt;&lt;/p&gt;
+<p>如果你有其他关于 <code class="language-plaintext highlighter-rouge">assert</code> 的技巧，欢迎留言讨论。</p>]]></content><author><name>Qinghao Lin</name></author><category term="C/C++" /><summary type="html"><![CDATA[在开发过程中使用 assert 可以帮助定位问题，增强鲁棒性。我们可以使用一个小技巧在 assert 触发时同时输出预先定义好的提示信息，进一步帮助定位问题。]]></summary></entry><entry><title type="html">一个视频主观质量对比脚本</title><link href="https://0qinghao.github.io/20230727-video-subjective-quality-demo/" rel="alternate" type="text/html" title="一个视频主观质量对比脚本" /><published>2023-07-27T00:00:00+08:00</published><updated>2023-07-27T00:00:00+08:00</updated><id>https://0qinghao.github.io/video-subjective-quality-demo</id><content type="html" xml:base="https://0qinghao.github.io/20230727-video-subjective-quality-demo/"><![CDATA[<p>最近开发了几个提升 H265 主观质量的算法，需要做个 demo 进行展示。mentor 以前采用的方案是使用开发板，写了个简单的应用程序使其同时解码多个码流，拼接好后输出到 HDMI 接口。我有点嫌弃搭建环境太过麻烦，还需要准备串口，因此自己撸了一个 Windows 下的脚本，调用 ffmpeg 实现。整体效果不错，而且使用起来也比较方便，唯一的不足是 ffmpeg 软解速度远远比不上开发板，4 路 1080p 播放的情况下，大约只能做到 10 fps。</p>
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nullsrc=size=$sw&lt;/code&gt;x$sh&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:rate=25[base]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;创建一个空白视频源，大小为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$sw&lt;/code&gt; x &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$sh&lt;/code&gt;，帧率为 25。这个空白视频源作为基础图层。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[0:v]crop=1920:1080:0:0,scale=$($sw/2):$($sh/2):$special_cfg0[0:tmp]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;对第一个输入视频流进行裁剪，裁剪后的大小为 1920x1080。&lt;/li&gt;
-      &lt;li&gt;将裁剪后的视频流缩放到屏幕的一半大小（$sw/2 x $sh/2）。&lt;/li&gt;
-      &lt;li&gt;应用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$special_cfg0&lt;/code&gt; 中的特殊配置（如果有）。&lt;/li&gt;
-      &lt;li&gt;将处理后的视频流命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[0:tmp]&lt;/code&gt;。&lt;/li&gt;
-      &lt;li&gt;重复上述步骤，得到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1:tmp]&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[2:tmp]&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[3:tmp]&lt;/code&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[base][0:tmp]overlay=0:0[a]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;将第一个处理后的视频流 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[0:tmp]&lt;/code&gt; 叠加到基础图层 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[base]&lt;/code&gt; 的左上角 (0,0) 位置。&lt;/li&gt;
-      &lt;li&gt;将结果命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[a]&lt;/code&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[a][1:tmp]overlay=$($sw/2):0[b]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;将第二个处理后的视频流 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[1:tmp]&lt;/code&gt; 叠加到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[a]&lt;/code&gt; 的右上角 ($sw/2,0) 位置。&lt;/li&gt;
-      &lt;li&gt;将结果命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[b]&lt;/code&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[b][2:tmp]overlay=0:$($sh/2)[c]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;将第三个处理后的视频流 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[2:tmp]&lt;/code&gt; 叠加到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[b]&lt;/code&gt; 的左下角 (0,$sh/2) 位置。&lt;/li&gt;
-      &lt;li&gt;将结果命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[c]&lt;/code&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[c][3:tmp]overlay=$($sw/2):$($sh/2)[d]&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;将第四个处理后的视频流 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[3:tmp]&lt;/code&gt; 叠加到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[c]&lt;/code&gt; 的右下角 ($sw/2,$sh/2) 位置。&lt;/li&gt;
-      &lt;li&gt;将结果命名为 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[d]&lt;/code&gt;。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[d]setpts=25/$speed*PTS&lt;/code&gt;:
-    &lt;ul&gt;
-      &lt;li&gt;调整最终视频流的播放速度，速度由 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$speed&lt;/code&gt; 参数决定。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+<h1 id="关于主观质量评价">关于主观质量评价</h1>
 
-&lt;p&gt;通过这些滤镜，脚本将四个输入视频流裁剪、缩放并拼接成一个 2x2 的网格，并调整播放速度，最终生成一个合成视频流。&lt;/p&gt;
+<p>在视频编解码领域，主观质量评价是衡量视频编码器性能的重要方法之一。与实验室环境中通过 JCTVC/JVET 标准测试序列计算 BD-Rate 不同，工业界更关注视频的主观质量，即平均主观分数 (Mean Opinion Score, MOS)。MOS 是通过让一组观察者在不知情的情况下观看并评分多组视频序列，从而评估编码器性能的指标。</p>
 
-&lt;p&gt;ffplay 部分主要是给多个画面增加标注，如不需要也可简化复杂滤波器部分。&lt;/p&gt;
+<p>标准文档中详细描述了主观质量评价的流程，通常采用 A/B 对比或交叉播放的方式。然而，为了增强对比效果，我们在测试中采用了同时播放多个编码器生成的视频序列的方法。这种方法不仅直观，而且能够更有效地展示不同编码器的性能差异。</p>
 
-&lt;p&gt;脚本运行后的界面类似如下，可以方便地对比多个画面。&lt;/p&gt;
+<p>需要注意的是，许多中高端显示设备自带图像优化滤镜，这些滤镜可能会影响主观质量评价的准确性。因此，在进行测试前，务必检查并关闭所有图像优化功能，以确保测试结果的客观性和准确性。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-12-20-15-38-00.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p>通过这种方式，我们能够更全面地评估视频编码器的主观质量表现，从而为算法的优化和改进提供可靠的数据支持。</p>
 
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# stream folder, stream suffix, label&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# 2x2 raster&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;T:\xxxxxxx\CBR2M&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;T:\xxxxxxx\VBRL&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;T:\xxxxxxx\VBRM&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;T:\xxxxxxx\VBRH&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<h1 id="一个用于主观评价的脚本">一个用于主观评价的脚本</h1>
 
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$suffix0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;_cbr_2M.h265&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$suffix1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;_vbrL_2M.h265&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$suffix2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;_vbrM_2M.h265&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$suffix3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;_vbrH_2M.h265&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p>前面配置码流路径的一大部分不重要，核心命令都在 ffmpeg 的复杂滤波器部分了。描述起来倒也简单，只需要把多个输入依次裁剪、缩放，然后把他们依次放在指定坐标即可。</p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;### 如果要求调整画面顺序, 只修改这部分 start ###&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Get seq name, cat string&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq$suffix0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq$suffix1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq$suffix2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$f3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seq$suffix3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p><strong>ffmpeg 命令中的 -filter_complex 部分解释</strong></p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Set labels&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;cbr 2M&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;vbrl 2M&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;vbrm 2M&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;vbrh 2M&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">nullsrc=size=$sw</code>x$sh<code class="language-plaintext highlighter-rouge">:rate=25[base]</code>:
+    <ul>
+      <li>创建一个空白视频源，大小为 <code class="language-plaintext highlighter-rouge">$sw</code> x <code class="language-plaintext highlighter-rouge">$sh</code>，帧率为 25。这个空白视频源作为基础图层。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[0:v]crop=1920:1080:0:0,scale=$($sw/2):$($sh/2):$special_cfg0[0:tmp]</code>:
+    <ul>
+      <li>对第一个输入视频流进行裁剪，裁剪后的大小为 1920x1080。</li>
+      <li>将裁剪后的视频流缩放到屏幕的一半大小（$sw/2 x $sh/2）。</li>
+      <li>应用 <code class="language-plaintext highlighter-rouge">$special_cfg0</code> 中的特殊配置（如果有）。</li>
+      <li>将处理后的视频流命名为 <code class="language-plaintext highlighter-rouge">[0:tmp]</code>。</li>
+      <li>重复上述步骤，得到 <code class="language-plaintext highlighter-rouge">[1:tmp]</code> <code class="language-plaintext highlighter-rouge">[2:tmp]</code> <code class="language-plaintext highlighter-rouge">[3:tmp]</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[base][0:tmp]overlay=0:0[a]</code>:
+    <ul>
+      <li>将第一个处理后的视频流 <code class="language-plaintext highlighter-rouge">[0:tmp]</code> 叠加到基础图层 <code class="language-plaintext highlighter-rouge">[base]</code> 的左上角 (0,0) 位置。</li>
+      <li>将结果命名为 <code class="language-plaintext highlighter-rouge">[a]</code>。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[a][1:tmp]overlay=$($sw/2):0[b]</code>:
+    <ul>
+      <li>将第二个处理后的视频流 <code class="language-plaintext highlighter-rouge">[1:tmp]</code> 叠加到 <code class="language-plaintext highlighter-rouge">[a]</code> 的右上角 ($sw/2,0) 位置。</li>
+      <li>将结果命名为 <code class="language-plaintext highlighter-rouge">[b]</code>。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[b][2:tmp]overlay=0:$($sh/2)[c]</code>:
+    <ul>
+      <li>将第三个处理后的视频流 <code class="language-plaintext highlighter-rouge">[2:tmp]</code> 叠加到 <code class="language-plaintext highlighter-rouge">[b]</code> 的左下角 (0,$sh/2) 位置。</li>
+      <li>将结果命名为 <code class="language-plaintext highlighter-rouge">[c]</code>。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[c][3:tmp]overlay=$($sw/2):$($sh/2)[d]</code>:
+    <ul>
+      <li>将第四个处理后的视频流 <code class="language-plaintext highlighter-rouge">[3:tmp]</code> 叠加到 <code class="language-plaintext highlighter-rouge">[c]</code> 的右下角 ($sw/2,$sh/2) 位置。</li>
+      <li>将结果命名为 <code class="language-plaintext highlighter-rouge">[d]</code>。</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">[d]setpts=25/$speed*PTS</code>:
+    <ul>
+      <li>调整最终视频流的播放速度，速度由 <code class="language-plaintext highlighter-rouge">$speed</code> 参数决定。</li>
+    </ul>
+  </li>
+</ol>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Special configurations&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# $special_cfg0 = &quot;out_range=full&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# $special_cfg1 = &quot;out_range=full&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# $special_cfg2 = &quot;out_range=full&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# $special_cfg3 = &quot;out_range=full&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p>通过这些滤镜，脚本将四个输入视频流裁剪、缩放并拼接成一个 2x2 的网格，并调整播放速度，最终生成一个合成视频流。</p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Check if PTv3 stream exists&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-not&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Test-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-PathType&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Leaf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-replace&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PTv3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PTv2&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-replace&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PTv3&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;PTv2&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;,setpts=2*PTS&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;### 如果要求调整画面顺序, 只修改这部分 end ###&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p>ffplay 部分主要是给多个画面增加标注，如不需要也可简化复杂滤波器部分。</p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Set play speed (=25 normal; &amp;lt;25 slow; &amp;gt;25 fast(limited by hardware))&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$speed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p>脚本运行后的界面类似如下，可以方便地对比多个画面。</p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# ffmpeg / ffplay paths&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffmpeg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Users\rin.lin\ffmpeg\bin\ffmpeg.exe&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffplay&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;C:\Users\rin.lin\ffmpeg\bin\ffplay.exe&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<p><img src="/assets/images/2024-12-20-15-38-00.png" alt="" /></p>
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Set screen size&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># stream folder, stream suffix, label</span><span class="w">
+</span><span class="c"># 2x2 raster</span><span class="w">
+</span><span class="nv">$f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"T:\xxxxxxx\CBR2M"</span><span class="w">
+</span><span class="nv">$f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"T:\xxxxxxx\VBRL"</span><span class="w">
+</span><span class="nv">$f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"T:\xxxxxxx\VBRM"</span><span class="w">
+</span><span class="nv">$f3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"T:\xxxxxxx\VBRH"</span><span class="w">
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Font configuration&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fontfile=simhei.ttf:fontsize=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontcolor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+</span><span class="nv">$suffix0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_cbr_2M.h265"</span><span class="w">
+</span><span class="nv">$suffix1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_vbrL_2M.h265"</span><span class="w">
+</span><span class="nv">$suffix2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_vbrM_2M.h265"</span><span class="w">
+</span><span class="nv">$suffix3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"_vbrH_2M.h265"</span><span class="w">
+
+</span><span class="c">### 如果要求调整画面顺序, 只修改这部分 start ###</span><span class="w">
+</span><span class="c"># Get seq name, cat string</span><span class="w">
+</span><span class="nv">$seq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w">
+</span><span class="nv">$stm0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$f0</span><span class="s2">\</span><span class="nv">$seq</span><span class="s2">\</span><span class="nv">$seq$suffix0</span><span class="s2">"</span><span class="w">
+</span><span class="nv">$stm1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$f1</span><span class="s2">\</span><span class="nv">$seq</span><span class="s2">\</span><span class="nv">$seq$suffix1</span><span class="s2">"</span><span class="w">
+</span><span class="nv">$stm2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$f2</span><span class="s2">\</span><span class="nv">$seq</span><span class="s2">\</span><span class="nv">$seq$suffix2</span><span class="s2">"</span><span class="w">
+</span><span class="nv">$stm3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$f3</span><span class="s2">\</span><span class="nv">$seq</span><span class="s2">\</span><span class="nv">$seq$suffix3</span><span class="s2">"</span><span class="w">
+
+</span><span class="c"># Set labels</span><span class="w">
+</span><span class="nv">$label0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"cbr 2M"</span><span class="w">
+</span><span class="nv">$label1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vbrl 2M"</span><span class="w">
+</span><span class="nv">$label2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vbrm 2M"</span><span class="w">
+</span><span class="nv">$label3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"vbrh 2M"</span><span class="w">
+
+</span><span class="c"># Special configurations</span><span class="w">
+</span><span class="nv">$special_cfg0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="nv">$special_cfg1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="nv">$special_cfg2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="nv">$special_cfg3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">""</span><span class="w">
+</span><span class="c"># $special_cfg0 = "out_range=full"</span><span class="w">
+</span><span class="c"># $special_cfg1 = "out_range=full"</span><span class="w">
+</span><span class="c"># $special_cfg2 = "out_range=full"</span><span class="w">
+</span><span class="c"># $special_cfg3 = "out_range=full"</span><span class="w">
+
+</span><span class="c"># Check if PTv3 stream exists</span><span class="w">
+</span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="o">-not</span><span class="w"> </span><span class="p">(</span><span class="n">Test-Path</span><span class="w"> </span><span class="nt">-Path</span><span class="w"> </span><span class="nv">$stm0</span><span class="w"> </span><span class="nt">-PathType</span><span class="w"> </span><span class="nx">Leaf</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nv">$stm0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$stm0</span><span class="w"> </span><span class="o">-replace</span><span class="w"> </span><span class="s2">"PTv3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PTv2"</span><span class="w">
+    </span><span class="nv">$label0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$label0</span><span class="w"> </span><span class="o">-replace</span><span class="w"> </span><span class="s2">"PTv3"</span><span class="p">,</span><span class="w"> </span><span class="s2">"PTv2"</span><span class="w">
+    </span><span class="nv">$special_cfg0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$special_cfg0</span><span class="s2">,setpts=2*PTS"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="c">### 如果要求调整画面顺序, 只修改这部分 end ###</span><span class="w">
+
+</span><span class="c"># Set play speed (=25 normal; &lt;25 slow; &gt;25 fast(limited by hardware))</span><span class="w">
+</span><span class="nv">$speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="w">
+
+</span><span class="c"># ffmpeg / ffplay paths</span><span class="w">
+</span><span class="nv">$ffmpeg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Users\rin.lin\ffmpeg\bin\ffmpeg.exe"</span><span class="w">
+</span><span class="nv">$ffplay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"C:\Users\rin.lin\ffmpeg\bin\ffplay.exe"</span><span class="w">
+
+</span><span class="c"># Set screen size</span><span class="w">
+</span><span class="nv">$sw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1920</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w">
+</span><span class="nv">$sh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1080</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w">
+
+</span><span class="c"># Font configuration</span><span class="w">
+</span><span class="nv">$label_font_common_cfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"fontfile=simhei.ttf:fontsize=</span><span class="si">$(</span><span class="nv">$sw</span><span class="n">/50</span><span class="p">):</span><span class="n">fontcolor</span><span class="o">=</span><span class="n">red</span><span class="s2">"
 
 # ffmpeg command
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffmpegCommand&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; = @&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffmpeg&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm2&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$stm3&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-filter_complex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;nullsrc=size=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;rate=25[base]; [0:v]crop=1920:1080:0:0,scale=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;crop&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$special_cfg3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setpts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$speed&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;PTS&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; -f avi -c:v rawvideo -pix_fmt yuv420p -
-&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+</span><span class="nv">$ffmpegCommand</span><span class="s2"> = @"</span><span class="w">
+</span><span class="s2">"</span><span class="nv">$ffmpeg</span><span class="s2">"</span><span class="w"> </span><span class="nt">-i</span><span class="w"> </span><span class="s2">"</span><span class="nv">$stm0</span><span class="s2">"</span><span class="w"> </span><span class="nt">-i</span><span class="w"> </span><span class="s2">"</span><span class="nv">$stm1</span><span class="s2">"</span><span class="w"> </span><span class="nt">-i</span><span class="w"> </span><span class="s2">"</span><span class="nv">$stm2</span><span class="s2">"</span><span class="w"> </span><span class="nt">-i</span><span class="w"> </span><span class="s2">"</span><span class="nv">$stm3</span><span class="s2">"</span><span class="w"> </span><span class="nt">-filter_complex</span><span class="w"> </span><span class="s2">"nullsrc=size=</span><span class="nv">$sw</span><span class="se">`x</span><span class="nv">$sh</span><span class="se">`:</span><span class="s2">rate=25[base]; [0:v]crop=1920:1080:0:0,scale=</span><span class="si">$(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">):</span><span class="nv">$special_cfg0</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">tmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">crop</span><span class="o">=</span><span class="mi">1920</span><span class="p">:</span><span class="mi">1080</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">):</span><span class="nv">$special_cfg1</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">tmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">crop</span><span class="o">=</span><span class="mi">1920</span><span class="p">:</span><span class="mi">1080</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">):</span><span class="nv">$special_cfg2</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="n">tmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">crop</span><span class="o">=</span><span class="mi">1920</span><span class="p">:</span><span class="mi">1080</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">):</span><span class="nv">$special_cfg3</span><span class="p">[</span><span class="mi">3</span><span class="p">:</span><span class="n">tmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">base</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">tmp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">0</span><span class="p">[</span><span class="n">a</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="n">tmp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="n">0</span><span class="p">[</span><span class="n">b</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="n">tmp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="n">c</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="mi">3</span><span class="p">:</span><span class="n">tmp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="n">d</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="n">setpts</span><span class="o">=</span><span class="mi">25</span><span class="n">/</span><span class="nv">$speed</span><span class="o">*</span><span class="nx">PTS</span><span class="s2">" -f avi -c:v rawvideo -pix_fmt yuv420p -
+"</span><span class="err">@</span><span class="w">
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# ffplay command&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffplayCommand&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;@&quot;
-&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffplay&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;&quot; -vf &quot;drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;text=%{frame_num}:x=(w-tw)/2:y=h-lh,drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;x=0:y=0,drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drawtext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drawtext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; -noframedrop -left 9999 -fs -
-&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+</span><span class="c"># ffplay command</span><span class="w">
+</span><span class="nv">$ffplayCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sh">@"
+"</span><span class="nv">$ffplay</span><span class="sh">" -vf "drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="sh">text=%{frame_num}:x=(w-tw)/2:y=h-lh,drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="sh">text=</span><span class="nv">$label0</span><span class="se">`:</span><span class="sh">x=0:y=0,drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="sh">text=</span><span class="nv">$label1</span><span class="se">`:</span><span class="sh">x=</span><span class="si">$(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">drawtext</span><span class="o">=</span><span class="nv">$label_font_common_cfg</span><span class="err">`</span><span class="p">:</span><span class="n">text</span><span class="o">=</span><span class="nv">$label2</span><span class="err">`</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">y</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">),</span><span class="n">drawtext</span><span class="o">=</span><span class="nv">$label_font_common_cfg</span><span class="err">`</span><span class="p">:</span><span class="n">text</span><span class="o">=</span><span class="nv">$label3</span><span class="err">`</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="n">y</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)</span><span class="s2">" -noframedrop -left 9999 -fs -
+"</span><span class="err">@</span><span class="w">
 
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# powershell 的管道操作很难处理, 交给 cmd 去运行&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmdCommand&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffmpegCommand&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; | &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ffplayCommand&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/c&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmdCommand&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</span><span class="c"># powershell 的管道操作很难处理, 交给 cmd 去运行</span><span class="w">
+</span><span class="nv">$cmdCommand</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"</span><span class="nv">$ffmpegCommand</span><span class="s2"> | </span><span class="nv">$ffplayCommand</span><span class="s2">"</span><span class="w">
+</span><span class="n">cmd</span><span class="w"> </span><span class="nx">/c</span><span class="w"> </span><span class="nv">$cmdCommand</span><span class="w">
+</span></code></pre></div></div>
 
-&lt;h1 id=&quot;一个展示图像差异的脚本&quot;&gt;一个展示图像差异的脚本&lt;/h1&gt;
+<h1 id="一个展示图像差异的脚本">一个展示图像差异的脚本</h1>
 
-&lt;p&gt;这个脚本可展示 2 个序列的 Y/UV 差异，是后续重新改写的，增加了简单的交互功能，发给其他同事用会更方便一点。&lt;/p&gt;
+<p>这个脚本可展示 2 个序列的 Y/UV 差异，是后续重新改写的，增加了简单的交互功能，发给其他同事用会更方便一点。</p>
 
-&lt;p&gt;&lt;strong&gt;解释生成差异图像的滤镜命令&lt;/strong&gt;&lt;/p&gt;
+<p><strong>解释生成差异图像的滤镜命令</strong></p>
 
-&lt;ol&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;format=yuva420p&lt;/code&gt;：将输入视频格式转换为 YUVA420P，这是一个包含透明度通道的 YUV 格式。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lut=c1=0:c2=0:c3=128&lt;/code&gt;：使用查找表 (LUT) 滤镜，将 U 和 V 分量设置为 0，透明度通道设置为 128。这样可以突出显示 Y 分量。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;negate&lt;/code&gt;：对视频进行反相处理，使得差异更加明显。&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blend=all_mode=difference:all_opacity=1&lt;/code&gt;：将两个视频帧进行差异混合，显示出两个视频帧之间的差异。&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">format=yuva420p</code>：将输入视频格式转换为 YUVA420P，这是一个包含透明度通道的 YUV 格式。</li>
+  <li><code class="language-plaintext highlighter-rouge">lut=c1=0:c2=0:c3=128</code>：使用查找表 (LUT) 滤镜，将 U 和 V 分量设置为 0，透明度通道设置为 128。这样可以突出显示 Y 分量。</li>
+  <li><code class="language-plaintext highlighter-rouge">negate</code>：对视频进行反相处理，使得差异更加明显。</li>
+  <li><code class="language-plaintext highlighter-rouge">blend=all_mode=difference:all_opacity=1</code>：将两个视频帧进行差异混合，显示出两个视频帧之间的差异。</li>
+</ol>
 
-&lt;p&gt;通过这些滤镜，脚本能够生成两个视频序列的 Y/UV 差异图像，并将其传递给 ffplay 进行显示。&lt;/p&gt;
+<p>通过这些滤镜，脚本能够生成两个视频序列的 Y/UV 差异图像，并将其传递给 ffplay 进行显示。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2024-12-20-15-54-08.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2024-12-20-15-54-08.png" alt="" /></p>
 
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#################### para part ####################&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;Param&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$parent_f0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./ResultRC_2023_11_01_0000_NO_FBC&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$parent_f1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;./ResultRC_2023_11_08_0444_FBC65&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$yuv_size&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1920x1088&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;#################### para part end ####################&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#################### para part ####################</span><span class="w">
+</span><span class="kr">Param</span><span class="w"> 
+</span><span class="p">(</span><span class="w">
+    </span><span class="nv">$parent_f0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"./ResultRC_2023_11_01_0000_NO_FBC"</span><span class="p">,</span><span class="w"> 
+    </span><span class="nv">$parent_f1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"./ResultRC_2023_11_08_0444_FBC65"</span><span class="p">,</span><span class="w">
+    </span><span class="nv">$yuv_size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"1920x1088"</span><span class="w">
+</span><span class="p">)</span><span class="w">
+</span><span class="c">#################### para part end ####################</span><span class="w">
 
-&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-Sequences&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqFolders&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-ChildItem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$parent_f0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Where-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$_&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;PSIsContainer&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Select-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ExpandProperty&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+</span><span class="kr">function</span><span class="w"> </span><span class="nf">Get-Sequences</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nv">$seqFolders</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-ChildItem</span><span class="w"> </span><span class="nv">$parent_f0</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Where-Object</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="bp">$_</span><span class="o">.</span><span class="nf">PSIsContainer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-ExpandProperty</span><span class="w"> </span><span class="nx">Name</span><span class="w">
 
-    &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Available sequences:&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-lt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqFolders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;. &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqFolders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Available sequences:"</span><span class="w">
+    </span><span class="kr">for</span><span class="w"> </span><span class="p">(</span><span class="nv">$i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nv">$i</span><span class="w"> </span><span class="o">-lt</span><span class="w"> </span><span class="nv">$seqFolders</span><span class="o">.</span><span class="nf">Count</span><span class="p">;</span><span class="w"> </span><span class="nv">$i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"</span><span class="nv">$i</span><span class="s2">. </span><span class="si">$(</span><span class="nv">$seqFolders</span><span class="p">[</span><span class="nv">$i</span><span class="p">]</span><span class="si">)</span><span class="s2">"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 
-    &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Read-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Enter the sequence number (or &apos;q&apos; to quit)&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    </span><span class="bp">$input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Read-Host</span><span class="w"> </span><span class="s2">"Enter the sequence number (or 'q' to quit)"</span><span class="w">
 
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-eq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&apos;q&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="bp">$input</span><span class="w"> </span><span class="o">-eq</span><span class="w"> </span><span class="s1">'q'</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="kr">exit</span><span class="w">
+    </span><span class="p">}</span><span class="w">
 
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-ge&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-and&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-lt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqFolders&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$seqFolders&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Write-Host&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Invalid input. Please enter a valid sequence number or &apos;q&apos; to quit.&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="bp">$input</span><span class="w"> </span><span class="o">-ge</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="o">-and</span><span class="w"> </span><span class="bp">$input</span><span class="w"> </span><span class="o">-lt</span><span class="w"> </span><span class="nv">$seqFolders</span><span class="o">.</span><span class="nf">Count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="kr">return</span><span class="w"> </span><span class="nv">$seqFolders</span><span class="p">[</span><span class="bp">$input</span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w"> </span><span class="kr">else</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="n">Write-Host</span><span class="w"> </span><span class="s2">"Invalid input. Please enter a valid sequence number or 'q' to quit."</span><span class="w">
+        </span><span class="kr">return</span><span class="w"> </span><span class="bp">$null</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
 
-&lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;do&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Get-Sequences&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+</span><span class="kr">do</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nv">$selectedSeq</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Get-Sequences</span><span class="w">
 
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-ne&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1920&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1080&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$speed&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    </span><span class="kr">if</span><span class="w"> </span><span class="p">(</span><span class="nv">$selectedSeq</span><span class="w"> </span><span class="o">-ne</span><span class="w"> </span><span class="bp">$null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nv">$sw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1920</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="nv">$sh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1080</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w">
+        </span><span class="nv">$speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="w">
 
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;NO FBC&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;FBC 65 percent&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label2&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Y_difference&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label3&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;UV_difference&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        </span><span class="nv">$label0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"NO FBC"</span><span class="w">
+        </span><span class="nv">$label1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"FBC 65 percent"</span><span class="w">
+        </span><span class="nv">$label2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"Y_difference"</span><span class="w">
+        </span><span class="nv">$label3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"UV_difference"</span><span class="w">
 
-        &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-i &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$parent_f0&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cbr_2M.h265&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
-        &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;-i &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$parent_f1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$selectedSeq&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`_&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cbr_2M.h265&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; 
+        </span><span class="bp">$input</span><span class="mi">0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"-i </span><span class="se">`"</span><span class="nv">$parent_f0</span><span class="s2">/</span><span class="nv">$selectedSeq</span><span class="s2">/</span><span class="nv">$selectedSeq</span><span class="se">`_</span><span class="s2">cbr_2M.h265</span><span class="se">`"</span><span class="s2">"</span><span class="w"> 
+        </span><span class="bp">$input</span><span class="mi">1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"-i </span><span class="se">`"</span><span class="nv">$parent_f1</span><span class="s2">/</span><span class="nv">$selectedSeq</span><span class="s2">/</span><span class="nv">$selectedSeq</span><span class="se">`_</span><span class="s2">cbr_2M.h265</span><span class="se">`"</span><span class="s2">"</span><span class="w"> 
 
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;fontfile=simhei.ttf:fontsize=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fontcolor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;
+        </span><span class="nv">$label_font_common_cfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"fontfile=simhei.ttf:fontsize=</span><span class="si">$(</span><span class="nv">$sw</span><span class="n">/50</span><span class="p">):</span><span class="n">fontcolor</span><span class="o">=</span><span class="n">red</span><span class="s2">"
 
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd_ffmpeg_part&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; = &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;\ffmpeg.exe&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-filter_complex&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nullsrc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yuva420p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;negate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v0yforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yuva420p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1yforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1yforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v0yforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yuva420p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;negate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v0uvforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yuva420p&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lut&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1uvforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v1uvforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v0uvforcmp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scale&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;vp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;overlay&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setpts&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$speed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PTS&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; -f avi -c:v rawvideo -pix_fmt yuv420p - | &quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        </span><span class="nv">$cmd_ffmpeg_part</span><span class="s2"> = "</span><span class="o">.</span><span class="nx">\ffmpeg.exe</span><span class="w"> </span><span class="bp">$input</span><span class="nx">0</span><span class="w"> </span><span class="bp">$input</span><span class="nx">1</span><span class="w"> </span><span class="nt">-filter_complex</span><span class="w"> </span><span class="se">`"</span><span class="nx">nullsrc</span><span class="o">=</span><span class="n">size</span><span class="o">=</span><span class="nv">$sw</span><span class="err">`</span><span class="n">x</span><span class="nv">$sh</span><span class="se">`:</span><span class="nx">rate</span><span class="o">=</span><span class="n">25</span><span class="p">[</span><span class="n">base</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="mi">0</span><span class="p">:</span><span class="n">vp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="mi">1</span><span class="p">:</span><span class="n">vp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">format</span><span class="o">=</span><span class="n">yuva420p</span><span class="p">,</span><span class="n">lut</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">c2</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">c3</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span><span class="n">negate</span><span class="p">[</span><span class="n">v0yforcmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">format</span><span class="o">=</span><span class="n">yuva420p</span><span class="p">,</span><span class="n">lut</span><span class="o">=</span><span class="n">c1</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">c2</span><span class="o">=</span><span class="n">0</span><span class="p">[</span><span class="n">v1yforcmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">v1yforcmp</span><span class="p">][</span><span class="n">v0yforcmp</span><span class="p">]</span><span class="n">overlay</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="mi">2</span><span class="p">:</span><span class="n">vp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">format</span><span class="o">=</span><span class="n">yuva420p</span><span class="p">,</span><span class="n">lut</span><span class="o">=</span><span class="n">c0</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">c3</span><span class="o">=</span><span class="mi">128</span><span class="p">,</span><span class="n">negate</span><span class="p">[</span><span class="n">v0uvforcmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="n">v</span><span class="p">]</span><span class="n">format</span><span class="o">=</span><span class="n">yuva420p</span><span class="p">,</span><span class="n">lut</span><span class="o">=</span><span class="n">c0</span><span class="o">=</span><span class="n">0</span><span class="p">[</span><span class="n">v1uvforcmp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">v1uvforcmp</span><span class="p">][</span><span class="n">v0uvforcmp</span><span class="p">]</span><span class="n">overlay</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="mi">3</span><span class="p">:</span><span class="n">vp</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">base</span><span class="p">][</span><span class="mi">0</span><span class="p">:</span><span class="n">vp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">0</span><span class="p">[</span><span class="n">a</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">a</span><span class="p">][</span><span class="mi">1</span><span class="p">:</span><span class="n">vp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="n">0</span><span class="p">[</span><span class="n">b</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">b</span><span class="p">][</span><span class="mi">2</span><span class="p">:</span><span class="n">vp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="n">c</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">c</span><span class="p">][</span><span class="mi">3</span><span class="p">:</span><span class="n">vp</span><span class="p">]</span><span class="n">overlay</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="p">:</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)[</span><span class="n">d</span><span class="p">];</span><span class="w"> </span><span class="p">[</span><span class="n">d</span><span class="p">]</span><span class="n">setpts</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="mi">25</span><span class="n">/</span><span class="nv">$speed</span><span class="p">)</span><span class="o">*</span><span class="n">PTS</span><span class="err">`</span><span class="s2">" -f avi -c:v rawvideo -pix_fmt yuv420p - | "</span><span class="w">
 
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd_ffplay_part&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;.\ffplay.exe -vf &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text=%{frame_num}:x=(w-tw)/2:y=h-lh,drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;x=0:y=0,drawtext=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;`:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drawtext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;drawtext&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label_font_common_cfg&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$label3&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sw&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$sh&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;/2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot; -noframedrop -left 9999 -fs -&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+        </span><span class="nv">$cmd_ffplay_part</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">".\ffplay.exe -vf </span><span class="se">`"</span><span class="s2">drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="s2">text=%{frame_num}:x=(w-tw)/2:y=h-lh,drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="s2">text=</span><span class="nv">$label0</span><span class="se">`:</span><span class="s2">x=0:y=0,drawtext=</span><span class="nv">$label_font_common_cfg</span><span class="se">`:</span><span class="s2">text=</span><span class="nv">$label1</span><span class="se">`:</span><span class="s2">x=</span><span class="si">$(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">drawtext</span><span class="o">=</span><span class="nv">$label_font_common_cfg</span><span class="err">`</span><span class="p">:</span><span class="n">text</span><span class="o">=</span><span class="nv">$label2</span><span class="err">`</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">:</span><span class="n">y</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">),</span><span class="n">drawtext</span><span class="o">=</span><span class="nv">$label_font_common_cfg</span><span class="err">`</span><span class="p">:</span><span class="n">text</span><span class="o">=</span><span class="nv">$label3</span><span class="err">`</span><span class="p">:</span><span class="n">x</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sw</span><span class="n">/2</span><span class="p">):</span><span class="n">y</span><span class="o">=</span><span class="err">$</span><span class="p">(</span><span class="nv">$sh</span><span class="n">/2</span><span class="p">)</span><span class="err">`</span><span class="s2">" -noframedrop -left 9999 -fs -"</span><span class="w">
 
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd_ffmpeg_part&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd_ffplay_part&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cmd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/c&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$cmd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Qinghao Lin</name></author><category term="video codec" /><category term="MOS" /><category term="powershell" /><summary type="html">最近开发了几个提升 H265 主观质量的算法，需要做个 demo 进行展示。mentor 以前采用的方案是使用开发板，写了个简单的应用程序使其同时解码多个码流，拼接好后输出到 HDMI 接口。我有点嫌弃搭建环境太过麻烦，还需要准备串口，因此自己撸了一个 Windows 下的脚本，调用 ffmpeg 实现。整体效果不错，而且使用起来也比较方便，唯一的不足是 ffmpeg 软解速度远远比不上开发板，4 路 1080p 播放的情况下，大约只能做到 10 fps。</summary></entry><entry><title type="html">获取 /dev/sdx 设备的 UUID 和 USB Version 等信息</title><link href="https://0qinghao.github.io/20230414-get-usb-dev-sdx-info/" rel="alternate" type="text/html" title="获取 /dev/sdx 设备的 UUID 和 USB Version 等信息" /><published>2023-04-14T00:00:00+08:00</published><updated>2023-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io/get-usb-dev-sdx-info</id><content type="html" xml:base="https://0qinghao.github.io/20230414-get-usb-dev-sdx-info/">&lt;p&gt;同事碰到一个痛点，在做板上测试时插入了多个 U 盘，由于 Linux 系统对接入设备是枚举命名的，即 sda/sdb…sdf，无法有效地确定名称与具体设备的对应关系。通过热拔插确实可以确定一次，但重启后的名称分配并不稳定，导致最后无法区分 sda 对应的是哪一个设备。&lt;/p&gt;
+        </span><span class="nv">$cmd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$cmd_ffmpeg_part</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nv">$cmd_ffplay_part</span><span class="w">
+        </span><span class="n">cmd</span><span class="w"> </span><span class="nx">/c</span><span class="w"> </span><span class="nv">$cmd</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w"> </span><span class="kr">while</span><span class="w"> </span><span class="p">(</span><span class="bp">$true</span><span class="si">)</span><span class="s2">
+</span></code></pre></div></div>]]></content><author><name>Qinghao Lin</name></author><category term="video codec" /><category term="MOS" /><category term="powershell" /><summary type="html"><![CDATA[分享一个实用脚本，同屏播放多个视频序列，用于视频主观质量对比]]></summary></entry><entry><title type="html">获取 /dev/sdx 设备的 UUID 和 USB Version 等信息</title><link href="https://0qinghao.github.io/20230414-get-usb-dev-sdx-info/" rel="alternate" type="text/html" title="获取 /dev/sdx 设备的 UUID 和 USB Version 等信息" /><published>2023-04-14T00:00:00+08:00</published><updated>2023-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io/get-usb-dev-sdx-info</id><content type="html" xml:base="https://0qinghao.github.io/20230414-get-usb-dev-sdx-info/"><![CDATA[<p>同事碰到一个痛点，在做板上测试时插入了多个 U 盘，由于 Linux 系统对接入设备是枚举命名的，即 sda/sdb…sdf，无法有效地确定名称与具体设备的对应关系。通过热拔插确实可以确定一次，但重启后的名称分配并不稳定，导致最后无法区分 sda 对应的是哪一个设备。</p>
 
-&lt;p&gt;查找到解决方案，可绑定 UUID 到固定的 sdx。在之后的文章将记录使用 udev rule 的绑定方法，这里只记录一个快速确定 sdx 对应设备的方案。&lt;/p&gt;
+<p>查找到解决方案，可绑定 UUID 到固定的 sdx。在之后的文章将记录使用 udev rule 的绑定方法，这里只记录一个快速确定 sdx 对应设备的方案。</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;udevadm info -n /dev/sdb
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>udevadm info -n /dev/sdb
+</code></pre></div></div>
 
-&lt;p&gt;我们将得到类似下述的信息：&lt;/p&gt;
+<p>我们将得到类似下述的信息：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2023-04-14-10-38-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2023-04-14-10-38-49.png" alt="" /></p>
 
-&lt;p&gt;如果根据 VENDOR 等信息能够确定设备，那到这就足够了，否则就需要加上 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-a&lt;/code&gt; 选项获得详尽的设备信息，进而判断。&lt;/p&gt;
+<p>如果根据 VENDOR 等信息能够确定设备，那到这就足够了，否则就需要加上 <code class="language-plaintext highlighter-rouge">-a</code> 选项获得详尽的设备信息，进而判断。</p>
 
-&lt;p&gt;又或者，你对判断哪个设备号是谁并没有兴趣，只想知道 sdb 的 USB 协议是 2.0 还是 3.0，那么类似这样的命令能够帮助你：&lt;/p&gt;
+<p>又或者，你对判断哪个设备号是谁并没有兴趣，只想知道 sdb 的 USB 协议是 2.0 还是 3.0，那么类似这样的命令能够帮助你：</p>
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;udevadm info -n /dev/sdb -a | grep version
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>udevadm info -n /dev/sdb -a | grep version
 udevadm info -n /dev/sdb -a | grep speed # 2.0 协议的速度是 480Mbps，3.0 则是 5000Mbps
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+</code></pre></div></div>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2023-04-14-10-44-24.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2023-04-14-10-44-24.png" alt="" /></p>
 
-&lt;p&gt;之后的文章将总结如何将 UUID 与设备号 sdx 绑定起来。最后，感谢你阅读文章！&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html">同事碰到一个痛点，在做板上测试时插入了多个 U 盘，由于 Linux 系统对接入设备是枚举命名的，即 sda/sdb…sdf，无法有效地确定名称与具体设备的对应关系。通过热拔插确实可以确定一次，但重启后的名称分配并不稳定，导致最后无法区分 sda 对应的是哪一个设备。</summary></entry><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io/20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io/20221113-NB-1110BUG/">&lt;p&gt;11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…&lt;/p&gt;
+<p>之后的文章将总结如何将 UUID 与设备号 sdx 绑定起来。最后，感谢你阅读文章！</p>]]></content><author><name>Qinghao Lin</name></author><category term="linux" /><summary type="html"><![CDATA[获取 U 盘的详细信息，最重要的是能直接获取 sda 设备是 usb 2.0 还是 3.0]]></summary></entry><entry><title type="html">【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug</title><link href="https://0qinghao.github.io/20221113-NB-1110BUG/" rel="alternate" type="text/html" title="【NB】11.10 技巧属性大幅改版后 辅助职业产生的严重 bug" /><published>2022-11-13T00:00:00+08:00</published><updated>2022-11-13T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-1110BUG</id><content type="html" xml:base="https://0qinghao.github.io/20221113-NB-1110BUG/"><![CDATA[<p>11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…</p>
 
-&lt;p&gt;虽然算下来数值不高，但这种白送属性的事玩家们自然是喜闻乐见的。&lt;/p&gt;
+<p>虽然算下来数值不高，但这种白送属性的事玩家们自然是喜闻乐见的。</p>
 
-&lt;h2 id=&quot;技巧改版提升大奶辅助能力&quot;&gt;技巧改版提升大奶辅助能力&lt;/h2&gt;
+<h2 id="技巧改版提升大奶辅助能力">技巧改版提升大奶辅助能力</h2>
 
-&lt;p&gt;这之中最让我振奋的是关于奶妈的修改（除了改祝福给新卡让道这点）。作为游戏中唯一一个会去堆技巧属性的职业——辅助奶妈，相比于其他职业的蚊子腿收益，这次技巧改版让认真培养的辅助奶的能力上升了一个台阶，官方确实意识到了大家诟病已久的大奶小奶差距甚小的问题。&lt;/p&gt;
+<p>这之中最让我振奋的是关于奶妈的修改（除了改祝福给新卡让道这点）。作为游戏中唯一一个会去堆技巧属性的职业——辅助奶妈，相比于其他职业的蚊子腿收益，这次技巧改版让认真培养的辅助奶的能力上升了一个台阶，官方确实意识到了大家诟病已久的大奶小奶差距甚小的问题。</p>
 
-&lt;p&gt;这次技巧改版，【水之祝福】buff 从【伤害增加】变成了【技能伤】，并且在基础数值上额外增加了 5% 技巧比例的技能伤；【海之祭坛】buff 在基础数值上额外增加了 10% 技巧比例的属强。&lt;/p&gt;
+<p>这次技巧改版，【水之祝福】buff 从【伤害增加】变成了【技能伤】，并且在基础数值上额外增加了 5% 技巧比例的技能伤；【海之祭坛】buff 在基础数值上额外增加了 10% 技巧比例的属强。</p>
 
-&lt;p&gt;一个优秀的辅助奶实战时会有 300% 以上的技巧值，也就是说能比白板奶多出 15% 技能伤和 30% 属强，粗略地可以看作多了一组 3 孔符文的辅助能力。相信未来玩家数值的增加和后续改版会进一步拉开精品奶与混子奶的差距。&lt;/p&gt;
+<p>一个优秀的辅助奶实战时会有 300% 以上的技巧值，也就是说能比白板奶多出 15% 技能伤和 30% 属强，粗略地可以看作多了一组 3 孔符文的辅助能力。相信未来玩家数值的增加和后续改版会进一步拉开精品奶与混子奶的差距。</p>
 
-&lt;p&gt;我不由地产生了“一切都好起来了”的感觉，直到，我发现了这个 bug……&lt;/p&gt;
+<p>我不由地产生了“一切都好起来了”的感觉，直到，我发现了这个 bug……</p>
 
-&lt;h2 id=&quot;新瓶装旧酒又是计算对象选错的-bug&quot;&gt;新瓶装旧酒，又是计算对象选错的 bug&lt;/h2&gt;
+<h2 id="新瓶装旧酒又是计算对象选错的-bug">新瓶装旧酒，又是计算对象选错的 bug</h2>
 
-&lt;p&gt;相信对奶妈有过一定研究的老玩家一定还记得从开服开始，持续了一年左右的【唤水】bug ：&lt;/p&gt;
+<p>相信对奶妈有过一定研究的老玩家一定还记得从开服开始，持续了一年左右的【唤水】bug ：</p>
 
-&lt;p&gt;简单来说，在小半年前修复之前，【唤水】会给队友增加【攻击力】，数值是【智力】* 2.5%&lt;/p&gt;
+<p>简单来说，在小半年前修复之前，【唤水】会给队友增加【攻击力】，数值是【智力】* 2.5%</p>
 
-&lt;p&gt;但那时的致命 bug 是：计算时用的是队友的智力而不是奶妈的智力，也就是说半年前，唤水砸到赤面头上之后，赤面的【攻击力】爆增了 ⑨*2.5%=0.0225 点！&lt;/p&gt;
+<p>但那时的致命 bug 是：计算时用的是队友的智力而不是奶妈的智力，也就是说半年前，唤水砸到赤面头上之后，赤面的【攻击力】爆增了 ⑨*2.5%=0.0225 点！</p>
 
-&lt;p&gt;是的，你没有猜错，这次技巧改版出现了一模一样的 bug。奶妈 buff 增益值的技巧部分在计算时，使用的是队友的【技巧】而不是奶妈的【技巧】。&lt;/p&gt;
+<p>是的，你没有猜错，这次技巧改版出现了一模一样的 bug。奶妈 buff 增益值的技巧部分在计算时，使用的是队友的【技巧】而不是奶妈的【技巧】。</p>
 
-&lt;p&gt;也就是说，当你的极品辅助奶妈队友砸了一个祭坛后，你在获得了技能本身的基础属强后，额外获得了（你的技巧值）5.5% * 10% = 0.55% 点属强！而不是理论上的 （奶妈的技巧值）300% * 10% = 30%&lt;/p&gt;
+<p>也就是说，当你的极品辅助奶妈队友砸了一个祭坛后，你在获得了技能本身的基础属强后，额外获得了（你的技巧值）5.5% * 10% = 0.55% 点属强！而不是理论上的 （奶妈的技巧值）300% * 10% = 30%</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-11-13-21-28-49.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-11-13-21-28-49.png" alt="" /></p>
 
-&lt;p&gt;【水之祝福】的技巧部分也有相同的问题，想要复现又不想双开的朋友，找个奶妈队友进图，分别观察点满潜力技巧前后，自己的技能伤面板变化就能验证了。&lt;/p&gt;
+<p>【水之祝福】的技巧部分也有相同的问题，想要复现又不想双开的朋友，找个奶妈队友进图，分别观察点满潜力技巧前后，自己的技能伤面板变化就能验证了。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-11-13-21-31-01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-11-13-21-31-01.png" alt="" /></p>
 
-&lt;p&gt;如果有为数不多的辅助雪崩玩家看到这，肯定想要问【无畏】增加的【所有攻击伤害】技巧部分是不是也有同样的问题。这里直接告诉你答案，是的。图就不上了，很容易就能验证复现。&lt;/p&gt;
+<p>如果有为数不多的辅助雪崩玩家看到这，肯定想要问【无畏】增加的【所有攻击伤害】技巧部分是不是也有同样的问题。这里直接告诉你答案，是的。图就不上了，很容易就能验证复现。</p>
 
-&lt;p&gt;最后，还有一个并不是本次更新后出现，而是老早就有，也属于同类的 bug。奶妈【神圣海域】会给队友附加护盾，护盾厚度与【智力】挂钩，这里的计算对象同样错选成了队友的。&lt;/p&gt;
+<p>最后，还有一个并不是本次更新后出现，而是老早就有，也属于同类的 bug。奶妈【神圣海域】会给队友附加护盾，护盾厚度与【智力】挂钩，这里的计算对象同样错选成了队友的。</p>
 
-&lt;h2 id=&quot;请尽快修复&quot;&gt;请尽快修复&lt;/h2&gt;
+<h2 id="请尽快修复">请尽快修复</h2>
 
-&lt;p&gt;我能理解雷火缺人手，年底了开发任务也重。但我相信工程师们有过小半年前修复【唤水】同类 bug 的经验，这次处理起来应该会得心应手一些。也不求多快，请在新图新团本出来之前修复吧！一个热爱辅助职业的普通玩家的深夜牢骚。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…</summary></entry><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io/20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io/20220414-NB-zhuanshuxing/">&lt;p&gt;2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：&lt;/p&gt;
+<p>我能理解雷火缺人手，年底了开发任务也重。但我相信工程师们有过小半年前修复【唤水】同类 bug 的经验，这次处理起来应该会得心应手一些。也不求多快，请在新图新团本出来之前修复吧！一个热爱辅助职业的普通玩家的深夜牢骚。</p>]]></content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html"><![CDATA[11 月 10 日的小型版本更新中，官方围绕【技巧】这一属性做出了若干修改，例如给赤面增加技巧关联的暗强、给白手部分技能增加技巧关联的攻速…]]></summary></entry><entry><title type="html">【NB】转属性符文是否叠加的简单测试及提升率计算</title><link href="https://0qinghao.github.io/20220414-NB-zhuanshuxing/" rel="alternate" type="text/html" title="【NB】转属性符文是否叠加的简单测试及提升率计算" /><published>2022-04-14T00:00:00+08:00</published><updated>2022-04-14T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-zhuanshuxing</id><content type="html" xml:base="https://0qinghao.github.io/20220414-NB-zhuanshuxing/"><![CDATA[<p>2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>修复了符文[深渊]、[寒冰]、[业火]、[辉光]同时使用，效果未能正常运用于所有技能的问题。</p>
+</blockquote>
 
-&lt;p&gt;这描述一度让人以为 4 个转属性符文能使最终伤害同时吃 4 个加成，即打上水暗火符文后，【光电鳗】的伤害变成 x * (1 + 水强% + 光强% + 火强% + 暗强%)。&lt;/p&gt;
+<p>这描述一度让人以为 4 个转属性符文能使最终伤害同时吃 4 个加成，即打上水暗火符文后，【光电鳗】的伤害变成 x * (1 + 水强% + 光强% + 火强% + 暗强%)。</p>
 
-&lt;p&gt;但是经过我和其他吧友的简单测试，这纯属无稽之谈，现在还是和更新前一样，吃最高的。至于有部分玩家感觉更新完伤害更高了，有可能是因为官方还修复了 A 属性转 B 属性随动的 bug，这涉及到振奋、放流、高爆以及所有穿属强套的玩家。&lt;/p&gt;
+<p>但是经过我和其他吧友的简单测试，这纯属无稽之谈，现在还是和更新前一样，吃最高的。至于有部分玩家感觉更新完伤害更高了，有可能是因为官方还修复了 A 属性转 B 属性随动的 bug，这涉及到振奋、放流、高爆以及所有穿属强套的玩家。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-45-58.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-45-58.png" alt="" /></p>
 
-&lt;p&gt;经吧友提醒，上述描述修复的可能是另一个大部分玩家不会碰到的 bug：&lt;/p&gt;
+<p>经吧友提醒，上述描述修复的可能是另一个大部分玩家不会碰到的 bug：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-16-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-16-05.png" alt="" /></p>
 
-&lt;p&gt;接下来描述我进行的测试。&lt;/p&gt;
+<p>接下来描述我进行的测试。</p>
 
-&lt;p&gt;天空塔 1 层；
+<p>天空塔 1 层；
 技能点清空；
 卡牌清空；
 装备只带 3 件防具，且这 3 件不会触发任何影响测试的 buff；
-使用【无属性 旗鱼】【暗属性 墨汁弹】【光属性 电鳗】测试打【符文：寒冰】后是否会叠加吃原属性和水属性 2 种属强；&lt;/p&gt;
+使用【无属性 旗鱼】【暗属性 墨汁弹】【光属性 电鳗】测试打【符文：寒冰】后是否会叠加吃原属性和水属性 2 种属强；</p>
 
-&lt;p&gt;打满【寒冰】前：&lt;/p&gt;
+<p>打满【寒冰】前：</p>
 
-&lt;p&gt;测试数据及其中一次墨汁弹伤害：&lt;/p&gt;
+<p>测试数据及其中一次墨汁弹伤害：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-23-05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-23-05.png" alt="" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-24-41.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-24-41.png" alt="" /></p>
 
-&lt;p&gt;打满【寒冰】后：&lt;/p&gt;
+<p>打满【寒冰】后：</p>
 
-&lt;p&gt;测试数据及其中一次墨汁弹伤害：&lt;/p&gt;
+<p>测试数据及其中一次墨汁弹伤害：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-26-53.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-26-53.png" alt="" /></p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-27-41.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-27-41.png" alt="" /></p>
 
-&lt;p&gt;关键数据：&lt;/p&gt;
+<p>关键数据：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-28-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-28-16.png" alt="" /></p>
 
-&lt;p&gt;面板、buff 栏全在截图中有，可验证。&lt;/p&gt;
+<p>面板、buff 栏全在截图中有，可验证。</p>
 
-&lt;p&gt;接下来是紧张刺激的计算验证环节。&lt;/p&gt;
+<p>接下来是紧张刺激的计算验证环节。</p>
 
-&lt;p&gt;如果不叠加，即打了【寒冰】后，水强达到 100.27%，远高于其他。【墨汁弹】会从吃 35.65% 的暗强变为吃 100.27% 的水强，提升率是 (1+100.27%)/(1+35.65%)-1=47.64%。&lt;/p&gt;
+<p>如果不叠加，即打了【寒冰】后，水强达到 100.27%，远高于其他。【墨汁弹】会从吃 35.65% 的暗强变为吃 100.27% 的水强，提升率是 (1+100.27%)/(1+35.65%)-1=47.64%。</p>
 
-&lt;p&gt;类似地，电鳗从吃光变吃水，旗鱼从吃无变吃水，理论数据如下：&lt;/p&gt;
+<p>类似地，电鳗从吃光变吃水，旗鱼从吃无变吃水，理论数据如下：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-31-59.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-31-59.png" alt="" /></p>
 
-&lt;p&gt;如果叠加，即打了【寒冰】后，【墨汁弹】同时吃 35.65% 的暗强和 100.27% 的水强，提升率是 75.31%，理论数据如下：&lt;/p&gt;
+<p>如果叠加，即打了【寒冰】后，【墨汁弹】同时吃 35.65% 的暗强和 100.27% 的水强，提升率是 75.31%，理论数据如下：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-33-18.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-33-18.png" alt="" /></p>
 
-&lt;p&gt;理论计算完毕，我们来对比实际数据：&lt;/p&gt;
+<p>理论计算完毕，我们来对比实际数据：</p>
 
-&lt;p&gt;打【寒冰】后，【墨汁弹】伤害从 2603 提升到 3850，提升率 47.89%，与不叠加的理论值误差 0.2%，严格控制变量就能得出精确的结果：&lt;/p&gt;
+<p>打【寒冰】后，【墨汁弹】伤害从 2603 提升到 3850，提升率 47.89%，与不叠加的理论值误差 0.2%，严格控制变量就能得出精确的结果：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-33-54.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-33-54.png" alt="" /></p>
 
-&lt;p&gt;因此得出结论：&lt;/p&gt;
+<p>因此得出结论：</p>
 
-&lt;p&gt;属强转换符文的效果仍是使技能吃转换属强，不叠加多属强。&lt;/p&gt;
+<p>属强转换符文的效果仍是使技能吃转换属强，不叠加多属强。</p>
 
-&lt;p&gt;这类符文带来的收益大小，计算起来十分方便，简单来说就是转换前后两属性差值越大提升越大，一般差 50%（或者实战状态下叠满 buff 差 100%） 以上才会有比较明显的效果，否则不如打本职业符文。&lt;/p&gt;
+<p>这类符文带来的收益大小，计算起来十分方便，简单来说就是转换前后两属性差值越大提升越大，一般差 50%（或者实战状态下叠满 buff 差 100%） 以上才会有比较明显的效果，否则不如打本职业符文。</p>
 
-&lt;p&gt;另外，附上 xls 公式审阅，欢迎 debug：&lt;/p&gt;
+<p>另外，附上 xls 公式审阅，欢迎 debug：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-04-14-16-39-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-04-14-16-39-06.png" alt="" /></p>
 
-&lt;p&gt;后话：&lt;/p&gt;
+<p>后话：</p>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;大部分人没有认真在玩这个游戏（当然这个睿智策划确实不值得我们认真去玩！）。他们不理解一个 buff/debuff 的实战效果；不理解什么叫做控制变量；不理解奶妈在什么情况下几乎没作用，在什么情况下顶 2 个队友；不理解强化的收益；不理解什么时候需要主属性；不理解六边形战士……&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;我是傻x，为什么浪费时间和钱做这个显而易见的测试&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">2022.4.14 日的例行维护 log 中，出现了一条描述极其模糊的条目：</summary></entry><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io/20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io/20220321-NB-lanying-debuff/">&lt;p&gt;蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。&lt;/p&gt;
+<ol>
+  <li>
+    <p>大部分人没有认真在玩这个游戏（当然这个睿智策划确实不值得我们认真去玩！）。他们不理解一个 buff/debuff 的实战效果；不理解什么叫做控制变量；不理解奶妈在什么情况下几乎没作用，在什么情况下顶 2 个队友；不理解强化的收益；不理解什么时候需要主属性；不理解六边形战士……</p>
+  </li>
+  <li>
+    <p>我是傻x，为什么浪费时间和钱做这个显而易见的测试</p>
+  </li>
+</ol>]]></content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html"><![CDATA[测试转属性符文是否叠加，另给出转属性的提升率计算方法，以评估是否该打这类符文]]></summary></entry><entry><title type="html">【NB】蓝鹰对怪易伤 debuff 的测试及杂谈</title><link href="https://0qinghao.github.io/20220321-NB-lanying-debuff/" rel="alternate" type="text/html" title="【NB】蓝鹰对怪易伤 debuff 的测试及杂谈" /><published>2022-03-21T00:00:00+08:00</published><updated>2022-03-21T00:00:00+08:00</updated><id>https://0qinghao.github.io/NB-lanying-debuff</id><content type="html" xml:base="https://0qinghao.github.io/20220321-NB-lanying-debuff/"><![CDATA[<p>蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。</p>
 
-&lt;p&gt;蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。&lt;/p&gt;
+<p>蓝鹰给怪挂的 debuff 也同样强力，但由于测试比较繁琐，暂时没看到可靠的实战数据。因此这里总结一下我做的几个小测试，希望对关注这个问题的玩家有帮助。</p>
 
-&lt;h3 id=&quot;蓝鹰的几个对怪易伤-debuff&quot;&gt;蓝鹰的几个对怪易伤 debuff&lt;/h3&gt;
+<h3 id="蓝鹰的几个对怪易伤-debuff">蓝鹰的几个对怪易伤 debuff</h3>
 
-&lt;ol&gt;
-  &lt;li&gt;
-    &lt;p&gt;水炮&lt;/p&gt;
+<ol>
+  <li>
+    <p>水炮</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-19-25.png&quot; alt=&quot;&quot; /&gt;
- 【所有属性抗性减少】30%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;水狱&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-19-25.png" alt="" />
+ 【所有属性抗性减少】30%</p>
+  </li>
+  <li>
+    <p>水狱</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-21-36.png&quot; alt=&quot;&quot; /&gt;
- 【所有属性抗性减少】20%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;虚弱之水&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-21-36.png" alt="" />
+ 【所有属性抗性减少】20%</p>
+  </li>
+  <li>
+    <p>虚弱之水</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-22-26.png&quot; alt=&quot;&quot; /&gt;
- 【所有属性抗性减少】9%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;冰霜结晶&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-22-26.png" alt="" />
+ 【所有属性抗性减少】9%</p>
+  </li>
+  <li>
+    <p>冰霜结晶</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-25-26.png&quot; alt=&quot;&quot; /&gt;
- 【所受伤害增加】10%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;珍珠中的加勒比&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-25-26.png" alt="" />
+ 【所受伤害增加】10%</p>
+  </li>
+  <li>
+    <p>珍珠中的加勒比</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-27-06.png&quot; alt=&quot;&quot; /&gt;
- 【所受伤害增加】30.5%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;裁决金锤&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-27-06.png" alt="" />
+ 【所受伤害增加】30.5%</p>
+  </li>
+  <li>
+    <p>裁决金锤</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-28-13.png&quot; alt=&quot;&quot; /&gt;
- 【所受伤害增加】45%&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;轮回道场&lt;/p&gt;
+    <p><img src="/assets/images/2022-03-21-16-28-13.png" alt="" />
+ 【所受伤害增加】45%</p>
+  </li>
+  <li>
+    <p>轮回道场</p>
 
-    &lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-29-11.png&quot; alt=&quot;&quot; /&gt;
- 【所受伤害增加】5%&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+    <p><img src="/assets/images/2022-03-21-16-29-11.png" alt="" />
+ 【所受伤害增加】5%</p>
+  </li>
+</ol>
 
-&lt;h3 id=&quot;debuff-的单独测试&quot;&gt;debuff 的单独测试&lt;/h3&gt;
+<h3 id="debuff-的单独测试">debuff 的单独测试</h3>
 
-&lt;p&gt;首先测试 7 个 debuff 单独生效时的效果，毕竟这游戏文本与实际不符也不是一次两次了。&lt;/p&gt;
+<p>首先测试 7 个 debuff 单独生效时的效果，毕竟这游戏文本与实际不符也不是一次两次了。</p>
 
-&lt;p&gt;测试对象是天空塔第 1 层，第 23 层，不要问我为什么，随便挑的。测试时除了必要的装备和技能，其他配置全部清空。&lt;/p&gt;
+<p>测试对象是天空塔第 1 层，第 23 层，不要问我为什么，随便挑的。测试时除了必要的装备和技能，其他配置全部清空。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-38-10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-16-38-10.png" alt="" /></p>
 
-&lt;p&gt;好在非常顺利，所有的 7 个 debuff 文本与实际相符。【所有属性抗性减少】和【所受伤害增加】都使伤害提升了与文本一致的数值。&lt;/p&gt;
+<p>好在非常顺利，所有的 7 个 debuff 文本与实际相符。【所有属性抗性减少】和【所受伤害增加】都使伤害提升了与文本一致的数值。</p>
 
-&lt;p&gt;这里另外说一句，【所有属性抗性减少】对无属性的伤害同样生效。&lt;/p&gt;
+<p>这里另外说一句，【所有属性抗性减少】对无属性的伤害同样生效。</p>
 
-&lt;h3 id=&quot;debuff-加算乘算的测试&quot;&gt;debuff 加算乘算的测试&lt;/h3&gt;
+<h3 id="debuff-加算乘算的测试">debuff 加算乘算的测试</h3>
 
-&lt;p&gt;我们可以合理地猜测，所有的【所有属性抗性减少】都属于同一乘区，是加算的。&lt;/p&gt;
+<p>我们可以合理地猜测，所有的【所有属性抗性减少】都属于同一乘区，是加算的。</p>
 
-&lt;p&gt;让怪同时挂上【水炮】（30%）和【水狱】（20%）两个 debuff，测试结果：&lt;/p&gt;
+<p>让怪同时挂上【水炮】（30%）和【水狱】（20%）两个 debuff，测试结果：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-47-11.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-16-47-11.png" alt="" /></p>
 
-&lt;p&gt;接近 50%，符合加算的猜想。&lt;/p&gt;
+<p>接近 50%，符合加算的猜想。</p>
 
-&lt;p&gt;让怪同时挂上【水炮】（30%）和【水狱】（20%）和【虚弱之水】（只打了2个符文，5%）三个 debuff，测试结果：&lt;/p&gt;
+<p>让怪同时挂上【水炮】（30%）和【水狱】（20%）和【虚弱之水】（只打了2个符文，5%）三个 debuff，测试结果：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-50-27.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-16-50-27.png" alt="" /></p>
 
-&lt;p&gt;比理论 55% 略高一些，是因为打了虚弱之水的装备触发了智力 buff。&lt;/p&gt;
+<p>比理论 55% 略高一些，是因为打了虚弱之水的装备触发了智力 buff。</p>
 
-&lt;p&gt;&lt;strong&gt;结论1：【所有属性抗性减少】的 3 个 debuff 属于同一乘区，加算。&lt;/strong&gt;&lt;/p&gt;
+<p><strong>结论1：【所有属性抗性减少】的 3 个 debuff 属于同一乘区，加算。</strong></p>
 
-&lt;p&gt;同样地，合理猜测所有的【所受伤害增加】都属于同一乘区，是加算的。&lt;/p&gt;
+<p>同样地，合理猜测所有的【所受伤害增加】都属于同一乘区，是加算的。</p>
 
-&lt;p&gt;让怪同时挂上【冰霜结晶】（10%）和【轮回道场】的【唤水】（5%）测试，增伤 14.71%≈15%&lt;/p&gt;
+<p>让怪同时挂上【冰霜结晶】（10%）和【轮回道场】的【唤水】（5%）测试，增伤 14.71%≈15%</p>
 
-&lt;p&gt;让怪同时挂上【裁决金锤】的【神圣海域】（45%）和【冰霜结晶】（10%）测试，增伤 53.86≈55%&lt;/p&gt;
+<p>让怪同时挂上【裁决金锤】的【神圣海域】（45%）和【冰霜结晶】（10%）测试，增伤 53.86≈55%</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-16-54-20.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-16-54-20.png" alt="" /></p>
 
-&lt;p&gt;&lt;strong&gt;结论2：【所受伤害增加】的 4 个 debuff 属于同一乘区，加算。&lt;/strong&gt;&lt;/p&gt;
+<p><strong>结论2：【所受伤害增加】的 4 个 debuff 属于同一乘区，加算。</strong></p>
 
-&lt;p&gt;最后，测试【所有属性抗性减少】和【所受伤害增加】是否属于各自独立的乘区。&lt;/p&gt;
+<p>最后，测试【所有属性抗性减少】和【所受伤害增加】是否属于各自独立的乘区。</p>
 
-&lt;p&gt;测到这里已经累了，所以只测试了【裁决金锤】的【所受伤害增加45%】和水炮的【所有属性抗性减少30%】一起生效的情况：&lt;/p&gt;
+<p>测到这里已经累了，所以只测试了【裁决金锤】的【所受伤害增加45%】和水炮的【所有属性抗性减少30%】一起生效的情况：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-03-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-03-26.png" alt="" /></p>
 
-&lt;p&gt;1.45*1.3=1.885，乘算。&lt;/p&gt;
+<p>1.45*1.3=1.885，乘算。</p>
 
-&lt;p&gt;&lt;strong&gt;结论3：【所受伤害增加】和【所有属性抗性减少】属于两个独立的乘区，乘算。&lt;/strong&gt;&lt;/p&gt;
+<p><strong>结论3：【所受伤害增加】和【所有属性抗性减少】属于两个独立的乘区，乘算。</strong></p>
 
-&lt;h3 id=&quot;杂谈关于虹吸装置&quot;&gt;杂谈：关于【虹吸装置】&lt;/h3&gt;
+<h3 id="杂谈关于虹吸装置">杂谈：关于【虹吸装置】</h3>
 
-&lt;p&gt;150 粉武中，【裁决金锤】和【虹吸装置】特效十分亮眼。&lt;/p&gt;
+<p>150 粉武中，【裁决金锤】和【虹吸装置】特效十分亮眼。</p>
 
-&lt;p&gt;【虹吸装置】的描述是【10 米内】我方的【武器攻击力提升】40%。&lt;/p&gt;
+<p>【虹吸装置】的描述是【10 米内】我方的【武器攻击力提升】40%。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-44-15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-44-15.png" alt="" /></p>
 
-&lt;p&gt;这个【10 米】的范围有多大？【武器攻击力】和【攻击力】有什么区别吗？&lt;/p&gt;
+<p>这个【10 米】的范围有多大？【武器攻击力】和【攻击力】有什么区别吗？</p>
 
-&lt;p&gt;测试结果：&lt;/p&gt;
+<p>测试结果：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-45-57.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-45-57.png" alt="" /></p>
 
-&lt;p&gt;【10米】范围非常可观，大致是【云耀乱刀】的范围。&lt;/p&gt;
+<p>【10米】范围非常可观，大致是【云耀乱刀】的范围。</p>
 
-&lt;p&gt;接下来看攻击力增加的数值：&lt;/p&gt;
+<p>接下来看攻击力增加的数值：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-47-06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-47-06.png" alt="" /></p>
 
-&lt;p&gt;结论：【武器攻击力增加40%】其实就是【攻击力增加40%】。&lt;/p&gt;
+<p>结论：【武器攻击力增加40%】其实就是【攻击力增加40%】。</p>
 
-&lt;p&gt;还有一条附带的结论：这个 buff 不会触发【海洋守护者】的减 cd，当然，也不触发守护者给自己的其他效果（回血、减伤）。本来还想用它替代唤水刷 CD，结果行不通。&lt;/p&gt;
+<p>还有一条附带的结论：这个 buff 不会触发【海洋守护者】的减 cd，当然，也不触发守护者给自己的其他效果（回血、减伤）。本来还想用它替代唤水刷 CD，结果行不通。</p>
 
-&lt;p&gt;最后，有人说这个 40% 攻击力的 buff 必须保持【虹吸装置】装在身上才行，换回双星队友就没 buff 了。真的吗？&lt;/p&gt;
+<p>最后，有人说这个 40% 攻击力的 buff 必须保持【虹吸装置】装在身上才行，换回双星队友就没 buff 了。真的吗？</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-50-45.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-50-45.png" alt="" /></p>
 
-&lt;p&gt;触发 buff 后马上切换武器，自己的 buff 确实消失了，但是队友的还在~&lt;/p&gt;
+<p>触发 buff 后马上切换武器，自己的 buff 确实消失了，但是队友的还在~</p>
 
-&lt;h3 id=&quot;杂谈关于最强音&quot;&gt;杂谈：关于【最强音】&lt;/h3&gt;
+<h3 id="杂谈关于最强音">杂谈：关于【最强音】</h3>
 
-&lt;p&gt;符文【最强音】的效果是【海之歌】生效时，我方的攻击力增加 27%&lt;/p&gt;
+<p>符文【最强音】的效果是【海之歌】生效时，我方的攻击力增加 27%</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-17-57-12.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-17-57-12.png" alt="" /></p>
 
-&lt;p&gt;但是具体生效的范围是多大呢？测试结果：&lt;/p&gt;
+<p>但是具体生效的范围是多大呢？测试结果：</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-18-00-32.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-18-00-32.png" alt="" /></p>
 
-&lt;p&gt;范围和【海之歌】一致，非常小，可以理解为【最强音】就是给【海之歌】的 buff 增加了一条攻击力提升。如果说【虹吸装置】是【10 米】，那【最强音】大概是【3 米】。&lt;/p&gt;
+<p>范围和【海之歌】一致，非常小，可以理解为【最强音】就是给【海之歌】的 buff 增加了一条攻击力提升。如果说【虹吸装置】是【10 米】，那【最强音】大概是【3 米】。</p>
 
-&lt;p&gt;再来讨论一下数值，27% 攻击力提升大吗？根据吧友的参考信息，27% 的攻击力稀释下来对最终输出的提升在 10% 左右，如果是铁拳这种攻击力乘区稀释严重的职业，增幅会更小。&lt;/p&gt;
+<p>再来讨论一下数值，27% 攻击力提升大吗？根据吧友的参考信息，27% 的攻击力稀释下来对最终输出的提升在 10% 左右，如果是铁拳这种攻击力乘区稀释严重的职业，增幅会更小。</p>
 
-&lt;p&gt;还有一点，【海之歌】是有 30 秒 cd 的，在团本中可以通过上 buff 刷 cd，但也确实存在一定的真空期。综上，【最强音】的实战增幅砍一半，算 5% 不过分吧。&lt;/p&gt;
+<p>还有一点，【海之歌】是有 30 秒 cd 的，在团本中可以通过上 buff 刷 cd，但也确实存在一定的真空期。综上，【最强音】的实战增幅砍一半，算 5% 不过分吧。</p>
 
-&lt;p&gt;因此，我个人看来，【最强音】并不是很优秀的辅助符文，我选择不打。非要打的话优先级也很低，最多在出齐红装后补上。&lt;/p&gt;
+<p>因此，我个人看来，【最强音】并不是很优秀的辅助符文，我选择不打。非要打的话优先级也很低，最多在出齐红装后补上。</p>
 
-&lt;h3 id=&quot;杂谈大海啸与平-a&quot;&gt;杂谈：【大海啸】与平 A&lt;/h3&gt;
+<h3 id="杂谈大海啸与平-a">杂谈：【大海啸】与平 A</h3>
 
-&lt;p&gt;在征服者大行其道的版本，如何提升平 A 伤害也是个热门话题。&lt;/p&gt;
+<p>在征服者大行其道的版本，如何提升平 A 伤害也是个热门话题。</p>
 
-&lt;p&gt;吧里偶尔会出现【大海啸】对平 A 无效的说法，理由是平 A 不属于【技能】……&lt;/p&gt;
+<p>吧里偶尔会出现【大海啸】对平 A 无效的说法，理由是平 A 不属于【技能】……</p>
 
-&lt;p&gt;其实只要搞清楚【所有技能伤害】对平 A 有没有加成就行了。测试结果：有&lt;/p&gt;
+<p>其实只要搞清楚【所有技能伤害】对平 A 有没有加成就行了。测试结果：有</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-18-28-16.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-18-28-16.png" alt="" /></p>
 
-&lt;h3 id=&quot;杂谈队友不享受觉醒的易伤&quot;&gt;杂谈：队友不享受觉醒的易伤？&lt;/h3&gt;
+<h3 id="杂谈队友不享受觉醒的易伤">杂谈：队友不享受觉醒的易伤？</h3>
 
-&lt;p&gt;测试结果：享受。&lt;/p&gt;
+<p>测试结果：享受。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2022-03-21-20-03-58.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2022-03-21-20-03-58.png" alt="" /></p>
 
-&lt;p&gt;有人说团本不吃，还不确定。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html">蓝鹰对队友的 buff 已经被大家讨论得很多了，【伤害增加】【所有技能伤害】【所有属性强化】【攻击力】【攻击速度】，这些独立乘区算下来对最终输出的提升在 300% 左右（指满符文），加上最近【唤水】的修复，【攻击力】这个之前比较弱小的乘区，现在也提供了不菲的加成。当然不同职业有不同程度的稀释，这个数值仅供参考，精确的数值需要看实战状态的面板。</summary></entry><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io/20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io/vim-technique</id><content type="html" xml:base="https://0qinghao.github.io/20200802-vim-technique/">&lt;p&gt;记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。&lt;/p&gt;
+<p>有人说团本不吃，还不确定。</p>]]></content><author><name>Qinghao Lin</name></author><category term="游戏" /><summary type="html"><![CDATA[测试蓝鹰两个对怪易伤 debuff 是加算还是乘算，以及谈一谈最近几个小的测试结果]]></summary></entry><entry><title type="html">值得一记的 vim 使用技巧</title><link href="https://0qinghao.github.io/20200802-vim-technique/" rel="alternate" type="text/html" title="值得一记的 vim 使用技巧" /><published>2020-08-02T00:00:00+08:00</published><updated>2020-08-02T00:00:00+08:00</updated><id>https://0qinghao.github.io/vim-technique</id><content type="html" xml:base="https://0qinghao.github.io/20200802-vim-technique/"><![CDATA[<p>记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。</p>
 
-&lt;h3 id=&quot;对括号内的文本操作&quot;&gt;对括号内的文本操作&lt;/h3&gt;
+<h3 id="对括号内的文本操作">对括号内的文本操作</h3>
 
-&lt;p&gt;不仅限括号，可理解为成对符号内的文本操作。&lt;/p&gt;
+<p>不仅限括号，可理解为成对符号内的文本操作。</p>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;命令&lt;/th&gt;
-      &lt;th&gt;功能&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ci(&lt;/td&gt;
-      &lt;td&gt;修改 () 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;di(&lt;/td&gt;
-      &lt;td&gt;删除 () 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;yi(&lt;/td&gt;
-      &lt;td&gt;复制 () 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;vi(&lt;/td&gt;
-      &lt;td&gt;选中 () 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ci”&lt;/td&gt;
-      &lt;td&gt;修改 “” 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ci[&lt;/td&gt;
-      &lt;td&gt;修改 [] 内的文本&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ci(</td>
+      <td>修改 () 内的文本</td>
+    </tr>
+    <tr>
+      <td>di(</td>
+      <td>删除 () 内的文本</td>
+    </tr>
+    <tr>
+      <td>yi(</td>
+      <td>复制 () 内的文本</td>
+    </tr>
+    <tr>
+      <td>vi(</td>
+      <td>选中 () 内的文本</td>
+    </tr>
+    <tr>
+      <td>ci”</td>
+      <td>修改 “” 内的文本</td>
+    </tr>
+    <tr>
+      <td>ci[</td>
+      <td>修改 [] 内的文本</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;数值自增--自减&quot;&gt;数值自增 / 自减&lt;/h3&gt;
+<h3 id="数值自增--自减">数值自增 / 自减</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;命令&lt;/th&gt;
-      &lt;th&gt;功能&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt;&lt;/td&gt;
-      &lt;td&gt;往后查找第一个数字，并使其 +1 （会识别数字的正负性）&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;x&lt;/kbd&gt;&lt;/td&gt;
-      &lt;td&gt;往后查找第一个数字，并使其 -1&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>a</kbd></td>
+      <td>往后查找第一个数字，并使其 +1 （会识别数字的正负性）</td>
+    </tr>
+    <tr>
+      <td><kbd>Ctrl</kbd> + <kbd>x</kbd></td>
+      <td>往后查找第一个数字，并使其 -1</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;移动到空行&quot;&gt;移动到空行&lt;/h3&gt;
+<h3 id="移动到空行">移动到空行</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;命令&lt;/th&gt;
-      &lt;th&gt;功能&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;{&lt;/td&gt;
-      &lt;td&gt;移动到上一个空行&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;}&lt;/td&gt;
-      &lt;td&gt;移动到下一个空行&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{</td>
+      <td>移动到上一个空行</td>
+    </tr>
+    <tr>
+      <td>}</td>
+      <td>移动到下一个空行</td>
+    </tr>
+  </tbody>
+</table>
 
-&lt;h3 id=&quot;基于当前屏幕的定位&quot;&gt;基于当前屏幕的定位&lt;/h3&gt;
+<h3 id="基于当前屏幕的定位">基于当前屏幕的定位</h3>
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;命令&lt;/th&gt;
-      &lt;th&gt;功能&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;H&lt;/td&gt;
-      &lt;td&gt;（保持屏幕不动） 光标移动到屏幕顶部&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;M&lt;/td&gt;
-      &lt;td&gt;光标移动到屏幕中间&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;L&lt;/td&gt;
-      &lt;td&gt;光标移动到屏幕底部&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zt&lt;/td&gt;
-      &lt;td&gt;（使屏幕滚动） 将当前行置于屏幕顶部&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zz&lt;/td&gt;
-      &lt;td&gt;将当前行置于屏幕中间&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;zb&lt;/td&gt;
-      &lt;td&gt;将当前行置于屏幕底部&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="linux" /><summary type="html">记录一些 vim 使用过程中发现的，让自己感叹“原来还可以这样”的一些技巧，时常更新。</summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://0qinghao.github.io/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/">&lt;p&gt;越来越多的人选择将博客托管在 &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub page&lt;/a&gt; 或是国内的 &lt;a href=&quot;https://help.coding.net/docs/devops/cd/static-website.html&quot;&gt;Coding page&lt;/a&gt;，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
-当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 配置时，GitHub 将在你 push 后自动进行在线构建。&lt;/p&gt;
+<table>
+  <thead>
+    <tr>
+      <th>命令</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H</td>
+      <td>（保持屏幕不动） 光标移动到屏幕顶部</td>
+    </tr>
+    <tr>
+      <td>M</td>
+      <td>光标移动到屏幕中间</td>
+    </tr>
+    <tr>
+      <td>L</td>
+      <td>光标移动到屏幕底部</td>
+    </tr>
+    <tr>
+      <td>zt</td>
+      <td>（使屏幕滚动） 将当前行置于屏幕顶部</td>
+    </tr>
+    <tr>
+      <td>zz</td>
+      <td>将当前行置于屏幕中间</td>
+    </tr>
+    <tr>
+      <td>zb</td>
+      <td>将当前行置于屏幕底部</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="linux" /><summary type="html"><![CDATA[一些日常 coding 时让自己感觉“原来还可以这样”的 vim 使用技巧]]></summary></entry><entry><title type="html">在基于 Jekyll 的博客中加入文字的注音</title><link href="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/" rel="alternate" type="text/html" title="在基于 Jekyll 的博客中加入文字的注音" /><published>2020-07-24T00:00:00+08:00</published><updated>2020-07-24T00:00:00+08:00</updated><id>https://0qinghao.github.io/add-ruby-in-jekyll-based-blog</id><content type="html" xml:base="https://0qinghao.github.io/20200724-add-ruby-in-jekyll-based-blog/"><![CDATA[<p>越来越多的人选择将博客托管在 <a href="https://pages.github.com/">GitHub page</a> 或是国内的 <a href="https://help.coding.net/docs/devops/cd/static-website.html">Coding page</a>，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。
+当一个 repo 被你设定为 GitHub page 时，GitHub 将检测 repo 的目录结构，如果符合 Jekyll 的特征，例如根目录下包含 <code class="language-plaintext highlighter-rouge">_config.yml</code> 配置时，GitHub 将在你 push 后自动进行在线构建。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-20-40-26.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2020-07-23-20-40-26.png" alt="" /></p>
 
-&lt;p&gt;查看 repo 的提交历史将能看到构建成功的消息，如果构建失败则会收到一封邮件报告。因此理论上我们在本地甚至不需要配置 Jekyll 环境，只需要保证 push 的内容具备让 GitHub 进行在线构建的条件即可。&lt;/p&gt;
+<p>查看 repo 的提交历史将能看到构建成功的消息，如果构建失败则会收到一封邮件报告。因此理论上我们在本地甚至不需要配置 Jekyll 环境，只需要保证 push 的内容具备让 GitHub 进行在线构建的条件即可。</p>
 
-&lt;h3 id=&quot;在线构建的局限性&quot;&gt;在线构建的局限性&lt;/h3&gt;
+<h3 id="在线构建的局限性">在线构建的局限性</h3>
 
-&lt;p&gt;将构建的任务交给 GitHub 确实十分方便，也能满足绝大部分用户的需求。但我们注意到 GitHub 提供的在线构建服务并不支持所有 Jekyll 插件，支持列表可以在这里查询：&lt;a href=&quot;https://pages.github.com/versions/&quot;&gt;https://pages.github.com/versions/&lt;/a&gt;&lt;/p&gt;
+<p>将构建的任务交给 GitHub 确实十分方便，也能满足绝大部分用户的需求。但我们注意到 GitHub 提供的在线构建服务并不支持所有 Jekyll 插件，支持列表可以在这里查询：<a href="https://pages.github.com/versions/">https://pages.github.com/versions/</a></p>
 
-&lt;p&gt;而很不幸的是，有一个插件对我来说是必不可少的，而它却不在支持列表中。这个插件是 &lt;a href=&quot;https://github.com/guentoan/jekyll-furigana&quot;&gt;jekyll-furigana&lt;/a&gt;，用于给文本注音，主要应用场景有：&lt;/p&gt;
+<p>而很不幸的是，有一个插件对我来说是必不可少的，而它却不在支持列表中。这个插件是 <a href="https://github.com/guentoan/jekyll-furigana">jekyll-furigana</a>，用于给文本注音，主要应用场景有：</p>
 
-&lt;p&gt;( 日本語:にほんご )の( 漢字:かんじ )に( 振:ふ )り( 仮名:がな )を( 編集:へんしゅう )する&lt;/p&gt;
+<p>( 日本語:にほんご )の( 漢字:かんじ )に( 振:ふ )り( 仮名:がな )を( 編集:へんしゅう )する</p>
 
-&lt;p&gt;( 中:zhōng )( 文:wén )拼音注音&lt;/p&gt;
+<p>( 中:zhōng )( 文:wén )拼音注音</p>
 
-&lt;p&gt;( 奇奇怪怪的用法:😀😁🤣😑🤨😮😶 )&lt;/p&gt;
+<p>( 奇奇怪怪的用法:😀😁🤣😑🤨😮😶 )</p>
 
-&lt;p&gt;幸运的是 GitHub page 支持关闭在线构建，代价则是用户必须在本地配置好 Jekyll 环境，构建、推送构建完成的静态网页到 GitHub page repo。&lt;/p&gt;
+<p>幸运的是 GitHub page 支持关闭在线构建，代价则是用户必须在本地配置好 Jekyll 环境，构建、推送构建完成的静态网页到 GitHub page repo。</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins&quot;&gt;GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p><a href="https://docs.github.com/en/github/working-with-github-pages/about-github-pages-and-jekyll#plugins">GitHub Pages cannot build sites using unsupported plugins. If you want to use unsupported plugins, generate your site locally and then push your site’s static files to GitHub.</a></p>
+</blockquote>
 
-&lt;h3 id=&quot;配置-jekyll-furigana-插件&quot;&gt;配置 jekyll-furigana 插件&lt;/h3&gt;
+<h3 id="配置-jekyll-furigana-插件">配置 jekyll-furigana 插件</h3>
 
-&lt;p&gt;配置 Jekyll 插件的前提当然是配置好本地 Jekyll 环境。这里默认大家已经配置好了，如果还没配置的可以跟着&lt;a href=&quot;http://jekyllcn.com/docs/installation/&quot;&gt;官方文档&lt;/a&gt;做，这里只描述插件的配置方法。&lt;/p&gt;
+<p>配置 Jekyll 插件的前提当然是配置好本地 Jekyll 环境。这里默认大家已经配置好了，如果还没配置的可以跟着<a href="http://jekyllcn.com/docs/installation/">官方文档</a>做，这里只描述插件的配置方法。</p>
 
-&lt;ol&gt;
-  &lt;li&gt;在 Gemfile 中配置 jekyll-furigana 插件
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&apos;https://rubygems.org&apos;&lt;/span&gt;
- gem &lt;span class=&quot;s1&quot;&gt;&apos;github-pages&apos;&lt;/span&gt;, group: :jekyll_plugins
- gem &lt;span class=&quot;s1&quot;&gt;&apos;tzinfo-data&apos;&lt;/span&gt;
- gem &lt;span class=&quot;s1&quot;&gt;&apos;jekyll-furigana&apos;&lt;/span&gt;, group: :jekyll_plugins
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;安装
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;bundle
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;在 Jekyll 配置文件 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;plugins:&lt;/code&gt; 部分配置插件
-    &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; plugins:
+<ol>
+  <li>在 Gemfile 中配置 jekyll-furigana 插件
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nb">source</span> <span class="s1">'https://rubygems.org'</span>
+ gem <span class="s1">'github-pages'</span>, group: :jekyll_plugins
+ gem <span class="s1">'tzinfo-data'</span>
+ gem <span class="s1">'jekyll-furigana'</span>, group: :jekyll_plugins
+</code></pre></div>    </div>
+  </li>
+  <li>安装
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="nv">$ </span>bundle
+</code></pre></div>    </div>
+  </li>
+  <li>在 Jekyll 配置文件 <code class="language-plaintext highlighter-rouge">_config.yml</code> 中的 <code class="language-plaintext highlighter-rouge">plugins:</code> 部分配置插件
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code> plugins:
      - jekyll-github-metadata
      - rouge
      - jekyll-paginate
@@ -764,110 +823,53 @@ udevadm info -n /dev/sdb -a | grep speed # 2.0 协议的速度是 480Mbps，3.0 
      - jekyll-feed
      - jemoji
      - jekyll-furigana
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;在需要启用注音功能的 markdown 博客文件头中加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;furigana: true&lt;/code&gt;
-    &lt;div class=&quot;language-markdown highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt; ---&lt;/span&gt;
+</code></pre></div>    </div>
+  </li>
+  <li>在需要启用注音功能的 markdown 博客文件头中加入 <code class="language-plaintext highlighter-rouge">furigana: true</code>
+    <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p"> ---</span>
  layout: post
  title: 在基于 Jekyll 的博客中加入文字的注音
  categories: [日语]
  furigana: true
-&lt;span class=&quot;p&quot;&gt; ---
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
-  &lt;/li&gt;
-  &lt;li&gt;修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_layouts/post.html&lt;/code&gt; 中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;content&lt;/code&gt; 过滤器，加入 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;furigana&lt;/code&gt; 过滤器
- &lt;img src=&quot;/assets/images/2020-07-24-20-20-27.png&quot; alt=&quot;&quot; /&gt;
-    &lt;ul&gt;
-      &lt;li&gt;默认情况下是修改 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post.html&lt;/code&gt; 文件，如果你的 markdown 文件头中的 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;layout&lt;/code&gt; 属性不是 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;post&lt;/code&gt; 那就要去修改对应的文件。&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
+<span class="p"> ---
+</span></code></pre></div>    </div>
+  </li>
+  <li>修改 <code class="language-plaintext highlighter-rouge">_layouts/post.html</code> 中的 <code class="language-plaintext highlighter-rouge">content</code> 过滤器，加入 <code class="language-plaintext highlighter-rouge">furigana</code> 过滤器
+ <img src="/assets/images/2020-07-24-20-20-27.png" alt="" />
+    <ul>
+      <li>默认情况下是修改 <code class="language-plaintext highlighter-rouge">post.html</code> 文件，如果你的 markdown 文件头中的 <code class="language-plaintext highlighter-rouge">layout</code> 属性不是 <code class="language-plaintext highlighter-rouge">post</code> 那就要去修改对应的文件。</li>
+    </ul>
+  </li>
+</ol>
 
-&lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt;
+<h3 id="使用方法">使用方法</h3>
 
-&lt;p&gt;jekyll-furigana 插件有多种使用格式，可选用下面任意一种。&lt;/p&gt;
+<p>jekyll-furigana 插件有多种使用格式，可选用下面任意一种。</p>
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-24-20-23-07.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<p><img src="/assets/images/2020-07-24-20-23-07.png" alt="" /></p>
 
-&lt;p&gt;他们在启用了插件的页面上，都将被渲染为：&lt;/p&gt;
+<p>他们在启用了插件的页面上，都将被渲染为：</p>
 
-&lt;p&gt;(日本語:にほんご)&lt;/p&gt;
+<p>(日本語:にほんご)</p>
 
-&lt;h3 id=&quot;编译静态网页推送到-github-page-repo&quot;&gt;编译静态网页推送到 GitHub page repo&lt;/h3&gt;
+<h3 id="编译静态网页推送到-github-page-repo">编译静态网页推送到 GitHub page repo</h3>
 
-&lt;p&gt;在根目录下编译静态网页，输出到 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./docs&lt;/code&gt;&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll build &lt;span class=&quot;nt&quot;&gt;--destination&lt;/span&gt; ./docs
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;将 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docs&lt;/code&gt; 文件夹内的内容推送到 GitHub page repo&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ./docs
+<p>在根目录下编译静态网页，输出到 <code class="language-plaintext highlighter-rouge">./docs</code></p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>jekyll build <span class="nt">--destination</span> ./docs
+</code></pre></div></div>
+<p>将 <code class="language-plaintext highlighter-rouge">docs</code> 文件夹内的内容推送到 GitHub page repo</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ./docs
 
 git init
 
-git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
+git add <span class="nt">-A</span>
 
-git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;test furigana&quot;&lt;/span&gt;
+git commit <span class="nt">-m</span> <span class="s2">"test furigana"</span>
 
 git remote add origin https://your-repo-url.git
 
 git push origin master
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;大约 2 分钟之后，即可打开网页检查插件是否生效。&lt;/p&gt;
+</code></pre></div></div>
+<p>大约 2 分钟之后，即可打开网页检查插件是否生效。</p>
 
-&lt;p&gt;最后，感谢你阅读文章。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="日语" /><category term="linux" /><category term="jekyll" /><summary type="html">越来越多的人选择将博客托管在 GitHub page 或是国内的 Coding page，通过 Jekyll 将 markdown 排版的文章渲染为静态网页。</summary></entry><entry><title type="html">vim 在 Verilog 中的应用——生成相似代码</title><link href="https://0qinghao.github.io/20200723-vim-app-in-verilog-generate-similar-code/" rel="alternate" type="text/html" title="vim 在 Verilog 中的应用——生成相似代码" /><published>2020-07-23T00:00:00+08:00</published><updated>2020-07-23T00:00:00+08:00</updated><id>https://0qinghao.github.io/vim-app-in-verilog-generate-similar-code</id><content type="html" xml:base="https://0qinghao.github.io/20200723-vim-app-in-verilog-generate-similar-code/">&lt;p&gt;vim 作为最出色的文本编辑器之一，有着丰富的内置命令和各色各样的开源插件，可以说是杀鸡屠龙无所不能。
-但同时 vim 的入门门槛高、学习曲线陡峭，也使得许多人或是望而生畏，或是浅尝辄止。当然也包括我，我在本科阶段第一次接触 vim 的时候，多半是带着一些“装x”的中二情感在强行用，直到最近才开始系统地学习、使用。目前使用的模式是在 VSCode 中激活&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=vscodevim.vim&quot;&gt; vim 键映射&lt;/a&gt;，虽然有很多大牛选择从零将 vim 打造成完整的 IDE，但我始终认为 vim 的强处在于文本处理，IDE 部分还是交给 VSCode 吧。&lt;/p&gt;
-
-&lt;p&gt;回到正题，我的主要开发语言是 Verilog，在 Verilog 代码中经常会出现一整段十分相似的代码，一般是只有数字编号不同的内容。例如在对一整组信号做打拍时，这种时候可以应用 vim 的宏功能来快速生成代码。&lt;/p&gt;
-
-&lt;div class=&quot;language-verilog highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// s0-s15 打一拍&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;always&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;posedge&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;clk&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;begin&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s0_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s1_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s2_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s3_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s4_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s5_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s6_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s7_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s8_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s9_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s10_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s11_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s12_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s13_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s13&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s14_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s14&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;s15_d1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;预备知识&quot;&gt;预备知识&lt;/h2&gt;
-
-&lt;h3 id=&quot;vim-宏&quot;&gt;vim 宏&lt;/h3&gt;
-
-&lt;p&gt;vim 处于 normal 模式时，按 &lt;kbd&gt;q&lt;/kbd&gt; &lt;kbd&gt;1&lt;/kbd&gt; 将进入宏录制模式，vim 会录制此后所有操作到宏 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt; 中。当然 &lt;kbd&gt;1&lt;/kbd&gt; 键可以任意替换，相应的宏也会录制到对应的键中。录制过程中再次按 &lt;kbd&gt;q&lt;/kbd&gt; 将结束录制，此后可通过 &lt;kbd&gt;@&lt;/kbd&gt; &lt;kbd&gt;1&lt;/kbd&gt; 的方式执行录制的内容。和 vim 中其他命令一样，可以在其前加上任意数字 n 表示重复执行 n 次。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-12-24-21.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;vim-数字自增功能&quot;&gt;vim 数字自增功能&lt;/h3&gt;
-
-&lt;p&gt;这大概是个比较冷门的功能，很少看见有人提到，但却意外地挺有用。&lt;/p&gt;
-
-&lt;p&gt;normal 模式下，&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;a&lt;/kbd&gt; 将从当前光标处往后查找第一个数字，并且将其 +1。类似地，&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;x&lt;/kbd&gt; 实现查找、-1 的功能。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-12-33-50.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;生成相似代码段&quot;&gt;生成相似代码段&lt;/h2&gt;
-
-&lt;p&gt;应用上述两个 vim 功能，即可很方便地生成前言中一组信号打拍的代码块。基本思路是写好第一行之后：复制当前行 → 粘贴 → 找到数字自增，重复这三个操作。因此录制并重复执行的内容就是上述 3 步，具体实现过程如下。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/2020-07-23-13-13-18.gif&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;小结&quot;&gt;小结&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;vim 宏录制&lt;/li&gt;
-  &lt;li&gt;vim 中的数字自增 / 自减&lt;/li&gt;
-  &lt;li&gt;找到代码中的规律，使其自动生成&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;最后，感谢你阅读文章。&lt;/p&gt;</content><author><name>Qinghao Lin</name></author><category term="vim" /><category term="verilog" /><category term="linux" /><summary type="html">vim 作为最出色的文本编辑器之一，有着丰富的内置命令和各色各样的开源插件，可以说是杀鸡屠龙无所不能。</summary></entry></feed>
+<p>最后，感谢你阅读文章。</p>]]></content><author><name>Qinghao Lin</name></author><category term="日语" /><category term="linux" /><category term="jekyll" /><summary type="html"><![CDATA[在使用 jekyll 构建的博客文章中加入注音, 同时涉及本地构建静态网站推送 github page / coding page 的方法]]></summary></entry></feed>
