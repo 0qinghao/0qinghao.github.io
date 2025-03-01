@@ -69,6 +69,8 @@
   
   
   
+  
+  
 
   
     {
@@ -328,6 +330,13 @@
       "category" : "C/C++",
       "content": "在 C/C++ 开发中，assert 是一个非常有用的工具。它可以在程序运行时进行条件检查，并在条件不满足时触发错误，帮助开发者定位问题。然而，默认的 assert 输出并不会给出太多有用的信息。本文将分享一个小技巧，帮助你在 assert 触发时输出自定义的提示信息，从而更快地定位问题。 示例代码 以下是一个简单的代码示例： #include &lt;stdio.h&gt; #include &lt;assert.h&gt; typedef unsigned char uint8; void main() {  uint8 log2_cu_size = 5; // 常规的 assert 语句  assert(5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size); // 带自定义提示信息的 assert  assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)); printf(cu_size = %d, 1 &lt;&lt; log2_cu_size); return; } 在这段代码中，第一处 assert 是标准的用法，如果 CU 尺寸异常，程序会直接中断并输出默认的 assert 错误信息。 第二行 assert 使用了一个小技巧，在条件之前添加了一个字符串 illegal CU size，这样在条件不满足时会输出这段信息。 运行结果分析 假设运行上述代码时 log2_cu_size = 5，则第一行和第二行的断言都会失败。  对于第一处的 assert，输出类似： assert_comment.c:8: main: Assertion `5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size' failed. 对于第二处的 assert，输出会包含额外的提示信息： assert_comment.c:9: main: Assertion `(illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)' failed. 技巧背后的原理 在 C/C++ 中，逗号表达式的结果是最后一个表达式的值。因此，assert((illegal CU size, 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size)) 实际上会忽略字符串 illegal CU size，只对 5 &gt; log2_cu_size &amp;&amp; 2 &lt; log2_cu_size 进行断言检查。然而，字符串 illegal CU size 会被 assert 错误信息捕获并输出。 注意事项 避免复杂提示信息：提示信息应当简洁明了，便于快速理解问题所在。 仅在开发环境使用：assert 通常在 Debug 模式下使用。在 Release 模式中，建议移除断言检查以提升性能。 搭配日志使用：对于复杂的程序，建议结合日志记录系统一起使用，以便更全面地了解程序的运行情况。 总结 通过在 assert 语句中使用逗号表达式，我们可以轻松添加自定义提示信息。这种方法简单有效，可以显著提高程序调试效率。希望本文的分享对你的开发工作有所帮助！ 如果你有其他关于 assert 的技巧，欢迎留言讨论。 ",
       "url"      : "https://0qinghao.github.io/20230821-C_assert_comment/"
+    } ,
+  
+    {
+      "title"    : "配置 SSH 密钥访问 Git 服务器时遇到的问题",
+      "category" : "git",
+      "content": "在配置 SSH 密钥以访问 Git 服务器时，一般只需要生成密钥并配置公钥到服务器上。但是，在一些情况下，我发现还需要进行额外的操作才能正常连接 Git 服务器。 旧步骤记录  启动 SSH-Agent 首先，需要在后台运行 SSH-Agent： eval $(ssh-agent -s)   添加私钥 然后，需要手动添加私钥： ssh-add ~/.ssh/fh_gerrit   检查是否添加成功 可以通过以下命令检查当前加入的密钥： ssh-add -l   问题分析 之前我并没有在其他教程中看到这两步，并且在 Windows 下实现这两步碰到了一些难题。终于我发现了原因： OpenSSH-Client 版本问题 在 Ubuntu 18 (包括 OpenSSH 7.6 和 7.7 版本) 上，这套配置正常运行，但在 Ubuntu 22 (进入 8.x 版本)时，会出现连接失败。 这是因为新版 SSH 客户端默认禁用了 RSA 密钥。解决方法如下：  降级 SSH 客户端：选择使用较旧版本的 OpenSSH 客户端。（不推荐） 配置 ~/.ssh/config：在配置文件中显式指定 RSA 算法。 SSH 配置 在 ~/.ssh/config 中添加以下内容： Host git106.fullhan.com  HostkeyAlgorithms +ssh-RSA  PubkeyAcceptedAlgorithms +ssh-rsa  IdentityFile ~/.ssh/fh_gerrit 注意：Windows 和 Linux 的 SSH 客户端对 config 文件有不同要求：  在 Windows 上，上述 3 行配置都需要保留。 在 WSL 上，PubkeyAcceptedAlgorithms +ssh-rsa 该行需要删除。 另外，如果你的私钥文件夹并不是默认文件名（id_rsa/id_ed25519…），你也需要在这个文件里面显式为特定的主机配置私钥文件： Host github.com  IdentityFile ~/.ssh/github 注意权限问题 最后，确保 SSH 私钥的权限正确： chmod 600 ~/.ssh/fh_gerrit 结论 通过上述配置，我们可以在 Ubuntu 22 上解决 SSH 密钥无法连接 Git 服务器的问题。并且，可以使用非默认私钥文件名，在同一设备上设置多个不同的 SSH 私钥用于不同的 Git 服务器。 ",
+      "url"      : "https://0qinghao.github.io/20240821-config-file-for-ssh-8x-version/"
     } ,
   
     {
