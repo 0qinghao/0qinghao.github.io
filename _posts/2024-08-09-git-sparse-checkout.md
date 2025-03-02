@@ -83,6 +83,7 @@ git config core.ignorecase false
 ```
 
 **版本兼容性**
+
 | Git版本 | 特性支持                   |
 | ------- | -------------------------- |
 | < 2.25  | 需手动编辑.sparse-checkout |
